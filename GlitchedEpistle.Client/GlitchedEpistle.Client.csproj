@@ -16,4 +16,8 @@
     <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.6.4" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GlitchedPolygons.GlitchedEpistle.Client</name>
+    </assembly>
+    <members>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User">
+            <summary>
+            The class that represents the epistle user.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Id">
+            <summary>
+            The user's unique identifier (the primary key for the epistle db).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PasswordSHA512">
+            <summary>
+            The user's password hashed with SHA512.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Token">
+            <summary>
+            The token needed to authenticate Web API requests.
+            </summary>
+            <value>Encoded JWT <see langword="string"/>.</value>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.ILoginService">
+            <summary>
+            Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.ILoginService.Login(System.String,System.String)">
+            <summary>
+            Logs the specified user in by authenticating the provided credentials
+            (POST request to the Glitched Epistle Web API). If authentication is successful, a valid JWT is returned.
+            That's needed for subsequent requests.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="passwordSHA512">The password hash (SHA-512).</param>
+            <returns>JWT <see langword="string"/></returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.LoginService">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.LoginService.Login(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA">
+            <summary>
+            <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA"/> implementation for asymmetric RSA encryption/decryption.
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA">
+            <summary>
+            Service interface for encrypting and decrypting <see langword="string"/>s and <see langword="byte"/>[] arrays.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Encrypts the specified text using the provided RSA public key.
+            </summary>
+            <param name="text">The text to encrypt.</param>
+            <param name="publicKey">The public key for encryption.</param>
+            <returns>The encrypted <c>string</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Decrypts the specified text using the provided RSA private key.
+            </summary>
+            <param name="encryptedText">The encrypted text to decrypt.</param>
+            <param name="privateKey">The private RSA key needed for decryption.</param>
+            <returns>Decrypted <c>string</c></returns>
+            <exception cref="T:System.Security.Cryptography.CryptographicException">If only the public key is provided, the <c>string</c> cannot be decrypted.</exception>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Encrypts the specified bytes using the provided RSA public key.
+            </summary>
+            <param name="data">The data (<c>byte[]</c>) to encrypt.</param>
+            <param name="publicKey">The public key to use for encryption.</param>
+            <returns>The encrypted bytes (System.Byte[]).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Decrypts the specified bytes using the provided private RSA key.
+            </summary>
+            <param name="encryptedData">The encrypted data bytes (<c>byte[]</c>).</param>
+            <param name="privateKey">The private key to use for decryption.</param>
+            <returns>Decrypted bytes (System.Byte[]) if successful.</returns>
+            <exception cref="T:System.Security.Cryptography.CryptographicException">If only the public key is provided, the <c>byte[]</c> array cannot be decrypted.</exception>
+        </member>
+    </members>
+</doc>
