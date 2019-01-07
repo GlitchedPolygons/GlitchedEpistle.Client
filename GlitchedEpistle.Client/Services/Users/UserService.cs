@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 using RestSharp;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
@@ -31,7 +32,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.GET,
-                resource: new Uri($"api/users/exp/{userId}", UriKind.Relative) 
+                resource: new Uri($"api/users/exp/{userId}", UriKind.Relative)
             );
 
             var response = await restClient.ExecuteTaskAsync(request);
@@ -41,6 +42,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
             }
 
             return null;
+        }
+
+        /// <inheritdoc/>
+        public async Task<List<Tuple<string, string>>> GetUserPublicKeyXml(string userId, string userIds, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"api/users/get-public-key/{userIds}", UriKind.Relative)
+            );
+            request.AddParameter(nameof(userId), userId);
+            request.AddParameter(nameof(auth), auth);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                return null;
+            }
+
+            var keys = JsonConvert.DeserializeObject<List<Tuple<string, string>>>(response.Content);
+            return keys;
         }
     }
 }
