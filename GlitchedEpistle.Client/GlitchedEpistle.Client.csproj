@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>GlitchedPolygons.GlitchedEpistle.Client</AssemblyName>
+    <RootNamespace>GlitchedPolygons.GlitchedEpistle.Client</RootNamespace>
+    <Authors>Glitched Polygons</Authors>
+    <Description>Shared code base for all epistle clients.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
