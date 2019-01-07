@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -23,5 +22,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         /// <value>Encoded JWT <see langword="string"/>.</value>
         public string Token { get; set; }
+
+        /// <summary>
+        /// The exact <see cref="DateTime"/> (UTC) this user's access to Epistle expires.
+        /// </summary>
+        public DateTime ExpirationUTC { get; set; } = DateTime.MinValue;
     }
 }
