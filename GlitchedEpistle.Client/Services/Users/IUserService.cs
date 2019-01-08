@@ -35,5 +35,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <param name="auth">The request authenticatication token.</param>
         /// <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
         Task<List<Tuple<string, string>>> GetUserPublicKeyXml(string userId, string userIds, string auth);
+
+        /// <summary>
+        /// Changes the user password.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="auth">The authentication token.</param>
+        /// <param name="oldPw">The old password hash (SHA-512).</param>
+        /// <param name="newPw">The new password hash (SHA-512).</param>
+        /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
+        Task<bool> ChangeUserPassword(string userId, string auth, string oldPw, string newPw);
+
+        /// <summary>
+        /// Creates a new user.
+        /// </summary>
+        /// <param name="passwordHash">The user's password hash (SHA-512).</param>
+        /// <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
+        /// <param name="creationSecret">The creation secret.</param>
+        /// <returns>The created user (or <c>null</c> if the creation failed).</returns>
+        Task<User> CreateUser(string passwordHash, string publicKeyXml, string creationSecret);
     }
 }

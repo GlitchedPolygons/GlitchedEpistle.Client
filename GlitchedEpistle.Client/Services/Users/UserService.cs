@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -62,6 +63,42 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 
             var keys = JsonConvert.DeserializeObject<List<Tuple<string, string>>>(response.Content);
             return keys;
+        }
+
+        /// <inheritdoc/>
+        public async Task<bool> ChangeUserPassword(string userId, string auth, string oldPw, string newPw)
+        {
+            var request = new RestRequest(
+                method: Method.PUT,
+                resource: new Uri($"api/users/change-pw/{userId}", UriKind.Relative)
+            );
+            request.AddParameter(nameof(auth), auth);
+            request.AddParameter(nameof(oldPw), oldPw);
+            request.AddParameter(nameof(newPw), newPw);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.StatusCode == HttpStatusCode.OK;
+        }
+
+        /// <inheritdoc/>
+        public async Task<User> CreateUser(string passwordHash, string publicKeyXml, string creationSecret)
+        {
+            var request = new RestRequest(
+                method: Method.POST,
+                resource: new Uri("api/users/create", UriKind.Relative)
+            );
+            request.AddParameter(nameof(passwordHash), passwordHash);
+            request.AddParameter(nameof(publicKeyXml), publicKeyXml);
+            request.AddParameter(nameof(creationSecret), creationSecret);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            if (response.StatusCode != HttpStatusCode.Created)
+            {
+                return null;
+            }
+
+            var user = JsonConvert.DeserializeObject<User>(response.Content);
+            return user;
         }
     }
 }
