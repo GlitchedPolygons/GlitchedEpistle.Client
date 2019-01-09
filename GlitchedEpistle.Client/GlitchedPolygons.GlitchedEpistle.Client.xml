@@ -4,6 +4,99 @@
         <name>GlitchedPolygons.GlitchedEpistle.Client</name>
     </assembly>
     <members>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo">
+            <summary>
+            A highly civilized conversation between two or more homo sapiens.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Id">
+            <summary>
+            Unique identifier for the convo.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreatorId">
+            <summary>
+            User ID of the conversation's creator.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Name">
+            <summary>
+            The conversation's name.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Description">
+            <summary>
+            A short description of what the convo is about.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.PasswordSHA512">
+            <summary>
+            The convo's password hashed with SHA512.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestamp">
+            <summary>
+            The <see cref="T:System.DateTime"/> (UTC) this conversation was created.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Expires">
+            <summary>
+            The exact UTC <see cref="T:System.DateTime"/> when the convo will expire.<para> </para>
+            After this moment in time, no further messages can be posted to the convo
+            and the conversation itself will be deleted 48h afterwards.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Participants">
+            <summary>
+            The people who joined the convo (their user ids).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.BannedUsers">
+            <summary>
+            A list of all the perma-banned users.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Messages">
+            <summary>
+            The conversation's messages.
+            </summary>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message">
+            <summary>
+            An epistle message.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId">
+            <summary>
+            The sender's ID.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderName">
+            <summary>
+            The sender's display username.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Timestamp">
+            <summary>
+            The message's timestamp in UTC.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedText">
+            <summary>
+            The method's encrypted text.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedAttachmentFileName">
+            <summary>
+            The encrypted attachment file name.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedAttachmentFileId">
+            <summary>
+            Attached files are not stored inside the message body due to MongoDB's 16MB document size limit.<para> </para>
+            Instead, a unique <see langword="string"/> is stored for downloading the attachment via GridFS.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User">
             <summary>
             The class that represents the epistle user.
@@ -14,6 +107,11 @@
             The user's unique identifier (the primary key for the epistle db).
             </summary>
         </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Role">
+            <summary>
+            The user's role. 
+            </summary>
+        </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PasswordSHA512">
             <summary>
             The user's password hashed with SHA512.
@@ -21,30 +119,47 @@
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Token">
             <summary>
-            The token needed to authenticate Web API requests.
+            The token needed to authenticate Web API requests.<para> </para>
+            <see cref="P:System.Tuple`2.Item1"/> is the token's UTC timestamp (when it was emitted).<para> </para>
+            <see cref="P:System.Tuple`2.Item2"/> is the token <see langword="string"/>.
             </summary>
-            <value>Encoded JWT <see langword="string"/>.</value>
         </member>
-        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.ILoginService">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestamp">
             <summary>
-            Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API.
+            The <see cref="T:System.DateTime"/> when this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> was first created.
             </summary>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.ILoginService.Login(System.String,System.String)">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC">
             <summary>
-            Logs the specified user in by authenticating the provided credentials
-            (POST request to the Glitched Epistle Web API). If authentication is successful, a valid JWT is returned.
-            That's needed for subsequent requests.
+            The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
             </summary>
-            <param name="userId">The user identifier.</param>
-            <param name="passwordSHA512">The password hash (SHA-512).</param>
-            <returns>JWT <see langword="string"/></returns>
         </member>
-        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.LoginService">
-            <inheritdoc/>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey">
+            <summary>
+            The user's private message encryption RSA key.
+            </summary>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Authentication.LoginService.Login(System.String,System.String)">
-            <inheritdoc/>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey">
+            <summary>
+            The user's public message encryption RSA key.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml">
+            <summary>
+            The user's public message encryption RSA key (XML-formatted, using preferably <see cref="M:System.Security.Cryptography.RSA.ExportParameters(System.Boolean)"/>).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.LoginFailures">
+            <summary>
+            How many failed login attempts this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> has on his record.
+            After too many, he is locked out for a while.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired">
+            <summary>
+            Checks whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s epistle membership is expired.
+            </summary>
+            <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s epistle membership is expired or not.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA">
             <summary>
@@ -102,6 +217,74 @@
             <param name="privateKey">The private key to use for decryption.</param>
             <returns>Decrypted bytes (System.Byte[]) if successful.</returns>
             <exception cref="T:System.Security.Cryptography.CryptographicException">If only the public key is provided, the <c>byte[]</c> array cannot be decrypted.</exception>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService">
+            <summary>
+            Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.Login(System.String,System.String)">
+            <summary>
+            Logs the specified user in by authenticating the provided credentials
+            (POST request to the Glitched Epistle Web API). If authentication is successful, a valid JWT is returned.
+            That's needed for subsequent requests.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="passwordSHA512">The password hash (SHA-512).</param>
+            <returns>JWT <see langword="string"/> if auth was successful; <see langword="null"/> otherwise.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserExpirationUTC(System.String)">
+            <summary>
+            Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s expiration <see cref="T:System.DateTime"/> (in UTC).
+            </summary>
+            <param name="userId">The user id.</param>
+            <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s expiration <see cref="T:System.DateTime"/> in UTC; <see langword="null"/> if the user doesn't exist.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String,System.String,System.String)">
+            <summary>
+            Gets one or more users' public key XML (RSA key needed for encrypting messages for that user).
+            </summary>
+            <param name="userId">Your user identifier.</param>
+            <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
+            <param name="auth">The request authenticatication token.</param>
+            <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(System.String,System.String,System.String,System.String)">
+            <summary>
+            Changes the user password.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="auth">The authentication token.</param>
+            <param name="oldPw">The old password hash (SHA-512).</param>
+            <param name="newPw">The new password hash (SHA-512).</param>
+            <returns><c>bool</c> indicating whether the change was successful or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.CreateUser(System.String,System.String,System.String)">
+            <summary>
+            Creates a new user.
+            </summary>
+            <param name="passwordHash">The user's password hash (SHA-512).</param>
+            <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
+            <param name="creationSecret">The creation secret.</param>
+            <returns>The created user (or <c>null</c> if the creation failed).</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Login(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserExpirationUTC(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String,System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(System.String,System.String,System.String)">
+            <inheritdoc/>
         </member>
     </members>
 </doc>
