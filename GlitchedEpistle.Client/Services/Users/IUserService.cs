@@ -17,8 +17,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="userId">The user identifier.</param>
         /// <param name="passwordSHA512">The password hash (SHA-512).</param>
+        /// <param name="totp">The 2FA code.</param>
         /// <returns>JWT <see langword="string"/> if auth was successful; <see langword="null"/> otherwise.</returns>
-        Task<string> Login(string userId, string passwordSHA512);
+        Task<string> Login(string userId, string passwordSHA512, string totp);
 
         /// <summary>
         /// Gets a <see cref="User"/>'s expiration <see cref="DateTime"/> (in UTC).
