@@ -14,7 +14,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         private readonly RestClient restClient = new RestClient("https://epistle.glitchedpolygons.com/");
 
         /// <inheritdoc/>
-        public async Task<string> Login(string userId, string passwordSHA512)
+        public async Task<string> Login(string userId, string passwordSHA512, string totp)
         {
             var request = new RestRequest(
                 method: Method.GET,
@@ -23,6 +23,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 
             request.AddParameter(nameof(userId), userId);
             request.AddParameter(nameof(passwordSHA512), passwordSHA512);
+            request.AddParameter(nameof(totp), totp);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK ? response.Content : null;

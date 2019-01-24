@@ -4,6 +4,35 @@
         <name>GlitchedPolygons.GlitchedEpistle.Client</name>
     </assembly>
     <members>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions">
+            <summary>
+            <see cref="T:System.String"/> extensions.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5(System.String,System.Boolean)">
+            <summary>
+            Computes the MD5 hash of a <c>string</c>.
+            </summary>
+            <param name="text">The text to hash.</param>
+            <param name="toLowercase">Should the output hash be lowercased?</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String,System.Boolean)">
+            <summary>
+            Computes the SHA512 hash of a <c>string</c>.
+            </summary>
+            <param name="text">The text to hash.</param>
+            <param name="toLowercase">Should the output hash <c>string</c> be lowercased?.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.EncodeToBytes(System.String,System.Text.Encoding)">
+            <summary>
+            Encodes a <c>string</c> to bytes (a <c>byte[]</c> array).
+            </summary>
+            <param name="text">The text to encode.</param>
+            <param name="encoding">The <see cref="T:System.Text.Encoding"/> to use for the conversion (default is UTF8).</param>
+            <returns>System.Byte[].</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo">
             <summary>
             A highly civilized conversation between two or more homo sapiens.
