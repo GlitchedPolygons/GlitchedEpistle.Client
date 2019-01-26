@@ -8,6 +8,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// </summary>
     public class UserRegistrationResponse
     {
+        public string Id { get; set; }
         public string PublicKeyXml { get; set; }
         public string PasswordSHA512 { get; set; }
         public DateTime CreationTimestamp { get; set; }
