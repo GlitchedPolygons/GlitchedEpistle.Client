@@ -30,6 +30,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         }
 
         /// <inheritdoc/>
+        public async Task<bool> Validate2FA(string userId, string totp)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri("api/users/login/2fa", UriKind.Relative)
+            );
+
+            request.AddParameter(nameof(userId), userId);
+            request.AddParameter(nameof(totp), totp);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.StatusCode == HttpStatusCode.OK;
+        }
+
+        /// <inheritdoc/>
         public async Task<DateTime?> GetUserExpirationUTC(string userId)
         {
             var request = new RestRequest(
@@ -82,7 +97,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         }
 
         /// <inheritdoc/>
-        public async Task<User> CreateUser(string passwordHash, string publicKeyXml, string creationSecret)
+        public async Task<UserRegistrationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret)
         {
             var request = new RestRequest(
                 method: Method.POST,
@@ -98,8 +113,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 return null;
             }
 
-            var user = JsonConvert.DeserializeObject<User>(response.Content);
-            return user;
+            return JsonConvert.DeserializeObject<UserRegistrationResponse>(response.Content);
         }
     }
 }

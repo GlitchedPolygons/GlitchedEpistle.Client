@@ -22,6 +22,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         Task<string> Login(string userId, string passwordSHA512, string totp);
 
         /// <summary>
+        /// Validates the 2fa token.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="totp">The totp.</param>
+        /// <returns>Whether the user 2FA authentication succeeded or not.</returns>
+        Task<bool> Validate2FA(string userId, string totp);
+
+        /// <summary>
         /// Gets a <see cref="User"/>'s expiration <see cref="DateTime"/> (in UTC).
         /// </summary>
         /// <param name="userId">The user id.</param>
@@ -53,7 +61,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <param name="passwordHash">The user's password hash (SHA-512).</param>
         /// <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
         /// <param name="creationSecret">The creation secret.</param>
-        /// <returns>The created user (or <c>null</c> if the creation failed).</returns>
-        Task<User> CreateUser(string passwordHash, string publicKeyXml, string creationSecret);
+        /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
+        Task<UserRegistrationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret);
     }
 }
