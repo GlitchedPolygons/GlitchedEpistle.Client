@@ -190,6 +190,11 @@
             </summary>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s epistle membership is expired or not.</returns>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse">
+            <summary>
+            A <see langword="class"/> containing the HTTP response data for <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> registration.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA">
             <summary>
             <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA"/> implementation for asymmetric RSA encryption/decryption.
@@ -263,6 +268,14 @@
             <param name="totp">The 2FA code.</param>
             <returns>JWT <see langword="string"/> if auth was successful; <see langword="null"/> otherwise.</returns>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.Validate2FA(System.String,System.String)">
+            <summary>
+            Validates the 2fa token.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="totp">The totp.</param>
+            <returns>Whether the user 2FA authentication succeeded or not.</returns>
+        </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserExpirationUTC(System.String)">
             <summary>
             Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s expiration <see cref="T:System.DateTime"/> (in UTC).
@@ -296,12 +309,15 @@
             <param name="passwordHash">The user's password hash (SHA-512).</param>
             <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
             <param name="creationSecret">The creation secret.</param>
-            <returns>The created user (or <c>null</c> if the creation failed).</returns>
+            <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService">
             <inheritdoc/>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Login(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Validate2FA(System.String,System.String)">
             <inheritdoc/>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserExpirationUTC(System.String)">

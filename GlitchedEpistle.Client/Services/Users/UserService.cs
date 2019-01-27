@@ -97,7 +97,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         }
 
         /// <inheritdoc/>
-        public async Task<UserRegistrationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret)
+        public async Task<UserCreationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret)
         {
             var request = new RestRequest(
                 method: Method.POST,
@@ -113,7 +113,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 return null;
             }
 
-            return JsonConvert.DeserializeObject<UserRegistrationResponse>(response.Content);
+            return JsonConvert.DeserializeObject<UserCreationResponse>(response.Content);
         }
     }
 }

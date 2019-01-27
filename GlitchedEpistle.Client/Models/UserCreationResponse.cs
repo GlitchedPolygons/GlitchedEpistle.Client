@@ -6,7 +6,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// <summary>
     /// A <see langword="class"/> containing the HTTP response data for <see cref="User"/> registration.
     /// </summary>
-    public class UserRegistrationResponse
+    public class UserCreationResponse
     {
         public string Id { get; set; }
         public string PublicKeyXml { get; set; }
