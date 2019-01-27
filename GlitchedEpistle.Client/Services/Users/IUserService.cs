@@ -62,6 +62,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
         /// <param name="creationSecret">The creation secret.</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        Task<UserRegistrationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret);
+        Task<UserCreationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret);
     }
 }
