@@ -29,7 +29,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <see cref="Tuple{T1,T2}.Item2"/> is the token <see langword="string"/>.
         /// </summary>
         public Tuple<DateTime, string> Token { get; set; } = null;
-        
+
         /// <summary>
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
