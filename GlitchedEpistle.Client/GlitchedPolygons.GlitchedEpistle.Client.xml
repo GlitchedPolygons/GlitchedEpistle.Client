@@ -195,6 +195,43 @@
             A <see langword="class"/> containing the HTTP response data for <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> registration.
             </summary>
         </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.Id">
+            <summary>
+            The user's unique identifier (the primary key for the epistle db).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.PasswordSHA512">
+            <summary>
+            The user's password hashed with SHA512.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.CreationTimestamp">
+            <summary>
+            The <see cref="T:System.DateTime"/> when this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> was first created.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.Role">
+            <summary>
+            The user's role. 
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.TotpSecret">
+            <summary>
+            The user's 2FA TOTP secret.
+            </summary>
+            <value>The totp secret.</value>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.TotpEmergencyBackupCodes">
+            <summary>
+            The user's 2FA TOTP emergency backup codes (can only be used once).
+            </summary>
+            <value>The 2FA TOTP emergency backup codes.</value>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.ExpirationUTC">
+            <summary>
+            The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA">
             <summary>
             <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA"/> implementation for asymmetric RSA encryption/decryption.

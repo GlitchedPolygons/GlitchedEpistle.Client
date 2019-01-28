@@ -12,6 +12,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
     public class UserService : IUserService
     {
         private readonly RestClient restClient = new RestClient("https://epistle.glitchedpolygons.com/");
+        private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
 
         /// <inheritdoc/>
         public async Task<string> Login(string userId, string passwordSHA512, string totp)
@@ -21,9 +22,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 resource: new Uri("api/users/login", UriKind.Relative)
             );
 
-            request.AddParameter(nameof(userId), userId);
-            request.AddParameter(nameof(passwordSHA512), passwordSHA512);
-            request.AddParameter(nameof(totp), totp);
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(passwordSHA512), passwordSHA512);
+            request.AddQueryParameter(nameof(totp), totp);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
@@ -37,8 +38,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 resource: new Uri("api/users/login/2fa", UriKind.Relative)
             );
 
-            request.AddParameter(nameof(userId), userId);
-            request.AddParameter(nameof(totp), totp);
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(totp), totp);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;
@@ -68,8 +69,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 method: Method.GET,
                 resource: new Uri($"api/users/get-public-key/{userIds}", UriKind.Relative)
             );
-            request.AddParameter(nameof(userId), userId);
-            request.AddParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
 
             var response = await restClient.ExecuteTaskAsync(request);
             if (response.StatusCode != HttpStatusCode.OK)
@@ -88,9 +89,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 method: Method.PUT,
                 resource: new Uri($"api/users/change-pw/{userId}", UriKind.Relative)
             );
-            request.AddParameter(nameof(auth), auth);
-            request.AddParameter(nameof(oldPw), oldPw);
-            request.AddParameter(nameof(newPw), newPw);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(oldPw), oldPw);
+            request.AddQueryParameter(nameof(newPw), newPw);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;
@@ -103,9 +104,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 method: Method.POST,
                 resource: new Uri("api/users/create", UriKind.Relative)
             );
-            request.AddParameter(nameof(passwordHash), passwordHash);
-            request.AddParameter(nameof(publicKeyXml), publicKeyXml);
-            request.AddParameter(nameof(creationSecret), creationSecret);
+
+            request.AddQueryParameter(nameof(passwordHash), passwordHash);
+            request.AddQueryParameter(nameof(publicKeyXml), publicKeyXml);
+            request.AddQueryParameter(nameof(creationSecret), creationSecret);
 
             var response = await restClient.ExecuteTaskAsync(request);
             if (response.StatusCode != HttpStatusCode.Created)
@@ -113,7 +115,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 return null;
             }
 
-            return JsonConvert.DeserializeObject<UserCreationResponse>(response.Content);
+            return JsonConvert.DeserializeObject<UserCreationResponse>(response.Content, JSON_SERIALIZER_SETTINGS);
         }
     }
 }
