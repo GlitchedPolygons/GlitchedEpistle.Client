@@ -289,6 +289,34 @@
             <returns>Decrypted bytes (System.Byte[]) if successful.</returns>
             <exception cref="T:System.Security.Cryptography.CryptographicException">If only the public key is provided, the <c>byte[]</c> array cannot be decrypted.</exception>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen">
+            <summary>
+            Asymmetric crypto key generator.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair(System.String)">
+            <summary>
+            Generates the key pair.
+            </summary>
+            <param name="outputDirectory">The output directory (where the keys should be exported into).</param>
+            <returns>Whether the key generation was successful or not.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.RSA4096Keygen">
+            <summary>
+            4096-bit RSA key generator.
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen" />
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.RSA4096Keygen.GenerateKeyPair(System.String)">
+            <summary>
+            Generates a 4096-bit RSA key pair.<para> </para>
+            The keys are exported into two files:
+            Private.rsa.pem and Public.rsa.pem (inside the specified output directory).
+            </summary>
+            <param name="outputDirectory">The output directory path (where the keys will be exported).</param>
+            <returns>Whether the key generation was successful or not.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService">
             <summary>
             Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.
