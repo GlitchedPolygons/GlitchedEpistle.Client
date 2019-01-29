@@ -78,7 +78,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 return null;
             }
 
-            var keys = JsonConvert.DeserializeObject<List<Tuple<string, string>>>(response.Content);
+            var keys = JsonConvert.DeserializeObject<List<Tuple<string, string>>>(response.Content, JSON_SERIALIZER_SETTINGS);
             return keys;
         }
 
@@ -110,7 +110,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
             request.AddQueryParameter(nameof(creationSecret), creationSecret);
 
             var response = await restClient.ExecuteTaskAsync(request);
-            if (response.StatusCode != HttpStatusCode.Created)
+            if (response.StatusCode != HttpStatusCode.OK)
             {
                 return null;
             }
