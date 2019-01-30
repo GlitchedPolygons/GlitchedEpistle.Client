@@ -4,6 +4,21 @@
         <name>GlitchedPolygons.GlitchedEpistle.Client</name>
     </assembly>
     <members>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs">
+            <summary>
+            Class containing important <see langword="const"/> URLs.
+            </summary>
+        </member>
+        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE">
+            <summary>
+            The Glitched Epistle base URL.
+            </summary>
+        </member>
+        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE_API">
+            <summary>
+            The Glitched Epistle Web API base URL.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions">
             <summary>
             Class that holds <see cref="T:System.IO.DirectoryInfo"/> extension methods.
@@ -256,6 +271,34 @@
             <summary>
             The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
             </summary>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService">
+            <summary>
+            Service class for redeeming subscription coupons.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService.UseCoupon(System.String,System.String,System.String)">
+            <summary>
+            Redeems a coupon code to extend a user's Epistle account membership.
+            </summary>
+            <param name="code">The coupon code.</param>
+            <param name="userId">The user identifier to which the coupon should be applied.</param>
+            <param name="auth">The jwt auth token.</param>
+            <returns>Whether the coupon code was redeemed successfully or not.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.ICouponService">
+            <summary>
+            Service interface for redeeming subscription coupons.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.ICouponService.UseCoupon(System.String,System.String,System.String)">
+            <summary>
+            Redeems a coupon code to extend a user's Epistle account membership.
+            </summary>
+            <param name="code">The coupon code.</param>
+            <param name="userId">The user identifier to which the coupon should be applied.</param>
+            <param name="auth">The jwt auth token.</param>
+            <returns>Whether the coupon code was redeemed successfully or not.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA">
             <summary>
