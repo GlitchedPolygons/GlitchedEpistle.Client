@@ -4,6 +4,31 @@
         <name>GlitchedPolygons.GlitchedEpistle.Client</name>
     </assembly>
     <members>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions">
+            <summary>
+            Class that holds <see cref="T:System.IO.DirectoryInfo"/> extension methods.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively(System.IO.DirectoryInfo)">
+            <summary>
+            Deletes the specified directory recursively,
+            including all of its sub-directories and files.
+            </summary>
+            <param name="dir">The directory to delete.</param>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions">
+            <summary>
+            Class holding <see cref="T:System.Security.Cryptography.RSAParameters"/> extension methods.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions.FromXml(System.String)">
+            <summary>
+            Deserializes an <see cref="T:System.Security.Cryptography.RSAParameters"/> instance from an xml <c>string</c>.
+            </summary>
+            <param name="xml">The XML containing the <see cref="T:System.Security.Cryptography.RSAParameters"/>.</param>
+            <returns><see cref="T:System.Security.Cryptography.RSAParameters"/>.</returns>
+            <exception cref="T:System.IO.InvalidDataException">Invalid XML RSA key.</exception>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions">
             <summary>
             <see cref="T:System.String"/> extensions.
@@ -316,6 +341,95 @@
             </summary>
             <param name="outputDirectory">The output directory path (where the keys will be exported).</param>
             <returns>Whether the key generation was successful or not.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger">
+            <summary>
+            Service interface for logging messages to their corresponding category's log file.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.LogMessage(System.String)">
+            <summary>
+            Logs an innocent message.
+            </summary>
+            <param name="msg">The message.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.LogWarning(System.String)">
+            <summary>
+            Logs a warning.
+            </summary>
+            <param name="msg">The warning.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.LogError(System.String)">
+            <summary>
+            Logs an error.
+            </summary>
+            <param name="msg">The error.</param>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings">
+            <summary>
+            Service interface for accessing, saving and loading user settings.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save">
+            <summary>
+            Saves the current user settings out to disk.
+            </summary>
+            <returns>Whether the settings were saved out to disk successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load">
+            <summary>
+            Loads user settings from disk into the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings"/> instance.
+            </summary>
+            <returns>Whether the loading procedure was successful or not.</returns>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String)">
+            <summary>
+            Gets or sets a user setting with its specified key <see langword="string"/>.<para> </para>
+            If you are trying to get an inexistent setting, <see langword="null"/> (or <c>string.Empty</c>) should be returned.<para> </para>
+            If you are trying to set an inexistent setting, the setting shall be created.
+            </summary>
+            <param name="key">The setting's name/key.</param>
+            <returns>The setting's <c>string</c> value; <see langword="null"/> (or <c>string.Empty</c>) if the setting doesn't exist.</returns>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String,System.String)">
+            <summary>
+            Gets a user setting by its key <c>string</c>.
+            </summary>
+            <param name="key">The setting's name/key.</param>
+            <param name="defaultValue">The setting's default <c>string</c> value (in case the setting doesn't exist).</param>
+            <returns>The setting's <c>string</c> value; the specified default value if the setting wasn't found.</returns>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String,System.Int32)">
+            <summary>
+            Gets a user setting parsed as an <c>int</c>.
+            </summary>
+            <param name="key">The setting's key.</param>
+            <param name="defaultValue">The setting's default <c>int</c> value to return in case the setting doesn't exist or couldn't be parsed.</param>
+            <returns>The setting's <c>int</c> value; or the specified default value if the setting wasn't found or couldn't be parsed.</returns>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String,System.Boolean)">
+            <summary>
+            Gets a user setting parsed as a <c>bool</c>.
+            </summary>
+            <param name="key">The setting's key.</param>
+            <param name="defaultValue">The setting's default <c>bool</c> value to return in case the setting doesn't exist or couldn't be parsed.</param>
+            <returns>The setting's <c>bool</c> value; or the specified default value if the setting wasn't found or couldn't be parsed.</returns>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String,System.Single)">
+            <summary>
+            Gets a user setting parsed as a <c>float</c>.
+            </summary>
+            <param name="key">The setting's key.</param>
+            <param name="defaultValue">The setting's default <c>float</c> value to return in case the setting doesn't exist or couldn't be parsed.</param>
+            <returns>The setting's <c>float</c> value; or the specified default value if the setting wasn't found or couldn't be parsed.</returns>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String,System.Double)">
+            <summary>
+            Gets a user setting parsed as a <c>double</c>.
+            </summary>
+            <param name="key">The setting's key.</param>
+            <param name="defaultValue">The setting's default <c>double</c> value to return in case the setting doesn't exist or couldn't be parsed.</param>
+            <returns>The setting's <c>double</c> value; or the specified default value if the setting wasn't found or couldn't be parsed.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService">
             <summary>
