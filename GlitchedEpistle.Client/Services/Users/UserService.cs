@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using GlitchedPolygons.GlitchedEpistle.Client.Models;
-using Newtonsoft.Json;
+using System.Collections.Generic;
+
 using RestSharp;
+using Newtonsoft.Json;
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
+using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 {
     /// <inheritdoc/>
     public class UserService : IUserService
     {
-        private readonly RestClient restClient = new RestClient("https://epistle.glitchedpolygons.com/");
+        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API);
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
 
         /// <inheritdoc/>
@@ -19,7 +21,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.GET,
-                resource: new Uri("api/users/login", UriKind.Relative)
+                resource: new Uri("users/login", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(userId), userId);
@@ -35,7 +37,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.GET,
-                resource: new Uri("api/users/login/2fa", UriKind.Relative)
+                resource: new Uri("users/login/2fa", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(userId), userId);
@@ -50,7 +52,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.GET,
-                resource: new Uri($"api/users/exp/{userId}", UriKind.Relative)
+                resource: new Uri($"users/exp/{userId}", UriKind.Relative)
             );
 
             var response = await restClient.ExecuteTaskAsync(request);
@@ -67,7 +69,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.GET,
-                resource: new Uri($"api/users/get-public-key/{userIds}", UriKind.Relative)
+                resource: new Uri($"users/get-public-key/{userIds}", UriKind.Relative)
             );
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
@@ -87,7 +89,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.PUT,
-                resource: new Uri($"api/users/change-pw/{userId}", UriKind.Relative)
+                resource: new Uri($"users/change-pw/{userId}", UriKind.Relative)
             );
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(oldPw), oldPw);
@@ -102,7 +104,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         {
             var request = new RestRequest(
                 method: Method.POST,
-                resource: new Uri("api/users/create", UriKind.Relative)
+                resource: new Uri("users/create", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(passwordHash), passwordHash);
