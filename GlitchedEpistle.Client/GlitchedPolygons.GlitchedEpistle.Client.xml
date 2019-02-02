@@ -490,6 +490,14 @@
             <param name="totp">The 2FA code.</param>
             <returns>JWT <see langword="string"/> if auth was successful; <see langword="null"/> otherwise.</returns>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.RefreshAuthToken(System.String,System.String)">
+            <summary>
+            Refreshes the authentication token.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="auth">The current authentication token.</param>
+            <returns>If all goes well, you should receive your new, fresh auth token from the backend.</returns>
+        </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.Validate2FA(System.String,System.String)">
             <summary>
             Validates the 2fa token.
@@ -537,6 +545,9 @@
             <inheritdoc/>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Login(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.RefreshAuthToken(System.String,System.String)">
             <inheritdoc/>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Validate2FA(System.String,System.String)">
