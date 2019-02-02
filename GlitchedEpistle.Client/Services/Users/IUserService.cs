@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
@@ -20,6 +20,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <param name="totp">The 2FA code.</param>
         /// <returns>JWT <see langword="string"/> if auth was successful; <see langword="null"/> otherwise.</returns>
         Task<string> Login(string userId, string passwordSHA512, string totp);
+
+        /// <summary>
+        /// Refreshes the authentication token.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="auth">The current authentication token.</param>
+        /// <returns>If all goes well, you should receive your new, fresh auth token from the backend.</returns>
+        Task<string> RefreshAuthToken(string userId, string auth);
 
         /// <summary>
         /// Validates the 2fa token.
