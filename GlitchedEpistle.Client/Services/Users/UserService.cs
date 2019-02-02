@@ -33,6 +33,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         }
 
         /// <inheritdoc/>
+        public async Task<string> RefreshAuthToken(string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri("users/login/refresh", UriKind.Relative)
+            );
+
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
+        }
+
+        /// <inheritdoc/>
         public async Task<bool> Validate2FA(string userId, string totp)
         {
             var request = new RestRequest(
