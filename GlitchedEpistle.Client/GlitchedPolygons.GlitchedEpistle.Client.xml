@@ -272,6 +272,24 @@
             The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
             </summary>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider">
+            <summary>
+            Service interface responsible for retrieving/accessing convos.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Convos">
+            <summary>
+            Gets all the convos currently loaded.
+            </summary>
+            <value>The convos.</value>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> with the specified identifier.
+            </summary>
+            <param name="id">The <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Id"/> identifier.</param>
+            <returns>The matching <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> (or <c>null</c> if the convo couldn't be found).</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService">
             <summary>
             Service class for redeeming subscription coupons.
