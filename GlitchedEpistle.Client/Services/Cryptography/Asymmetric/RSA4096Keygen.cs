@@ -32,7 +32,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
 
             try
             {
-
                 Directory.CreateDirectory(outputDirectory);
 
                 await Task.Run(() =>
