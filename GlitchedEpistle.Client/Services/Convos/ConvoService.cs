@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 
 using RestSharp;
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
+using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
@@ -36,8 +38,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.POST,
                 resource: new Uri("convos/create", UriKind.Relative)
             );
+            request.AddJsonBody(convoDto);
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.Content;
         }
 
         public async Task<bool> DeleteConvo(string convoId, string convoPasswordHash, string userId, string auth)
@@ -49,6 +55,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful;
         }
 
         public async Task<bool> PostMessage(string convoId, string convoPasswordHash, string userId, string auth, string senderName, string messageBodiesJson)
@@ -62,9 +71,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(senderName), senderName);
             request.AddQueryParameter(nameof(messageBodiesJson), messageBodiesJson);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful;
         }
 
-        public async Task<string> GetConvoMetadata(string convoId, string convoPasswordHash, string userId, string auth)
+        public async Task<ConvoMetadataDto> GetConvoMetadata(string convoId, string convoPasswordHash, string userId, string auth)
         {
             var request = new RestRequest(
                 method: Method.GET,
@@ -73,6 +85,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful ? JsonConvert.DeserializeObject<ConvoMetadataDto>(response.Content) : null;
         }
 
         public async Task<string> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0)
@@ -85,6 +100,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(fromIndex), fromIndex.ToString());
+
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.Content;
         }
 
         public async Task<int> IndexOf(string convoId, string convoPasswordHash, string userId, string auth, string messageId)
@@ -97,6 +115,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(messageId), messageId);
+            var response = await restClient.ExecuteTaskAsync(request);
+            return int.TryParse(response.Content, out int i) ? i : -1;
         }
 
         public async Task<bool> JoinConvo(string convoId, string convoPasswordHash, string userId, string auth)
@@ -108,6 +128,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful;
         }
 
         public async Task<bool> LeaveConvo(string convoId, string convoPasswordHash, string userId, string auth)
@@ -119,6 +141,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful;
         }
 
         public async Task<bool> KickUser(string convoId, string convoPasswordHash, string convoAdminId, string auth, string userIdToKick, bool permaBan)
@@ -132,6 +156,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(userIdToKick), userIdToKick);
             request.AddQueryParameter(nameof(permaBan), permaBan.ToString());
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful;
         }
     }
 }
