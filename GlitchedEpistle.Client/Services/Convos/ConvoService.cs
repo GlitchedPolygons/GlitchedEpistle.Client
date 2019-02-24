@@ -29,5 +29,109 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             var response = await restClient.ExecuteTaskAsync(request);
             return response.Content;
         }
+
+        public async Task<string> CreateConvo(ConvoCreationDto convoDto, string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.POST,
+                resource: new Uri("convos/create", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+        }
+
+        public async Task<bool> DeleteConvo(string convoId, string convoPasswordHash, string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.DELETE,
+                resource: new Uri($"convos/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+        }
+
+        public async Task<bool> PostMessage(string convoId, string convoPasswordHash, string userId, string auth, string senderName, string messageBodiesJson)
+        {
+            var request = new RestRequest(
+                method: Method.POST,
+                resource: new Uri($"convos/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            request.AddQueryParameter(nameof(senderName), senderName);
+            request.AddQueryParameter(nameof(messageBodiesJson), messageBodiesJson);
+        }
+
+        public async Task<string> GetConvoMetadata(string convoId, string convoPasswordHash, string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"convos/meta/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+        }
+
+        public async Task<string> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"convos/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            request.AddQueryParameter(nameof(fromIndex), fromIndex.ToString());
+        }
+
+        public async Task<int> IndexOf(string convoId, string convoPasswordHash, string userId, string auth, string messageId)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"convos/indexof/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            request.AddQueryParameter(nameof(messageId), messageId);
+        }
+
+        public async Task<bool> JoinConvo(string convoId, string convoPasswordHash, string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.PUT,
+                resource: new Uri($"convos/join/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+        }
+
+        public async Task<bool> LeaveConvo(string convoId, string convoPasswordHash, string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.PUT,
+                resource: new Uri($"convos/leave/{convoId}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+        }
+
+        public async Task<bool> KickUser(string convoId, string convoPasswordHash, string convoAdminId, string auth, string userIdToKick, bool permaBan)
+        {
+            var request = new RestRequest(
+                method: Method.PUT,
+                resource: new Uri($"convos/{convoId}/kick/{userIdToKick}", UriKind.Relative)
+            );
+            request.AddQueryParameter(nameof(convoAdminId), convoAdminId);
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            request.AddQueryParameter(nameof(userIdToKick), userIdToKick);
+            request.AddQueryParameter(nameof(permaBan), permaBan.ToString());
+        }
     }
 }
