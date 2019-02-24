@@ -4,7 +4,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Models;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
     /// <summary>
-    /// Service interface responsible for retrieving/accessing convos.
+    /// Service interface responsible for retrieving/accessing convos (local).
     /// </summary>
     public interface IConvoProvider
     {
