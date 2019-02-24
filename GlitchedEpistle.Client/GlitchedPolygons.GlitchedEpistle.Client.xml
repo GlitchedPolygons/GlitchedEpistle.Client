@@ -274,7 +274,7 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider">
             <summary>
-            Service interface responsible for retrieving/accessing convos.
+            Service interface responsible for retrieving/accessing convos (local).
             </summary>
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Convos">
@@ -289,6 +289,11 @@
             </summary>
             <param name="id">The <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Id"/> identifier.</param>
             <returns>The matching <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> (or <c>null</c> if the convo couldn't be found).</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService">
+            <summary>
+            /// Service interface responsible for accessing convos on the web API (remote).
+            </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService">
             <summary>
