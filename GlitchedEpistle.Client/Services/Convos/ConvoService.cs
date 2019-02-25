@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Net;
 using System.Threading.Tasks;
 
 using RestSharp;
+using Newtonsoft.Json;
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
-using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
