@@ -25,6 +25,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.GET,
                 resource: new Uri($"convos/attachments/{attachmentId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(convoId), convoId);
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
@@ -39,6 +40,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.POST,
                 resource: new Uri("convos/create", UriKind.Relative)
             );
+
             request.AddJsonBody(convoDto);
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
@@ -53,6 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.DELETE,
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
@@ -67,6 +70,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.POST,
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
@@ -83,6 +87,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.GET,
                 resource: new Uri($"convos/meta/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
@@ -97,6 +102,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.GET,
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
@@ -112,10 +118,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.GET,
                 resource: new Uri($"convos/indexof/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(messageId), messageId);
+
             var response = await restClient.ExecuteTaskAsync(request);
             return int.TryParse(response.Content, out int i) ? i : -1;
         }
@@ -126,9 +134,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.PUT,
                 resource: new Uri($"convos/join/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
         }
@@ -139,9 +149,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.PUT,
                 resource: new Uri($"convos/leave/{convoId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
         }
@@ -152,11 +164,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 method: Method.PUT,
                 resource: new Uri($"convos/{convoId}/kick/{userIdToKick}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(convoAdminId), convoAdminId);
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(userIdToKick), userIdToKick);
             request.AddQueryParameter(nameof(permaBan), permaBan.ToString());
+
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
         }
