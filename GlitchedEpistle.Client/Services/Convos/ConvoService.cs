@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 using RestSharp;
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using Newtonsoft.Json;
 
@@ -90,7 +91,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             return response.IsSuccessful ? JsonConvert.DeserializeObject<ConvoMetadataDto>(response.Content) : null;
         }
 
-        public async Task<string> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0)
+        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0)
         {
             var request = new RestRequest(
                 method: Method.GET,
@@ -102,7 +103,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(fromIndex), fromIndex.ToString());
 
             var response = await restClient.ExecuteTaskAsync(request);
-            return response.Content;
+            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
         }
 
         public async Task<int> IndexOf(string convoId, string convoPasswordHash, string userId, string auth, string messageId)
