@@ -130,6 +130,54 @@
             The conversation's messages.
             </summary>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto">
+            <summary>
+            Data transfer object class for a conversation's metadata (like e.g. the name, description, etc...).
+            Does not contain sensitive information such as passwords, etc...
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Id">
+            <summary>
+            Unique <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> identifier.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreatorId">
+            <summary>
+            The creator user identifier.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Name">
+            <summary>
+            <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> name/title.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Description">
+            <summary>
+            The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s description text.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestamp">
+            <summary>
+            The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s creation timestamp (UTC).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Expires">
+            <summary>
+            Convo expiration <see cref="T:System.DateTime"/> (UTC).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Participants">
+            <summary>
+            The convo's participants (user ids separated by a comma: ',').
+            </summary>
+            <value>The participants.</value>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.BannedUsers">
+            <summary>
+            The convo's banned users (their user id), separated by a comma: ','.
+            </summary>
+            <value>The banned users.</value>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message">
             <summary>
             An epistle message.
@@ -272,6 +320,118 @@
             The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
             </summary>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService">
+            <summary>
+            Service interface responsible for accessing convos on the web API (remote).
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService" /> <c>interface</c>.
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.DownloadAttachment(System.String,System.String,System.String,System.String)">
+            <summary>
+            Downloads a message's attachment.
+            </summary>
+            <param name="attachmentId">The attachment identifier.</param>
+            <param name="convoId">The convo identifier.</param>
+            <param name="userId">The user identifier (who's making the request).</param>
+            <param name="auth">The authentication token.</param>
+            <returns>The attachment file <c>byte[]</c>, encoded to <c>string</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto,System.String,System.String)">
+            <summary>
+            Creates a new convo on the server.
+            </summary>
+            <param name="convoDto">The convo creation DTO.</param>
+            <param name="userId">The user identifier (who's making the request).</param>
+            <param name="auth">The authentication token (JWT).</param>
+            <returns><c>null</c> if creation failed; the created <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />'s unique id.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.DeleteConvo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Deletes a convo server-side.
+            </summary>
+            <param name="convoId">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />'s identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
+            <param name="auth">The authentication JWT.</param>
+            <returns>Whether deletion was successful or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.PostMessage(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Posts a message to a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="auth">The authentication.</param>
+            <param name="senderName">Name (display name) of the sender.</param>
+            <param name="messageBodiesJson">The encrypted message bodies (json string).</param>
+            <returns>Whether the message was posted successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.GetConvoMetadata(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets a convo's metadata (description, timestamp, etc...).
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (needs to be a participant of the convo).</param>
+            <param name="auth">The authentication token.</param>
+            <returns>The convo's metadata wrapped into a DTO (<c>null</c> if something failed).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Gets the convo messages.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (needs to be a convo participant).</param>
+            <param name="auth">The request authentication token.</param>
+            <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
+            <returns>The retrieved <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the index of a message inside a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier of who's making the request.</param>
+            <param name="auth">The request authentication JWT.</param>
+            <param name="messageId">The message identifier.</param>
+            <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message" />'s index integer; if something fails, <c>-1</c> is returned.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.JoinConvo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Join a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
+            </summary>
+            <param name="convoId">The identifier of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" /> that you're trying to join.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user's identifier (who wants to join).</param>
+            <param name="auth">The authentication token.</param>
+            <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" /> was joined successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.LeaveConvo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Leave a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (who's leaving the convo).</param>
+            <param name="auth">The request authentication token.</param>
+            <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" /> was left successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.KickUser(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Kick a user from a conversation.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoAdminId">Your user id (you need to be a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />'s admin in order to kick people out of it).</param>
+            <param name="auth">The request authentication token.</param>
+            <param name="userIdToKick">The user id of who you're kicking out.</param>
+            <param name="permaBan">If set to <c>true</c>, the kicked user won't be able to rejoin the convo permanently.</param>
+            <returns>Whether the user was kicked out successfully or not.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider">
             <summary>
             Service interface responsible for retrieving/accessing convos (local).
@@ -292,8 +452,113 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService">
             <summary>
-            /// Service interface responsible for accessing convos on the web API (remote).
+            Service interface responsible for accessing convos on the web API (remote).
             </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.DownloadAttachment(System.String,System.String,System.String,System.String)">
+            <summary>
+            Downloads a message's attachment.
+            </summary>
+            <param name="attachmentId">The attachment identifier.</param>
+            <param name="convoId">The convo identifier.</param>
+            <param name="userId">The user identifier (who's making the request).</param>
+            <param name="auth">The authentication token.</param>
+            <returns>The attachment file <c>byte[]</c>, encoded to <c>string</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto,System.String,System.String)">
+            <summary>
+            Creates a new convo on the server.
+            </summary>
+            <param name="convoDto">The convo creation DTO.</param>
+            <param name="userId">The user identifier (who's making the request).</param>
+            <param name="auth">The authentication token (JWT).</param>
+            <returns><c>null</c> if creation failed; the created <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s unique id.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.DeleteConvo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Deletes a convo server-side.
+            </summary>
+            <param name="convoId">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
+            <param name="auth">The authentication JWT.</param>
+            <returns>Whether deletion was successful or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.PostMessage(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Posts a message to a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="auth">The authentication.</param>
+            <param name="senderName">Name (display name) of the sender.</param>
+            <param name="messageBodiesJson">The encrypted message bodies (json string).</param>
+            <returns>Whether the message was posted successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.GetConvoMetadata(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets a convo's metadata (description, timestamp, etc...).
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (needs to be a participant of the convo).</param>
+            <param name="auth">The authentication token.</param>
+            <returns>The convo's metadata wrapped into a DTO (<c>null</c> if something failed).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Gets the convo messages.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (needs to be a convo participant).</param>
+            <param name="auth">The request authentication token.</param>
+            <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
+            <returns>The retrieved <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message"/>s (<c>null</c> if everything is up to date or if something failed).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the index of a message inside a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier of who's making the request.</param>
+            <param name="auth">The request authentication JWT.</param>
+            <param name="messageId">The message identifier.</param>
+            <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message"/>'s index integer; if something fails, <c>-1</c> is returned.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.JoinConvo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Join a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
+            </summary>
+            <param name="convoId">The identifier of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> that you're trying to join.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user's identifier (who wants to join).</param>
+            <param name="auth">The authentication token.</param>
+            <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> was joined successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.LeaveConvo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Leave a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="userId">The user identifier (who's leaving the convo).</param>
+            <param name="auth">The request authentication token.</param>
+            <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> was left successfully or not.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.KickUser(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Kick a user from a conversation.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoAdminId">Your user id (you need to be a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s admin in order to kick people out of it).</param>
+            <param name="auth">The request authentication token.</param>
+            <param name="userIdToKick">The user id of who you're kicking out.</param>
+            <param name="permaBan">If set to <c>true</c>, the kicked user won't be able to rejoin the convo permanently.</param>
+            <returns>Whether the user was kicked out successfully or not.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService">
             <summary>
