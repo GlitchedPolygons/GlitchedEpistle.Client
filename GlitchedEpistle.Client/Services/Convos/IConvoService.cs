@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
@@ -13,7 +14,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         Task<bool> DeleteConvo(string convoId, string convoPasswordHash, string userId, string auth);
         Task<bool> PostMessage(string convoId, string convoPasswordHash, string userId, string auth, string senderName, string messageBodiesJson);
         Task<ConvoMetadataDto> GetConvoMetadata(string convoId, string convoPasswordHash, string userId, string auth);
-        Task<string> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0);
+        Task<Message[]> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0);
         Task<int> IndexOf(string convoId, string convoPasswordHash, string userId, string auth, string messageId);
         Task<bool> JoinConvo(string convoId, string convoPasswordHash, string userId, string auth);
         Task<bool> LeaveConvo(string convoId, string convoPasswordHash, string userId, string auth);
