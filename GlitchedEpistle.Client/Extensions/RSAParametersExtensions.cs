@@ -47,5 +47,23 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
 
             return rsaParameters;
         }
+
+        /// <summary>
+        /// Converts <see cref="RSAParameters"/> to xml.
+        /// </summary>
+        /// <param name="parameters">The key to convert to xml.</param>
+        /// <returns>System.String.</returns>
+        public static string ToXmlString(this RSAParameters parameters)
+        {
+            return string.Format("<RSAKeyValue><Modulus>{0}</Modulus><Exponent>{1}</Exponent><P>{2}</P><Q>{3}</Q><DP>{4}</DP><DQ>{5}</DQ><InverseQ>{6}</InverseQ><D>{7}</D></RSAKeyValue>",
+                parameters.Modulus != null ? Convert.ToBase64String(parameters.Modulus) : null,
+                parameters.Exponent != null ? Convert.ToBase64String(parameters.Exponent) : null,
+                parameters.P != null ? Convert.ToBase64String(parameters.P) : null,
+                parameters.Q != null ? Convert.ToBase64String(parameters.Q) : null,
+                parameters.DP != null ? Convert.ToBase64String(parameters.DP) : null,
+                parameters.DQ != null ? Convert.ToBase64String(parameters.DQ) : null,
+                parameters.InverseQ != null ? Convert.ToBase64String(parameters.InverseQ) : null,
+                parameters.D != null ? Convert.ToBase64String(parameters.D) : null);
+        }
     }
 }
