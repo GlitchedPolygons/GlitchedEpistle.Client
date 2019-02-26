@@ -44,6 +44,13 @@
             <returns><see cref="T:System.Security.Cryptography.RSAParameters"/>.</returns>
             <exception cref="T:System.IO.InvalidDataException">Invalid XML RSA key.</exception>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions.ToXmlString(System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Converts <see cref="T:System.Security.Cryptography.RSAParameters"/> to xml.
+            </summary>
+            <param name="parameters">The key to convert to xml.</param>
+            <returns>System.String.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions">
             <summary>
             <see cref="T:System.String"/> extensions.
