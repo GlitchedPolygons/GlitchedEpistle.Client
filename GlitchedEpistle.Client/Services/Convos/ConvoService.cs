@@ -20,29 +20,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API);
 
         /// <summary>
-        /// Downloads a message's attachment.
-        /// </summary>
-        /// <param name="attachmentId">The attachment identifier.</param>
-        /// <param name="convoId">The convo identifier.</param>
-        /// <param name="userId">The user identifier (who's making the request).</param>
-        /// <param name="auth">The authentication token.</param>
-        /// <returns>The attachment file <c>byte[]</c>, encoded to <c>string</c>.</returns>
-        public async Task<string> DownloadAttachment(string attachmentId, string convoId, string userId, string auth)
-        {
-            var request = new RestRequest(
-                method: Method.GET,
-                resource: new Uri($"convos/attachments/{attachmentId}", UriKind.Relative)
-            );
-
-            request.AddQueryParameter(nameof(convoId), convoId);
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(auth), auth);
-
-            var response = await restClient.ExecuteTaskAsync(request);
-            return response.Content;
-        }
-
-        /// <summary>
         /// Creates a new convo on the server.
         /// </summary>
         /// <param name="convoDto">The convo creation DTO.</param>
@@ -108,7 +85,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(senderName), senderName);
-            request.AddQueryParameter(nameof(messageBodiesJson), messageBodiesJson);
+            request.AddJsonBody(messageBodiesJson);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
@@ -146,7 +123,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <param name="auth">The request authentication token.</param>
         /// <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
-        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0)
+        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0) // TODO: adapt to new web API gridFS variant asap!!
         {
             var request = new RestRequest(
                 method: Method.GET,
