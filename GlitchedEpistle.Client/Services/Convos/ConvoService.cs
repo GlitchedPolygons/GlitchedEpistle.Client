@@ -85,7 +85,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
             request.AddQueryParameter(nameof(senderName), senderName);
-            request.AddJsonBody(messageBodiesJson);
+            request.AddParameter(nameof(messageBodiesJson), messageBodiesJson, "application/json", ParameterType.RequestBody);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;

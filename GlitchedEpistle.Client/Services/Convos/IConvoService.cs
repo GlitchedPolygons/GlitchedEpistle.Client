@@ -10,16 +10,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
     public interface IConvoService
     {
         /// <summary>
-        /// Downloads a message's attachment.
-        /// </summary>
-        /// <param name="attachmentId">The attachment identifier.</param>
-        /// <param name="convoId">The convo identifier.</param>
-        /// <param name="userId">The user identifier (who's making the request).</param>
-        /// <param name="auth">The authentication token.</param>
-        /// <returns>The attachment file <c>byte[]</c>, encoded to <c>string</c>.</returns>
-        Task<string> DownloadAttachment(string attachmentId, string convoId, string userId, string auth);
-
-        /// <summary>
         /// Creates a new convo on the server.
         /// </summary>
         /// <param name="convoDto">The convo creation DTO.</param>
