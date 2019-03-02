@@ -687,6 +687,14 @@
             </summary>
             <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography" />
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography"/> class.
+            </summary>
+            <param name="aes">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography"/> instance (should be injected via IoC).</param>
+            <param name="rsa">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA"/> instance (should be injected via IoC).</param>
+            <param name="gzip">The <see cref="T:GlitchedPolygons.Services.CompressionUtility.ICompressionUtility"/> instance needed for compression (should be injected via IoC).</param>
+        </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
             <summary>
             Encrypts a message json <c>string</c> for a specific recipient, whose public encryption RSA key you know (xml <c>string</c>).
@@ -736,6 +744,22 @@
             <param name="encryptionResult">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult"/> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt(System.Byte[])"/>.</param>
             <returns>Decrypted <c>byte[]</c> or <see langword="null"/> if decryption failed.</returns>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)">
+            <summary>
+            Encrypts data using a password.
+            </summary>
+            <param name="data">The data to encrypt.</param>
+            <param name="password">The password used to derive the AES key.</param>
+            <returns>The encrypted data bytes.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)">
+            <summary>
+            Decrypts data that was encrypted using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/>.
+            </summary>
+            <param name="encryptedData">The encrypted data.</param>
+            <param name="password">The password that was used to encrypt the data.</param>
+            <returns>The decrypted <c>byte[]</c> array.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography">
             <summary>
             Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="T:System.Security.Cryptography.AesManaged"/>.
@@ -757,6 +781,22 @@
             </summary>
             <param name="encryptionResult">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])" />.</param>
             <returns>Decrypted <c>byte[]</c> or <see langword="null" /> if decryption failed.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)">
+            <summary>
+            Encrypts data using a password.
+            </summary>
+            <param name="data">The data to encrypt.</param>
+            <param name="password">The password used to derive the AES key.</param>
+            <returns>The encrypted data bytes.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)">
+            <summary>
+            Decrypts data that was encrypted using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/>.
+            </summary>
+            <param name="encryptedBytes">The encrypted data that was returned by <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/>.</param>
+            <param name="password">The password that was used to encrypt the data.</param>
+            <returns>The decrypted <c>byte[]</c> array.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger">
             <summary>
