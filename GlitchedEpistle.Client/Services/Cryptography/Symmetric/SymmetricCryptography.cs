@@ -1,33 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Cryptography;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
 {
+    /// <summary>
+    /// Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="AesManaged"/>.
+    /// Implements the <see cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <see langword="interface"/>.
+    /// </summary>
+    /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" />
     public class SymmetricCryptography : ISymmetricCryptography
     {
-        public async Task<string> Encrypt(string plainText, string password, string salt)
+        /// <summary>
+        /// Encrypts the specified data using a randomly generated key and initialization vector.<para></para>
+        /// Returns an <see cref="EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.
+        /// </summary>
+        /// <param name="data">The data to encrypt.</param>
+        /// <returns><see cref="EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.</returns>
+        public EncryptionResult Encrypt(byte[] data)
         {
-            //string encryptedText;
-            //using (var input = new MemoryStream(Encoding.UTF8.GetBytes(plainText)))
-            //using (var output = new MemoryStream())
-            //using (var rfc = new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt), 133769))
-            //using (var aes = new AesManaged { Key = rfc.GetBytes(32) })
-            //using (var cryptoStream = new CryptoStream(output, aes.CreateEncryptor(), CryptoStreamMode.Write))
-            //{
-            //    await input.CopyToAsync(cryptoStream);
-            //    encryptedText = Convert.ToBase64String(output.ToArray());
-            //}
-            //return encryptedText;
-            throw new NotImplementedException();
+            EncryptionResult result;
+            using (var aes = new AesManaged())
+            {
+                aes.GenerateIV();
+                aes.GenerateKey();
+                using (ICryptoTransform encryptor = aes.CreateEncryptor())
+                {
+                    result = new EncryptionResult
+                    {
+                        iv = aes.IV,
+                        key = aes.Key,
+                        encryptedData = encryptor.TransformFinalBlock(data, 0, data.Length)
+                    };
+                }
+            }
+            return result;
         }
 
-        public async Task<string> Decrypt(string encryptedText, string password, string salt)
+        /// <summary>
+        /// Decrypts the specified <see cref="EncryptionResult" /> that was obtained using <see cref="Encrypt(System.Byte[])" />.
+        /// </summary>
+        /// <param name="encryptionResult">The <see cref="EncryptionResult" /> that was obtained using <see cref="Encrypt(System.Byte[])" />.</param>
+        /// <returns>Decrypted <c>byte[]</c> or <see langword="null" /> if decryption failed.</returns>
+        public byte[] Decrypt(EncryptionResult encryptionResult)
         {
-            throw new NotImplementedException();
+            byte[] decryptedBytes;
+            using (var aes = new AesManaged())
+            {
+                aes.IV = encryptionResult.iv;
+                aes.Key = encryptionResult.key;
+                using (ICryptoTransform decryptor = aes.CreateDecryptor())
+                {
+                    decryptedBytes = decryptor.TransformFinalBlock(encryptionResult.encryptedData, 0, encryptionResult.encryptedData.Length);
+                }
+            }
+            return decryptedBytes;
         }
     }
 }

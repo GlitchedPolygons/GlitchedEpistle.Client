@@ -334,16 +334,6 @@
             </summary>
             <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService" />
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.DownloadAttachment(System.String,System.String,System.String,System.String)">
-            <summary>
-            Downloads a message's attachment.
-            </summary>
-            <param name="attachmentId">The attachment identifier.</param>
-            <param name="convoId">The convo identifier.</param>
-            <param name="userId">The user identifier (who's making the request).</param>
-            <param name="auth">The authentication token.</param>
-            <returns>The attachment file <c>byte[]</c>, encoded to <c>string</c>.</returns>
-        </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto,System.String,System.String)">
             <summary>
             Creates a new convo on the server.
@@ -461,16 +451,6 @@
             <summary>
             Service interface responsible for accessing convos on the web API (remote).
             </summary>
-        </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.DownloadAttachment(System.String,System.String,System.String,System.String)">
-            <summary>
-            Downloads a message's attachment.
-            </summary>
-            <param name="attachmentId">The attachment identifier.</param>
-            <param name="convoId">The convo identifier.</param>
-            <param name="userId">The user identifier (who's making the request).</param>
-            <param name="auth">The authentication token.</param>
-            <returns>The attachment file <c>byte[]</c>, encoded to <c>string</c>.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto,System.String,System.String)">
             <summary>
@@ -679,6 +659,104 @@
             </summary>
             <param name="outputDirectory">The output directory path (where the keys will be exported).</param>
             <returns>Whether the key generation was successful or not.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography">
+            <summary>
+            Service interface for comfortably encrypting/decrypting epistle messages (usually json strings).
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Encrypts a message json <c>string</c> for a specific recipient, whose public encryption RSA key you know (xml <c>string</c>).
+            </summary>
+            <param name="messageJson">The message json (<c>string</c>).</param>
+            <param name="recipientPublicRsaKey">The recipient's public RSA key.</param>
+            <returns>The encrypted message <c>string</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Decrypts a message that's been encrypted using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/> method.
+            </summary>
+            <param name="encryptedMessageJson">The encrypted message json <see langword="string"/>.</param>
+            <param name="privateDecryptionRsaKey">Your private decryption RSA key.</param>
+            <returns>The decrypted message json (or <see langword="null"/> if decryption failed in some way).</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography">
+            <summary>
+            Service interface implementation for comfortably encrypting/decrypting epistle messages (usually json strings).
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Encrypts a message json <c>string</c> for a specific recipient, whose public encryption RSA key you know (xml <c>string</c>).
+            </summary>
+            <param name="messageJson">The message json (<c>string</c>) to encrypt.</param>
+            <param name="recipientPublicRsaKey">The recipient's public RSA key (used for encryption).</param>
+            <returns>The encrypted message <c>string</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
+            <summary>
+            Decrypts a message that's been encrypted using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)" /> method.
+            </summary>
+            <param name="encryptedMessage">The encrypted message <see langword="string"/> obtained via <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/>.</param>
+            <param name="privateDecryptionRsaKey">Your private message decryption RSA key.</param>
+            <returns>The decrypted message json (or <see langword="null" /> if decryption failed in some way).</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult">
+            <summary>
+            The result of encrypting some data using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])"/> method.
+            Contains the encrypted bytes and the key + initialization vector used for the encryption (you need those for decryption).
+            Implements the <see cref="T:System.IDisposable" />
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Dispose">
+            <summary>
+            Overwrites the <see cref="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.key"/> and <see cref="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.iv"/> bytes with zeros.
+            </summary>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography">
+            <summary>
+            Service interface for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays).
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt(System.Byte[])">
+            <summary>
+            Encrypts the specified data using a randomly generated key and initialization vector.<para> </para>
+            Returns an <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult"/> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.
+            </summary>
+            <param name="data">The data to encrypt.</param>
+            <returns><see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult"/> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)">
+            <summary>
+            Decrypts the specified <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult"/> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt(System.Byte[])"/>.
+            </summary>
+            <param name="encryptionResult">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult"/> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt(System.Byte[])"/>.</param>
+            <returns>Decrypted <c>byte[]</c> or <see langword="null"/> if decryption failed.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography">
+            <summary>
+            Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="T:System.Security.Cryptography.AesManaged"/>.
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <see langword="interface"/>.
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])">
+            <summary>
+            Encrypts the specified data using a randomly generated key and initialization vector.<para></para>
+            Returns an <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.
+            </summary>
+            <param name="data">The data to encrypt.</param>
+            <returns><see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)">
+            <summary>
+            Decrypts the specified <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])" />.
+            </summary>
+            <param name="encryptionResult">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])" />.</param>
+            <returns>Decrypted <c>byte[]</c> or <see langword="null" /> if decryption failed.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger">
             <summary>
