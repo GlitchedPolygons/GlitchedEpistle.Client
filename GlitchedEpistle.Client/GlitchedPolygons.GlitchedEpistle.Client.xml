@@ -765,7 +765,7 @@
             Returns an <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.
             </summary>
             <param name="data">The data to encrypt.</param>
-            <returns><see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.</returns>
+            <returns><see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv; <c>null</c> if encryption failed.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)">
             <summary>
@@ -780,7 +780,7 @@
             </summary>
             <param name="data">The data to encrypt.</param>
             <param name="password">The password used to derive the AES key.</param>
-            <returns>The encrypted data bytes.</returns>
+            <returns>The encrypted data <c>byte[]</c> array; <c>null</c> if encryption failed in some way.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)">
             <summary>
@@ -788,7 +788,7 @@
             </summary>
             <param name="encryptedBytes">The encrypted data that was returned by <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/>.</param>
             <param name="password">The password that was used to encrypt the data.</param>
-            <returns>The decrypted <c>byte[]</c> array.</returns>
+            <returns>The decrypted <c>byte[]</c> array; <c>null</c> if decryption failed.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger">
             <summary>
