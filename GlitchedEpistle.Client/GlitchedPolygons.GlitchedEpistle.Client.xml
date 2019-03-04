@@ -726,7 +726,9 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography">
             <summary>
-            Service interface for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays).
+            Service interface for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays).<para> </para>
+            Please keep in mind that the data you encrypt with <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/> can only be decrypted using the same password and the corresponding mirror method <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)"/>.<para> </para>
+            Likewise, data encrypted using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt(System.Byte[])"/> can only be decrypted again using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)"/> respectively.
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt(System.Byte[])">
@@ -762,10 +764,11 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography">
             <summary>
-            Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="T:System.Security.Cryptography.AesManaged"/>.
+            Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="T:System.Security.Cryptography.AesManaged"/>.<para> </para>
+            Please keep in mind that the data you encrypt with <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/> can only be decrypted using the same password and the corresponding mirror method <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)"/>.<para> </para>
+            Likewise, data encrypted using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])"/> can only be decrypted again using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)"/> respectively.
             Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <see langword="interface"/>.
             </summary>
-            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" />
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])">
             <summary>
