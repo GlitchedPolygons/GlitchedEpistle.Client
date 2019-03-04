@@ -57,6 +57,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <param name="text">The text to encode.</param>
         /// <param name="encoding">The <see cref="Encoding"/> to use for the conversion (default is UTF8).</param>
         /// <returns>System.Byte[].</returns>
-        public static byte[] EncodeToBytes(this string text, Encoding encoding = null) => (encoding ?? Encoding.UTF8).GetBytes(text);
+        private static byte[] EncodeToBytes(this string text, Encoding encoding = null) => (encoding ?? Encoding.UTF8).GetBytes(text);
     }
 }
