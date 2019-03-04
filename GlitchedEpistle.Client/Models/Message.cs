@@ -27,22 +27,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public DateTime Timestamp { get; set; }
 
         /// <summary>
-        /// The method's encrypted text.
+        /// This is the message body - a base64 encoded json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
         /// </summary>
-        [JsonProperty(PropertyName = "txt")]
-        public string EncryptedText { get; set; }
-
-        /// <summary>
-        /// The encrypted attachment file name.
-        /// </summary>
-        [JsonProperty(PropertyName = "fileName")]
-        public string EncryptedAttachmentFileName { get; set; }
-
-        /// <summary>
-        /// Attached files are not stored inside the message body due to MongoDB's 16MB document size limit.<para> </para>
-        /// Instead, a unique <see langword="string"/> is stored for downloading the attachment via GridFS.
-        /// </summary>
-        [JsonProperty(PropertyName = "fileId")]
-        public string EncryptedAttachmentFileId { get; set; } = null;
+        [JsonProperty(PropertyName = "body")]
+        public string Body { get; set; }
     }
 }

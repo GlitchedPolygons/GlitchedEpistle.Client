@@ -123,7 +123,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <param name="auth">The request authentication token.</param>
         /// <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
-        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0) // TODO: adapt to new web API gridFS variant asap!!
+        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordHash, string userId, string auth, int fromIndex = 0)
         {
             var request = new RestRequest(
                 method: Method.GET,
