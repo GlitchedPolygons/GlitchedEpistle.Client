@@ -13,7 +13,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth
     /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest" />
     public class ServerConnectionTest : IServerConnectionTest
     {
-        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API);
+        private readonly RestClient restClient = new RestClient(URLs.EPISTLE);
 
         /// <summary>
         /// Tests the connection to the epistle server.<para> </para>
