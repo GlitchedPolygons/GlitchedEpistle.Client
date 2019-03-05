@@ -49,7 +49,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="userId">Your user identifier.</param>
         /// <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
-        /// <param name="auth">The request authenticatication token.</param>
+        /// <param name="auth">The request authentication token.</param>
         /// <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
         Task<List<Tuple<string, string>>> GetUserPublicKeyXml(string userId, string userIds, string auth);
 
