@@ -137,6 +137,31 @@
             The conversation's messages.
             </summary>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto">
+            <summary>
+            Data-transfer object for the creation of a new <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.Name">
+            <summary>
+            <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> name (title).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.Description">
+            <summary>
+            <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> description (e.g. what is the convo about?).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.PasswordSHA512">
+            <summary>
+            The convo's access password SHA512.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.Expires">
+            <summary>
+            The conversation's expiration date (in UTC).
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto">
             <summary>
             Data transfer object class for a conversation's metadata (like e.g. the name, description, etc...).
@@ -571,16 +596,38 @@
             <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA" />
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)">
-            <inheritdoc/>
+            <summary>
+            Encrypts the specified text using the provided RSA public key.
+            </summary>
+            <param name="text">The text to encrypt.</param>
+            <param name="publicKey">The public key for encryption.</param>
+            <returns>The encrypted <c>string</c>.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)">
-            <inheritdoc/>
+            <summary>
+            Decrypts the specified text using the provided RSA private key.
+            </summary>
+            <param name="encryptedText">The encrypted text to decrypt.</param>
+            <param name="privateKey">The private RSA key needed for decryption.</param>
+            <returns>Decrypted <c>string</c></returns>
+            <exception cref="T:System.Security.Cryptography.CryptographicException"></exception>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">
-            <inheritdoc/>
+            <summary>
+            Encrypts the specified bytes using the provided RSA public key.
+            </summary>
+            <param name="data">The data (<c>byte[]</c>) to encrypt.</param>
+            <param name="publicKey">The public key to use for encryption.</param>
+            <returns>The encrypted bytes (System.Byte[]).</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">
-            <inheritdoc/>
+            <summary>
+            Decrypts the specified bytes using the provided private RSA key.
+            </summary>
+            <param name="encryptedData">The encrypted data bytes (<c>byte[]</c>).</param>
+            <param name="privateKey">The private key to use for decryption.</param>
+            <returns>Decrypted bytes (System.Byte[]) if successful.</returns>
+            <exception cref="T:System.Security.Cryptography.CryptographicException"></exception>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA">
             <summary>
@@ -813,6 +860,32 @@
             </summary>
             <param name="msg">The error.</param>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest">
+            <summary>
+            Service interface for testing the connection to the epistle server.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest.TestConnection">
+            <summary>
+            Tests the connection to the epistle server.<para> </para>
+            Returns <c>true</c> if the connection could be established or <c>false</c> if the server did not respond.
+            </summary>
+            <returns>Whether the connection to the epistle server could be established successfully or not.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.ServerConnectionTest">
+            <summary>
+            Class for testing the connection to the epistle server.
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest" /> interface.
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.ServerConnectionTest.TestConnection">
+            <summary>
+            Tests the connection to the epistle server.<para> </para>
+            Returns <c>true</c> if the connection could be established or <c>false</c> if the server did not respond.
+            </summary>
+            <returns>Whether the connection to the epistle server could be established successfully or not.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings">
             <summary>
             Service interface for accessing, saving and loading user settings.
@@ -924,7 +997,7 @@
             </summary>
             <param name="userId">Your user identifier.</param>
             <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
-            <param name="auth">The request authenticatication token.</param>
+            <param name="auth">The request authentication token.</param>
             <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(System.String,System.String,System.String,System.String)">
@@ -947,28 +1020,68 @@
             <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService">
-            <inheritdoc/>
+            <summary>
+            Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.<para> </para>
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService" /> interface.
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService" />
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Login(System.String,System.String,System.String)">
-            <inheritdoc/>
+            <summary>
+            Logs the specified user in by authenticating the provided credentials
+            (POST request to the Glitched Epistle Web API). If authentication is successful, a valid JWT is returned.
+            That's needed for subsequent requests.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="passwordSHA512">The password hash (SHA-512).</param>
+            <param name="totp">The 2FA code.</param>
+            <returns>JWT <see langword="string" /> if auth was successful; <see langword="null" /> otherwise.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.RefreshAuthToken(System.String,System.String)">
-            <inheritdoc/>
+            <summary>
+            Refreshes the authentication token.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="auth">The current authentication token.</param>
+            <returns>If all goes well, you should receive your new, fresh auth token from the backend.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Validate2FA(System.String,System.String)">
             <inheritdoc/>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserExpirationUTC(System.String)">
-            <inheritdoc/>
+            <summary>
+            Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> (in UTC).
+            </summary>
+            <param name="userId">The user id.</param>
+            <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <see langword="null" /> if the user doesn't exist.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String,System.String,System.String)">
-            <inheritdoc/>
+            <summary>
+            Gets one or more users' public key XML (RSA key needed for encrypting messages for that user).
+            </summary>
+            <param name="userId">Your user identifier.</param>
+            <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
+            <param name="auth">The request authentication token.</param>
+            <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String,System.String,System.String,System.String)">
-            <inheritdoc/>
+            <summary>
+            Changes the user password.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <param name="auth">The authentication token.</param>
+            <param name="oldPw">The old password hash (SHA-512).</param>
+            <param name="newPw">The new password hash (SHA-512).</param>
+            <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(System.String,System.String,System.String)">
-            <inheritdoc/>
+            <summary>
+            Creates a new user.
+            </summary>
+            <param name="passwordHash">The user's password hash (SHA-512).</param>
+            <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
+            <param name="creationSecret">The creation secret.</param>
+            <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         </member>
     </members>
 </doc>
