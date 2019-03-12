@@ -81,11 +81,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(senderName), senderName);
-            request.AddParameter(nameof(messageBodiesJson), messageBodiesJson, "application/json", ParameterType.RequestBody);
+            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
+            request.AddQueryParameter(nameof(messageBodiesJson), messageBodiesJson);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
