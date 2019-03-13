@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
+using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 {
@@ -66,10 +67,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <summary>
         /// Creates a new user.
         /// </summary>
-        /// <param name="passwordHash">The user's password hash (SHA-512).</param>
-        /// <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
-        /// <param name="creationSecret">The creation secret.</param>
+        /// <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        Task<UserCreationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret);
+        Task<UserCreationResponse> CreateUser(UserCreationDto userCreationDto);
     }
 }

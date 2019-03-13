@@ -7,6 +7,7 @@ using RestSharp;
 using Newtonsoft.Json;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
+using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 {
@@ -151,23 +152,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <summary>
         /// Creates a new user.
         /// </summary>
-        /// <param name="passwordHash">The user's password hash (SHA-512).</param>
-        /// <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
-        /// <param name="creationSecret">The creation secret.</param>
+        /// <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        public async Task<UserCreationResponse> CreateUser(string passwordHash, string publicKeyXml, string creationSecret)
+        public async Task<UserCreationResponse> CreateUser(UserCreationDto userCreationDto)
         {
             var request = new RestRequest(
                 method: Method.POST,
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
-            request.AddJsonBody(new
-            {
-                passwordHash,
-                publicKeyXml,
-                creationSecret
-            });
+            request.AddJsonBody(userCreationDto);
 
             var response = await restClient.ExecuteTaskAsync(request);
             if (response.StatusCode != HttpStatusCode.OK)

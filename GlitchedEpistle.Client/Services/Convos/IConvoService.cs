@@ -32,13 +32,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// Posts a message to a <see cref="Convo"/>.
         /// </summary>
         /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="convoPasswordHash">The convo's password hash.</param>
-        /// <param name="userId">The user identifier.</param>
-        /// <param name="auth">The authentication.</param>
-        /// <param name="senderName">Name (display name) of the sender.</param>
-        /// <param name="messageBodiesJson">The encrypted message bodies (json string).</param>
+        /// <param name="messageDto">The message post parameters (for the request body).</param>
         /// <returns>Whether the message was posted successfully or not.</returns>
-        Task<bool> PostMessage(string convoId, string convoPasswordHash, string userId, string auth, string senderName, string messageBodiesJson);
+        Task<bool> PostMessage(string convoId, PostMessageParamsDto messageDto);
 
         /// <summary>
         /// Gets a convo's metadata (description, timestamp, etc...).

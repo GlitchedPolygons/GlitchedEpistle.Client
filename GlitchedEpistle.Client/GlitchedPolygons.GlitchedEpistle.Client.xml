@@ -210,6 +210,56 @@
             </summary>
             <value>The banned users.</value>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto">
+            <summary>
+            DTO for the message post request parameters (request body).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordHash">
+            <summary>
+            The conversation's access pw.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.UserId">
+            <summary>
+            The message author's user id.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Auth">
+            <summary>
+            The message author's request authentication token.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.SenderName">
+            <summary>
+            The message author's username (to display).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.MessageBodiesJson">
+            <summary>
+            The message's encrypted bodies (packed into json key-value pairs).
+            </summary>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto">
+            <summary>
+            DTO for creating a new <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PasswordHash">
+            <summary>
+            The user's desired password SHA512.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PublicKeyXml">
+            <summary>
+            The user's public RSA key (in xml format). This is needed to encrypt messages for this user.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.CreationSecret">
+            <summary>
+            The server creation secret <c>string</c>.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message">
             <summary>
             An epistle message.
@@ -367,16 +417,12 @@
             <param name="auth">The authentication JWT.</param>
             <returns>Whether deletion was successful or not.</returns>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.PostMessage(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.PostMessage(System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)">
             <summary>
             Posts a message to a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
-            <param name="userId">The user identifier.</param>
-            <param name="auth">The authentication.</param>
-            <param name="senderName">Name (display name) of the sender.</param>
-            <param name="messageBodiesJson">The encrypted message bodies (json string).</param>
+            <param name="messageDto">The message post parameters (for the request body).</param>
             <returns>Whether the message was posted successfully or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.GetConvoMetadata(System.String,System.String,System.String,System.String)">
@@ -485,16 +531,12 @@
             <param name="auth">The authentication JWT.</param>
             <returns>Whether deletion was successful or not.</returns>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.PostMessage(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.PostMessage(System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)">
             <summary>
             Posts a message to a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
-            <param name="userId">The user identifier.</param>
-            <param name="auth">The authentication.</param>
-            <param name="senderName">Name (display name) of the sender.</param>
-            <param name="messageBodiesJson">The encrypted message bodies (json string).</param>
+            <param name="messageDto">The message post parameters (for the request body).</param>
             <returns>Whether the message was posted successfully or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.GetConvoMetadata(System.String,System.String,System.String,System.String)">
@@ -1010,13 +1052,11 @@
             <param name="newPw">The new password hash (SHA-512).</param>
             <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.CreateUser(System.String,System.String,System.String)">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.CreateUser(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)">
             <summary>
             Creates a new user.
             </summary>
-            <param name="passwordHash">The user's password hash (SHA-512).</param>
-            <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
-            <param name="creationSecret">The creation secret.</param>
+            <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
             <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService">
@@ -1074,13 +1114,11 @@
             <param name="newPw">The new password hash (SHA-512).</param>
             <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(System.String,System.String,System.String)">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)">
             <summary>
             Creates a new user.
             </summary>
-            <param name="passwordHash">The user's password hash (SHA-512).</param>
-            <param name="publicKeyXml">The user's public key XML (RSA key for encrypting messages for him).</param>
-            <param name="creationSecret">The creation secret.</param>
+            <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
             <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         </member>
     </members>
