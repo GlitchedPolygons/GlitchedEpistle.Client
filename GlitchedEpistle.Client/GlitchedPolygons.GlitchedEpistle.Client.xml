@@ -282,7 +282,7 @@
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body">
             <summary>
-            This is the message body - a base64 encoded json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
+            This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
             </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User">
