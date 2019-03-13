@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
-
 using RestSharp;
 using Newtonsoft.Json;
-
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
@@ -81,13 +81,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(senderName), senderName);
-            request.AddQueryParameter(nameof(convoPasswordHash), convoPasswordHash);
-            request.AddQueryParameter(nameof(messageBodiesJson), messageBodiesJson);
-
+            request.AddJsonBody(new
+            {
+                auth,
+                userId,
+                senderName,
+                convoPasswordHash,
+                messageBodiesJsonBase64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(messageBodiesJson))
+            });
+            
             var response = await restClient.ExecuteTaskAsync(request);
+            
             return response.IsSuccessful;
         }
 
