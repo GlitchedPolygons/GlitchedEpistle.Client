@@ -162,9 +162,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(passwordHash), passwordHash);
-            request.AddQueryParameter(nameof(publicKeyXml), publicKeyXml);
-            request.AddQueryParameter(nameof(creationSecret), creationSecret);
+            request.AddJsonBody(new
+            {
+                passwordHash,
+                publicKeyXml,
+                creationSecret
+            });
 
             var response = await restClient.ExecuteTaskAsync(request);
             if (response.StatusCode != HttpStatusCode.OK)
