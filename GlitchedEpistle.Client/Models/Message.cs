@@ -27,7 +27,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public DateTime Timestamp { get; set; }
 
         /// <summary>
-        /// This is the message body - a base64 encoded json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
+        /// This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
         /// </summary>
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
