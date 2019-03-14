@@ -10,7 +10,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
     /// <seealso cref="System.IDisposable" />
     public class EncryptionResult : IDisposable
     {
-        public byte[] key, iv;
+        /// <summary>
+        /// The initialization vector.
+        /// </summary>
+        public byte[] iv;
+
+        /// <summary>
+        /// The encryption key.
+        /// </summary>
+        public byte[] key;
+
+        /// <summary>
+        /// The encrypted data bytes.
+        /// </summary>
         public byte[] encryptedData;
 
         /// <summary>
