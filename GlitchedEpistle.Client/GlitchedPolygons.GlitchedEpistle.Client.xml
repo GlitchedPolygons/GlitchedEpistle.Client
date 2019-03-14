@@ -19,6 +19,18 @@
             The Glitched Epistle Web API base URL.
             </summary>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions">
+            <summary>
+            Extension methods for <c>byte[]</c> arrays.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString(System.Byte[])">
+            <summary>
+            Gets the <c>byte[]</c> array's human readable file size string (e.g. 5KB or 20MB).
+            </summary>
+            <param name="bytes">The bytes (for example a file whose size you want to retrieve in a human readable way).</param>
+            <returns>A human readable file size <c>string</c> that represents the passed <c>byte[]</c> array's length.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions">
             <summary>
             Class that holds <see cref="T:System.IO.DirectoryInfo"/> extension methods.
@@ -240,6 +252,26 @@
             The message's encrypted bodies (packed into json key-value pairs).
             </summary>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto">
             <summary>
             DTO for creating a new <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>.
@@ -259,6 +291,26 @@
             <summary>
             The server creation secret <c>string</c>.
             </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message">
             <summary>
@@ -822,6 +874,21 @@
             Implements the <see cref="T:System.IDisposable" />
             </summary>
             <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.iv">
+            <summary>
+            The initialization vector.
+            </summary>
+        </member>
+        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.key">
+            <summary>
+            The encryption key.
+            </summary>
+        </member>
+        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.encryptedData">
+            <summary>
+            The encrypted data bytes.
+            </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Dispose">
             <summary>
