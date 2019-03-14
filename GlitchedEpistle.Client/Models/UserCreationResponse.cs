@@ -26,7 +26,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
-        public DateTime CreationTimestamp { get; set; }
+        public DateTime CreationTimestampUTC { get; set; }
 
         /// <summary>
         /// The user's role. 

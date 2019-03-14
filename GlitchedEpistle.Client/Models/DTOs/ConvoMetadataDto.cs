@@ -31,12 +31,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The <see cref="Convo"/>'s creation timestamp (UTC).
         /// </summary>
-        public DateTime CreationTimestamp { get; set; }
+        public DateTime CreationTimestampUTC { get; set; }
 
         /// <summary>
         /// Convo expiration <see cref="DateTime"/> (UTC).
         /// </summary>
-        public DateTime Expires { get; set; }
+        public DateTime ExpirationUTC { get; set; }
 
         /// <summary>
         /// The convo's participants (user ids separated by a comma: ',').
