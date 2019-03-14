@@ -122,12 +122,12 @@
             The convo's password hashed with SHA512.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestamp">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC">
             <summary>
             The <see cref="T:System.DateTime"/> (UTC) this conversation was created.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Expires">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.ExpirationUTC">
             <summary>
             The exact UTC <see cref="T:System.DateTime"/> when the convo will expire.<para> </para>
             After this moment in time, no further messages can be posted to the convo
@@ -169,7 +169,7 @@
             The convo's access password SHA512.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.Expires">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.ExpirationUTC">
             <summary>
             The conversation's expiration date (in UTC).
             </summary>
@@ -200,12 +200,12 @@
             The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s description text.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestamp">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC">
             <summary>
             The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s creation timestamp (UTC).
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Expires">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.ExpirationUTC">
             <summary>
             Convo expiration <see cref="T:System.DateTime"/> (UTC).
             </summary>
@@ -250,6 +250,11 @@
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.MessageBodiesJson">
             <summary>
             The message's encrypted bodies (packed into json key-value pairs).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.TimestampUTC">
+            <summary>
+            The message's timestamp (UTC).
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)">
@@ -327,7 +332,7 @@
             The sender's display username.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Timestamp">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.TimestampUTC">
             <summary>
             The message's timestamp in UTC.
             </summary>
@@ -340,7 +345,7 @@
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Id">
             <summary>
             Gets the message's unique identifier, which is <para> </para>
-            md5( <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId"/> + <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Timestamp"/> )
+            md5( <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId"/> + <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.TimestampUTC"/> )
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Equals(System.Object)">
@@ -390,7 +395,7 @@
             <see cref="P:System.Tuple`2.Item2"/> is the token <see langword="string"/>.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestamp">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestampUTC">
             <summary>
             The <see cref="T:System.DateTime"/> when this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> was first created.
             </summary>
@@ -442,7 +447,7 @@
             The user's password hashed with SHA512.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.CreationTimestamp">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.CreationTimestampUTC">
             <summary>
             The <see cref="T:System.DateTime"/> when this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> was first created.
             </summary>
