@@ -32,6 +32,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         public string MessageBodiesJson { get; set; }
 
+        /// <summary>
+        /// The message's timestamp (UTC).
+        /// </summary>
+        public DateTime TimestampUTC { get; set; }
+
         #region Equality
 
         /// <summary>

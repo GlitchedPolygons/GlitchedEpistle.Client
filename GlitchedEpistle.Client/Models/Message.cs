@@ -25,7 +25,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// The message's timestamp in UTC.
         /// </summary>
         [JsonProperty(PropertyName = "utc")]
-        public DateTime Timestamp { get; set; }
+        public DateTime TimestampUTC { get; set; }
 
         /// <summary>
         /// This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
@@ -36,7 +36,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         private string id = null;
         /// <summary>
         /// Gets the message's unique identifier, which is <para> </para>
-        /// md5( <see cref="SenderId"/> + <see cref="Timestamp"/> )
+        /// md5( <see cref="SenderId"/> + <see cref="TimestampUTC"/> )
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id
@@ -45,7 +45,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
             {
                 if (string.IsNullOrEmpty(id))
                 {
-                    id = (SenderId + Timestamp.ToString("u")).MD5();
+                    id = (SenderId + TimestampUTC.ToString("u")).MD5();
                 }
                 return id;
             }

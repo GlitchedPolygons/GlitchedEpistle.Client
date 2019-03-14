@@ -33,7 +33,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
-        public DateTime CreationTimestamp { get; set; }
+        public DateTime CreationTimestampUTC { get; set; }
 
         /// <summary>
         /// The exact <see cref="DateTime"/> (UTC) this user's access to Epistle expires.

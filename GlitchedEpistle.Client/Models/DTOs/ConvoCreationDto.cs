@@ -25,6 +25,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The conversation's expiration date (in UTC).
         /// </summary>
-        public DateTime Expires { get; set; } = DateTime.MaxValue;
+        public DateTime ExpirationUTC { get; set; } = DateTime.MaxValue;
     }
 }

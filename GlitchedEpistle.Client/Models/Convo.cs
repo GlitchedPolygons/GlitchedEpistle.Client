@@ -43,7 +43,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// The <see cref="DateTime"/> (UTC) this conversation was created.
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
-        public DateTime CreationTimestamp { get; set; }
+        public DateTime CreationTimestampUTC { get; set; }
 
         /// <summary>
         /// The exact UTC <see cref="DateTime"/> when the convo will expire.<para> </para>
@@ -51,7 +51,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// and the conversation itself will be deleted 48h afterwards.
         /// </summary>
         [JsonProperty(PropertyName = "exp")]
-        public DateTime Expires { get; set; } = DateTime.MaxValue;
+        public DateTime ExpirationUTC { get; set; } = DateTime.MaxValue;
 
         /// <summary>
         /// The people who joined the convo (their user ids).
