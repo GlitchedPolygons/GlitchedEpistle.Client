@@ -7,7 +7,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
     /// </summary>
     public static class ByteArrayExtensions
     {
-        private static readonly string[] SIZE_SUFFIX_STRINGS = { "B", "KB", "MB", "GB", "TB", "PB", "EB" }; // Longs run out around EB
+        private static readonly string[] SIZE_SUFFIX_STRINGS = { " B", " KB", " MB", " GB", " TB", " PB", " EB" }; // Longs run out around EB
 
         /// <summary>
         /// Gets the <c>byte[]</c> array's human readable file size string (e.g. 5KB or 20MB).
