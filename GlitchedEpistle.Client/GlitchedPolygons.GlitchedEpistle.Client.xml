@@ -581,7 +581,7 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider">
             <summary>
-            Service interface responsible for retrieving/accessing convos (local).
+            Service interface responsible for accessing convos (local).
             </summary>
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Convos">
@@ -596,6 +596,28 @@
             </summary>
             <param name="id">The <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.Id"/> identifier.</param>
             <returns>The matching <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> (or <c>null</c> if the convo couldn't be found).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save">
+            <summary>
+            Saves all the currently loaded <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>s in memory out to disk (or somewhere persistent; depends on the implementation).
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load">
+            <summary>
+            Loads all <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>s available on the persistent storage medium (usually local hard drive)
+            into the <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Convos"/> collection (the existing collection is overwritten!).
+            </summary>
+        </member>
+        <member name="E:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Loaded">
+            <summary>
+            Occurs when the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider"/> has finished loading/refreshing <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>s into the <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Convos"/> collection.
+            </summary>
+        </member>
+        <member name="E:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Saved">
+            <summary>
+            Shall be raised when the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider"/> has finished
+            saving the current state of the <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Convos"/> out to persistent memory.
+            </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService">
             <summary>
