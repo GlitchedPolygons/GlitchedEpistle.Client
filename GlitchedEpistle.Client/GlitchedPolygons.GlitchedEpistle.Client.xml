@@ -848,13 +848,14 @@
             </summary>
             <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography" />
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility)">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography"/> class.
             </summary>
             <param name="aes">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography"/> instance (should be injected via IoC).</param>
             <param name="rsa">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA"/> instance (should be injected via IoC).</param>
             <param name="gzip">The <see cref="T:GlitchedPolygons.Services.CompressionUtility.ICompressionUtility"/> instance needed for compression (should be injected via IoC).</param>
+            <param name="logger"><see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger"/> instance for logging any cryptographic errors that might occur.</param>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
             <summary>
