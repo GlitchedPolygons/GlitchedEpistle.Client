@@ -282,7 +282,7 @@
             DTO for creating a new <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PasswordHash">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PasswordSHA512">
             <summary>
             The user's desired password SHA512.
             </summary>

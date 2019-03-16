@@ -33,9 +33,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 resource: new Uri("convos/create", UriKind.Relative)
             );
 
-            request.AddJsonBody(convoDto);
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(convoDto), ParameterType.RequestBody);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.Content;
@@ -77,7 +77,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
 
-            request.AddJsonBody(messageDto);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(messageDto), ParameterType.RequestBody);
             
             var response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;

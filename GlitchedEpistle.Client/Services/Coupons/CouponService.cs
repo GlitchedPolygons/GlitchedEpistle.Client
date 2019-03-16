@@ -27,6 +27,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
                 method: Method.PUT,
                 resource: new Uri($"coupons/{code}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 

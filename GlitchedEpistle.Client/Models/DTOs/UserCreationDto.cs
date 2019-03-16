@@ -1,4 +1,5 @@
 using System;
+using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -10,16 +11,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The user's desired password SHA512.
         /// </summary>
-        public string PasswordHash { get; set; }
+        [JsonProperty(PropertyName = "pw")]
+        public string PasswordSHA512 { get; set; }
         
         /// <summary>
         /// The user's public RSA key (in xml format). This is needed to encrypt messages for this user.
         /// </summary>
+        [JsonProperty(PropertyName = "key")]
         public string PublicKeyXml{ get; set; }
         
         /// <summary>
         /// The server creation secret <c>string</c>.
         /// </summary>
+        [JsonProperty(PropertyName = "secret")]
         public string CreationSecret{ get; set; }
 
         #region Equality
@@ -32,7 +36,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public bool Equals(UserCreationDto other)
         {
             return other != null && 
-                   string.Equals(PasswordHash, other.PasswordHash) &&
+                   string.Equals(PasswordSHA512, other.PasswordSHA512) &&
                    string.Equals(PublicKeyXml, other.PublicKeyXml) &&
                    string.Equals(CreationSecret, other.CreationSecret);
         }
@@ -56,7 +60,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         {
             unchecked
             {
-                int hashCode = PasswordHash.GetHashCode();
+                int hashCode = PasswordSHA512.GetHashCode();
                 hashCode = (hashCode * 397) ^ PublicKeyXml.GetHashCode();
                 hashCode = (hashCode * 397) ^ CreationSecret.GetHashCode();
                 return hashCode;
