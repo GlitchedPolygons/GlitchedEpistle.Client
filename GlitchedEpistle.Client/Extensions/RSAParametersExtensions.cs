@@ -16,7 +16,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <param name="xml">The XML containing the <see cref="RSAParameters"/>.</param>
         /// <returns><see cref="RSAParameters"/>.</returns>
         /// <exception cref="InvalidDataException">Invalid XML RSA key.</exception>
-        public static RSAParameters FromXml(string xml)
+        public static RSAParameters FromXmlString(string xml)
         {
             var rsaParameters = new RSAParameters();
 

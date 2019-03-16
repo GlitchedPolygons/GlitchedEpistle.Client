@@ -1,6 +1,6 @@
 ﻿using System;
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using Newtonsoft.Json;
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {

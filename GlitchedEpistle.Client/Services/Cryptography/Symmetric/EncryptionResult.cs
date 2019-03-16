@@ -13,25 +13,25 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         /// <summary>
         /// The initialization vector.
         /// </summary>
-        public byte[] iv;
+        public byte[] IV { get; set; }
 
         /// <summary>
         /// The encryption key.
         /// </summary>
-        public byte[] key;
+        public byte[] Key { get; set; }
 
         /// <summary>
         /// The encrypted data bytes.
         /// </summary>
-        public byte[] encryptedData;
+        public byte[] EncryptedData { get; set; }
 
         /// <summary>
-        /// Overwrites the <see cref="key"/> and <see cref="iv"/> bytes with zeros.
+        /// Overwrites the <see cref="Key"/> and <see cref="IV"/> bytes with zeros.
         /// </summary>
         public void Dispose()
         {
-            for (int i = 0; i < iv.Length; i++) iv[i] = 0;
-            for (int i = 0; i < key.Length; i++) key[i] = 0;
+            for (int i = 0; i < IV.Length; i++) IV[i] = 0;
+            for (int i = 0; i < Key.Length; i++) Key[i] = 0;
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 using RestSharp;
 using Newtonsoft.Json;
-using GlitchedPolygons.GlitchedEpistle.Client.Models;
+
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
@@ -93,7 +93,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
             );
 
             var response = await restClient.ExecuteTaskAsync(request);
-            if (response.StatusCode == HttpStatusCode.OK && DateTime.TryParse(response.Content, out var exp))
+            if (response.StatusCode == HttpStatusCode.OK && DateTime.TryParse(response.Content, out DateTime exp))
             {
                 return exp;
             }
@@ -156,7 +156,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        public async Task<UserCreationResponse> CreateUser(UserCreationDto userCreationDto)
+        public async Task<UserCreationResponseDto> CreateUser(UserCreationDto userCreationDto)
         {
             var request = new RestRequest(
                 method: Method.POST,
@@ -171,7 +171,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 return null;
             }
 
-            return JsonConvert.DeserializeObject<UserCreationResponse>(response.Content, JSON_SERIALIZER_SETTINGS);
+            return JsonConvert.DeserializeObject<UserCreationResponseDto>(response.Content, JSON_SERIALIZER_SETTINGS);
         }
     }
 }

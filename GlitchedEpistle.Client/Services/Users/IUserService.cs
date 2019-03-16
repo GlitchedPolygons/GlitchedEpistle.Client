@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
@@ -69,6 +70,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        Task<UserCreationResponse> CreateUser(UserCreationDto userCreationDto);
+        Task<UserCreationResponseDto> CreateUser(UserCreationDto userCreationDto);
     }
 }

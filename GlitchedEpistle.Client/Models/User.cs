@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+
 using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
