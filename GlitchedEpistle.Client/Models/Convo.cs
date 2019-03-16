@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
+
 using Newtonsoft.Json;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -70,5 +73,25 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         [JsonIgnore]
         public List<Message> Messages { get; set; } = new List<Message>(16);
+
+        /// <summary>
+        /// Gets all of the <see cref="Convo"/>'s participants (their ids) comma-separated;
+        /// ready for submitting them with <see cref="IUserService.GetUserPublicKeyXml"/>.
+        /// </summary>
+        /// <returns>The participant user ids separated by commas.</returns>
+        public string GetParticipantIdsCommaSeparated()
+        {
+            var stringBuilder = new StringBuilder(128);
+            int participantsCount = Participants.Count;
+            for (int i = 0; i < participantsCount; i++)
+            {
+                stringBuilder.Append(Participants[i]);
+                if (i < participantsCount - 1)
+                {
+                    stringBuilder.Append(',');
+                }
+            }
+            return stringBuilder.ToString();
+        }
     }
 }

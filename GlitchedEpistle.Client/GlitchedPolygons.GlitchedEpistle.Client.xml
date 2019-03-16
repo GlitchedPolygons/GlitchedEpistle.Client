@@ -149,6 +149,13 @@
             The conversation's messages.
             </summary>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetParticipantIdsCommaSeparated">
+            <summary>
+            Gets all of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s participants (their ids) comma-separated;
+            ready for submitting them with <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String,System.String,System.String)"/>.
+            </summary>
+            <returns>The participant user ids separated by commas.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto">
             <summary>
             Data-transfer object for the creation of a new <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
