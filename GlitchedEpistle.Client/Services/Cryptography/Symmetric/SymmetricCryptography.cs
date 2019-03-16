@@ -33,9 +33,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                     {
                         result = new EncryptionResult
                         {
-                            iv = aes.IV,
-                            key = aes.Key,
-                            encryptedData = encryptor.TransformFinalBlock(data, 0, data.Length)
+                            IV = aes.IV,
+                            Key = aes.Key,
+                            EncryptedData = encryptor.TransformFinalBlock(data, 0, data.Length)
                         };
                     }
                 }
@@ -59,11 +59,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                 byte[] decryptedBytes;
                 using (var aes = new AesManaged())
                 {
-                    aes.IV = encryptionResult.iv;
-                    aes.Key = encryptionResult.key;
+                    aes.IV = encryptionResult.IV;
+                    aes.Key = encryptionResult.Key;
                     using (ICryptoTransform decryptor = aes.CreateDecryptor())
                     {
-                        decryptedBytes = decryptor.TransformFinalBlock(encryptionResult.encryptedData, 0, encryptionResult.encryptedData.Length);
+                        decryptedBytes = decryptor.TransformFinalBlock(encryptionResult.EncryptedData, 0, encryptionResult.EncryptedData.Length);
                     }
                 }
 

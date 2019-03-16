@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Models
+namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
     /// <summary>
     /// A <see langword="class"/> containing the HTTP response data for <see cref="User"/> registration.
     /// </summary>
-    public class UserCreationResponse
+    public class UserCreationResponseDto
     {
         /// <summary>
         /// The user's unique identifier (the primary key for the epistle db).

@@ -12,7 +12,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// </summary>
         /// <param name="text">The text to hash.</param>
         /// <param name="toLowercase">Should the output hash be lowercased?</param>
-        /// <returns>System.String.</returns>
+        /// <returns>MD5 hash of the input string.</returns>
         public static string MD5(this string text, bool toLowercase = false)
         {
             using (var md5 = System.Security.Cryptography.MD5.Create())
@@ -34,7 +34,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// </summary>
         /// <param name="text">The text to hash.</param>
         /// <param name="toLowercase">Should the output hash <c>string</c> be lowercased?.</param>
-        /// <returns>System.String.</returns>
+        /// <returns>SHA512 of the input string.</returns>
         public static string SHA512(this string text, bool toLowercase = false)
         {
             using (var sha512 = System.Security.Cryptography.SHA512.Create())

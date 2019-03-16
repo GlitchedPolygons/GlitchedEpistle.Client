@@ -1,5 +1,4 @@
-﻿
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Logging
+﻿namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Logging
 {
     /// <summary>
     /// Service interface for logging messages to their corresponding category's log file.

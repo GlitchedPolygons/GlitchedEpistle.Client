@@ -1,5 +1,4 @@
-﻿using System.Collections.Concurrent;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
 {

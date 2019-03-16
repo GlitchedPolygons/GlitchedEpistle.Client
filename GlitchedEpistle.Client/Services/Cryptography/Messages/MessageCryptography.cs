@@ -47,35 +47,47 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         /// <returns>The encrypted message <c>string</c>.</returns>
         public string EncryptMessage(string messageJson, RSAParameters recipientPublicRsaKey)
         {
+            if (messageJson is null)
+            {
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(EncryptMessage)}: Message encryption failed; {nameof(messageJson)} string argument was null. Nothing to encrypt!");
+                return null;
+            }
+
             try
             {
                 byte[] data = gzip.Compress(Encoding.UTF8.GetBytes(messageJson), COMPRESSION_SETTINGS);
                 using (var encryptionResult = aes.Encrypt(data))
                 {
-                    var stringBuilder = new StringBuilder(encryptionResult.encryptedData.Length);
-                    stringBuilder.Append(Convert.ToBase64String(rsa.Encrypt(encryptionResult.key, recipientPublicRsaKey)));
+                    var stringBuilder = new StringBuilder(encryptionResult.EncryptedData.Length);
+                    stringBuilder.Append(Convert.ToBase64String(rsa.Encrypt(encryptionResult.Key, recipientPublicRsaKey)));
                     stringBuilder.Append('|');
-                    stringBuilder.Append(Convert.ToBase64String(encryptionResult.iv));
+                    stringBuilder.Append(Convert.ToBase64String(encryptionResult.IV));
                     stringBuilder.Append('|');
-                    stringBuilder.Append(Convert.ToBase64String(encryptionResult.encryptedData));
+                    stringBuilder.Append(Convert.ToBase64String(encryptionResult.EncryptedData));
                     return stringBuilder.ToString();
                 }
             }
             catch (Exception)
             {
-                logger.LogError($"Message encryption failed. Recipient public RSA key: {recipientPublicRsaKey.ToXmlString()}");
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(EncryptMessage)}: Message encryption failed. Eventually an encryption key problem? Passed recipient public RSA key: {recipientPublicRsaKey.ToXmlString()}");
                 return null;
             }
         }
 
         /// <summary>
-        /// Decrypts a message that's been encrypted using the <see cref="EncryptMessage(string,RSAParameters)" /> method.
+        /// Decrypts a message that's been encrypted using the <see cref="EncryptMessage(string,RSAParameters)"/> method.
         /// </summary>
         /// <param name="encryptedMessage">The encrypted message <see langword="string"/> obtained via <see cref="EncryptMessage"/>.</param>
         /// <param name="privateDecryptionRsaKey">Your private message decryption RSA key.</param>
         /// <returns>The decrypted message json (or <see langword="null" /> if decryption failed in some way).</returns>
         public string DecryptMessage(string encryptedMessage, RSAParameters privateDecryptionRsaKey)
         {
+            if (string.IsNullOrEmpty(encryptedMessage))
+            {
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: The provided {nameof(encryptedMessage)} string is null or empty. Nothing to decrypt!");
+                return null;
+            }
+
             string[] split = encryptedMessage.Split('|');
             if (split.Length != 3)
             {
@@ -83,25 +95,35 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
                 return null;
             }
 
-            var encryptionResult = new EncryptionResult
-            {
-                key = rsa.Decrypt(Convert.FromBase64String(split[0]), privateDecryptionRsaKey),
-                iv = Convert.FromBase64String(split[1]),
-                encryptedData = Convert.FromBase64String(split[2])
-            };
+            EncryptionResult encryptionResult = null;
 
             try
             {
+                encryptionResult = new EncryptionResult
+                {
+                    Key = rsa.Decrypt(Convert.FromBase64String(split[0]), privateDecryptionRsaKey),
+                    IV = Convert.FromBase64String(split[1]),
+                    EncryptedData = Convert.FromBase64String(split[2])
+                };
+
                 byte[] decryptedDecompressed = gzip.Decompress(aes.Decrypt(encryptionResult), COMPRESSION_SETTINGS);
-                encryptionResult.Dispose();
                 string result = Encoding.UTF8.GetString(decryptedDecompressed);
-                for (int i = 0; i < decryptedDecompressed.Length; i++) decryptedDecompressed[i] = 0;
+
+                for (int i = 0; i < decryptedDecompressed.Length; i++)
+                {
+                    decryptedDecompressed[i] = 0;
+                }
+
                 return result;
             }
             catch (Exception)
             {
-                logger.LogError("Message decryption failed. Perhaps wrong or missing keys? Or invalid message format?");
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: Message decryption failed. Perhaps wrong or missing keys? Or invalid message format?");
                 return null;
+            }
+            finally
+            {
+                encryptionResult?.Dispose();
             }
         }
     }

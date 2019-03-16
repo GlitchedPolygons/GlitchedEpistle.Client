@@ -48,7 +48,7 @@
             Class holding <see cref="T:System.Security.Cryptography.RSAParameters"/> extension methods.
             </summary>
         </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions.FromXml(System.String)">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions.FromXmlString(System.String)">
             <summary>
             Deserializes an <see cref="T:System.Security.Cryptography.RSAParameters"/> instance from an xml <c>string</c>.
             </summary>
@@ -74,7 +74,7 @@
             </summary>
             <param name="text">The text to hash.</param>
             <param name="toLowercase">Should the output hash be lowercased?</param>
-            <returns>System.String.</returns>
+            <returns>MD5 hash of the input string.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String,System.Boolean)">
             <summary>
@@ -82,7 +82,7 @@
             </summary>
             <param name="text">The text to hash.</param>
             <param name="toLowercase">Should the output hash <c>string</c> be lowercased?.</param>
-            <returns>System.String.</returns>
+            <returns>SHA512 of the input string.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.EncodeToBytes(System.String,System.Text.Encoding)">
             <summary>
@@ -324,6 +324,48 @@
             </summary>
             <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto">
+            <summary>
+            A <see langword="class"/> containing the HTTP response data for <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> registration.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Id">
+            <summary>
+            The user's unique identifier (the primary key for the epistle db).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512">
+            <summary>
+            The user's password hashed with SHA512.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC">
+            <summary>
+            The <see cref="T:System.DateTime"/> when this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> was first created.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role">
+            <summary>
+            The user's role. 
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.TotpSecret">
+            <summary>
+            The user's 2FA TOTP secret.
+            </summary>
+            <value>The totp secret.</value>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.TotpEmergencyBackupCodes">
+            <summary>
+            The user's 2FA TOTP emergency backup codes (can only be used once).
+            </summary>
+            <value>The 2FA TOTP emergency backup codes.</value>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC">
+            <summary>
+            The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message">
             <summary>
             An epistle message.
@@ -438,48 +480,6 @@
             Checks whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s epistle membership is expired.
             </summary>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s epistle membership is expired or not.</returns>
-        </member>
-        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse">
-            <summary>
-            A <see langword="class"/> containing the HTTP response data for <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> registration.
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.Id">
-            <summary>
-            The user's unique identifier (the primary key for the epistle db).
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.PasswordSHA512">
-            <summary>
-            The user's password hashed with SHA512.
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.CreationTimestampUTC">
-            <summary>
-            The <see cref="T:System.DateTime"/> when this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> was first created.
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.Role">
-            <summary>
-            The user's role. 
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.TotpSecret">
-            <summary>
-            The user's 2FA TOTP secret.
-            </summary>
-            <value>The totp secret.</value>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.TotpEmergencyBackupCodes">
-            <summary>
-            The user's 2FA TOTP emergency backup codes (can only be used once).
-            </summary>
-            <value>The 2FA TOTP emergency backup codes.</value>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.UserCreationResponse.ExpirationUTC">
-            <summary>
-            The exact <see cref="T:System.DateTime"/> (UTC) this user's access to Epistle expires.
-            </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService">
             <summary>
@@ -761,6 +761,28 @@
             <returns>Decrypted bytes (System.Byte[]) if successful.</returns>
             <exception cref="T:System.Security.Cryptography.CryptographicException"></exception>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096">
+            <summary>
+            4096-bit RSA key generator.
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen" />
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096"/> class.
+            </summary>
+            <param name="logger">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger"/> instance with which any eventual problems/errors will be logged.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair(System.String)">
+            <summary>
+            Generates a 4096-bit RSA key pair.<para> </para>
+            The keys are exported into two files:
+            Private.rsa.pem and Public.rsa.pem (inside the specified output directory).
+            </summary>
+            <param name="outputDirectory">The output directory path (where the keys will be exported).</param>
+            <returns>Whether the key generation was successful or not.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA">
             <summary>
             Service interface for encrypting and decrypting <see langword="string"/>s and <see langword="byte"/>[] arrays.
@@ -812,22 +834,6 @@
             <param name="outputDirectory">The output directory (where the keys should be exported into).</param>
             <returns>Whether the key generation was successful or not.</returns>
         </member>
-        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.RSA4096Keygen">
-            <summary>
-            4096-bit RSA key generator.
-            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen" />
-            </summary>
-            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen" />
-        </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.RSA4096Keygen.GenerateKeyPair(System.String)">
-            <summary>
-            Generates a 4096-bit RSA key pair.<para> </para>
-            The keys are exported into two files:
-            Private.rsa.pem and Public.rsa.pem (inside the specified output directory).
-            </summary>
-            <param name="outputDirectory">The output directory path (where the keys will be exported).</param>
-            <returns>Whether the key generation was successful or not.</returns>
-        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography">
             <summary>
             Service interface for comfortably encrypting/decrypting epistle messages (usually json strings).
@@ -874,7 +880,7 @@
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)">
             <summary>
-            Decrypts a message that's been encrypted using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)" /> method.
+            Decrypts a message that's been encrypted using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/> method.
             </summary>
             <param name="encryptedMessage">The encrypted message <see langword="string"/> obtained via <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/>.</param>
             <param name="privateDecryptionRsaKey">Your private message decryption RSA key.</param>
@@ -888,24 +894,24 @@
             </summary>
             <seealso cref="T:System.IDisposable" />
         </member>
-        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.iv">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IV">
             <summary>
             The initialization vector.
             </summary>
         </member>
-        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.key">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Key">
             <summary>
             The encryption key.
             </summary>
         </member>
-        <member name="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.encryptedData">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.EncryptedData">
             <summary>
             The encrypted data bytes.
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Dispose">
             <summary>
-            Overwrites the <see cref="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.key"/> and <see cref="F:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.iv"/> bytes with zeros.
+            Overwrites the <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Key"/> and <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IV"/> bytes with zeros.
             </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography">
