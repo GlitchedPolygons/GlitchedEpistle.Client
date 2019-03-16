@@ -114,6 +114,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 method: Method.GET,
                 resource: new Uri($"users/get-public-key/{userIds}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
@@ -141,6 +142,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 method: Method.PUT,
                 resource: new Uri($"users/change-pw/{userId}", UriKind.Relative)
             );
+
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(oldPw), oldPw);
             request.AddQueryParameter(nameof(newPw), newPw);
@@ -161,7 +163,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
-            request.AddJsonBody(userCreationDto);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(userCreationDto), ParameterType.RequestBody);
 
             var response = await restClient.ExecuteTaskAsync(request);
             if (response.StatusCode != HttpStatusCode.OK)

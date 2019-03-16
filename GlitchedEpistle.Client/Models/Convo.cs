@@ -62,7 +62,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// A list of all the perma-banned users.
         /// </summary>
-        [JsonProperty(PropertyName = "banned")]
+        [JsonProperty(PropertyName = "ban")]
         public List<string> BannedUsers { get; set; } = new List<string>(2);
 
         /// <summary>
