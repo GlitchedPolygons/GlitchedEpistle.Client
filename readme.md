@@ -2,9 +2,9 @@
 ## Shared codebase for implementing clients
 
 Technology used:
-* C# on netstandard2.0
-* Newtonsoft.Json
-* Portable.BouncyCastle
-* RestSharp
+* C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md))
+* [RestSharp](https://github.com/restsharp/RestSharp)
+* [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
+* [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp)
 
 Reference this C# project inside your Glitched Epistle client solution.
