@@ -4,6 +4,8 @@ using System.IO.Compression;
 using System.Security.Cryptography;
 
 using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric;
 
@@ -17,6 +19,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
     {
         private static readonly CompressionSettings COMPRESSION_SETTINGS = new CompressionSettings { CompressionLevel = CompressionLevel.Optimal };
 
+        private readonly ILogger logger;
         private readonly ICompressionUtility gzip;
         private readonly ISymmetricCryptography aes;
         private readonly IAsymmetricCryptographyRSA rsa;
@@ -27,11 +30,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         /// <param name="aes">The <see cref="ISymmetricCryptography"/> instance (should be injected via IoC).</param>
         /// <param name="rsa">The <see cref="IAsymmetricCryptographyRSA"/> instance (should be injected via IoC).</param>
         /// <param name="gzip">The <see cref="ICompressionUtility"/> instance needed for compression (should be injected via IoC).</param>
-        public MessageCryptography(ISymmetricCryptography aes, IAsymmetricCryptographyRSA rsa, ICompressionUtility gzip)
+        /// <param name="logger"><see cref="ILogger"/> instance for logging any cryptographic errors that might occur.</param>
+        public MessageCryptography(ISymmetricCryptography aes, IAsymmetricCryptographyRSA rsa, ICompressionUtility gzip, ILogger logger)
         {
             this.aes = aes;
             this.rsa = rsa;
             this.gzip = gzip;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -42,16 +47,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         /// <returns>The encrypted message <c>string</c>.</returns>
         public string EncryptMessage(string messageJson, RSAParameters recipientPublicRsaKey)
         {
-            byte[] data = gzip.Compress(Encoding.UTF8.GetBytes(messageJson), COMPRESSION_SETTINGS);
-            using (var encryptionResult = aes.Encrypt(data))
+            try
             {
-                var stringBuilder = new StringBuilder(encryptionResult.encryptedData.Length);
-                stringBuilder.Append(Convert.ToBase64String(rsa.Encrypt(encryptionResult.key, recipientPublicRsaKey)));
-                stringBuilder.Append('|');
-                stringBuilder.Append(Convert.ToBase64String(encryptionResult.iv));
-                stringBuilder.Append('|');
-                stringBuilder.Append(Convert.ToBase64String(encryptionResult.encryptedData));
-                return stringBuilder.ToString();
+                byte[] data = gzip.Compress(Encoding.UTF8.GetBytes(messageJson), COMPRESSION_SETTINGS);
+                using (var encryptionResult = aes.Encrypt(data))
+                {
+                    var stringBuilder = new StringBuilder(encryptionResult.encryptedData.Length);
+                    stringBuilder.Append(Convert.ToBase64String(rsa.Encrypt(encryptionResult.key, recipientPublicRsaKey)));
+                    stringBuilder.Append('|');
+                    stringBuilder.Append(Convert.ToBase64String(encryptionResult.iv));
+                    stringBuilder.Append('|');
+                    stringBuilder.Append(Convert.ToBase64String(encryptionResult.encryptedData));
+                    return stringBuilder.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                logger.LogError($"Message encryption failed. Recipient public RSA key: {recipientPublicRsaKey.ToXmlString()}");
+                return null;
             }
         }
 
@@ -66,7 +79,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
             string[] split = encryptedMessage.Split('|');
             if (split.Length != 3)
             {
-                throw new ArgumentException($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: The provided {nameof(encryptedMessage)} string is not in the right format! Please make sure that you do not modify the string that you obtain via the {nameof(MessageCryptography)}::{nameof(EncryptMessage)} method before passing it into this decryption method...");
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: The provided {nameof(encryptedMessage)} string is not in the right format! Please make sure that you do not modify the string that you obtain via the {nameof(MessageCryptography)}::{nameof(EncryptMessage)} method before passing it into this decryption method...");
+                return null;
             }
 
             var encryptionResult = new EncryptionResult
@@ -76,11 +90,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
                 encryptedData = Convert.FromBase64String(split[2])
             };
 
-            byte[] decryptedDecompressed = gzip.Decompress(aes.Decrypt(encryptionResult), COMPRESSION_SETTINGS);
-            encryptionResult.Dispose();
-            string result = Encoding.UTF8.GetString(decryptedDecompressed);
-            for (int i = 0; i < decryptedDecompressed.Length; i++) decryptedDecompressed[i] = 0;
-            return result;
+            try
+            {
+                byte[] decryptedDecompressed = gzip.Decompress(aes.Decrypt(encryptionResult), COMPRESSION_SETTINGS);
+                encryptionResult.Dispose();
+                string result = Encoding.UTF8.GetString(decryptedDecompressed);
+                for (int i = 0; i < decryptedDecompressed.Length; i++) decryptedDecompressed[i] = 0;
+                return result;
+            }
+            catch (Exception)
+            {
+                logger.LogError("Message decryption failed. Perhaps wrong or missing keys? Or invalid message format?");
+                return null;
+            }
         }
     }
 }
