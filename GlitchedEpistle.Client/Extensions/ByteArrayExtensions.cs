@@ -27,7 +27,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
             }
             int i = Convert.ToInt32(Math.Floor(Math.Log(byteCount, 1024)));
             double n = Math.Round(byteCount / Math.Pow(1024, i), 1);
-            return (Math.Sign(byteCount) * n) + SIZE_SUFFIX_STRINGS[i];
+            return (Math.Sign(byteCount) * n).ToString() + SIZE_SUFFIX_STRINGS[i];
         }
     }
 }
