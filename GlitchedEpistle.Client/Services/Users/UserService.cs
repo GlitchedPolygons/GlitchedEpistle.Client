@@ -133,10 +133,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="userId">The user identifier.</param>
         /// <param name="auth">The authentication token.</param>
-        /// <param name="oldPw">The old password hash (SHA-512).</param>
-        /// <param name="newPw">The new password hash (SHA-512).</param>
+        /// <param name="oldPwSHA512">The old password hash (SHA-512).</param>
+        /// <param name="newPwSHA512">The new password hash (SHA-512).</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        public async Task<bool> ChangeUserPassword(string userId, string auth, string oldPw, string newPw)
+        public async Task<bool> ChangeUserPassword(string userId, string auth, string oldPwSHA512, string newPwSHA512)
         {
             var request = new RestRequest(
                 method: Method.PUT,
@@ -144,8 +144,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
             );
 
             request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(oldPw), oldPw);
-            request.AddQueryParameter(nameof(newPw), newPw);
+            request.AddQueryParameter(nameof(oldPwSHA512), oldPwSHA512);
+            request.AddQueryParameter(nameof(newPwSHA512), newPwSHA512);
 
             var response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;

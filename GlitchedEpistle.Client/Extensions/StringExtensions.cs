@@ -8,6 +8,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
     public static class StringExtensions
     {
         /// <summary>
+        /// Returns <c>true</c> when the passed <c>string</c> is not <c>null</c> or empty; <c>false</c> otherwise.
+        /// </summary>
+        /// <param name="str">The <c>string</c> to check.</param>
+        /// <returns><c>!string.IsNullOrEmpty(str)</c></returns>
+        public static bool NotNullNotEmpty(this string str)
+        {
+            return !string.IsNullOrEmpty(str);
+        }
+
+        /// <summary>
+        /// Returns whether the passed string is <c>null</c> or empty.
+        /// </summary>
+        /// <param name="str">The <c>string</c> to check.</param>
+        /// <returns><c>string.IsNullOrEmpty(str)</c></returns>
+        public static bool NullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
+        
+        /// <summary>
         /// Computes the MD5 hash of a <c>string</c>.
         /// </summary>
         /// <param name="text">The text to hash.</param>
@@ -30,7 +50,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         }
 
         /// <summary>
-        /// Computes the SHA512 hash of a <c>string</c>.
+        /// Computes the SHA512 of a <c>string</c>.
         /// </summary>
         /// <param name="text">The text to hash.</param>
         /// <param name="toLowercase">Should the output hash <c>string</c> be lowercased?.</param>
@@ -56,7 +76,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// </summary>
         /// <param name="text">The text to encode.</param>
         /// <param name="encoding">The <see cref="Encoding"/> to use for the conversion (default is UTF8).</param>
-        /// <returns>System.Byte[].</returns>
+        /// <returns>The encoded <c>byte[]</c> array.</returns>
         private static byte[] EncodeToBytes(this string text, Encoding encoding = null) => (encoding ?? Encoding.UTF8).GetBytes(text);
     }
 }

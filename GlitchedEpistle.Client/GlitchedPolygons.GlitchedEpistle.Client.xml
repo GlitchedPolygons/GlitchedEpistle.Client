@@ -68,6 +68,20 @@
             <see cref="T:System.String"/> extensions.
             </summary>
         </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty(System.String)">
+            <summary>
+            Returns <c>true</c> when the passed <c>string</c> is not <c>null</c> or empty; <c>false</c> otherwise.
+            </summary>
+            <param name="str">The <c>string</c> to check.</param>
+            <returns><c>!string.IsNullOrEmpty(str)</c></returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty(System.String)">
+            <summary>
+            Returns whether the passed string is <c>null</c> or empty.
+            </summary>
+            <param name="str">The <c>string</c> to check.</param>
+            <returns><c>string.IsNullOrEmpty(str)</c></returns>
+        </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5(System.String,System.Boolean)">
             <summary>
             Computes the MD5 hash of a <c>string</c>.
@@ -78,7 +92,7 @@
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String,System.Boolean)">
             <summary>
-            Computes the SHA512 hash of a <c>string</c>.
+            Computes the SHA512 of a <c>string</c>.
             </summary>
             <param name="text">The text to hash.</param>
             <param name="toLowercase">Should the output hash <c>string</c> be lowercased?.</param>
@@ -90,7 +104,7 @@
             </summary>
             <param name="text">The text to encode.</param>
             <param name="encoding">The <see cref="T:System.Text.Encoding"/> to use for the conversion (default is UTF8).</param>
-            <returns>System.Byte[].</returns>
+            <returns>The encoded <c>byte[]</c> array.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo">
             <summary>
@@ -155,6 +169,37 @@
             ready for submitting them with <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String,System.String,System.String)"/>.
             </summary>
             <returns>The participant user ids separated by commas.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto">
+            <summary>
+            DTO for changing an existing <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s metadata
+            (such as for example updating the title or description, or extending its lifespan).
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.CreatorId">
+            <summary>
+            The new convo admin.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.Name">
+            <summary>
+            <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> name/title.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.Description">
+            <summary>
+            The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s new description text.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.PasswordSHA512">
+            <summary>
+            The changed access password hash for this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
+            </summary>
+        </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.ExpirationUTC">
+            <summary>
+            The new convo expiration <see cref="T:System.DateTime"/> (UTC).
+            </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto">
             <summary>
@@ -234,7 +279,7 @@
             DTO for the message post request parameters (request body).
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordHash">
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordSHA512">
             <summary>
             The conversation's access pw.
             </summary>
@@ -502,7 +547,7 @@
             Deletes a convo server-side.
             </summary>
             <param name="convoId">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />'s identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
             <param name="auth">The authentication JWT.</param>
             <returns>Whether deletion was successful or not.</returns>
@@ -520,17 +565,30 @@
             Gets a convo's metadata (description, timestamp, etc...).
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (needs to be a participant of the convo).</param>
             <param name="auth">The authentication token.</param>
             <returns>The convo's metadata wrapped into a DTO (<c>null</c> if something failed).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(System.String,System.String,System.String,System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto)">
+            <summary>
+            Changes a convo's metadata (description, title, etc...).<para> </para>
+            The user making the request needs to be the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s admin (Creator).<para> </para>
+            If you're assigning a new admin, he needs to be a participant of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>, else you'll get a bad request returned from the web api.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordSHA512">The convo's hashed access password.</param>
+            <param name="userId">The user identifier (needs to be the admin/creator of the convo).</param>
+            <param name="auth">Request authentication token.</param>
+            <param name="metadata">The data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
+            <returns>Whether the convo's metadata was changed successfully or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             Gets the convo messages.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (needs to be a convo participant).</param>
             <param name="auth">The request authentication token.</param>
             <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
@@ -541,7 +599,7 @@
             Gets the index of a message inside a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier of who's making the request.</param>
             <param name="auth">The request authentication JWT.</param>
             <param name="messageId">The message identifier.</param>
@@ -552,7 +610,7 @@
             Join a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
             </summary>
             <param name="convoId">The identifier of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" /> that you're trying to join.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user's identifier (who wants to join).</param>
             <param name="auth">The authentication token.</param>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" /> was joined successfully or not.</returns>
@@ -562,7 +620,7 @@
             Leave a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (who's leaving the convo).</param>
             <param name="auth">The request authentication token.</param>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" /> was left successfully or not.</returns>
@@ -572,7 +630,7 @@
             Kick a user from a conversation.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="convoAdminId">Your user id (you need to be a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo" />'s admin in order to kick people out of it).</param>
             <param name="auth">The request authentication token.</param>
             <param name="userIdToKick">The user id of who you're kicking out.</param>
@@ -638,7 +696,7 @@
             Deletes a convo server-side.
             </summary>
             <param name="convoId">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
             <param name="auth">The authentication JWT.</param>
             <returns>Whether deletion was successful or not.</returns>
@@ -656,17 +714,30 @@
             Gets a convo's metadata (description, timestamp, etc...).
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (needs to be a participant of the convo).</param>
             <param name="auth">The authentication token.</param>
             <returns>The convo's metadata wrapped into a DTO (<c>null</c> if something failed).</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(System.String,System.String,System.String,System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto)">
+            <summary>
+            Changes a convo's metadata (description, title, etc...).<para> </para>
+            The user making the request needs to be the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s admin (Creator).<para> </para>
+            If you're assigning a new admin, he needs to be a participant of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>, else you'll get a bad request returned from the web api.
+            </summary>
+            <param name="convoId">The convo's identifier.</param>
+            <param name="convoPasswordSHA512">The convo's hashed access password.</param>
+            <param name="userId">The user identifier (needs to be the admin/creator of the convo).</param>
+            <param name="auth">Request authentication token.</param>
+            <param name="metadata">The data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
+            <returns>Whether the convo's metadata was changed successfully or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             Gets the convo messages.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (needs to be a convo participant).</param>
             <param name="auth">The request authentication token.</param>
             <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
@@ -677,7 +748,7 @@
             Gets the index of a message inside a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier of who's making the request.</param>
             <param name="auth">The request authentication JWT.</param>
             <param name="messageId">The message identifier.</param>
@@ -688,7 +759,7 @@
             Join a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
             </summary>
             <param name="convoId">The identifier of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> that you're trying to join.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user's identifier (who wants to join).</param>
             <param name="auth">The authentication token.</param>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> was joined successfully or not.</returns>
@@ -698,7 +769,7 @@
             Leave a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="userId">The user identifier (who's leaving the convo).</param>
             <param name="auth">The request authentication token.</param>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> was left successfully or not.</returns>
@@ -708,7 +779,7 @@
             Kick a user from a conversation.
             </summary>
             <param name="convoId">The convo's identifier.</param>
-            <param name="convoPasswordHash">The convo's password hash.</param>
+            <param name="convoPasswordSHA512">The convo's password hash.</param>
             <param name="convoAdminId">Your user id (you need to be a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s admin in order to kick people out of it).</param>
             <param name="auth">The request authentication token.</param>
             <param name="userIdToKick">The user id of who you're kicking out.</param>
@@ -1182,8 +1253,8 @@
             </summary>
             <param name="userId">The user identifier.</param>
             <param name="auth">The authentication token.</param>
-            <param name="oldPw">The old password hash (SHA-512).</param>
-            <param name="newPw">The new password hash (SHA-512).</param>
+            <param name="oldPwSHA512">The old password hash (SHA-512).</param>
+            <param name="newPwSHA512">The new password hash (SHA-512).</param>
             <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.CreateUser(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)">
@@ -1244,8 +1315,8 @@
             </summary>
             <param name="userId">The user identifier.</param>
             <param name="auth">The authentication token.</param>
-            <param name="oldPw">The old password hash (SHA-512).</param>
-            <param name="newPw">The new password hash (SHA-512).</param>
+            <param name="oldPwSHA512">The old password hash (SHA-512).</param>
+            <param name="newPwSHA512">The new password hash (SHA-512).</param>
             <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)">
