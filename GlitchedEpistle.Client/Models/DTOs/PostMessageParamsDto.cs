@@ -12,7 +12,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The conversation's access pw.
         /// </summary>
         [JsonProperty(PropertyName = "pw")]
-        public string ConvoPasswordHash { get; set; }
+        public string ConvoPasswordSHA512 { get; set; }
 
         /// <summary>
         /// The message author's user id.
@@ -55,7 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return string.Equals(ConvoPasswordHash, other.ConvoPasswordHash, StringComparison.OrdinalIgnoreCase) &&
+            return string.Equals(ConvoPasswordSHA512, other.ConvoPasswordSHA512, StringComparison.OrdinalIgnoreCase) &&
                    string.Equals(UserId, other.UserId, StringComparison.OrdinalIgnoreCase) &&
                    string.Equals(Auth, other.Auth, StringComparison.OrdinalIgnoreCase) &&
                    string.Equals(SenderName, other.SenderName, StringComparison.OrdinalIgnoreCase) &&
@@ -82,7 +82,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         {
             unchecked
             {
-                int hashCode = (ConvoPasswordHash != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(ConvoPasswordHash) : 0);
+                int hashCode = (ConvoPasswordSHA512 != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(ConvoPasswordSHA512) : 0);
                 hashCode = (hashCode * 397) ^ (UserId != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(UserId) : 0);
                 hashCode = (hashCode * 397) ^ (Auth != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(Auth) : 0);
                 hashCode = (hashCode * 397) ^ (SenderName != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(SenderName) : 0);

@@ -60,10 +60,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="userId">The user identifier.</param>
         /// <param name="auth">The authentication token.</param>
-        /// <param name="oldPw">The old password hash (SHA-512).</param>
-        /// <param name="newPw">The new password hash (SHA-512).</param>
+        /// <param name="oldPwSHA512">The old password hash (SHA-512).</param>
+        /// <param name="newPwSHA512">The new password hash (SHA-512).</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        Task<bool> ChangeUserPassword(string userId, string auth, string oldPw, string newPw);
+        Task<bool> ChangeUserPassword(string userId, string auth, string oldPwSHA512, string newPwSHA512);
 
         /// <summary>
         /// Creates a new user.
