@@ -1,6 +1,8 @@
-﻿using System;
+﻿#region
+using System;
 using System.Linq;
 using System.Security.Cryptography;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
 {
@@ -25,18 +27,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             try
             {
                 EncryptionResult result;
-                using (var aes = new AesManaged())
+                using (AesManaged aes = new AesManaged())
                 {
                     aes.GenerateIV();
                     aes.GenerateKey();
                     using (ICryptoTransform encryptor = aes.CreateEncryptor())
                     {
-                        result = new EncryptionResult
-                        {
-                            IV = aes.IV,
-                            Key = aes.Key,
-                            EncryptedData = encryptor.TransformFinalBlock(data, 0, data.Length)
-                        };
+                        result = new EncryptionResult { IV = aes.IV, Key = aes.Key, EncryptedData = encryptor.TransformFinalBlock(data, 0, data.Length) };
                     }
                 }
                 return result;
@@ -46,7 +43,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                 return null;
             }
         }
-        
+
         /// <summary>
         /// Decrypts the specified <see cref="EncryptionResult" /> that was obtained using <see cref="Encrypt(System.Byte[])" />.
         /// </summary>
@@ -57,7 +54,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             try
             {
                 byte[] decryptedBytes;
-                using (var aes = new AesManaged())
+                using (AesManaged aes = new AesManaged())
                 {
                     aes.IV = encryptionResult.IV;
                     aes.Key = encryptionResult.Key;
@@ -87,11 +84,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             {
                 byte[] result;
                 byte[] salt = new byte[32];
-                using (var aes = new AesManaged())
-                using (var rng = new RNGCryptoServiceProvider())
+                using (AesManaged aes = new AesManaged())
+                using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
                 {
                     rng.GetBytes(salt);
-                    using (var rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
+                    using (Rfc2898DeriveBytes rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
                     {
                         aes.IV = rfc.GetBytes(16);
                         aes.Key = rfc.GetBytes(32);
@@ -125,13 +122,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                 byte[] encr = new byte[encryptedBytes.Length - 32];
 
                 for (int i = 0; i < salt.Length; i++)
+                {
                     salt[i] = encryptedBytes[i];
+                }
 
                 for (int i = 0; i < encr.Length; i++)
+                {
                     encr[i] = encryptedBytes[i + 32];
+                }
 
-                using (var aes = new AesManaged())
-                using (var rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
+                using (AesManaged aes = new AesManaged())
+                using (Rfc2898DeriveBytes rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
                 {
                     aes.IV = rfc.GetBytes(16);
                     aes.Key = rfc.GetBytes(32);

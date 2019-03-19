@@ -1,6 +1,9 @@
-﻿using System;
+﻿#region
+using System;
 using System.Collections.Generic;
+
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {

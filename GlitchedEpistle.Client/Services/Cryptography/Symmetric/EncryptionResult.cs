@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region
+using System;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
 {
@@ -30,8 +32,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         /// </summary>
         public void Dispose()
         {
-            for (int i = 0; i < IV.Length; i++) IV[i] = 0;
-            for (int i = 0; i < Key.Length; i++) Key[i] = 0;
+            for (int i = 0; i < IV.Length; i++)
+            {
+                IV[i] = 0;
+            }
+            for (int i = 0; i < Key.Length; i++)
+            {
+                Key[i] = 0;
+            }
         }
     }
 }

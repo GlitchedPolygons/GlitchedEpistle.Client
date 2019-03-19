@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿#region
+using System.Threading.Tasks;
+
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
@@ -58,7 +61,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <param name="metadata">The data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
         Task<bool> ChangeConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth, ConvoChangeMetadataDto metadata);
-        
+
         /// <summary>
         /// Gets the convo messages.
         /// </summary>

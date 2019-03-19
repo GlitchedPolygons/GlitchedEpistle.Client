@@ -1,6 +1,8 @@
-﻿using System;
-using System.Text;
+﻿#region
+using System;
 using System.Security.Cryptography;
+using System.Text;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
 {
@@ -18,10 +20,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// <returns>The encrypted <c>string</c>.</returns>
         public string Encrypt(string text, RSAParameters publicKey)
         {
-            if (string.IsNullOrEmpty(text)) return null;
+            if (string.IsNullOrEmpty(text))
+            {
+                return null;
+            }
 
             byte[] encryptedData;
-            using (var rsa = new RSACryptoServiceProvider())
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(publicKey);
                 encryptedData = rsa.Encrypt(Encoding.UTF8.GetBytes(text), true);
@@ -38,10 +43,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// <exception cref="CryptographicException"></exception>
         public string Decrypt(string encryptedText, RSAParameters privateKey)
         {
-            if (string.IsNullOrEmpty(encryptedText)) return null;
+            if (string.IsNullOrEmpty(encryptedText))
+            {
+                return null;
+            }
 
             byte[] data;
-            using (var rsa = new RSACryptoServiceProvider())
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(privateKey);
                 if (rsa.PublicOnly)
@@ -62,7 +70,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         public byte[] Encrypt(byte[] data, RSAParameters publicKey)
         {
             byte[] encryptedData;
-            using (var rsa = new RSACryptoServiceProvider())
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(publicKey);
                 encryptedData = rsa.Encrypt(data, true);
@@ -80,7 +88,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         public byte[] Decrypt(byte[] encryptedData, RSAParameters privateKey)
         {
             byte[] data;
-            using (var rsa = new RSACryptoServiceProvider())
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(privateKey);
                 if (rsa.PublicOnly)

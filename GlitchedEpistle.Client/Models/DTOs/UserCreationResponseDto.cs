@@ -1,7 +1,9 @@
-﻿using System;
+﻿#region
+using System;
 using System.Collections.Generic;
 
 using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {

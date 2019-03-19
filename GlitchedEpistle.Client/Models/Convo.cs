@@ -1,9 +1,12 @@
-﻿using System;
-using System.Text;
+﻿#region
+using System;
 using System.Collections.Generic;
+using System.Text;
+
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
 
 using Newtonsoft.Json;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -81,7 +84,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns>The participant user ids separated by commas.</returns>
         public string GetParticipantIdsCommaSeparated()
         {
-            var stringBuilder = new StringBuilder(128);
+            StringBuilder stringBuilder = new StringBuilder(128);
             int participantsCount = Participants.Count;
             for (int i = 0; i < participantsCount; i++)
             {

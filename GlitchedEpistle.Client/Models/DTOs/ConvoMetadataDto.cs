@@ -1,5 +1,8 @@
-﻿using System;
+﻿#region
+using System;
+
 using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {

@@ -1,5 +1,8 @@
+#region
 using System;
+
 using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -13,21 +16,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         [JsonProperty(PropertyName = "pw")]
         public string PasswordSHA512 { get; set; }
-        
+
         /// <summary>
         /// The user's public RSA key (in xml format). This is needed to encrypt messages for this user.
         /// </summary>
         [JsonProperty(PropertyName = "key")]
-        public string PublicKeyXml{ get; set; }
-        
+        public string PublicKeyXml { get; set; }
+
         /// <summary>
         /// The server creation secret <c>string</c>.
         /// </summary>
         [JsonProperty(PropertyName = "secret")]
-        public string CreationSecret{ get; set; }
+        public string CreationSecret { get; set; }
 
         #region Equality
-
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
@@ -35,7 +37,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
         public bool Equals(UserCreationDto other)
         {
-            return other != null && 
+            return other != null &&
                    string.Equals(PasswordSHA512, other.PasswordSHA512) &&
                    string.Equals(PublicKeyXml, other.PublicKeyXml) &&
                    string.Equals(CreationSecret, other.CreationSecret);
@@ -48,7 +50,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <returns><c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
             return obj is UserCreationDto other && Equals(other);
         }
 
@@ -66,7 +71,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
                 return hashCode;
             }
         }
-        
         #endregion
     }
 }
