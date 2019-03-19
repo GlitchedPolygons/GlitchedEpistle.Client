@@ -1,13 +1,15 @@
-﻿using System;
+﻿#region
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
-using Org.BouncyCastle.OpenSsl;
-using Org.BouncyCastle.Security;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
+
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Generators;
-
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
+using Org.BouncyCastle.OpenSsl;
+using Org.BouncyCastle.Security;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
 {
@@ -48,25 +50,25 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
 
             try
             {
-                var keyPair = await Task.Run(() =>
+                AsymmetricCipherKeyPair keyPair = await Task.Run(() =>
                 {
-                    var keygen = new RsaKeyPairGenerator();
+                    RsaKeyPairGenerator keygen = new RsaKeyPairGenerator();
                     keygen.Init(new KeyGenerationParameters(new SecureRandom(), 4096));
                     return keygen.GenerateKeyPair();
                 });
 
-                using (var sw = new StringWriter())
+                using (StringWriter sw = new StringWriter())
                 {
-                    var pem = new PemWriter(sw);
+                    PemWriter pem = new PemWriter(sw);
                     pem.WriteObject(keyPair.Private);
                     pem.Writer.Flush();
 
                     File.WriteAllText(Path.Combine(outputDirectory, "Private.rsa.pem"), sw.ToString());
                 }
 
-                using (var sw = new StringWriter())
+                using (StringWriter sw = new StringWriter())
                 {
-                    var pem = new PemWriter(sw);
+                    PemWriter pem = new PemWriter(sw);
                     pem.WriteObject(keyPair.Public);
                     pem.Writer.Flush();
 
@@ -77,7 +79,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             }
             catch (Exception e)
             {
-                logger.LogError($"{nameof(AsymmetricKeygenRSA4096)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e.ToString()}");
+                logger.LogError($"{nameof(AsymmetricKeygenRSA4096)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e}");
                 return false;
             }
         }

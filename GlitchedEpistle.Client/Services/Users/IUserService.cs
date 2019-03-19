@@ -1,9 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿#region
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 {

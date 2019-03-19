@@ -1,5 +1,8 @@
+#region
 using System;
+
 using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -45,7 +48,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public DateTime TimestampUTC { get; set; }
 
         #region Equality
-
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
@@ -53,8 +55,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
         public bool Equals(PostMessageParamsDto other)
         {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
             return string.Equals(ConvoPasswordSHA512, other.ConvoPasswordSHA512, StringComparison.OrdinalIgnoreCase) &&
                    string.Equals(UserId, other.UserId, StringComparison.OrdinalIgnoreCase) &&
                    string.Equals(Auth, other.Auth, StringComparison.OrdinalIgnoreCase) &&
@@ -69,9 +77,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <returns><c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            return obj.GetType() == this.GetType() && Equals((PostMessageParamsDto) obj);
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+            return obj.GetType() == GetType() && Equals((PostMessageParamsDto)obj);
         }
 
         /// <summary>
@@ -82,7 +96,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         {
             unchecked
             {
-                int hashCode = (ConvoPasswordSHA512 != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(ConvoPasswordSHA512) : 0);
+                int hashCode = ConvoPasswordSHA512 != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(ConvoPasswordSHA512) : 0;
                 hashCode = (hashCode * 397) ^ (UserId != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(UserId) : 0);
                 hashCode = (hashCode * 397) ^ (Auth != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(Auth) : 0);
                 hashCode = (hashCode * 397) ^ (SenderName != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(SenderName) : 0);
@@ -90,7 +104,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
                 return hashCode;
             }
         }
-
         #endregion
     }
 }

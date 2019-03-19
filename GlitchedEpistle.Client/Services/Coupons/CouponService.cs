@@ -1,9 +1,12 @@
-﻿using System;
+﻿#region
+using System;
 using System.Net;
 using System.Threading.Tasks;
 
-using RestSharp;
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
+
+using RestSharp;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
 {
@@ -23,7 +26,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
         /// <returns>Whether the coupon code was redeemed successfully or not.</returns>
         public async Task<bool> UseCoupon(string code, string userId, string auth)
         {
-            var request = new RestRequest(
+            RestRequest request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"coupons/{code}", UriKind.Relative)
             );
@@ -31,7 +34,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            var response = await restClient.ExecuteTaskAsync(request);
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;
         }
     }

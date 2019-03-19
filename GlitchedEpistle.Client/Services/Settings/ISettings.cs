@@ -1,23 +1,10 @@
-﻿
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Settings
+﻿namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Settings
 {
     /// <summary>
     /// Service interface for accessing, saving and loading user settings.
     /// </summary>
     public interface ISettings
     {
-        /// <summary>
-        /// Saves the current user settings out to disk.
-        /// </summary>
-        /// <returns>Whether the settings were saved out to disk successfully or not.</returns>
-        bool Save();
-
-        /// <summary>
-        /// Loads user settings from disk into the <see cref="ISettings"/> instance.
-        /// </summary>
-        /// <returns>Whether the loading procedure was successful or not.</returns>
-        bool Load();
-
         /// <summary>
         /// Gets or sets a user setting with its specified key <see langword="string"/>.<para> </para>
         /// If you are trying to get an inexistent setting, <see langword="null"/> (or <c>string.Empty</c>) should be returned.<para> </para>
@@ -66,5 +53,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Settings
         /// <param name="defaultValue">The setting's default <c>double</c> value to return in case the setting doesn't exist or couldn't be parsed.</param>
         /// <returns>The setting's <c>double</c> value; or the specified default value if the setting wasn't found or couldn't be parsed.</returns>
         double this[string key, double defaultValue] { get; }
+
+        /// <summary>
+        /// Saves the current user settings out to disk.
+        /// </summary>
+        /// <returns>Whether the settings were saved out to disk successfully or not.</returns>
+        bool Save();
+
+        /// <summary>
+        /// Loads user settings from disk into the <see cref="ISettings"/> instance.
+        /// </summary>
+        /// <returns>Whether the loading procedure was successful or not.</returns>
+        bool Load();
     }
 }

@@ -1,7 +1,9 @@
-﻿using System;
+﻿#region
+using System;
 using System.IO;
-using System.Xml;
 using System.Security.Cryptography;
+using System.Xml;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
 {
@@ -18,9 +20,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <exception cref="InvalidDataException">Invalid XML RSA key.</exception>
         public static RSAParameters FromXmlString(string xml)
         {
-            var rsaParameters = new RSAParameters();
+            RSAParameters rsaParameters = new RSAParameters();
 
-            var xmlDoc = new XmlDocument();
+            XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(xml);
 
             if (xmlDoc.DocumentElement != null && xmlDoc.DocumentElement.Name == "RSAKeyValue")
@@ -29,14 +31,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
                 {
                     switch (node.Name)
                     {
-                        case "Modulus": rsaParameters.Modulus = Convert.FromBase64String(node.InnerText); break;
-                        case "Exponent": rsaParameters.Exponent = Convert.FromBase64String(node.InnerText); break;
-                        case "P": rsaParameters.P = Convert.FromBase64String(node.InnerText); break;
-                        case "Q": rsaParameters.Q = Convert.FromBase64String(node.InnerText); break;
-                        case "DP": rsaParameters.DP = Convert.FromBase64String(node.InnerText); break;
-                        case "DQ": rsaParameters.DQ = Convert.FromBase64String(node.InnerText); break;
-                        case "InverseQ": rsaParameters.InverseQ = Convert.FromBase64String(node.InnerText); break;
-                        case "D": rsaParameters.D = Convert.FromBase64String(node.InnerText); break;
+                        case "Modulus":
+                            rsaParameters.Modulus = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "Exponent":
+                            rsaParameters.Exponent = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "P":
+                            rsaParameters.P = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "Q":
+                            rsaParameters.Q = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "DP":
+                            rsaParameters.DP = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "DQ":
+                            rsaParameters.DQ = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "InverseQ":
+                            rsaParameters.InverseQ = Convert.FromBase64String(node.InnerText);
+                            break;
+                        case "D":
+                            rsaParameters.D = Convert.FromBase64String(node.InnerText);
+                            break;
                     }
                 }
             }

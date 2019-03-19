@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿#region
+using System.Security.Cryptography;
+using System.Text;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
 {
@@ -26,7 +29,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         {
             return string.IsNullOrEmpty(str);
         }
-        
+
         /// <summary>
         /// Computes the MD5 hash of a <c>string</c>.
         /// </summary>
@@ -35,9 +38,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <returns>MD5 hash of the input string.</returns>
         public static string MD5(this string text, bool toLowercase = false)
         {
-            using (var md5 = System.Security.Cryptography.MD5.Create())
+            using (MD5 md5 = System.Security.Cryptography.MD5.Create())
             {
-                var stringBuilder = new StringBuilder(32);
+                StringBuilder stringBuilder = new StringBuilder(32);
                 byte[] hash = md5.ComputeHash(text.EncodeToBytes());
 
                 for (int i = 0; i < hash.Length; i++)
@@ -57,9 +60,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <returns>SHA512 of the input string.</returns>
         public static string SHA512(this string text, bool toLowercase = false)
         {
-            using (var sha512 = System.Security.Cryptography.SHA512.Create())
+            using (SHA512 sha512 = System.Security.Cryptography.SHA512.Create())
             {
-                var stringBuilder = new StringBuilder(128);
+                StringBuilder stringBuilder = new StringBuilder(128);
                 byte[] hash = sha512.ComputeHash(text.EncodeToBytes());
 
                 for (int i = 0; i < hash.Length; i++)
@@ -77,6 +80,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <param name="text">The text to encode.</param>
         /// <param name="encoding">The <see cref="Encoding"/> to use for the conversion (default is UTF8).</param>
         /// <returns>The encoded <c>byte[]</c> array.</returns>
-        private static byte[] EncodeToBytes(this string text, Encoding encoding = null) => (encoding ?? Encoding.UTF8).GetBytes(text);
+        private static byte[] EncodeToBytes(this string text, Encoding encoding = null)
+        {
+            return (encoding ?? Encoding.UTF8).GetBytes(text);
+        }
     }
 }

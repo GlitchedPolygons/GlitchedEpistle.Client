@@ -1,6 +1,10 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿#region
+using System;
+
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
+
+using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -9,6 +13,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// </summary>
     public class Message : IEquatable<Message>
     {
+        private string id;
+
         /// <summary>
         /// The sender's ID.
         /// </summary>
@@ -33,7 +39,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
 
-        private string id = null;
         /// <summary>
         /// Gets the message's unique identifier, which is <para> </para>
         /// md5( <see cref="SenderId"/> + <see cref="TimestampUTC"/> )
@@ -52,7 +57,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         }
 
         #region Equality
-
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" /> is equal to this instance.
         /// </summary>
@@ -81,7 +85,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         {
             return Id.GetHashCode();
         }
-
         #endregion
     }
 }

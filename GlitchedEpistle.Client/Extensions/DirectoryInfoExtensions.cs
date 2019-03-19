@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿#region
+using System.IO;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
 {
@@ -14,12 +16,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <param name="dir">The directory to delete.</param>
         public static void DeleteRecursively(this DirectoryInfo dir)
         {
-            foreach (var file in dir.GetFiles())
+            foreach (FileInfo file in dir.GetFiles())
             {
                 file.Delete();
             }
 
-            foreach (var subDir in dir.GetDirectories())
+            foreach (DirectoryInfo subDir in dir.GetDirectories())
             {
                 DeleteRecursively(subDir);
                 subDir.Delete();

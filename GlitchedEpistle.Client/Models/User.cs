@@ -1,7 +1,9 @@
-﻿using System;
+﻿#region
+using System;
 using System.Security.Cryptography;
 
 using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -71,12 +73,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// After too many, he is locked out for a while.
         /// </summary>
         [JsonProperty(PropertyName = "fail")]
-        public int LoginFailures { get; set; } = 0;
+        public int LoginFailures { get; set; }
 
         /// <summary>
         /// Checks whether the <see cref="User"/>'s epistle membership is expired.
         /// </summary>
         /// <returns>Whether the <see cref="User"/>'s epistle membership is expired or not.</returns>
-        public bool IsExpired() => DateTime.UtcNow > ExpirationUTC;
+        public bool IsExpired()
+        {
+            return DateTime.UtcNow > ExpirationUTC;
+        }
     }
 }

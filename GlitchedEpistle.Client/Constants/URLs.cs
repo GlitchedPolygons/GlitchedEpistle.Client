@@ -1,5 +1,4 @@
-﻿
-namespace GlitchedPolygons.GlitchedEpistle.Client.Constants
+﻿namespace GlitchedPolygons.GlitchedEpistle.Client.Constants
 {
     /// <summary>
     /// Class containing important <see langword="const"/> URLs.

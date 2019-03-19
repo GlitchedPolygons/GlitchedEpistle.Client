@@ -1,5 +1,8 @@
+#region
 using System;
+
 using Newtonsoft.Json;
+#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -14,7 +17,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         [JsonProperty(PropertyName = "creatorId")]
         public string CreatorId { get; set; }
-        
+
         /// <summary>
         /// <see cref="Convo"/> name/title.
         /// </summary>
@@ -26,13 +29,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         [JsonProperty(PropertyName = "desc")]
         public string Description { get; set; }
-        
+
         /// <summary>
         /// The changed access password hash for this <see cref="Convo"/>.
         /// </summary>
         [JsonProperty(PropertyName = "pw")]
         public string PasswordSHA512 { get; set; }
-        
+
         /// <summary>
         /// The new convo expiration <see cref="DateTime"/> (UTC).
         /// </summary>
