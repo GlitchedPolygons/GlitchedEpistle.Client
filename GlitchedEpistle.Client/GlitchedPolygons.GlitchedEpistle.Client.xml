@@ -163,6 +163,12 @@
             The conversation's messages.
             </summary>
         </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.IsExpired">
+            <summary>
+            Determines whether this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> is expired.
+            </summary>
+            <returns><c>true</c> if the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> is expired; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetParticipantIdsCommaSeparated">
             <summary>
             Gets all of the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/>'s participants (their ids) comma-separated;
