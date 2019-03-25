@@ -78,6 +78,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public List<Message> Messages { get; set; } = new List<Message>(16);
 
         /// <summary>
+        /// Determines whether this <see cref="Convo"/> is expired.
+        /// </summary>
+        /// <returns><c>true</c> if the <see cref="Convo"/> is expired; otherwise, <c>false</c>.</returns>
+        public bool IsExpired => DateTime.UtcNow > ExpirationUTC;
+
+        /// <summary>
         /// Gets all of the <see cref="Convo"/>'s participants (their ids) comma-separated;
         /// ready for submitting them with <see cref="IUserService.GetUserPublicKeyXml"/>.
         /// </summary>
