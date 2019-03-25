@@ -48,9 +48,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         {
             get
             {
-                if (string.IsNullOrEmpty(id))
+                if (id.NullOrEmpty())
                 {
-                    id = (SenderId + TimestampUTC.ToString("u")).MD5();
+                    id = (SenderId + TimestampUTC.ToString("yyyyMMddHHmmssfff")).MD5();
                 }
                 return id;
             }
