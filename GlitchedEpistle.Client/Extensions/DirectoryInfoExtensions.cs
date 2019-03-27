@@ -16,6 +16,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <param name="dir">The directory to delete.</param>
         public static void DeleteRecursively(this DirectoryInfo dir)
         {
+            if (dir is null || !dir.Exists)
+            {
+                return;
+            }
+
             foreach (FileInfo file in dir.GetFiles())
             {
                 file.Delete();
