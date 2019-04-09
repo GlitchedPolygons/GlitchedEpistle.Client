@@ -13,7 +13,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// </summary>
     public class Message : IEquatable<Message>
     {
-        private string id;
+        /// <summary>
+        /// Gets the message's unique identifier, which is <para> </para>
+        /// md5( <see cref="SenderId"/> + <see cref="TimestampUTC"/> )
+        /// </summary>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
 
         /// <summary>
         /// The sender's ID.
@@ -38,23 +43,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
-
-        /// <summary>
-        /// Gets the message's unique identifier, which is <para> </para>
-        /// md5( <see cref="SenderId"/> + <see cref="TimestampUTC"/> )
-        /// </summary>
-        [JsonProperty(PropertyName = "id")]
-        public string Id
-        {
-            get
-            {
-                if (id.NullOrEmpty())
-                {
-                    id = (SenderId + TimestampUTC.ToString("yyyyMMddHHmmssfff")).MD5();
-                }
-                return id;
-            }
-        }
 
         #region Equality
         /// <summary>
