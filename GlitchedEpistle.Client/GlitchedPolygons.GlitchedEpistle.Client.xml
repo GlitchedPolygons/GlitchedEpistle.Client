@@ -31,6 +31,35 @@
             <param name="bytes">The bytes (for example a file whose size you want to retrieve in a human readable way).</param>
             <returns>A human readable file size <c>string</c> that represents the passed <c>byte[]</c> array's length (<c>string.Empty</c> if the array was <see langword="null"/>).</returns>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Collections.Generic.ICollection`1"/> implementations.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Checks whether the two <see cref="T:System.Collections.Generic.ICollection`1"/> are equal (have the same elements).<para> </para>
+            The order of the elements is not important; e.g. {1,2,3} and {2,3,1} would return <c>true</c>.
+            </summary>
+            <typeparam name="T"><see cref="T:System.Collections.Generic.ICollection`1"/> type parameter.</typeparam>
+            <param name="a">Collection to compare.</param>
+            <param name="b">Collection to compare.</param>
+            <returns>Whether the two collections have the same elements.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.DateTime"/> objects.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals(System.DateTime,System.DateTime,System.Double)">
+            <summary>
+            Checks whether the given <see cref="T:System.DateTime"/> is almost equal to another <see cref="T:System.DateTime"/> object.
+            </summary>
+            <param name="dt1">The <see cref="T:System.DateTime"/> to compare.</param>
+            <param name="dt2">The <see cref="T:System.DateTime"/> to compare.</param>
+            <param name="threshold">The equality-defining threshold in seconds between the two <see cref="T:System.DateTime"/>s. If the two <see cref="T:System.DateTime"/>s are further apart from each other than this amount of seconds, they're not equal.</param>
+            <returns>Whether the two <see cref="T:System.DateTime"/> objects are almost equal.</returns>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions">
             <summary>
             Class that holds <see cref="T:System.IO.DirectoryInfo"/> extension methods.
@@ -285,6 +314,11 @@
             DTO for the message post request parameters (request body).
             </summary>
         </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Id">
+            <summary>
+            The message's unique id.
+            </summary>
+        </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordSHA512">
             <summary>
             The conversation's access pw.
@@ -314,26 +348,6 @@
             <summary>
             The message's timestamp (UTC).
             </summary>
-        </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)">
-            <summary>
-            Indicates whether the current object is equal to another object of the same type.
-            </summary>
-            <param name="other">An object to compare with this object.</param>
-            <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
-        </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(System.Object)">
-            <summary>
-            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
-            </summary>
-            <param name="obj">The object to compare with the current object.</param>
-            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
-        </member>
-        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode">
-            <summary>
-            Returns a hash code for this instance.
-            </summary>
-            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto">
             <summary>
@@ -422,6 +436,12 @@
             An epistle message.
             </summary>
         </member>
+        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Id">
+            <summary>
+            Gets the message's unique identifier, which is <para> </para>
+            md5( <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId"/> + <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.TimestampUTC"/> )
+            </summary>
+        </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId">
             <summary>
             The sender's ID.
@@ -440,12 +460,6 @@
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body">
             <summary>
             This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Id">
-            <summary>
-            Gets the message's unique identifier, which is <para> </para>
-            md5( <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId"/> + <see cref="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.TimestampUTC"/> )
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Equals(System.Object)">
