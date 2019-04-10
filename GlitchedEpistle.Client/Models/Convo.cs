@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
+using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
 
 using Newtonsoft.Json;
@@ -13,7 +15,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// <summary>
     /// A highly civilized conversation between two or more homo sapiens.
     /// </summary>
-    public class Convo
+    public class Convo : IEquatable<ConvoMetadataDto>, IEquatable<Convo>
     {
         /// <summary>
         /// Unique identifier for the convo.
@@ -101,6 +103,32 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                 }
             }
             return stringBuilder.ToString();
+        }
+
+        public bool Equals(ConvoMetadataDto other)
+        {
+            return other != null
+                   && Id == other.Id
+                   && Name == other.Name
+                   && CreatorId == other.CreatorId
+                   && Description == other.Description
+                   && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
+                   && CreationTimestampUTC.AlmostEquals(other.CreationTimestampUTC)
+                   && BannedUsers.UnorderedEqual(other.BannedUsers.Split(','))
+                   && Participants.UnorderedEqual(other.Participants.Split(','));
+        }
+
+        public bool Equals(Convo other)
+        {
+            return other != null
+                   && Id == other.Id
+                   && Name == other.Name
+                   && CreatorId == other.CreatorId
+                   && Description == other.Description
+                   && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
+                   && CreationTimestampUTC.AlmostEquals(other.CreationTimestampUTC)
+                   && BannedUsers.UnorderedEqual(other.BannedUsers)
+                   && Participants.UnorderedEqual(other.Participants);
         }
     }
 }
