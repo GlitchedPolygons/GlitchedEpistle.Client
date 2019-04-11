@@ -546,6 +546,38 @@
             </summary>
             <returns>Whether the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/>'s epistle membership is expired or not.</returns>
         </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider">
+            <summary>
+            Default implementation of the  <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider"/> interface.
+            </summary>
+            <seealso cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider" />
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.GetPasswordSHA512(System.String)">
+            <summary>
+            Gets a conversation's password SHA512 from the session's password provider.<para></para>
+            Returns <c>null</c> if the user has never accessed the convo during the session.
+            </summary>
+            <param name="convoId">The convo identifier.</param>
+            <returns>The convo's password SHA512 <c>string</c>; <c>null</c> if the password was</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.SetPasswordSHA512(System.String,System.String)">
+            <summary>
+            Saves a convo's password SHA512 for the current app session for easy access.
+            </summary>
+            <param name="convoId">The convo identifier.</param>
+            <param name="passwordSHA512">The password's SHA512.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.RemovePasswordSHA512(System.String)">
+            <summary>
+            Removes a convo password SHA512 from the session's cache.
+            </summary>
+            <param name="convoId">The convo identifier.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.Clear">
+            <summary>
+            Clears all session-stored passwords.
+            </summary>
+        </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService">
             <summary>
             Service interface responsible for accessing convos on the web API (remote).
@@ -656,6 +688,37 @@
             <param name="userIdToKick">The user id of who you're kicking out.</param>
             <param name="permaBan">If set to <c>true</c>, the kicked user won't be able to rejoin the convo permanently.</param>
             <returns>Whether the user was kicked out successfully or not.</returns>
+        </member>
+        <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider">
+            <summary>
+            Interface for storing <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> password SHA512 strings during a session.
+            </summary>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.GetPasswordSHA512(System.String)">
+            <summary>
+            Gets a conversation's password SHA512 from the session's password provider.<para> </para>
+            Returns <c>null</c> if the user has never accessed the convo during the session.
+            </summary>
+            <param name="convoId">The convo identifier.</param>
+            <returns>The convo's password SHA512 <c>string</c>; <c>null</c> if the password was</returns>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.SetPasswordSHA512(System.String,System.String)">
+            <summary>
+            Saves a convo's password SHA512 for the current app session for easy access.
+            </summary>
+            <param name="convoId">The convo identifier.</param>
+            <param name="passwordSHA512">The password's SHA512.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.RemovePasswordSHA512(System.String)">
+            <summary>
+            Removes a convo password SHA512 from the session's cache.
+            </summary>
+            <param name="convoId">The convo identifier.</param>
+        </member>
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.Clear">
+            <summary>
+            Clears all session-stored passwords.
+            </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider">
             <summary>

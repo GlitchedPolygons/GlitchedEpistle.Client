@@ -36,6 +36,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         }
 
         /// <summary>
+        /// Removes a convo password SHA512 from the session's cache.
+        /// </summary>
+        /// <param name="convoId">The convo identifier.</param>
+        public void RemovePasswordSHA512(string convoId)
+        {
+            if (dictionary.ContainsKey(convoId))
+            {
+                dictionary.Remove(convoId);
+            }
+        }
+
+        /// <summary>
         /// Clears all session-stored passwords.
         /// </summary>
         public void Clear()

@@ -23,6 +23,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         void SetPasswordSHA512(string convoId, string passwordSHA512);
 
         /// <summary>
+        /// Removes a convo password SHA512 from the session's cache.
+        /// </summary>
+        /// <param name="convoId">The convo identifier.</param>
+        void RemovePasswordSHA512(string convoId);
+
+        /// <summary>
         /// Clears all session-stored passwords.
         /// </summary>
         void Clear();
