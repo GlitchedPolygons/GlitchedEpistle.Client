@@ -1,10 +1,5 @@
-﻿#region
-using System;
-
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
-
+﻿using System;
 using Newtonsoft.Json;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {

@@ -9,12 +9,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     public class PostMessageParamsDto
     {
         /// <summary>
-        /// The message's unique id.
-        /// </summary>
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
-
-        /// <summary>
         /// The conversation's access pw.
         /// </summary>
         [JsonProperty(PropertyName = "pw")]
@@ -43,11 +37,5 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         [JsonProperty(PropertyName = "bodies")]
         public string MessageBodiesJson { get; set; }
-
-        /// <summary>
-        /// The message's timestamp (UTC).
-        /// </summary>
-        [JsonProperty(PropertyName = "utc")]
-        public DateTime TimestampUTC { get; set; }
     }
 }
