@@ -314,11 +314,6 @@
             DTO for the message post request parameters (request body).
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Id">
-            <summary>
-            The message's unique id.
-            </summary>
-        </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordSHA512">
             <summary>
             The conversation's access pw.
@@ -342,11 +337,6 @@
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.MessageBodiesJson">
             <summary>
             The message's encrypted bodies (packed into json key-value pairs).
-            </summary>
-        </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.TimestampUTC">
-            <summary>
-            The message's timestamp (UTC).
             </summary>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto">
