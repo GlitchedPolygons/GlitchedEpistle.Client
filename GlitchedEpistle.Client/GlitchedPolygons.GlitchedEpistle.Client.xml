@@ -192,7 +192,7 @@
             The conversation's messages.
             </summary>
         </member>
-        <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.IsExpired">
+        <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.IsExpired">
             <summary>
             Determines whether this <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo"/> is expired.
             </summary>
