@@ -7,13 +7,22 @@
     <Authors>Glitched Polygons</Authors>
     <Description>Shared code base for all epistle clients.</Description>
     <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
   </PropertyGroup>
 
