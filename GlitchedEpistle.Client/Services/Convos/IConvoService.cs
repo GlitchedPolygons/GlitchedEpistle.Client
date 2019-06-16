@@ -69,9 +69,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <param name="convoPasswordSHA512">The convo's password hash.</param>
         /// <param name="userId">The user identifier (needs to be a convo participant).</param>
         /// <param name="auth">The request authentication token.</param>
-        /// <param name="fromIndex">The index from which to start retrieving messages inclusively (e.g. starting from index 4 will include <c>convo.Messages[4]</c>).</param>
-        /// <returns>The retrieved <see cref="Message"/>s (<c>null</c> if everything is up to date or if something failed).</returns>
-        Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, int fromIndex = 0);
+        /// <param name="tailId">The id of the tail message from which to start retrieving subsequent messages (e.g. starting from message id that evaluates to index 4 will not include <c>convo.Messages[4]</c>). Here you would pass the id of the last message the client already has. If this is null or empty, all messages will be retrieved!</param>
+        /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
+        Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, string tailId = null);
 
         /// <summary>
         /// Gets the index of a message inside a <see cref="Convo"/>.
