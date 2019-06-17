@@ -1,4 +1,4 @@
-# Building the API Documentation Site
+# Building the [API Documentation Site](https://glitchedpolygons.github.io/GlitchedEpistle.Client.Docs/)
 ---
 * Make sure that you have [docfx](https://github.com/dotnet/docfx) installed and added to the system's PATH environment variable.
 * Open the command prompt inside the `docfx_project` folder.
