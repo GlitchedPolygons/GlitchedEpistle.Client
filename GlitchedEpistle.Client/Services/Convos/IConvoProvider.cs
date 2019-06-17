@@ -15,15 +15,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <summary>
         /// Gets all the convos currently loaded.
         /// </summary>
-        /// <value>The convos.</value>
-        ICollection<Convo> Convos { get; }
+        ICollection<Convo> GetAllConvos();
 
         /// <summary>
-        /// Gets the <see cref="Convo"/> with the specified identifier.
+        /// Gets or sets the <see cref="Convo"/> with the specified identifier.
         /// </summary>
         /// <param name="id">The <see cref="Convo.Id"/> identifier.</param>
         /// <returns>The matching <see cref="Convo"/> (or <c>null</c> if the convo couldn't be found).</returns>
-        Convo this[string id] { get; }
+        Convo this[string id] { get; set; }
 
         /// <summary>
         /// Saves all the currently loaded <see cref="Convo"/>s in memory out to disk (or somewhere persistent; depends on the implementation).
