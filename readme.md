@@ -1,5 +1,5 @@
 # Glitched Epistle
-[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/GlitchedEpistle.Client.Docs/api/index.html)
+[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/GlitchedEpistle.Client/api/index.html)
 ## Shared codebase for implementing clients
 
 Technology used:
@@ -9,3 +9,6 @@ Technology used:
 * [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp)
 
 Reference this C# project inside your Glitched Epistle client solution.
+
+API docs can be found here:
+_https://glitchedpolygons.github.io/GlitchedEpistle.Client_
