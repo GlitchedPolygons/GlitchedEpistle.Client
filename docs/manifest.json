@@ -1,0 +1,759 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/epistle/GlitchedEpistle.Client/docs/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.html",
+          "hash": "GoAkH354Y7DzItsXGRemRw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.html",
+          "hash": "hfsnPeRC9tm6DX6BckCz+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html",
+          "hash": "yMQw/q4Dli0BNefwam//3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.html",
+          "hash": "aVtdPqd4DjjXby52O6bIXA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html",
+          "hash": "ZmAX9MjoH3imUIlHY7eBPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html",
+          "hash": "P5pi77tHZUTGGhZt32DfjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.RSAParametersExtensions.html",
+          "hash": "qf3oe/aUySynPeKXMKRSAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html",
+          "hash": "llfqzVm7Xv6mYwjVvKkdxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.html",
+          "hash": "mSKnuWBd6dOp+bECV3xUlw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html",
+          "hash": "yMveffJoz1hf1K8YWy6gyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataDto.html",
+          "hash": "srDALLejekk4fD+1lAnJ4g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationDto.html",
+          "hash": "lzGHBvB29oWdJonzI+VHow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html",
+          "hash": "nLAYYjdB+ZDPHvKAXuCg+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html",
+          "hash": "M861PmYBB1LA3uB+s17iKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.html",
+          "hash": "xZ/UJXa0b4bpgX1BNiNB4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html",
+          "hash": "9/AmQbmioEIwh0/egpHdng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.html",
+          "hash": "8agl0M5IhVKPuFjyXPLynA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html",
+          "hash": "0WIrTGXiZTZrdfNYIUfS7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html",
+          "hash": "eDnexiPHLfJE3tCqsGlOYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.html",
+          "hash": "my9mj5wEyByERe+0vnbd+Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.html",
+          "hash": "Qjxp69HrwXpJnQrndAJIiw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.html",
+          "hash": "yf+AhQHUQCKcgQZ+N+bW6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.html",
+          "hash": "vwejHpDwY57toK1SH9KIFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html",
+          "hash": "cFxsoMxCseXBfqfWBPztLQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.html",
+          "hash": "PvLHb0tPA4MFL0bNFDkBzg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.html",
+          "hash": "ge+tn6wo/ai2ZOHhbS0NTw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.CouponService.html",
+          "hash": "msPB7ggNPxyOxMaxOwT7dQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.ICouponService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.ICouponService.html",
+          "hash": "lxq66ujBbQn8yQ3kkGSu1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.html",
+          "hash": "jZnkXDBnMmddhbF4amTSfQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html",
+          "hash": "Bu22DDhV/jsF34G8fNCDEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.html",
+          "hash": "/lmatBxcpBGvUnii4t+iHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html",
+          "hash": "bn5Uo2g0P69afvoqdTUebg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.html",
+          "hash": "As203RBAWLGAY1LknjsaaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.html",
+          "hash": "/RpGaTrr19Cj73nma9IciA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html",
+          "hash": "XIwa1xyee9iy/6quXlovAA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html",
+          "hash": "Zfhm88I/MXz8zS8g+6Us8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.html",
+          "hash": "1FdSdl9AlNJruLIF6aQbDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html",
+          "hash": "e+39HQUJ3OAn+r1l09V2gA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html",
+          "hash": "R0AaKJSRnsW0/wWooMhrIA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html",
+          "hash": "0x2nE2cuPZ+MHWaDlYlr/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.html",
+          "hash": "f+Vo0nlBR/xd7M60q+l9JA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.html",
+          "hash": "OGnr2uMWCElnrTt1U1Xezg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.html",
+          "hash": "JwOw7fZynfAUPvxD51U2kQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest.html",
+          "hash": "/tIGZqXJzzkZ9sRbKbj9dw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.ServerConnectionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.ServerConnectionTest.html",
+          "hash": "ndRo1FJaWjUStw+FAKkSJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.html",
+          "hash": "ydkMeeEfUVfMJatbFBTiKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.html",
+          "hash": "JuVW8bEOExCddjmtmwfRWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.html",
+          "hash": "8J8I/zhR73D9fe7qoD8d8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html",
+          "hash": "z+AZh4fgBPhIgnxDvZIanQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html",
+          "hash": "/HlGrMi1F0d1K7NE0lvO1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.html",
+          "hash": "4Q2rxnaBoqi7GknnE9S/WQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "A9mrHuwtxtsT6JItXmqskw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "sC66FDHfSYEK+ci314tqDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "LW/OvQwuLXecuUc1qPLP2g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "saT9IAgD7Q7yK/1bgURsrw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "CTRBtwqjkNOufjixN6uYcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 51,
+          "skipped_file_count": 51
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
