@@ -1,4 +1,5 @@
 # Glitched Epistle
+[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/GlitchedEpistle.Client.Docs/api/index.html)
 ## Shared codebase for implementing clients
 
 Technology used:
