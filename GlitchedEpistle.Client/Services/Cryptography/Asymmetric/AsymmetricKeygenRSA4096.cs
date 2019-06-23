@@ -52,23 +52,23 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             {
                 AsymmetricCipherKeyPair keyPair = await Task.Run(() =>
                 {
-                    RsaKeyPairGenerator keygen = new RsaKeyPairGenerator();
+                    var keygen = new RsaKeyPairGenerator();
                     keygen.Init(new KeyGenerationParameters(new SecureRandom(), 4096));
                     return keygen.GenerateKeyPair();
                 });
 
-                using (StringWriter sw = new StringWriter())
+                using (var sw = new StringWriter())
                 {
-                    PemWriter pem = new PemWriter(sw);
+                    var pem = new PemWriter(sw);
                     pem.WriteObject(keyPair.Private);
                     pem.Writer.Flush();
 
                     File.WriteAllText(Path.Combine(outputDirectory, "Private.rsa.pem"), sw.ToString());
                 }
 
-                using (StringWriter sw = new StringWriter())
+                using (var sw = new StringWriter())
                 {
-                    PemWriter pem = new PemWriter(sw);
+                    var pem = new PemWriter(sw);
                     pem.WriteObject(keyPair.Public);
                     pem.Writer.Flush();
 
