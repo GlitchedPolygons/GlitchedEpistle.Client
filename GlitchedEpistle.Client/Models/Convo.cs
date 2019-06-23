@@ -1,8 +1,9 @@
 ﻿#region
 using System;
-using System.Collections.Generic;
 using System.Text;
+using System.Collections.Generic;
 
+using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
@@ -15,7 +16,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// <summary>
     /// A highly civilized conversation between two or more homo sapiens.
     /// </summary>
-    public class Convo : IEquatable<ConvoMetadataDto>, IEquatable<Convo>
+    public class Convo : IEquatable<ConvoMetadataDto>, IEquatable<Convo>, IEntity<string>
     {
         /// <summary>
         /// Unique identifier for the convo.

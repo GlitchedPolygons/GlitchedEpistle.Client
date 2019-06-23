@@ -28,6 +28,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GlitchedPolygons.RepositoryPattern.SQLite" Version="1.0.1" />
     <PackageReference Include="GlitchedPolygons.Services.CompressionUtility" Version="1.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.4" />

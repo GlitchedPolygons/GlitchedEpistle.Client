@@ -1,14 +1,16 @@
 ﻿#region
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
+using GlitchedPolygons.RepositoryPattern;
 #endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
     /// <summary>
-    /// Service interface responsible for accessing convos (local).
+    /// Service interface responsible for accessing convos (locally).
     /// </summary>
     public interface IConvoProvider
     {

@@ -59,7 +59,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
                 byte[] data = gzip.Compress(Encoding.UTF8.GetBytes(messageJson), COMPRESSION_SETTINGS);
                 using (EncryptionResult encryptionResult = aes.Encrypt(data))
                 {
-                    StringBuilder stringBuilder = new StringBuilder(encryptionResult.EncryptedData.Length);
+                    var stringBuilder = new StringBuilder(encryptionResult.EncryptedData.Length);
                     stringBuilder.Append(Convert.ToBase64String(rsa.Encrypt(encryptionResult.Key, recipientPublicRsaKey)));
                     stringBuilder.Append('|');
                     stringBuilder.Append(Convert.ToBase64String(encryptionResult.IV));
