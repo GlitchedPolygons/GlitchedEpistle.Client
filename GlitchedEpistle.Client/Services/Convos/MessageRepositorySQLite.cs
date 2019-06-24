@@ -1,19 +1,21 @@
 using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
-using System.IO;
+using System.Text;
+using System.Globalization;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 using Dapper;
-
 using GlitchedPolygons.RepositoryPattern.SQLite;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
+    /// <inheritdoc />
     public class MessageRepositorySQLite : SQLiteRepository<Message, string>
     {
+        private const string TIMESTAMP_FORMAT = "yyyy-MM-dd HH:mm:ss.fffZ";
+
         public MessageRepositorySQLite(string connectionString, string tableName = null) : base(connectionString, tableName)
         {
             string sql = $"CREATE TABLE IF NOT EXISTS \"{TableName}\" (\"Id\" TEXT NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" TIMESTAMP, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
@@ -23,6 +25,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             }
         }
 
+        /// <inheritdoc />
         public override async Task<bool> Add(Message message)
         {
             if (message is null)
@@ -45,7 +48,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     message.Id,
                     message.SenderId,
                     message.SenderName,
-                    message.TimestampUTC,
+                    TimestampUTC = message.TimestampUTC.ToString(TIMESTAMP_FORMAT, CultureInfo.InvariantCulture),
                     message.Body,
                 }) > 0;
             }
@@ -53,14 +56,57 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             return success;
         }
 
-        public override Task<bool> AddRange(IEnumerable<Message> entities)
+        /// <inheritdoc />
+        public override async Task<bool> AddRange(IEnumerable<Message> messages)
         {
-            throw new System.NotImplementedException();
+            var sql = new StringBuilder($"INSERT INTO \"{TableName}\" VALUES ", 512);
+
+            foreach (var message in messages)
+            {
+                if (message.Id.NullOrEmpty())
+                {
+                    throw new ArgumentException($"{nameof(MessageRepositorySQLite)}::{nameof(AddRange)}: One or more {nameof(messages)} Id member is null or empty. Very bad! Messages should be added to the local sqlite db using their backend unique id as primary key.");
+                }
+
+                sql.Append("('")
+                    .Append(message.Id).Append("', '")
+                    .Append(message.SenderId).Append("', '")
+                    .Append(message.SenderName).Append("', '")
+                    .Append(message.TimestampUTC.ToString(TIMESTAMP_FORMAT, CultureInfo.InvariantCulture)).Append("', '")
+                    .Append(message.Body)
+                    .Append("'),");
+            }
+
+            using (var dbcon = OpenConnection())
+            {
+                return await dbcon.ExecuteAsync(sql.ToString().TrimEnd(',')) > 0;
+            }
         }
 
-        public override Task<bool> Update(Message entity)
+        /// <inheritdoc />
+        public override async Task<bool> Update(Message message)
         {
-            throw new System.NotImplementedException();
+            var sql = new StringBuilder(256)
+                .Append($"UPDATE \"{TableName}\" SET ")
+                .Append("\"SenderId\" = @SenderId, ")
+                .Append("\"SenderName\" = @SenderName, ")
+                .Append("\"TimestampUTC\" = @TimestampUTC, ")
+                .Append("\"Body\" = @Body ")
+                .Append("WHERE \"Id\" = @Id");
+
+            using (var dbcon = OpenConnection())
+            {
+                int result = await dbcon.ExecuteAsync(sql.ToString(), new
+                {
+                    Id = message.Id,
+                    SenderId = message.SenderId,
+                    SenderName = message.SenderName,
+                    TimestampUTC = message.TimestampUTC.ToString(TIMESTAMP_FORMAT, CultureInfo.InvariantCulture),
+                    Body = message.Body
+                });
+
+                return result > 0;
+            }
         }
     }
 }
