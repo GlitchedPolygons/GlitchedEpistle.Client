@@ -11,11 +11,21 @@ using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
-    /// <inheritdoc />
+    /// <summary>
+    /// SQLite repository class for accessing a <see cref="Convo"/>'s messages.<para> </para>
+    /// </summary>
     public class MessageRepositorySQLite : SQLiteRepository<Message, string>
     {
         private const string TIMESTAMP_FORMAT = "yyyy-MM-dd HH:mm:ss.fffZ";
 
+        /// <summary>
+        /// Creates an instance of the <see cref="MessageRepositorySQLite"/> class that will provide 
+        /// functionality for accessing an epistle <see cref="Message"/> storage database using SQLite.<para> </para>
+        /// If the provided connection string points to a file that doesn't exist or a db that does not contain 
+        /// the messages table, a correct SQLite database + table will be created at that path.
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <param name="tableName"></param>
         public MessageRepositorySQLite(string connectionString, string tableName = null) : base(connectionString, tableName)
         {
             string sql = $"CREATE TABLE IF NOT EXISTS \"{TableName}\" (\"Id\" TEXT NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" TIMESTAMP, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
@@ -25,7 +35,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             }
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Adds a message to the repository.
+        /// </summary>
+        /// <param name="message">The <see cref="Message"/> to add.</param>
+        /// <returns>Whether the operation was successful or not.</returns>
         public override async Task<bool> Add(Message message)
         {
             if (message is null)
@@ -56,7 +70,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             return success;
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Adds multiple <see cref="Message"/>s in bulk to the repository (SQLite db).
+        /// </summary>
+        /// <param name="messages">The <see cref="Message"/>s to add.</param>
+        /// <returns>Whether the operation was successful or not.</returns>
         public override async Task<bool> AddRange(IEnumerable<Message> messages)
         {
             var sql = new StringBuilder($"INSERT INTO \"{TableName}\" VALUES ", 512);
@@ -83,7 +101,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             }
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Updates an existing <see cref="Message"/> record inside the db.
+        /// </summary>
+        /// <param name="message">The new (updated) <see cref="Message"/> instance.</param>
+        /// <returns>Whether the operation was successful or not.</returns>
         public override async Task<bool> Update(Message message)
         {
             var sql = new StringBuilder(256)
