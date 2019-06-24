@@ -94,6 +94,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals
   nameWithType: DateTimeExtensions.AlmostEquals
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
+  name: ToUnixTimeSeconds(DateTime)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeSeconds_System_DateTime_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
+  nameWithType: DateTimeExtensions.ToUnixTimeSeconds(DateTime)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds*
+  name: ToUnixTimeSeconds
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeSeconds_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds
+  nameWithType: DateTimeExtensions.ToUnixTimeSeconds
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions
   name: DirectoryInfoExtensions
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html
@@ -1599,6 +1612,67 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.PostMessage
   nameWithType: IConvoService.PostMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite
+  name: MessageRepositorySQLite
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite
+  nameWithType: MessageRepositorySQLite
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor(System.String,System.String)
+  name: MessageRepositorySQLite(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite__ctor_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.MessageRepositorySQLite(System.String, System.String)
+  nameWithType: MessageRepositorySQLite.MessageRepositorySQLite(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor*
+  name: MessageRepositorySQLite
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.MessageRepositorySQLite
+  nameWithType: MessageRepositorySQLite.MessageRepositorySQLite
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  name: Add(Message)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Add_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  nameWithType: MessageRepositorySQLite.Add(Message)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Add*
+  name: Add
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Add_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Add
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Add
+  nameWithType: MessageRepositorySQLite.Add
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  name: AddRange(IEnumerable<Message>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_AddRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  name.vb: AddRange(IEnumerable(Of Message))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
+  nameWithType: MessageRepositorySQLite.AddRange(IEnumerable<Message>)
+  nameWithType.vb: MessageRepositorySQLite.AddRange(IEnumerable(Of Message))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange*
+  name: AddRange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_AddRange_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange
+  nameWithType: MessageRepositorySQLite.AddRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  name: Update(Message)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Update_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  nameWithType: MessageRepositorySQLite.Update(Message)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update*
+  name: Update
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Update_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update
+  nameWithType: MessageRepositorySQLite.Update
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
   name: GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons.html
