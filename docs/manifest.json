@@ -123,7 +123,7 @@
           "hash": "gntqeCXqvE1TPB727UDA4g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -246,7 +246,7 @@
           "hash": "my9mj5wEyByERe+0vnbd+Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -318,7 +318,7 @@
           "hash": "SfG67amXFIJtjD1eLF5IfQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -330,7 +330,7 @@
           "hash": "0c3bYirnQxCzEs92jzee3g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -615,10 +615,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html",
-          "hash": "8BcDgMyFszVtM7qWAUoBcw=="
+          "hash": "97JAdzOgLvz8obQG89CArg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -627,10 +627,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html",
-          "hash": "x/rX0LGIWpi9DAJqVjNxEw=="
+          "hash": "q2wOTxkxEhK4dlccFD1WZQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -642,7 +642,7 @@
           "hash": "4Q2rxnaBoqi7GknnE9S/WQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -741,7 +741,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 52,
-          "skipped_file_count": 51
+          "skipped_file_count": 50
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
