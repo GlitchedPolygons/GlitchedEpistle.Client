@@ -2387,6 +2387,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.CreateUser
   nameWithType: IUserService.CreateUser
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetConvos(System.String,System.String)
+  name: GetConvos(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetConvos_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetConvos(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetConvos(System.String, System.String)
+  nameWithType: IUserService.GetConvos(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetConvos*
+  name: GetConvos
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetConvos_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetConvos
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetConvos
+  nameWithType: IUserService.GetConvos
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserExpirationUTC(System.String)
   name: GetUserExpirationUTC(String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserExpirationUTC_System_String_
@@ -2484,6 +2497,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser
   nameWithType: UserService.CreateUser
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetConvos(System.String,System.String)
+  name: GetConvos(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetConvos_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetConvos(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetConvos(System.String, System.String)
+  nameWithType: UserService.GetConvos(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetConvos*
+  name: GetConvos
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetConvos_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetConvos
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetConvos
+  nameWithType: UserService.GetConvos
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserExpirationUTC(System.String)
   name: GetUserExpirationUTC(String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserExpirationUTC_System_String_
