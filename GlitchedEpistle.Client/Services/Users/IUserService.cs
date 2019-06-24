@@ -49,6 +49,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         Task<DateTime?> GetUserExpirationUTC(string userId);
 
         /// <summary>
+        /// Gets the <see cref="Convo"/>s in which the specified <see cref="User"/> is involved (participant or creator thereof).
+        /// </summary>
+        /// <param name="userId">The user id.</param>
+        /// <param name="auth">Request authentication token.</param>
+        /// <returns>The found convos.</returns>
+        Task<IEnumerable<ConvoMetadataDto>> GetConvos(string userId, string auth);
+
+        /// <summary>
         /// Gets one or more users' public key XML (RSA key needed for encrypting messages for that user).
         /// </summary>
         /// <param name="userId">Your user identifier.</param>
