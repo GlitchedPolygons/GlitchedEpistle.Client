@@ -94,6 +94,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals
   nameWithType: DateTimeExtensions.AlmostEquals
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds(System.Int64)
+  name: FromUnixTimeSeconds(Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_FromUnixTimeSeconds_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds(System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds(System.Int64)
+  nameWithType: DateTimeExtensions.FromUnixTimeSeconds(Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds*
+  name: FromUnixTimeSeconds
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_FromUnixTimeSeconds_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds
+  nameWithType: DateTimeExtensions.FromUnixTimeSeconds
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
   name: ToUnixTimeSeconds(DateTime)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeSeconds_System_DateTime_
@@ -312,6 +325,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.ExpirationUTC
   nameWithType: Convo.ExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetBannedUsersCommaSeparated
+  name: GetBannedUsersCommaSeparated()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_GetBannedUsersCommaSeparated
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetBannedUsersCommaSeparated
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetBannedUsersCommaSeparated()
+  nameWithType: Convo.GetBannedUsersCommaSeparated()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetBannedUsersCommaSeparated*
+  name: GetBannedUsersCommaSeparated
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_GetBannedUsersCommaSeparated_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetBannedUsersCommaSeparated
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetBannedUsersCommaSeparated
+  nameWithType: Convo.GetBannedUsersCommaSeparated
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.GetParticipantIdsCommaSeparated
   name: GetParticipantIdsCommaSeparated()
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_GetParticipantIdsCommaSeparated
@@ -1209,6 +1235,207 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoPasswordProvider.SetPasswordSHA512
   nameWithType: ConvoPasswordProvider.SetPasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite
+  name: ConvoRepositorySQLite
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite
+  nameWithType: ConvoRepositorySQLite
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.#ctor(System.String)
+  name: ConvoRepositorySQLite(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite__ctor_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.#ctor(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.ConvoRepositorySQLite(System.String)
+  nameWithType: ConvoRepositorySQLite.ConvoRepositorySQLite(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.#ctor*
+  name: ConvoRepositorySQLite
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.ConvoRepositorySQLite
+  nameWithType: ConvoRepositorySQLite.ConvoRepositorySQLite
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  name: Add(Convo)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Add_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  nameWithType: ConvoRepositorySQLite.Add(Convo)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add*
+  name: Add
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Add_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add
+  nameWithType: ConvoRepositorySQLite.Add
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  name: AddRange(IEnumerable<Convo>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_AddRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  name.vb: AddRange(IEnumerable(Of Convo))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo))
+  nameWithType: ConvoRepositorySQLite.AddRange(IEnumerable<Convo>)
+  nameWithType.vb: ConvoRepositorySQLite.AddRange(IEnumerable(Of Convo))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange*
+  name: AddRange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_AddRange_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange
+  nameWithType: ConvoRepositorySQLite.AddRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  name: Find(Expression<Func<Convo, Boolean>>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Find_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  name.vb: Find(Expression(Of Func(Of Convo, Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
+  nameWithType: ConvoRepositorySQLite.Find(Expression<Func<Convo, Boolean>>)
+  nameWithType.vb: ConvoRepositorySQLite.Find(Expression(Of Func(Of Convo, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find*
+  name: Find
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Find_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find
+  nameWithType: ConvoRepositorySQLite.Find
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get(System.String)
+  name: Get(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Get_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get(System.String)
+  nameWithType: ConvoRepositorySQLite.Get(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get*
+  name: Get
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Get_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get
+  nameWithType: ConvoRepositorySQLite.Get
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll
+  name: GetAll()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_GetAll
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll()
+  nameWithType: ConvoRepositorySQLite.GetAll()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll*
+  name: GetAll
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_GetAll_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll
+  nameWithType: ConvoRepositorySQLite.GetAll
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item(System.String)
+  name: Item[String]
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Item_System_String_
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item(System.String)
+  name.vb: Item(String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item[System.String]
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item(System.String)
+  nameWithType: ConvoRepositorySQLite.Item[String]
+  nameWithType.vb: ConvoRepositorySQLite.Item(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item*
+  name: Item
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Item_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item
+  nameWithType: ConvoRepositorySQLite.Item
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  name: Remove(Convo)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  nameWithType: ConvoRepositorySQLite.Remove(Convo)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(System.String)
+  name: Remove(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(System.String)
+  nameWithType: ConvoRepositorySQLite.Remove(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove*
+  name: Remove
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove
+  nameWithType: ConvoRepositorySQLite.Remove
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll
+  name: RemoveAll()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveAll
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll()
+  nameWithType: ConvoRepositorySQLite.RemoveAll()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll*
+  name: RemoveAll
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveAll_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll
+  nameWithType: ConvoRepositorySQLite.RemoveAll
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  name: RemoveRange(IEnumerable<Convo>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  name.vb: RemoveRange(IEnumerable(Of Convo))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo))
+  nameWithType: ConvoRepositorySQLite.RemoveRange(IEnumerable<Convo>)
+  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(IEnumerable(Of Convo))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
+  name: RemoveRange(IEnumerable<String>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: RemoveRange(IEnumerable(Of String))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: ConvoRepositorySQLite.RemoveRange(IEnumerable<String>)
+  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(IEnumerable(Of String))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  name: RemoveRange(Expression<Func<Convo, Boolean>>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  name.vb: RemoveRange(Expression(Of Func(Of Convo, Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
+  nameWithType: ConvoRepositorySQLite.RemoveRange(Expression<Func<Convo, Boolean>>)
+  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(Expression(Of Func(Of Convo, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange*
+  name: RemoveRange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange
+  nameWithType: ConvoRepositorySQLite.RemoveRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  name: SingleOrDefault(Expression<Func<Convo, Boolean>>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_SingleOrDefault_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  name.vb: SingleOrDefault(Expression(Of Func(Of Convo, Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
+  nameWithType: ConvoRepositorySQLite.SingleOrDefault(Expression<Func<Convo, Boolean>>)
+  nameWithType.vb: ConvoRepositorySQLite.SingleOrDefault(Expression(Of Func(Of Convo, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault*
+  name: SingleOrDefault
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_SingleOrDefault_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault
+  nameWithType: ConvoRepositorySQLite.SingleOrDefault
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  name: Update(Convo)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Update_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)
+  nameWithType: ConvoRepositorySQLite.Update(Convo)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update*
+  name: Update
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Update_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update
+  nameWithType: ConvoRepositorySQLite.Update
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService
   name: ConvoService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.html
@@ -1403,79 +1630,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider.SetPasswordSHA512
   nameWithType: IConvoPasswordProvider.SetPasswordSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider
-  name: IConvoProvider
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider
-  nameWithType: IConvoProvider
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.GetAllConvos
-  name: GetAllConvos()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_GetAllConvos
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.GetAllConvos
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.GetAllConvos()
-  nameWithType: IConvoProvider.GetAllConvos()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.GetAllConvos*
-  name: GetAllConvos
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_GetAllConvos_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.GetAllConvos
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.GetAllConvos
-  nameWithType: IConvoProvider.GetAllConvos
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item(System.String)
-  name: Item[String]
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Item_System_String_
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item(System.String)
-  name.vb: Item(String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item[System.String]
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item(System.String)
-  nameWithType: IConvoProvider.Item[String]
-  nameWithType.vb: IConvoProvider.Item(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item*
-  name: Item
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Item_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Item
-  nameWithType: IConvoProvider.Item
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load
-  name: Load()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Load
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load()
-  nameWithType: IConvoProvider.Load()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load*
-  name: Load
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Load_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Load
-  nameWithType: IConvoProvider.Load
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Loaded
-  name: Loaded
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Loaded
-  commentId: E:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Loaded
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Loaded
-  nameWithType: IConvoProvider.Loaded
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save
-  name: Save()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Save
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save()
-  nameWithType: IConvoProvider.Save()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save*
-  name: Save
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Save_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Save
-  nameWithType: IConvoProvider.Save
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Saved
-  name: Saved
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoProvider_Saved
-  commentId: E:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Saved
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoProvider.Saved
-  nameWithType: IConvoProvider.Saved
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService
   name: IConvoService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.html
@@ -1618,12 +1772,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite
   nameWithType: MessageRepositorySQLite
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor(System.String,System.String)
-  name: MessageRepositorySQLite(String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite__ctor_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor(System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.MessageRepositorySQLite(System.String, System.String)
-  nameWithType: MessageRepositorySQLite.MessageRepositorySQLite(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor(System.String)
+  name: MessageRepositorySQLite(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite__ctor_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.MessageRepositorySQLite(System.String)
+  nameWithType: MessageRepositorySQLite.MessageRepositorySQLite(String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.#ctor*
   name: MessageRepositorySQLite
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite__ctor_
@@ -1660,6 +1814,146 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.AddRange
   nameWithType: MessageRepositorySQLite.AddRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  name: Find(Expression<Func<Message, Boolean>>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Find_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  name.vb: Find(Expression(Of Func(Of Message, Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
+  nameWithType: MessageRepositorySQLite.Find(Expression<Func<Message, Boolean>>)
+  nameWithType.vb: MessageRepositorySQLite.Find(Expression(Of Func(Of Message, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find*
+  name: Find
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Find_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Find
+  nameWithType: MessageRepositorySQLite.Find
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Get(System.String)
+  name: Get(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Get_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Get(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Get(System.String)
+  nameWithType: MessageRepositorySQLite.Get(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Get*
+  name: Get
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Get_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Get
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Get
+  nameWithType: MessageRepositorySQLite.Get
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetAll
+  name: GetAll()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_GetAll
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetAll
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetAll()
+  nameWithType: MessageRepositorySQLite.GetAll()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetAll*
+  name: GetAll
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_GetAll_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetAll
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetAll
+  nameWithType: MessageRepositorySQLite.GetAll
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item(System.String)
+  name: Item[String]
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Item_System_String_
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item(System.String)
+  name.vb: Item(String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item[System.String]
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item(System.String)
+  nameWithType: MessageRepositorySQLite.Item[String]
+  nameWithType.vb: MessageRepositorySQLite.Item(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item*
+  name: Item
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Item_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item
+  nameWithType: MessageRepositorySQLite.Item
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  name: Remove(Message)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Remove_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
+  nameWithType: MessageRepositorySQLite.Remove(Message)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove(System.String)
+  name: Remove(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Remove_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove(System.String)
+  nameWithType: MessageRepositorySQLite.Remove(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove*
+  name: Remove
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Remove_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Remove
+  nameWithType: MessageRepositorySQLite.Remove
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveAll
+  name: RemoveAll()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_RemoveAll
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveAll
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveAll()
+  nameWithType: MessageRepositorySQLite.RemoveAll()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveAll*
+  name: RemoveAll
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_RemoveAll_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveAll
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveAll
+  nameWithType: MessageRepositorySQLite.RemoveAll
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  name: RemoveRange(IEnumerable<Message>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  name.vb: RemoveRange(IEnumerable(Of Message))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
+  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Message>)
+  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Message))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
+  name: RemoveRange(IEnumerable<String>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: RemoveRange(IEnumerable(Of String))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<String>)
+  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of String))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  name: RemoveRange(Expression<Func<Message, Boolean>>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  name.vb: RemoveRange(Expression(Of Func(Of Message, Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
+  nameWithType: MessageRepositorySQLite.RemoveRange(Expression<Func<Message, Boolean>>)
+  nameWithType.vb: MessageRepositorySQLite.RemoveRange(Expression(Of Func(Of Message, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange*
+  name: RemoveRange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_RemoveRange_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.RemoveRange
+  nameWithType: MessageRepositorySQLite.RemoveRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  name: SingleOrDefault(Expression<Func<Message, Boolean>>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_SingleOrDefault_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  name.vb: SingleOrDefault(Expression(Of Func(Of Message, Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
+  nameWithType: MessageRepositorySQLite.SingleOrDefault(Expression<Func<Message, Boolean>>)
+  nameWithType.vb: MessageRepositorySQLite.SingleOrDefault(Expression(Of Func(Of Message, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault*
+  name: SingleOrDefault
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_SingleOrDefault_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.SingleOrDefault
+  nameWithType: MessageRepositorySQLite.SingleOrDefault
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
   name: Update(Message)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Update_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_

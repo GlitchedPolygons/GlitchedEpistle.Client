@@ -1,0 +1,872 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ConvoRepositorySQLite
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConvoRepositorySQLite
+   ">
+    <meta name="generator" content="docfx 2.43.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite">
+  
+  
+  <h1 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite" class="text-break">Class ConvoRepositorySQLite
+  </h1>
+  <div class="markdown level0 summary"><p>SQLite repository class for accessing all locally stored <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s.<p> </p></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ConvoRepositorySQLite</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">GlitchedPolygons.RepositoryPattern.IRepository</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>, <span class="xref">System.String</span>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Convos</a></h6>
+  <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
+  <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConvoRepositorySQLite : IRepository&lt;Convo, string&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite__ctor_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L34">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite__ctor_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.#ctor*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite__ctor_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.#ctor(System.String)">ConvoRepositorySQLite(String)</h4>
+  <div class="markdown level1 summary"><p>Creates an instance of the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.html">ConvoRepositorySQLite</a> class that will provide
+functionality for accessing the local <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> storage database using SQLite.<p> </p>
+This db only contains the metadata for the convos stored locally on the device.<p> </p>
+If the provided connection string points to a file that doesn't exist or to a db that does not contain
+the convos table, a correct SQLite database + table will be created at that path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConvoRepositorySQLite(string connectionString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td><p>Connection string containing the SQLite db file path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Item_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L62">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Item_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Item_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> synchronously by its unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Convo this[string id] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>'s unique identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a></td>
+        <td><p>The first found <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>; <code>null</code> if nothing was found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Add_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L210">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Add_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Add_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Add(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)">Add(Convo)</h4>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> entry to the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Add(Convo convo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a></td>
+        <td><span class="parametername">convo</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the operation was successful or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_AddRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable%7BGlitchedPolygons.GlitchedEpistle.Client.Models.Convo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L248">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_AddRange_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_AddRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})">AddRange(IEnumerable&lt;Convo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds multiple <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s in bulk to the repository (SQLite db).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; AddRange(IEnumerable&lt;Convo&gt; convos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>&gt;</td>
+        <td><span class="parametername">convos</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the operation was successful or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Find_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression%7BSystem.Func%7BGlitchedPolygons.GlitchedEpistle.Client.Models.Convo%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L192">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Find_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Find_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})">Find(Expression&lt;Func&lt;Convo, Boolean&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds all <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s according to the specified predicate <span class="xref">System.Linq.Expressions.Expression</span>.<p> </p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;Convo&gt;&gt; Find(Expression&lt;Func&lt;Convo, bool&gt;&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>The search predicate (all entities that match the provided conditions will be added to the query's result).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>&gt;&gt;</td>
+        <td><p>The found <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Get_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L100">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Get_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Get_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Get(System.String)">Get(String)</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> asynchronously by its unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Convo&gt; Get(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>'s unique identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>&gt;</td>
+        <td><p>The first found <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>; <code>null</code> if nothing was found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_GetAll.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L134">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_GetAll_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_GetAll" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.GetAll">GetAll()</h4>
+  <div class="markdown level1 summary"><p>Gets all <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s from the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;Convo&gt;&gt; GetAll()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>&gt;&gt;</td>
+        <td><p>All <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s inside the repo.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L316">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)">Remove(Convo)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Remove(Convo convo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a></td>
+        <td><span class="parametername">convo</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> could be removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L326">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Remove_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Remove(System.String)">Remove(String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Remove(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique id of the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> could be removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveAll.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L350">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveAll_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveAll" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveAll">RemoveAll()</h4>
+  <div class="markdown level1 summary"><p>Removes all <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s at once from the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveAll()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s were removed successfully or not. If the repository was already empty, <code>false</code> is returned (because nothing was actually &lt;&lt;removed&gt;&gt; ).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable%7BGlitchedPolygons.GlitchedEpistle.Client.Models.Convo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L385">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})">RemoveRange(IEnumerable&lt;Convo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the range of <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s from the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(IEnumerable&lt;Convo&gt; convos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>&gt;</td>
+        <td><span class="parametername">convos</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether all <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s were removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L395">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_String__" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})">RemoveRange(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the range of <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s from the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(IEnumerable&lt;string&gt; ids)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">ids</span></td>
+        <td><p>The unique ids of the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether all <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s were removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression%7BSystem.Func%7BGlitchedPolygons.GlitchedEpistle.Client.Models.Convo%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L375">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})">RemoveRange(Expression&lt;Func&lt;Convo, Boolean&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes all <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>s that match the specified conditions.<p> </p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(Expression&lt;Func&lt;Convo, bool&gt;&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>The predicate <span class="xref">System.Linq.Expressions.Expression</span> that defines which entities should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the entities were removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_SingleOrDefault_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression%7BSystem.Func%7BGlitchedPolygons.GlitchedEpistle.Client.Models.Convo%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L174">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_SingleOrDefault_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_SingleOrDefault_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})">SingleOrDefault(Expression&lt;Func&lt;Convo, Boolean&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets a single entity from the repo according to the specified predicate condition.<p> </p>
+If 0 or &gt;1 entities are found, <code>null</code> is returned.<p> </p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Convo&gt; SingleOrDefault(Expression&lt;Func&lt;Convo, bool&gt;&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>The search predicate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>&gt;</td>
+        <td><p>Single found <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> or <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Update_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L282">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Update_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite_Update_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite.Update(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo)">Update(Convo)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> record inside the db.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Update(Convo updatedConvo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a></td>
+        <td><span class="parametername">updatedConvo</span></td>
+        <td><p>The new (updated) <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether the operation was successful or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">GlitchedPolygons.RepositoryPattern.IRepository&lt;T1, T2&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/feature/EP-60-sqlite/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoRepositorySQLite.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoRepositorySQLite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/feature/EP-60-sqlite/GlitchedEpistle.Client/Services/Convos/ConvoRepositorySQLite.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
