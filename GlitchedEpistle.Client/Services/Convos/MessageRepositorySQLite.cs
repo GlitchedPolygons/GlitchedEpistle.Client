@@ -131,7 +131,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             {
                 await sqlc.OpenAsync();
 
-                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\"", sqlc))
+                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" ORDER BY \"TimestampUTC\" ASC", sqlc))
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (!reader.HasRows)
