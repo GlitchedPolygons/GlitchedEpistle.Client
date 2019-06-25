@@ -268,9 +268,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     .Append("'),");
             }
 
+            string command = sql.ToString().TrimEnd(',');
+
+            if (!command.Contains('(') || !command.Contains(')'))
+            {
+                return false;
+            }
+
             using (var dbcon = OpenConnection())
             {
-                return await dbcon.ExecuteAsync(sql.ToString().TrimEnd(',')) > 0;
+                return await dbcon.ExecuteAsync(command) > 0;
             }
         }
 
