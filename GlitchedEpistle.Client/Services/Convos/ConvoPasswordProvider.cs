@@ -4,7 +4,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 {
     /// <summary>
-    /// Default implementation of the  <see cref="IConvoPasswordProvider"/> interface.
+    /// Default implementation (thread safe through usage of standard locks) of the  <see cref="IConvoPasswordProvider"/> interface.
     /// </summary>
     /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider" />
     public class ConvoPasswordProvider : IConvoPasswordProvider
@@ -19,6 +19,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>The convo's password SHA512 <c>string</c>; <c>null</c> if the password was</returns>
         public string GetPasswordSHA512(string convoId)
         {
+            lock(dictionary)
             return dictionary.TryGetValue(convoId, out string pwSHA512) ? pwSHA512 : null;
         }
 
@@ -31,6 +32,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         {
             if (convoId.NotNullNotEmpty() && passwordSHA512.NotNullNotEmpty())
             {
+                lock (dictionary)
                 dictionary[convoId] = passwordSHA512;
             }
         }
@@ -41,9 +43,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <param name="convoId">The convo identifier.</param>
         public void RemovePasswordSHA512(string convoId)
         {
-            if (dictionary.ContainsKey(convoId))
+            lock (dictionary)
             {
-                dictionary.Remove(convoId);
+                if (dictionary.ContainsKey(convoId))
+                {
+                    dictionary.Remove(convoId);
+                }
             }
         }
 
@@ -52,6 +57,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// </summary>
         public void Clear()
         {
+            lock (dictionary)
             dictionary.Clear();
         }
     }
