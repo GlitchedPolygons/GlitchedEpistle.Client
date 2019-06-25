@@ -32,6 +32,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         }
 
         /// <summary>
+        /// Converts a <see cref="DateTime"/> to Unix time (milliseconds since 1970-01-01T00:00:00Z).<para> </para>
+        /// Make sure that the <see cref="DateTime"/> you're converting is UTC!
+        /// </summary>
+        /// <param name="dt">The <see cref="DateTime"/> to convert.</param>
+        /// <returns>Unix time (milliseconds since 1970-01-01T00:00:00Z)</returns>
+        public static long ToUnixTimeMilliseconds(this DateTime dt)
+        {
+            return new DateTimeOffset(dt).ToUnixTimeMilliseconds();
+        }
+
+        /// <summary>
         /// Converts a unix timestamp (seconds since 1970-01-01 00:00:00.000 UTC) to a UTC <see cref="DateTime"/>.
         /// </summary>
         /// <param name="timestamp">The unix timestamp to convert.</param>
@@ -39,6 +50,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         public static DateTime FromUnixTimeSeconds(long timestamp)
         {
             return DateTimeOffset.FromUnixTimeSeconds(timestamp).UtcDateTime;
+        }
+
+        /// <summary>
+        /// Converts a unix timestamp (milliseconds since 1970-01-01 00:00:00.000 UTC) to a UTC <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="timestamp">The unix timestamp to convert.</param>
+        /// <returns>The converted <see cref="DateTime"/> in UTC.</returns>
+        public static DateTime FromUnixTimeMilliseconds(long timestamp)
+        {
+            return DateTimeOffset.FromUnixTimeMilliseconds(timestamp).UtcDateTime;
         }
     }
 }

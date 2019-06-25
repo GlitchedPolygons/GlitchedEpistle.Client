@@ -18,7 +18,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
     /// <summary>
     /// SQLite repository class for accessing a <see cref="Convo"/>'s messages.<para> </para>
     /// </summary>
-    public class MessageRepositorySQLite : IRepository<Message, string>
+    public class MessageRepositorySQLite : IMessageRepository
     {
         private readonly string tableName;
         private readonly string connectionString;
@@ -80,11 +80,23 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                             Id = reader.GetString(0),
                             SenderId = reader.GetString(1),
                             SenderName = reader.GetString(2),
-                            TimestampUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(3)),
+                            TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
                             Body = reader.GetString(4)
                         };
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Gets the <see cref="Message.Id"/> from the most recent <see cref="Message"/> in the repository.
+        /// </summary>
+        public async Task<string> GetLastMessageId()
+        {
+            using (var sqlc = OpenConnection())
+            {
+                string id = await sqlc.QueryFirstOrDefaultAsync<string>($"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1");
+                return id;
             }
         }
 
@@ -113,7 +125,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                         Id = reader.GetString(0),
                         SenderId = reader.GetString(1),
                         SenderName = reader.GetString(2),
-                        TimestampUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(3)),
+                        TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
                         Body = reader.GetString(4)
                     };
                 }
@@ -146,7 +158,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                             Id = reader.GetString(0),
                             SenderId = reader.GetString(1),
                             SenderName = reader.GetString(2),
-                            TimestampUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(3)),
+                            TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
                             Body = reader.GetString(4)
                         });
                     }
@@ -219,7 +231,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     message.Id,
                     message.SenderId,
                     message.SenderName,
-                    TimestampUTC = message.TimestampUTC.ToUnixTimeSeconds(),
+                    TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
                     message.Body,
                 }) > 0;
             }
@@ -247,7 +259,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     .Append(message.Id).Append("', '")
                     .Append(message.SenderId).Append("', '")
                     .Append(message.SenderName).Append("', ")
-                    .Append(message.TimestampUTC.ToUnixTimeSeconds()).Append(", '")
+                    .Append(message.TimestampUTC.ToUnixTimeMilliseconds()).Append(", '")
                     .Append(message.Body)
                     .Append("'),");
             }
@@ -280,7 +292,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     Id = message.Id,
                     SenderId = message.SenderId,
                     SenderName = message.SenderName,
-                    TimestampUTC = message.TimestampUTC.ToUnixTimeSeconds(),
+                    TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
                     Body = message.Body
                 });
 

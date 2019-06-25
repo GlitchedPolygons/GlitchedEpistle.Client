@@ -82,8 +82,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                             CreatorId = reader.GetString(1),
                             Name = reader.GetString(2),
                             Description = reader.GetString(3),
-                            CreationTimestampUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(4)),
-                            ExpirationUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(5)),
+                            CreationTimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
+                            ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
                             Participants = reader.GetString(6).Split(',').ToList(),
                             BannedUsers = reader.GetString(7).Split(',').ToList(),
                         };
@@ -118,8 +118,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                         CreatorId = reader.GetString(1),
                         Name = reader.GetString(2),
                         Description = reader.GetString(3),
-                        CreationTimestampUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(4)),
-                        ExpirationUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(5)),
+                        CreationTimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
+                        ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
                         Participants = reader.GetString(6).Split(',').ToList(),
                         BannedUsers = reader.GetString(7).Split(',').ToList(),
                     };
@@ -138,7 +138,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             {
                 await sqlc.OpenAsync();
 
-                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\"", sqlc))
+                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" ORDER BY \"Name\"", sqlc))
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (!reader.HasRows)
@@ -154,8 +154,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                             CreatorId = reader.GetString(1),
                             Name = reader.GetString(2),
                             Description = reader.GetString(3),
-                            CreationTimestampUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(4)),
-                            ExpirationUTC = DateTimeExtensions.FromUnixTimeSeconds(reader.GetInt64(5)),
+                            CreationTimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
+                            ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
                             Participants = reader.GetString(6).Split(',').ToList(),
                             BannedUsers = reader.GetString(7).Split(',').ToList(),
                         });
@@ -230,8 +230,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     convo.CreatorId,
                     convo.Name,
                     convo.Description,
-                    CreationTimestampUTC = convo.CreationTimestampUTC.ToUnixTimeSeconds(),
-                    ExpirationUTC = convo.ExpirationUTC.ToUnixTimeSeconds(),
+                    CreationTimestampUTC = convo.CreationTimestampUTC.ToUnixTimeMilliseconds(),
+                    ExpirationUTC = convo.ExpirationUTC.ToUnixTimeMilliseconds(),
                     Participants = convo.GetParticipantIdsCommaSeparated(),
                     BannedUsers = convo.GetBannedUsersCommaSeparated()
                 }) > 0;
@@ -261,8 +261,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     .Append(convo.CreatorId).Append("', '")
                     .Append(convo.Name).Append("', '")
                     .Append(convo.Description).Append("', ")
-                    .Append(convo.CreationTimestampUTC.ToUnixTimeSeconds()).Append(", ")
-                    .Append(convo.ExpirationUTC.ToUnixTimeSeconds()).Append(", '")
+                    .Append(convo.CreationTimestampUTC.ToUnixTimeMilliseconds()).Append(", ")
+                    .Append(convo.ExpirationUTC.ToUnixTimeMilliseconds()).Append(", '")
                     .Append(convo.GetParticipantIdsCommaSeparated()).Append("', '")
                     .Append(convo.GetBannedUsersCommaSeparated())
                     .Append("'),");
@@ -300,8 +300,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
                     updatedConvo.CreatorId,
                     updatedConvo.Name,
                     updatedConvo.Description,
-                    CreationTimestampUTC = updatedConvo.CreationTimestampUTC.ToUnixTimeSeconds(),
-                    ExpirationUTC = updatedConvo.ExpirationUTC.ToUnixTimeSeconds(),
+                    CreationTimestampUTC = updatedConvo.CreationTimestampUTC.ToUnixTimeMilliseconds(),
+                    ExpirationUTC = updatedConvo.ExpirationUTC.ToUnixTimeMilliseconds(),
                     Participants = updatedConvo.GetParticipantIdsCommaSeparated(),
                     BannedUsers = updatedConvo.GetBannedUsersCommaSeparated()
                 }) > 0;
