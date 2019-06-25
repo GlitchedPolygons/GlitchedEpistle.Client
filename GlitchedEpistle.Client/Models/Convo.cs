@@ -2,6 +2,7 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
+using System.Linq;
 
 using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
@@ -125,6 +126,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
             return stringBuilder.ToString();
         }
 
+        /// <summary>
+        /// Converts a <see cref="Convo"/> object into a data-transfer object for the backend (<see cref="ConvoMetadataDto"/>).
+        /// </summary>
+        /// <param name="convo">The <see cref="Convo"/> to convert to a <see cref="ConvoMetadataDto"/>.</param>
+        public static implicit operator ConvoMetadataDto(Convo convo)
+        {
+            return new ConvoMetadataDto
+            {
+                Id = convo.Id,
+                CreatorId = convo.CreatorId,
+                Name = convo.Name,
+                Description = convo.Description,
+                CreationTimestampUTC = convo.CreationTimestampUTC,
+                ExpirationUTC = convo.ExpirationUTC,
+                Participants = convo.GetParticipantIdsCommaSeparated(),
+                BannedUsers = convo.GetBannedUsersCommaSeparated()
+            };
+        }
+
+        /// <summary>
+        /// Checks for equality against a <see cref="ConvoMetadataDto"/> data transfer object (coming from the backend).
+        /// </summary>
+        /// <param name="other">The <see cref="ConvoMetadataDto"/> to compare to this <see cref="Convo"/>.</param>
+        /// <returns>Whether the two convos are equal or not.</returns>
         public bool Equals(ConvoMetadataDto other)
         {
             return other != null
@@ -138,6 +163,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && Participants.UnorderedEqual(other.Participants.Split(','));
         }
 
+        /// <summary>
+        /// Checks for equality against another <see cref="Convo"/> instance.
+        /// </summary>
+        /// <param name="other">The <see cref="Convo"/> to compare to.</param>
+        /// <returns>Whether the two <see cref="Convo"/>s are equal or not.</returns>
         public bool Equals(Convo other)
         {
             return other != null

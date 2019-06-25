@@ -60,7 +60,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
         public bool Equals(Message other)
         {
-            return other != null && other.Id == Id;
+            return other != null 
+                   && other.Id == Id 
+                   && other.SenderId == SenderId 
+                   && other.SenderName == SenderName 
+                   && other.Body == Body;
         }
 
         /// <summary>

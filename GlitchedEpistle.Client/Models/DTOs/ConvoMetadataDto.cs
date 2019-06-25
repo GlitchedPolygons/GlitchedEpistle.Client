@@ -1,5 +1,6 @@
 ﻿#region
 using System;
+using System.Linq;
 
 using Newtonsoft.Json;
 #endregion
@@ -61,5 +62,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <value>The banned users.</value>
         [JsonProperty(PropertyName = "ban")]
         public string BannedUsers { get; set; }
+
+        /// <summary>
+        /// Converts a <see cref="ConvoMetadataDto"/> data-transfer object from the backend into a full-fletched, client <see cref="Convo"/> instance.
+        /// </summary>
+        /// <param name="dto"></param>
+        public static implicit operator Convo(ConvoMetadataDto dto)
+        {
+            return new Convo
+            {
+                Id = dto.Id,
+                CreatorId = dto.CreatorId,
+                Name = dto.Name,
+                Description = dto.Description,
+                CreationTimestampUTC = dto.CreationTimestampUTC,
+                ExpirationUTC = dto.ExpirationUTC,
+                Participants = dto.Participants.Split(',').ToList(),
+                BannedUsers = dto.Participants.Split(',').ToList()
+            };
+        }
     }
 }
