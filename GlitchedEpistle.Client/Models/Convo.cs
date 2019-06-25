@@ -44,12 +44,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The convo's password hashed with SHA512.
-        /// </summary>
-        [JsonIgnore]
-        public string PasswordSHA512 { get; set; }
-
-        /// <summary>
         /// The <see cref="DateTime"/> (UTC) this conversation was created.
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
@@ -74,12 +68,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         [JsonProperty(PropertyName = "ban")]
         public List<string> BannedUsers { get; set; } = new List<string>(2);
-
-        /// <summary>
-        /// The conversation's messages.
-        /// </summary>
-        [JsonIgnore]
-        public List<Message> Messages { get; set; } = new List<Message>(16);
 
         /// <summary>
         /// Determines whether this <see cref="Convo"/> is expired.
