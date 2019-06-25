@@ -6,9 +6,14 @@
     <RootNamespace>GlitchedPolygons.GlitchedEpistle.Client</RootNamespace>
     <Authors>Glitched Polygons</Authors>
     <Description>Shared code base for all epistle clients.</Description>
-    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <Platforms>AnyCPU;x64</Platforms>
-    <Version>1.0.7</Version>
+    <Version>1.1.0</Version>
+    <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/GlitchedEpistle.Client/b73845791295eab9d08e11815b582ae84ae26427/Docs/docfx_project/_exported_templates/default/favicon.ico</PackageIconUrl>
+    <RepositoryUrl>https://github.com/GlitchedPolygons/GlitchedEpistle.Client</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/GlitchedPolygons/GlitchedEpistle.Client</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -33,6 +38,13 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.4" />
     <PackageReference Include="RestSharp" Version="106.6.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

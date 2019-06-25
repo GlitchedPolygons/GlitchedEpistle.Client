@@ -30,5 +30,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         {
             return new DateTimeOffset(dt).ToUnixTimeSeconds();
         }
+
+        /// <summary>
+        /// Converts a unix timestamp (seconds since 1970-01-01 00:00:00.000 UTC) to a UTC <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="timestamp">The unix timestamp to convert.</param>
+        /// <returns>The converted <see cref="DateTime"/> in UTC.</returns>
+        public static DateTime FromUnixTimeSeconds(long timestamp)
+        {
+            return DateTimeOffset.FromUnixTimeSeconds(timestamp).UtcDateTime;
+        }
     }
 }

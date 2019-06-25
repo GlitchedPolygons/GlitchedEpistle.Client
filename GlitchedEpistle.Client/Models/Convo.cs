@@ -93,12 +93,31 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns>The participant user ids separated by commas.</returns>
         public string GetParticipantIdsCommaSeparated()
         {
-            StringBuilder stringBuilder = new StringBuilder(128);
+            var stringBuilder = new StringBuilder(128);
             int participantsCount = Participants.Count;
             for (int i = 0; i < participantsCount; i++)
             {
                 stringBuilder.Append(Participants[i]);
                 if (i < participantsCount - 1)
+                {
+                    stringBuilder.Append(',');
+                }
+            }
+            return stringBuilder.ToString();
+        }
+        
+        /// <summary>
+        /// Gets the <see cref="Convo"/>'s black list (as a comma-separated list of user ids).
+        /// </summary>
+        /// <returns>Comma-separated <see cref="User.Id"/>s that are banned from this <see cref="Convo"/>.</returns>
+        public string GetBannedUsersCommaSeparated()
+        {
+            var stringBuilder = new StringBuilder(128);
+            int bannedUsersCount = BannedUsers.Count;
+            for (int i = 0; i < bannedUsersCount; i++)
+            {
+                stringBuilder.Append(BannedUsers[i]);
+                if (i < bannedUsersCount - 1)
                 {
                     stringBuilder.Append(',');
                 }
