@@ -222,7 +222,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             }
 
             bool success = false;
-            string sql = $"INSERT INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
+            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
             
             using (var dbcon = OpenConnection())
             {
@@ -246,7 +246,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the operation was successful or not.</returns>
         public async Task<bool> AddRange(IEnumerable<Message> messages)
         {
-            var sql = new StringBuilder($"INSERT INTO \"{tableName}\" VALUES ", 512);
+            var sql = new StringBuilder($"INSERT OR IGNORE INTO \"{tableName}\" VALUES ", 512);
 
             foreach (var message in messages)
             {
