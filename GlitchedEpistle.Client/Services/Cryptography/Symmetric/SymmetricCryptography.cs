@@ -27,7 +27,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             try
             {
                 EncryptionResult result;
-                using (AesManaged aes = new AesManaged())
+                using (var aes = new AesManaged())
                 {
                     aes.GenerateIV();
                     aes.GenerateKey();
@@ -54,7 +54,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             try
             {
                 byte[] decryptedBytes;
-                using (AesManaged aes = new AesManaged())
+                using (var aes = new AesManaged())
                 {
                     aes.IV = encryptionResult.IV;
                     aes.Key = encryptionResult.Key;
@@ -84,14 +84,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             {
                 byte[] result;
                 byte[] salt = new byte[32];
-                using (AesManaged aes = new AesManaged())
-                using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+                
+                using (var aes = new AesManaged())
+                using (var rng = new RNGCryptoServiceProvider())
                 {
                     rng.GetBytes(salt);
+                    
                     using (Rfc2898DeriveBytes rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
                     {
                         aes.IV = rfc.GetBytes(16);
                         aes.Key = rfc.GetBytes(32);
+                        
                         using (ICryptoTransform encryptor = aes.CreateEncryptor())
                         {
                             result = salt.Concat(encryptor.TransformFinalBlock(data, 0, data.Length)).ToArray();
@@ -131,8 +134,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                     encr[i] = encryptedBytes[i + 32];
                 }
 
-                using (AesManaged aes = new AesManaged())
-                using (Rfc2898DeriveBytes rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
+                using (var aes = new AesManaged())
+                using (var rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
                 {
                     aes.IV = rfc.GetBytes(16);
                     aes.Key = rfc.GetBytes(32);

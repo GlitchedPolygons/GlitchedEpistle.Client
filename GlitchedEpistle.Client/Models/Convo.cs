@@ -1,8 +1,10 @@
 ﻿#region
 using System;
-using System.Collections.Generic;
 using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 
+using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
@@ -15,7 +17,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// <summary>
     /// A highly civilized conversation between two or more homo sapiens.
     /// </summary>
-    public class Convo : IEquatable<ConvoMetadataDto>, IEquatable<Convo>
+    public class Convo : IEquatable<ConvoMetadataDto>, IEquatable<Convo>, IEntity<string>
     {
         /// <summary>
         /// Unique identifier for the convo.
@@ -40,12 +42,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         [JsonProperty(PropertyName = "desc")]
         public string Description { get; set; }
-
-        /// <summary>
-        /// The convo's password hashed with SHA512.
-        /// </summary>
-        [JsonIgnore]
-        public string PasswordSHA512 { get; set; }
 
         /// <summary>
         /// The <see cref="DateTime"/> (UTC) this conversation was created.
@@ -74,12 +70,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public List<string> BannedUsers { get; set; } = new List<string>(2);
 
         /// <summary>
-        /// The conversation's messages.
-        /// </summary>
-        [JsonIgnore]
-        public List<Message> Messages { get; set; } = new List<Message>(16);
-
-        /// <summary>
         /// Determines whether this <see cref="Convo"/> is expired.
         /// </summary>
         /// <returns><c>true</c> if the <see cref="Convo"/> is expired; otherwise, <c>false</c>.</returns>
@@ -92,7 +82,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns>The participant user ids separated by commas.</returns>
         public string GetParticipantIdsCommaSeparated()
         {
-            StringBuilder stringBuilder = new StringBuilder(128);
+            var stringBuilder = new StringBuilder(128);
             int participantsCount = Participants.Count;
             for (int i = 0; i < participantsCount; i++)
             {
@@ -104,7 +94,50 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
             }
             return stringBuilder.ToString();
         }
+        
+        /// <summary>
+        /// Gets the <see cref="Convo"/>'s black list (as a comma-separated list of user ids).
+        /// </summary>
+        /// <returns>Comma-separated <see cref="User.Id"/>s that are banned from this <see cref="Convo"/>.</returns>
+        public string GetBannedUsersCommaSeparated()
+        {
+            var stringBuilder = new StringBuilder(128);
+            int bannedUsersCount = BannedUsers.Count;
+            for (int i = 0; i < bannedUsersCount; i++)
+            {
+                stringBuilder.Append(BannedUsers[i]);
+                if (i < bannedUsersCount - 1)
+                {
+                    stringBuilder.Append(',');
+                }
+            }
+            return stringBuilder.ToString();
+        }
 
+        /// <summary>
+        /// Converts a <see cref="Convo"/> object into a data-transfer object for the backend (<see cref="ConvoMetadataDto"/>).
+        /// </summary>
+        /// <param name="convo">The <see cref="Convo"/> to convert to a <see cref="ConvoMetadataDto"/>.</param>
+        public static implicit operator ConvoMetadataDto(Convo convo)
+        {
+            return new ConvoMetadataDto
+            {
+                Id = convo.Id,
+                CreatorId = convo.CreatorId,
+                Name = convo.Name,
+                Description = convo.Description,
+                CreationTimestampUTC = convo.CreationTimestampUTC,
+                ExpirationUTC = convo.ExpirationUTC,
+                Participants = convo.GetParticipantIdsCommaSeparated(),
+                BannedUsers = convo.GetBannedUsersCommaSeparated()
+            };
+        }
+
+        /// <summary>
+        /// Checks for equality against a <see cref="ConvoMetadataDto"/> data transfer object (coming from the backend).
+        /// </summary>
+        /// <param name="other">The <see cref="ConvoMetadataDto"/> to compare to this <see cref="Convo"/>.</param>
+        /// <returns>Whether the two convos are equal or not.</returns>
         public bool Equals(ConvoMetadataDto other)
         {
             return other != null
@@ -118,6 +151,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && Participants.UnorderedEqual(other.Participants.Split(','));
         }
 
+        /// <summary>
+        /// Checks for equality against another <see cref="Convo"/> instance.
+        /// </summary>
+        /// <param name="other">The <see cref="Convo"/> to compare to.</param>
+        /// <returns>Whether the two <see cref="Convo"/>s are equal or not.</returns>
         public bool Equals(Convo other)
         {
             return other != null

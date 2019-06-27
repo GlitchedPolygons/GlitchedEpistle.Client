@@ -1,4 +1,7 @@
 ﻿using System;
+
+using GlitchedPolygons.RepositoryPattern;
+
 using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
@@ -6,7 +9,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// <summary>
     /// An epistle message.
     /// </summary>
-    public class Message : IEquatable<Message>
+    public class Message : IEquatable<Message>, IEntity<string>
     {
         /// <summary>
         /// Gets the message's unique identifier, which is <para> </para>
@@ -57,7 +60,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
         public bool Equals(Message other)
         {
-            return other != null && other.Id == Id;
+            return other != null 
+                   && other.Id == Id 
+                   && other.SenderId == SenderId 
+                   && other.SenderName == SenderName 
+                   && other.Body == Body;
         }
 
         /// <summary>

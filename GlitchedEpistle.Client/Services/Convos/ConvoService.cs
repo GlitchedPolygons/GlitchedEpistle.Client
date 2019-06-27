@@ -48,11 +48,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// Deletes a convo server-side.
         /// </summary>
         /// <param name="convoId">The <see cref="Convo" />'s identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="totp">2FA token.</param>
         /// <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
         /// <param name="auth">The authentication JWT.</param>
         /// <returns>Whether deletion was successful or not.</returns>
-        public async Task<bool> DeleteConvo(string convoId, string convoPasswordSHA512, string userId, string auth)
+        public async Task<bool> DeleteConvo(string convoId, string totp, string userId, string auth)
         {
             RestRequest request = new RestRequest(
                 method: Method.DELETE,
@@ -61,7 +61,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
+            request.AddQueryParameter(nameof(totp), totp);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
@@ -212,11 +212,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// Leave a <see cref="Convo" />.
         /// </summary>
         /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="totp">2FA TOTP code.</param>
         /// <param name="userId">The user identifier (who's leaving the convo).</param>
         /// <param name="auth">The request authentication token.</param>
         /// <returns>Whether the <see cref="Convo" /> was left successfully or not.</returns>
-        public async Task<bool> LeaveConvo(string convoId, string convoPasswordSHA512, string userId, string auth)
+        public async Task<bool> LeaveConvo(string convoId, string totp, string userId, string auth)
         {
             RestRequest request = new RestRequest(
                 method: Method.PUT,
@@ -225,7 +225,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
+            request.AddQueryParameter(nameof(totp), totp);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;

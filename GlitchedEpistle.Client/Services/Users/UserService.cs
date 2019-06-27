@@ -1,11 +1,12 @@
 ﻿#region
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
-using GlitchedPolygons.GlitchedEpistle.Client.Constants;
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 
 using Newtonsoft.Json;
 
@@ -16,9 +17,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 {
     /// <summary>
     /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.<para> </para>
-    /// Implements the <see cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService" /> interface.
+    /// Implements the <see cref="IUserService" /> interface.
     /// </summary>
-    /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService" />
+    /// <seealso cref="IUserService" />
     public class UserService : IUserService
     {
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
@@ -35,7 +36,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <returns>JWT <see langword="string" /> if auth was successful; <see langword="null" /> otherwise.</returns>
         public async Task<string> Login(string userId, string passwordSHA512, string totp)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri("users/login", UriKind.Relative)
             );
@@ -56,7 +57,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <returns>If all goes well, you should receive your new, fresh auth token from the backend.</returns>
         public async Task<string> RefreshAuthToken(string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri("users/login/refresh", UriKind.Relative)
             );
@@ -68,10 +69,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
             return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Validates the 2fa token.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="totp">The totp.</param>
+        /// <returns>Whether the user 2FA authentication succeeded or not.</returns>
         public async Task<bool> Validate2FA(string userId, string totp)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri("users/login/2fa", UriKind.Relative)
             );
@@ -84,13 +90,46 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         }
 
         /// <summary>
+        /// Gets the <see cref="Convo"/>s in which the specified <see cref="User"/> is involved (participant or creator thereof).
+        /// </summary>
+        /// <param name="userId">The user id.</param>
+        /// <param name="auth">Request authentication token.</param>
+        /// <returns>The found convos.</returns>
+        public async Task<IEnumerable<ConvoMetadataDto>> GetConvos(string userId, string auth)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"users/{userId}/convos", UriKind.Relative)
+            );
+
+            request.AddQueryParameter(nameof(auth), auth);
+
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                return Array.Empty<ConvoMetadataDto>();
+            }
+
+            try
+            {
+                var convos = JsonConvert.DeserializeObject<ConvoMetadataDto[]>(response.Content);
+                return convos;
+            }
+            catch (Exception)
+            {
+                return Array.Empty<ConvoMetadataDto>();
+            }
+        }
+
+        /// <summary>
         /// Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> (in UTC).
         /// </summary>
         /// <param name="userId">The user id.</param>
         /// <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <see langword="null" /> if the user doesn't exist.</returns>
         public async Task<DateTime?> GetUserExpirationUTC(string userId)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri($"users/exp/{userId}", UriKind.Relative)
             );
@@ -113,7 +152,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
         public async Task<List<Tuple<string, string>>> GetUserPublicKeyXml(string userId, string userIds, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri($"users/get-public-key/{userIds}", UriKind.Relative)
             );
@@ -141,7 +180,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         public async Task<bool> ChangeUserPassword(string userId, string auth, string oldPwSHA512, string newPwSHA512)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"users/change-pw/{userId}", UriKind.Relative)
             );
@@ -161,7 +200,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         public async Task<UserCreationResponseDto> CreateUser(UserCreationDto userCreationDto)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.POST,
                 resource: new Uri("users/create", UriKind.Relative)
             );

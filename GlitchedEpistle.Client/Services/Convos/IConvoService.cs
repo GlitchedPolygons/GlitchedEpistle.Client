@@ -25,11 +25,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// Deletes a convo server-side.
         /// </summary>
         /// <param name="convoId">The <see cref="Convo"/>'s identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="totp">2FA token.</param>
         /// <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
         /// <param name="auth">The authentication JWT.</param>
         /// <returns>Whether deletion was successful or not.</returns>
-        Task<bool> DeleteConvo(string convoId, string convoPasswordSHA512, string userId, string auth);
+        Task<bool> DeleteConvo(string convoId, string totp, string userId, string auth);
 
         /// <summary>
         /// Posts a message to a <see cref="Convo"/>.
@@ -98,11 +98,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// Leave a <see cref="Convo"/>.
         /// </summary>
         /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="totp">2FA TOTP code.</param>
         /// <param name="userId">The user identifier (who's leaving the convo).</param>
         /// <param name="auth">The request authentication token.</param>
         /// <returns>Whether the <see cref="Convo"/> was left successfully or not.</returns>
-        Task<bool> LeaveConvo(string convoId, string convoPasswordSHA512, string userId, string auth);
+        Task<bool> LeaveConvo(string convoId, string totp, string userId, string auth);
 
         /// <summary>
         /// Kick a user from a conversation.

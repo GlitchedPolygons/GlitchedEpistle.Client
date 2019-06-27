@@ -25,7 +25,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth
         /// <returns>Whether the connection to the epistle server could be established successfully or not.</returns>
         public async Task<bool> TestConnection()
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri("marco", UriKind.Relative)
             );
