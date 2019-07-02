@@ -168,6 +168,52 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         }
 
         /// <summary>
+        /// Gets the n latest <see cref="Message"/>s from the repo.
+        /// </summary>
+        /// <param name="n">The amount of messages to retrieve.</param>
+        /// <param name="offset">How many entries to skip before starting to gather messages.</param>
+        public async Task<IEnumerable<Message>> GetLastMessages(int n, int offset = 0)
+        {
+            n = Math.Abs(n);
+            offset = Math.Abs(offset);
+
+            IList<Message> messages = new List<Message>(n);
+
+            string sql = $"SELECT * FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT {n}";
+            if (offset > 0)
+            {
+                sql += " OFFSET " + offset;
+            }
+
+            using (var sqlc = new SQLiteConnection(connectionString))
+            {
+                await sqlc.OpenAsync();
+
+                using (var cmd = new SQLiteCommand(sql, sqlc))
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    if (!reader.HasRows)
+                    {
+                        return Array.Empty<Message>();
+                    }
+
+                    while (await reader.ReadAsync())
+                    {
+                        messages.Add(new Message
+                        {
+                            Id = reader.GetString(0),
+                            SenderId = reader.GetString(1),
+                            SenderName = reader.GetString(2),
+                            TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                            Body = reader.GetString(4)
+                        });
+                    }
+                }
+            }
+            return messages.Reverse();
+        }
+
+        /// <summary>
         /// Gets a single <see cref="Message"/> from the repo according to the specified predicate condition.<para> </para>
         /// If 0 or &gt;1 entities are found, <c>null</c> is returned.<para> </para>
         /// </summary>
