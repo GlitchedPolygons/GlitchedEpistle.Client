@@ -57,7 +57,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
             try
             {
                 byte[] data = gzip.Compress(Encoding.UTF8.GetBytes(messageJson), COMPRESSION_SETTINGS);
-                using (EncryptionResult encryptionResult = aes.Encrypt(data))
+                using (var encryptionResult = aes.Encrypt(data))
                 {
                     var stringBuilder = new StringBuilder(encryptionResult.EncryptedData.Length);
                     stringBuilder.Append(Convert.ToBase64String(rsa.Encrypt(encryptionResult.Key, recipientPublicRsaKey)));

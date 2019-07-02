@@ -20,9 +20,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <exception cref="InvalidDataException">Invalid XML RSA key.</exception>
         public static RSAParameters FromXmlString(string xml)
         {
-            RSAParameters rsaParameters = new RSAParameters();
+            var rsaParameters = new RSAParameters();
 
-            XmlDocument xmlDoc = new XmlDocument();
+            var xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(xml);
 
             if (xmlDoc.DocumentElement != null && xmlDoc.DocumentElement.Name == "RSAKeyValue")

@@ -26,7 +26,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             }
 
             byte[] encryptedData;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            using (var rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(publicKey);
                 encryptedData = rsa.Encrypt(Encoding.UTF8.GetBytes(text), true);
@@ -49,7 +49,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             }
 
             byte[] data;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            using (var rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(privateKey);
                 if (rsa.PublicOnly)
@@ -70,7 +70,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         public byte[] Encrypt(byte[] data, RSAParameters publicKey)
         {
             byte[] encryptedData;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            using (var rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(publicKey);
                 encryptedData = rsa.Encrypt(data, true);
@@ -88,7 +88,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         public byte[] Decrypt(byte[] encryptedData, RSAParameters privateKey)
         {
             byte[] data;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            using (var rsa = new RSACryptoServiceProvider())
             {
                 rsa.ImportParameters(privateKey);
                 if (rsa.PublicOnly)

@@ -38,9 +38,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <returns>MD5 hash of the input string.</returns>
         public static string MD5(this string text, bool toLowercase = false)
         {
-            using (MD5 md5 = System.Security.Cryptography.MD5.Create())
+            using (var md5 = System.Security.Cryptography.MD5.Create())
             {
-                StringBuilder stringBuilder = new StringBuilder(32);
+                var stringBuilder = new StringBuilder(32);
                 byte[] hash = md5.ComputeHash(text.EncodeToBytes());
 
                 for (int i = 0; i < hash.Length; i++)
@@ -60,9 +60,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// <returns>SHA512 of the input string.</returns>
         public static string SHA512(this string text, bool toLowercase = false)
         {
-            using (SHA512 sha512 = System.Security.Cryptography.SHA512.Create())
+            using (var sha512 = System.Security.Cryptography.SHA512.Create())
             {
-                StringBuilder stringBuilder = new StringBuilder(128);
+                var stringBuilder = new StringBuilder(128);
                 byte[] hash = sha512.ComputeHash(text.EncodeToBytes());
 
                 for (int i = 0; i < hash.Length; i++)

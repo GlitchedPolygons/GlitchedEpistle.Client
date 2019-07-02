@@ -90,7 +90,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                 {
                     rng.GetBytes(salt);
                     
-                    using (Rfc2898DeriveBytes rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
+                    using (var rfc = new Rfc2898DeriveBytes(password, salt, RFC_ITERATIONS))
                     {
                         aes.IV = rfc.GetBytes(16);
                         aes.Key = rfc.GetBytes(32);

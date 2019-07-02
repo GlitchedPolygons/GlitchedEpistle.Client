@@ -26,7 +26,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
         /// <returns>Whether the coupon code was redeemed successfully or not.</returns>
         public async Task<bool> UseCoupon(string code, string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"coupons/{code}", UriKind.Relative)
             );

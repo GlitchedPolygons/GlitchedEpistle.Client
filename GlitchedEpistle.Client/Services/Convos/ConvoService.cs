@@ -31,7 +31,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns><c>null</c> if creation failed; the created <see cref="Convo" />'s unique id.</returns>
         public async Task<string> CreateConvo(ConvoCreationDto convoDto, string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.POST,
                 resource: new Uri("convos/create", UriKind.Relative)
             );
@@ -54,7 +54,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether deletion was successful or not.</returns>
         public async Task<bool> DeleteConvo(string convoId, string totp, string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.DELETE,
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
@@ -75,7 +75,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the message was posted successfully or not.</returns>
         public async Task<bool> PostMessage(string convoId, PostMessageParamsDto messageDto)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.POST,
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
@@ -96,7 +96,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>The convo's metadata wrapped into a DTO (<c>null</c> if something failed).</returns>
         public async Task<ConvoMetadataDto> GetConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri($"convos/meta/{convoId}", UriKind.Relative)
             );
@@ -122,7 +122,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
         public async Task<bool> ChangeConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth, ConvoChangeMetadataDto metadata)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"convos/meta/{convoId}", UriKind.Relative)
             );
@@ -147,7 +147,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
         public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, string tailId = null)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri($"convos/{convoId}/{tailId}", UriKind.Relative)
             );
@@ -171,7 +171,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>The <see cref="Message" />'s index integer; if something fails, <c>-1</c> is returned.</returns>
         public async Task<int> IndexOf(string convoId, string convoPasswordSHA512, string userId, string auth, string messageId)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri($"convos/indexof/{convoId}", UriKind.Relative)
             );
@@ -195,7 +195,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the <see cref="Convo" /> was joined successfully or not.</returns>
         public async Task<bool> JoinConvo(string convoId, string convoPasswordSHA512, string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"convos/join/{convoId}", UriKind.Relative)
             );
@@ -218,7 +218,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the <see cref="Convo" /> was left successfully or not.</returns>
         public async Task<bool> LeaveConvo(string convoId, string totp, string userId, string auth)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"convos/leave/{convoId}", UriKind.Relative)
             );
@@ -243,7 +243,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the user was kicked out successfully or not.</returns>
         public async Task<bool> KickUser(string convoId, string convoPasswordSHA512, string convoAdminId, string auth, string userIdToKick, bool permaBan)
         {
-            RestRequest request = new RestRequest(
+            var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri($"convos/{convoId}/kick/{userIdToKick}", UriKind.Relative)
             );
