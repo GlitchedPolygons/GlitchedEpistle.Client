@@ -1,7 +1,6 @@
-﻿#region
-using System.Security.Cryptography;
-using System.Text;
-#endregion
+﻿using System.Text;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
 {
@@ -10,6 +9,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
     /// </summary>
     public static class StringExtensions
     {
+        /// <summary>
+        /// Opens the <c>string</c> URL in the browser.
+        /// </summary>
+        /// <param name="url">The URL <see cref="string"/> to open.</param>
+        public static void OpenUrlInBrowser(this string url)
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}"));
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                Process.Start("xdg-open", url);
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                Process.Start("open", url);
+            }
+        }
+
         /// <summary>
         /// Returns <c>true</c> when the passed <c>string</c> is not <c>null</c> or empty; <c>false</c> otherwise.
         /// </summary>

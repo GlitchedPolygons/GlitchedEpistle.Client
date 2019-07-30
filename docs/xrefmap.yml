@@ -242,6 +242,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty
   nameWithType: StringExtensions.NullOrEmpty
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser(System.String)
+  name: OpenUrlInBrowser(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_OpenUrlInBrowser_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser(System.String)
+  nameWithType: StringExtensions.OpenUrlInBrowser(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser*
+  name: OpenUrlInBrowser
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_OpenUrlInBrowser_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser
+  nameWithType: StringExtensions.OpenUrlInBrowser
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String,System.Boolean)
   name: SHA512(String, Boolean)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_SHA512_System_String_System_Boolean_
@@ -1823,6 +1836,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessageId
   nameWithType: IMessageRepository.GetLastMessageId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessages(System.Int32,System.Int32)
+  name: GetLastMessages(Int32, Int32)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IMessageRepository_GetLastMessages_System_Int32_System_Int32_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessages(System.Int32,System.Int32)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessages(System.Int32, System.Int32)
+  nameWithType: IMessageRepository.GetLastMessages(Int32, Int32)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessages*
+  name: GetLastMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IMessageRepository_GetLastMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IMessageRepository.GetLastMessages
+  nameWithType: IMessageRepository.GetLastMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite
   name: MessageRepositorySQLite
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html
@@ -1926,6 +1952,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessageId
   nameWithType: MessageRepositorySQLite.GetLastMessageId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessages(System.Int32,System.Int32)
+  name: GetLastMessages(Int32, Int32)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_GetLastMessages_System_Int32_System_Int32_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessages(System.Int32,System.Int32)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessages(System.Int32, System.Int32)
+  nameWithType: MessageRepositorySQLite.GetLastMessages(Int32, Int32)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessages*
+  name: GetLastMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_GetLastMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.GetLastMessages
+  nameWithType: MessageRepositorySQLite.GetLastMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.Item(System.String)
   name: Item[String]
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_MessageRepositorySQLite_Item_System_String_
