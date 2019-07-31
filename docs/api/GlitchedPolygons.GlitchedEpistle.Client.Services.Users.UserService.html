@@ -120,19 +120,19 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Users/UserService.cs/#L181">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Users/UserService.cs/#L200">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_System_String_System_String_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String,System.String,System.String,System.String)">ChangeUserPassword(String, String, String, String)</h4>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)">ChangeUserPassword(UserChangePasswordDto)</h4>
   <div class="markdown level1 summary"><p>Changes the user password.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; ChangeUserPassword(string userId, string auth, string oldPwSHA512, string newPwSHA512)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; ChangeUserPassword(UserChangePasswordDto paramsDto)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,27 +145,9 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">userId</span></td>
-        <td><p>The user identifier.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">auth</span></td>
-        <td><p>The authentication token.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">oldPwSHA512</span></td>
-        <td><p>The old password hash (SHA-512).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">newPwSHA512</span></td>
-        <td><p>The new password hash (SHA-512).</p>
+        <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html">UserChangePasswordDto</a></td>
+        <td><span class="parametername">paramsDto</span></td>
+        <td><p>Request parameters DTO.</p>
 </td>
       </tr>
     </tbody>
@@ -191,7 +173,7 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_CreateUser_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationDto_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Users/UserService.cs/#L201">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Users/UserService.cs/#L218">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_CreateUser_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_CreateUser_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationDto_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.CreateUser(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto)">CreateUser(UserCreationDto)</h4>
@@ -338,6 +320,68 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;&gt;</td>
         <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a>'s expiration <span class="xref">System.DateTime</span> in UTC; <span class="xref">null</span> if the user doesn't exist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Users/UserService.cs/#L180">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_System_String_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)">GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a user's (encrypted, base-64 encoded) private key xml from the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; GetUserPrivateKeyXmlEncryptedBytesBase64(string userId, string passwordSHA512, string totp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The requesting user's id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">passwordSHA512</span></td>
+        <td><p>The requesting user's password hash (SHA512).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">totp</span></td>
+        <td><p>Two-Factor Authentication token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p><code>null</code> if retrieval failed; the key if the request was successful.</p>
 </td>
       </tr>
     </tbody>

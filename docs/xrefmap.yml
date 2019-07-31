@@ -796,6 +796,77 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.UserId
   nameWithType: PostMessageParamsDto.UserId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto
+  name: UserChangePasswordDto
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto
+  nameWithType: UserChangePasswordDto
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.Auth
+  name: Auth
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_Auth
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.Auth
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.Auth
+  nameWithType: UserChangePasswordDto.Auth
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.Auth*
+  name: Auth
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_Auth_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.Auth
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.Auth
+  nameWithType: UserChangePasswordDto.Auth
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+  name: NewPrivateKeyXmlEncryptedBytesBase64
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_NewPrivateKeyXmlEncryptedBytesBase64
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+  nameWithType: UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64*
+  name: NewPrivateKeyXmlEncryptedBytesBase64
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_NewPrivateKeyXmlEncryptedBytesBase64_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+  nameWithType: UserChangePasswordDto.NewPrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPwSHA512
+  name: NewPwSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_NewPwSHA512
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPwSHA512
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPwSHA512
+  nameWithType: UserChangePasswordDto.NewPwSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPwSHA512*
+  name: NewPwSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_NewPwSHA512_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPwSHA512
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.NewPwSHA512
+  nameWithType: UserChangePasswordDto.NewPwSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.OldPwSHA512
+  name: OldPwSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_OldPwSHA512
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.OldPwSHA512
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.OldPwSHA512
+  nameWithType: UserChangePasswordDto.OldPwSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.OldPwSHA512*
+  name: OldPwSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_OldPwSHA512_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.OldPwSHA512
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.OldPwSHA512
+  nameWithType: UserChangePasswordDto.OldPwSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.UserId
+  name: UserId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_UserId
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.UserId
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.UserId
+  nameWithType: UserChangePasswordDto.UserId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.UserId*
+  name: UserId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_UserId_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.UserId
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto.UserId
+  nameWithType: UserChangePasswordDto.UserId
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto
   name: UserCreationDto
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.html
@@ -860,6 +931,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PasswordSHA512
   nameWithType: UserCreationDto.PasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
+  name: PrivateKeyXmlEncryptedBytesBase64
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationDto_PrivateKeyXmlEncryptedBytesBase64
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
+  nameWithType: UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PrivateKeyXmlEncryptedBytesBase64*
+  name: PrivateKeyXmlEncryptedBytesBase64
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationDto_PrivateKeyXmlEncryptedBytesBase64_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
+  nameWithType: UserCreationDto.PrivateKeyXmlEncryptedBytesBase64
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.PublicKeyXml
   name: PublicKeyXml
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationDto_PublicKeyXml
@@ -2764,12 +2848,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService
   nameWithType: IUserService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(System.String,System.String,System.String,System.String)
-  name: ChangeUserPassword(String, String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_ChangeUserPassword_System_String_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(System.String,System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(System.String, System.String, System.String, System.String)
-  nameWithType: IUserService.ChangeUserPassword(String, String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)
+  name: ChangeUserPassword(UserChangePasswordDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)
+  nameWithType: IUserService.ChangeUserPassword(UserChangePasswordDto)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.ChangeUserPassword*
   name: ChangeUserPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_ChangeUserPassword_
@@ -2816,6 +2900,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserExpirationUTC
   nameWithType: IUserService.GetUserExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
+  name: GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPrivateKeyXmlEncryptedBytesBase64_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String, System.String, System.String)
+  nameWithType: IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64*
+  name: GetUserPrivateKeyXmlEncryptedBytesBase64
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPrivateKeyXmlEncryptedBytesBase64_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64
+  nameWithType: IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String,System.String,System.String)
   name: GetUserPublicKeyXml(String, String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPublicKeyXml_System_String_System_String_System_String_
@@ -2874,12 +2971,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService
   nameWithType: UserService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String,System.String,System.String,System.String)
-  name: ChangeUserPassword(String, String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_System_String_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String,System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(System.String, System.String, System.String, System.String)
-  nameWithType: UserService.ChangeUserPassword(String, String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)
+  name: ChangeUserPassword(UserChangePasswordDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordDto)
+  nameWithType: UserService.ChangeUserPassword(UserChangePasswordDto)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.ChangeUserPassword*
   name: ChangeUserPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_ChangeUserPassword_
@@ -2926,6 +3023,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserExpirationUTC
   nameWithType: UserService.GetUserExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
+  name: GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String, System.String, System.String)
+  nameWithType: UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64*
+  name: GetUserPrivateKeyXmlEncryptedBytesBase64
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64
+  nameWithType: UserService.GetUserPrivateKeyXmlEncryptedBytesBase64
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String,System.String,System.String)
   name: GetUserPublicKeyXml(String, String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPublicKeyXml_System_String_System_String_System_String_
