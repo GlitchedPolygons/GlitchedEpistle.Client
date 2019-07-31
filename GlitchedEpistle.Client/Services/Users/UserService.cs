@@ -171,23 +171,40 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         }
 
         /// <summary>
+        /// Gets a user's (encrypted, base-64 encoded) private key xml from the server.
+        /// </summary>
+        /// <param name="userId">The requesting user's id.</param>
+        /// <param name="passwordSHA512">The requesting user's password hash (SHA512).</param>
+        /// <param name="totp">Two-Factor Authentication token.</param>
+        /// <returns><c>null</c> if retrieval failed; the key if the request was successful.</returns>
+        public async Task<string> GetUserPrivateKeyXmlEncryptedBytesBase64(string userId, string passwordSHA512, string totp)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"users/get-private-key/{userId}", UriKind.Relative)
+            );
+
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(passwordSHA512), passwordSHA512);
+            request.AddQueryParameter(nameof(totp), totp);
+
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
+        }
+
+        /// <summary>
         /// Changes the user password.
         /// </summary>
-        /// <param name="userId">The user identifier.</param>
-        /// <param name="auth">The authentication token.</param>
-        /// <param name="oldPwSHA512">The old password hash (SHA-512).</param>
-        /// <param name="newPwSHA512">The new password hash (SHA-512).</param>
+        /// <param name="paramsDto">Request parameters DTO.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        public async Task<bool> ChangeUserPassword(string userId, string auth, string oldPwSHA512, string newPwSHA512)
+        public async Task<bool> ChangeUserPassword(UserChangePasswordDto paramsDto)
         {
             var request = new RestRequest(
                 method: Method.PUT,
-                resource: new Uri($"users/change-pw/{userId}", UriKind.Relative)
+                resource: new Uri("users/change-pw", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(oldPwSHA512), oldPwSHA512);
-            request.AddQueryParameter(nameof(newPwSHA512), newPwSHA512);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(paramsDto), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;

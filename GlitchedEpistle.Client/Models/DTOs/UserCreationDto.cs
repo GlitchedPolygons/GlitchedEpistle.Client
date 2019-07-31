@@ -24,6 +24,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string PublicKeyXml { get; set; }
 
         /// <summary>
+        /// The user's private message decryption RSA key,
+        /// xml-formatted and encrypted into <c>byte[]</c> and then Base-64 encoded.
+        /// </summary>
+        [JsonProperty("pkey")]
+        public string PrivateKeyXmlEncryptedBytesBase64 { get; set; }
+
+        /// <summary>
         /// The server creation secret <c>string</c>.
         /// </summary>
         [JsonProperty(PropertyName = "secret")]

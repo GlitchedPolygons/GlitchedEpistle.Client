@@ -66,14 +66,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         Task<List<Tuple<string, string>>> GetUserPublicKeyXml(string userId, string userIds, string auth);
 
         /// <summary>
+        /// Gets a user's (encrypted, base-64 encoded) private key xml from the server.
+        /// </summary>
+        /// <param name="userId">The requesting user's id.</param>
+        /// <param name="passwordSHA512">The requesting user's password hash (SHA512).</param>
+        /// <param name="totp">Two-Factor Authentication token.</param>
+        /// <returns><c>null</c> if retrieval failed; the key if the request was successful.</returns>
+        Task<string> GetUserPrivateKeyXmlEncryptedBytesBase64(string userId, string passwordSHA512, string totp);
+
+        /// <summary>
         /// Changes the user password.
         /// </summary>
-        /// <param name="userId">The user identifier.</param>
-        /// <param name="auth">The authentication token.</param>
-        /// <param name="oldPwSHA512">The old password hash (SHA-512).</param>
-        /// <param name="newPwSHA512">The new password hash (SHA-512).</param>
+        /// <param name="paramsDto">Request parameters DTO.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        Task<bool> ChangeUserPassword(string userId, string auth, string oldPwSHA512, string newPwSHA512);
+        Task<bool> ChangeUserPassword(UserChangePasswordDto paramsDto);
 
         /// <summary>
         /// Creates a new user.
