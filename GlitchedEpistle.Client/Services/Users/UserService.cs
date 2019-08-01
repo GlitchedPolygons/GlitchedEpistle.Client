@@ -23,30 +23,35 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
     public class UserService : IUserService
     {
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
-        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API);
+        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
 
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials
-        /// (POST request to the Glitched Epistle Web API). If authentication is successful, a valid JWT is returned.
+        /// (POST request to the Glitched Epistle Web API).
+        /// If authentication is successful, a valid JWT <see cref="System.String"/> is returned along with the user's keypair.
         /// That's needed for subsequent requests.
         /// </summary>
-        /// <param name="userId">The user identifier.</param>
-        /// <param name="passwordSHA512">The password hash (SHA-512).</param>
-        /// <param name="totp">The 2FA code.</param>
-        /// <returns>JWT <see langword="string" /> if auth was successful; <see langword="null" /> otherwise.</returns>
-        public async Task<string> Login(string userId, string passwordSHA512, string totp)
+        /// <param name="paramsDto">HTTP Request parameters wrapped into a DTO instance.</param>
+        /// <returns><see cref="UserLoginSuccessResponseDto"/> if auth was successful; <c>null</c> otherwise.</returns>
+        public async Task<UserLoginSuccessResponseDto> Login(UserLoginRequestDto paramsDto)
         {
             var request = new RestRequest(
                 method: Method.GET,
                 resource: new Uri("users/login", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(passwordSHA512), passwordSHA512);
-            request.AddQueryParameter(nameof(totp), totp);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(paramsDto), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
-            return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
+            try
+            {
+                var r = JsonConvert.DeserializeObject<UserLoginSuccessResponseDto>(response.Content);
+                return response.StatusCode == HttpStatusCode.OK ? r : null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -197,7 +202,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="paramsDto">Request parameters DTO.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        public async Task<bool> ChangeUserPassword(UserChangePasswordDto paramsDto)
+        public async Task<bool> ChangeUserPassword(UserChangePasswordRequestDto paramsDto)
         {
             var request = new RestRequest(
                 method: Method.PUT,
@@ -213,16 +218,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <summary>
         /// Creates a new user.
         /// </summary>
-        /// <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
+        /// <param name="userCreationRequestDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        public async Task<UserCreationResponseDto> CreateUser(UserCreationDto userCreationDto)
+        public async Task<UserCreationResponseDto> CreateUser(UserCreationRequestDto userCreationRequestDto)
         {
             var request = new RestRequest(
                 method: Method.POST,
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonConvert.SerializeObject(userCreationDto), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(userCreationRequestDto), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             if (response.StatusCode != HttpStatusCode.OK)

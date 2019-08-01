@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
 {
     /// <summary>
-    /// Service interface for encrypting and decrypting <see langword="string"/>s and <see langword="byte"/>[] arrays.
+    /// Service interface for encrypting and decrypting <see cref="System.String"/>s and <see langword="byte"/>[] arrays.
     /// </summary>
     public interface IAsymmetricCryptographyRSA
     {

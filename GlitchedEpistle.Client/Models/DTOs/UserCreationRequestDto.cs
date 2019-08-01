@@ -9,7 +9,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     /// <summary>
     /// DTO for creating a new <see cref="User"/>.
     /// </summary>
-    public class UserCreationDto : IEquatable<UserCreationDto>
+    public class UserCreationRequestDto : IEquatable<UserCreationRequestDto>
     {
         /// <summary>
         /// The user's desired password SHA512.
@@ -42,7 +42,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         /// <param name="other">An object to compare with this object.</param>
         /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
-        public bool Equals(UserCreationDto other)
+        public bool Equals(UserCreationRequestDto other)
         {
             return other != null &&
                    string.Equals(PasswordSHA512, other.PasswordSHA512) &&
@@ -61,7 +61,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return false;
             }
-            return obj is UserCreationDto other && Equals(other);
+            return obj is UserCreationRequestDto other && Equals(other);
         }
 
         /// <summary>

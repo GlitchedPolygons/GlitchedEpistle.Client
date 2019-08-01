@@ -9,7 +9,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     /// <summary>
     /// Data-transfer object for the creation of a new <see cref="Convo"/>.
     /// </summary>
-    public class ConvoCreationDto
+    public class ConvoCreationRequestDto
     {
         /// <summary>
         /// <see cref="Convo"/> name (title).

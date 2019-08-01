@@ -15,7 +15,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
         /// Gets the <c>byte[]</c> array's human readable file size string (e.g. 5KB or 20MB).
         /// </summary>
         /// <param name="bytes">The bytes (for example a file whose size you want to retrieve in a human readable way).</param>
-        /// <returns>A human readable file size <c>string</c> that represents the passed <c>byte[]</c> array's length (<c>string.Empty</c> if the array was <see langword="null"/>).</returns>
+        /// <returns>A human readable file size <c>string</c> that represents the passed <c>byte[]</c> array's length (<c>string.Empty</c> if the array was <c>null</c>).</returns>
         public static string GetFileSizeString(this byte[] bytes)
         {
             if (bytes is null)

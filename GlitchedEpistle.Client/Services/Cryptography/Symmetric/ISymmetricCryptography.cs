@@ -19,7 +19,7 @@
         /// Decrypts the specified <see cref="EncryptionResult"/> that was obtained using <see cref="ISymmetricCryptography.Encrypt(byte[])"/>.
         /// </summary>
         /// <param name="encryptionResult">The <see cref="EncryptionResult"/> that was obtained using <see cref="ISymmetricCryptography.Encrypt(byte[])"/>.</param>
-        /// <returns>Decrypted <c>byte[]</c> or <see langword="null"/> if decryption failed.</returns>
+        /// <returns>Decrypted <c>byte[]</c> or <c>null</c> if decryption failed.</returns>
         byte[] Decrypt(EncryptionResult encryptionResult);
 
         /// <summary>

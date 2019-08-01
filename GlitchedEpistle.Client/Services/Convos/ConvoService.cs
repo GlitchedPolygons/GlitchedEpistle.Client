@@ -20,16 +20,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
     /// <seealso cref="IConvoService" />
     public class ConvoService : IConvoService
     {
-        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API);
+        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
 
         /// <summary>
         /// Creates a new convo on the server.
         /// </summary>
-        /// <param name="convoDto">The convo creation DTO.</param>
+        /// <param name="convoRequestDto">The convo creation DTO.</param>
         /// <param name="userId">The user identifier (who's making the request).</param>
         /// <param name="auth">The authentication token (JWT).</param>
         /// <returns><c>null</c> if creation failed; the created <see cref="Convo" />'s unique id.</returns>
-        public async Task<string> CreateConvo(ConvoCreationDto convoDto, string userId, string auth)
+        public async Task<string> CreateConvo(ConvoCreationRequestDto convoRequestDto, string userId, string auth)
         {
             var request = new RestRequest(
                 method: Method.POST,
@@ -38,7 +38,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
 
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
-            request.AddParameter("application/json", JsonConvert.SerializeObject(convoDto), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(convoRequestDto), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.Content;
@@ -120,7 +120,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <param name="auth">Request authentication token.</param>
         /// <param name="metadata">The data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
-        public async Task<bool> ChangeConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth, ConvoChangeMetadataDto metadata)
+        public async Task<bool> ChangeConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth, ConvoChangeMetadataRequestDto metadata)
         {
             var request = new RestRequest(
                 method: Method.PUT,

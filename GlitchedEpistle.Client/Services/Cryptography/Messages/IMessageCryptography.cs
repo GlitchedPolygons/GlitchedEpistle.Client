@@ -20,9 +20,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         /// <summary>
         /// Decrypts a message that's been encrypted using the <see cref="EncryptMessage"/> method.
         /// </summary>
-        /// <param name="encryptedMessageJson">The encrypted message json <see langword="string"/>.</param>
+        /// <param name="encryptedMessageJson">The encrypted message json <see cref="System.String"/>.</param>
         /// <param name="privateDecryptionRsaKey">Your private decryption RSA key.</param>
-        /// <returns>The decrypted message json (or <see langword="null"/> if decryption failed in some way).</returns>
+        /// <returns>The decrypted message json (or <c>null</c> if decryption failed in some way).</returns>
         string DecryptMessage(string encryptedMessageJson, RSAParameters privateDecryptionRsaKey);
     }
 }

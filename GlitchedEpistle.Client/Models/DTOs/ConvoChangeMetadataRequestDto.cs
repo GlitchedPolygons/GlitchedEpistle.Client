@@ -10,7 +10,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     /// DTO for changing an existing <see cref="Convo"/>'s metadata
     /// (such as for example updating the title or description, or extending its lifespan).
     /// </summary>
-    public class ConvoChangeMetadataDto
+    public class ConvoChangeMetadataRequestDto
     {
         /// <summary>
         /// The new convo admin.

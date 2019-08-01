@@ -15,7 +15,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
     /// </summary>
     public class CouponService : ICouponService
     {
-        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API);
+        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
 
         /// <summary>
         /// Redeems a coupon code to extend a user's Epistle account membership.

@@ -10,20 +10,21 @@ using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
 {
     /// <summary>
-    /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.
+    /// Service interface for logging into Glitched Epistle
+    /// and receiving an auth token back from the Web API,
+    /// as well as extending a user's expiration date.
     /// </summary>
     public interface IUserService
     {
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials
-        /// (POST request to the Glitched Epistle Web API). If authentication is successful, a valid JWT is returned.
+        /// (POST request to the Glitched Epistle Web API).
+        /// If authentication is successful, a valid JWT <see cref="System.String"/> is returned along with the user's keypair.
         /// That's needed for subsequent requests.
         /// </summary>
-        /// <param name="userId">The user identifier.</param>
-        /// <param name="passwordSHA512">The password hash (SHA-512).</param>
-        /// <param name="totp">The 2FA code.</param>
-        /// <returns>JWT <see langword="string"/> if auth was successful; <see langword="null"/> otherwise.</returns>
-        Task<string> Login(string userId, string passwordSHA512, string totp);
+        /// <param name="paramsDto">HTTP Request parameters wrapped into a DTO instance.</param>
+        /// <returns><see cref="UserLoginSuccessResponseDto"/> if auth was successful; <c>null</c> otherwise.</returns>
+        Task<UserLoginSuccessResponseDto> Login(UserLoginRequestDto paramsDto);
 
         /// <summary>
         /// Refreshes the authentication token.
@@ -45,7 +46,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// Gets a <see cref="User"/>'s expiration <see cref="DateTime"/> (in UTC).
         /// </summary>
         /// <param name="userId">The user id.</param>
-        /// <returns>The <see cref="User"/>'s expiration <see cref="DateTime"/> in UTC; <see langword="null"/> if the user doesn't exist.</returns>
+        /// <returns>The <see cref="User"/>'s expiration <see cref="DateTime"/> in UTC; <c>null</c> if the user doesn't exist.</returns>
         Task<DateTime?> GetUserExpirationUTC(string userId);
 
         /// <summary>
@@ -79,13 +80,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// </summary>
         /// <param name="paramsDto">Request parameters DTO.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        Task<bool> ChangeUserPassword(UserChangePasswordDto paramsDto);
+        Task<bool> ChangeUserPassword(UserChangePasswordRequestDto paramsDto);
 
         /// <summary>
         /// Creates a new user.
         /// </summary>
-        /// <param name="userCreationDto">DTO containing user creation parameters (for the request body).</param>
+        /// <param name="userCreationRequestDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
-        Task<UserCreationResponseDto> CreateUser(UserCreationDto userCreationDto);
+        Task<UserCreationResponseDto> CreateUser(UserCreationRequestDto userCreationRequestDto);
     }
 }
