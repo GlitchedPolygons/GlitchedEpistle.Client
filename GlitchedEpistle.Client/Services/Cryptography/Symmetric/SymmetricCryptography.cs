@@ -39,7 +39,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                     aes.GenerateKey();
                     using (ICryptoTransform encryptor = aes.CreateEncryptor())
                     {
-                        result = new EncryptionResult { IV = aes.IV, Key = aes.Key, EncryptedData = encryptor.TransformFinalBlock(data, 0, data.Length) };
+                        result = new EncryptionResult
+                        {
+                            IV = aes.IV,
+                            Key = aes.Key,
+                            EncryptedData = encryptor.TransformFinalBlock(data, 0, data.Length)
+                        };
                     }
                 }
                 return result;
