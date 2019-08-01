@@ -1,4 +1,6 @@
-﻿namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
+﻿using System.Security.Cryptography;
+
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
 {
     /// <summary>
     /// Service interface for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays).<para> </para>
@@ -33,9 +35,26 @@
         /// <summary>
         /// Decrypts data that was encrypted using <see cref="EncryptWithPassword"/>.
         /// </summary>
-        /// <param name="encryptedData">The encrypted data.</param>
+        /// <param name="encryptedBytes">The encrypted data.</param>
         /// <param name="password">The password that was used to encrypt the data.</param>
         /// <returns>The decrypted <c>byte[]</c> array.</returns>
-        byte[] DecryptWithPassword(byte[] encryptedData, string password);
+        byte[] DecryptWithPassword(byte[] encryptedBytes, string password);
+
+        /// <summary>
+        /// Symmetrically encrypts an RSA key using a password and automatically returns the encoded base-64 <see cref="System.String"/>.<para> </para>
+        /// To decrypt again, use the <see cref="DecryptRSAParameters"/> method.
+        /// </summary>
+        /// <param name="key">The RSA key to encrypt.</param>
+        /// <param name="password">Password to use to encrypt the key.</param>
+        /// <returns>The encrypted, encoded base-64 <see cref="System.String"/>, ready to be exchanged (or decrypted using <see cref="DecryptRSAParameters"/>).</returns>
+        string EncryptRSAParameters(RSAParameters key, string password);
+
+        /// <summary>
+        /// Symmetrically decrypts an RSA key that was encrypted using the <see cref="EncryptRSAParameters"/> method.
+        /// </summary>
+        /// <param name="encryptedKey">The encrypted key string.</param>
+        /// <param name="password">The password with which the key was encrypted.</param>
+        /// <returns>The decrypted <see cref="RSAParameters"/> key instance.</returns>
+        RSAParameters DecryptRSAParameters(string encryptedKey, string password);
     }
 }

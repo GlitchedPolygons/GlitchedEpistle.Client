@@ -1,7 +1,12 @@
 ﻿#region
 using System;
 using System.Linq;
+using System.Text;
+using System.IO.Compression;
 using System.Security.Cryptography;
+
+using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 #endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
@@ -15,6 +20,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
     public class SymmetricCryptography : ISymmetricCryptography
     {
         private const int RFC_ITERATIONS = 16384;
+        private static readonly CompressionSettings KEY_COMPRESSION_SETTINGS = new CompressionSettings { CompressionLevel = CompressionLevel.Fastest };
 
         /// <summary>
         /// Encrypts the specified data using a randomly generated key and initialization vector.<para></para>
@@ -151,6 +157,51 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
             {
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Symmetrically encrypts an RSA key using a password and automatically returns the encoded base-64 <see cref="System.String"/>.<para> </para>
+        /// To decrypt again, use the <see cref="DecryptRSAParameters"/> method.
+        /// </summary>
+        /// <param name="key">The RSA key to encrypt.</param>
+        /// <param name="password">Password to use to encrypt the key.</param>
+        /// <returns>The encrypted, encoded base-64 <see cref="System.String"/>, ready to be exchanged (or decrypted using <see cref="DecryptRSAParameters"/>).</returns>
+        public string EncryptRSAParameters(RSAParameters key, string password)
+        {
+            ICompressionUtility gzip = new GZipUtility();
+
+            return Convert.ToBase64String(
+                inArray: EncryptWithPassword(
+                    password: password,
+                    data: gzip.Compress(
+                        bytes: Encoding.UTF8.GetBytes(key.ToXmlString()), 
+                        compressionSettings: KEY_COMPRESSION_SETTINGS
+                    )
+                )
+            );
+        }
+
+        /// <summary>
+        /// Symmetrically decrypts an RSA key that was encrypted using the <see cref="EncryptRSAParameters"/> method.
+        /// </summary>
+        /// <param name="encryptedKey">The encrypted key string.</param>
+        /// <param name="password">The password with which the key was encrypted.</param>
+        /// <returns>The decrypted <see cref="RSAParameters"/> key instance.</returns>
+        public RSAParameters DecryptRSAParameters(string encryptedKey, string password)
+        {
+            ICompressionUtility gzip = new GZipUtility();
+
+            return RSAParametersExtensions.FromXmlString(
+                Encoding.UTF8.GetString(
+                    bytes: gzip.Decompress(
+                        compressionSettings: KEY_COMPRESSION_SETTINGS,
+                        compressedBytes: DecryptWithPassword(
+                            password: password,
+                            encryptedBytes: Convert.FromBase64String(encryptedKey)
+                        )
+                    )
+                )
+            );
         }
     }
 }

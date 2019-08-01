@@ -51,7 +51,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public DateTime ExpirationUTC { get; set; } = DateTime.MinValue;
 
         /// <summary>
-        /// The user's private message encryption RSA key.
+        /// The user's private message decryption RSA key.
         /// </summary>
         [JsonIgnore]
         public RSAParameters PrivateKey { get; set; }
