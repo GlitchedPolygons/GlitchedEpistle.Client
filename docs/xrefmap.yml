@@ -2617,6 +2617,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Decrypt
   nameWithType: ISymmetricCryptography.Decrypt
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters(System.String,System.String)
+  name: DecryptRSAParameters(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptRSAParameters_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters(System.String, System.String)
+  nameWithType: ISymmetricCryptography.DecryptRSAParameters(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters*
+  name: DecryptRSAParameters
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptRSAParameters_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters
+  nameWithType: ISymmetricCryptography.DecryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)
   name: DecryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptWithPassword_System_Byte___System_String_
@@ -2649,6 +2662,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt
   nameWithType: ISymmetricCryptography.Encrypt
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
+  name: EncryptRSAParameters(RSAParameters, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters, System.String)
+  nameWithType: ISymmetricCryptography.EncryptRSAParameters(RSAParameters, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters*
+  name: EncryptRSAParameters
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptRSAParameters_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters
+  nameWithType: ISymmetricCryptography.EncryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)
   name: EncryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptWithPassword_System_Byte___System_String_
@@ -2684,6 +2710,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt
   nameWithType: SymmetricCryptography.Decrypt
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String,System.String)
+  name: DecryptRSAParameters(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String, System.String)
+  nameWithType: SymmetricCryptography.DecryptRSAParameters(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters*
+  name: DecryptRSAParameters
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters
+  nameWithType: SymmetricCryptography.DecryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)
   name: DecryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_Byte___System_String_
@@ -2716,6 +2755,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt
   nameWithType: SymmetricCryptography.Encrypt
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
+  name: EncryptRSAParameters(RSAParameters, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters, System.String)
+  nameWithType: SymmetricCryptography.EncryptRSAParameters(RSAParameters, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters*
+  name: EncryptRSAParameters
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters
+  nameWithType: SymmetricCryptography.EncryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)
   name: EncryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_Byte___System_String_
