@@ -2,13 +2,16 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
+using GlitchedPolygons.ExtensionMethods.RSAXmlPemStringConverter;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Security;
+using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Crypto.Generators;
 #endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
@@ -32,56 +35,46 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         }
 
         /// <summary>
-        /// Generates a 4096-bit RSA key pair.<para> </para>
-        /// The keys are exported into two files:
-        /// Private.rsa.pem and Public.rsa.pem (inside the specified output directory).
+        /// Generates a 4096-bit RSA key pair.
         /// </summary>
-        /// <param name="outputDirectory">The output directory path (where the keys will be exported).</param>
-        /// <returns>Whether the key generation was successful or not.</returns>
-        public async Task<bool> GenerateKeyPair(string outputDirectory)
+        /// <returns>The RSA key pair <see cref="Tuple"/>, where the first item is the public key and the second is the private key. If generation failed for some reason, <c>null</c> is returned.</returns>
+        public Task<Tuple<RSAParameters, RSAParameters>> GenerateKeyPair()
         {
-            if (string.IsNullOrEmpty(outputDirectory))
+            return Task.Run(async () =>
             {
-                logger.LogError($"{nameof(AsymmetricKeygenRSA4096)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed because the {nameof(outputDirectory)} string parameter was null or empty. Please give this method a valid output folder path for the keys!");
-                return false;
-            }
-
-            Directory.CreateDirectory(outputDirectory);
-
-            try
-            {
-                AsymmetricCipherKeyPair keyPair = await Task.Run(() =>
+                try
                 {
                     var keygen = new RsaKeyPairGenerator();
                     keygen.Init(new KeyGenerationParameters(new SecureRandom(), 4096));
-                    return keygen.GenerateKeyPair();
-                });
-
-                using (var sw = new StringWriter())
-                {
-                    var pem = new PemWriter(sw);
-                    pem.WriteObject(keyPair.Private);
-                    pem.Writer.Flush();
-
-                    File.WriteAllText(Path.Combine(outputDirectory, "Private.rsa.pem"), sw.ToString());
+                    AsymmetricCipherKeyPair keyPair = keygen.GenerateKeyPair();
+                    Task<RSAParameters>[] tasks = new Task<RSAParameters>[2]
+                    {
+                        GetRSAParameters(keyPair.Public),
+                        GetRSAParameters(keyPair.Private)
+                    };
+                    RSAParameters[] keys = await Task.WhenAll(tasks);
+                    return new Tuple<RSAParameters, RSAParameters>(keys[0], keys[1]);
                 }
-
-                using (var sw = new StringWriter())
+                catch (Exception e)
                 {
-                    var pem = new PemWriter(sw);
-                    pem.WriteObject(keyPair.Public);
-                    pem.Writer.Flush();
-
-                    File.WriteAllText(Path.Combine(outputDirectory, "Public.rsa.pem"), sw.ToString());
+                    logger.LogError($"{nameof(AsymmetricKeygenRSA4096)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e}");
+                    return null;
                 }
+            });
+        }
 
-                return true;
-            }
-            catch (Exception e)
+        private Task<RSAParameters> GetRSAParameters(AsymmetricKeyParameter key)
+        {
+            return Task.Run(() =>
             {
-                logger.LogError($"{nameof(AsymmetricKeygenRSA4096)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e}");
-                return false;
-            }
+                using (var sw = new StringWriter())
+                {
+                    var pem = new PemWriter(sw);
+                    pem.WriteObject(key);
+                    pem.Writer.Flush();
+                    return RSAParametersExtensions.FromXmlString(sw.ToString().PemToXml());
+                }
+            });
         }
     }
 }

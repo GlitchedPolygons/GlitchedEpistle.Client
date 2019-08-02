@@ -48,4 +48,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="GlitchedPolygons.ExtensionMethods.RSAXmlPemStringConverter">
+      <HintPath>..\..\..\Users\rapha\.nuget\packages\glitchedpolygons.extensionmethods.rsaxmlpemstringconverter\1.0.3\lib\netstandard2.0\GlitchedPolygons.ExtensionMethods.RSAXmlPemStringConverter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

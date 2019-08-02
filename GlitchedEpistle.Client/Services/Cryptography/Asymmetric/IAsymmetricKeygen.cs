@@ -1,4 +1,6 @@
 ﻿#region
+using System;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 #endregion
 
@@ -10,10 +12,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
     public interface IAsymmetricKeygen
     {
         /// <summary>
-        /// Generates the key pair.
+        /// Generates a new key pair.
         /// </summary>
-        /// <param name="outputDirectory">The output directory (where the keys should be exported into).</param>
-        /// <returns>Whether the key generation was successful or not.</returns>
-        Task<bool> GenerateKeyPair(string outputDirectory);
+        /// <returns>The keypair <see cref="Tuple"/>, where the first item is the public key and the second is the private key.</returns>
+        Task<Tuple<RSAParameters, RSAParameters>> GenerateKeyPair();
     }
 }
