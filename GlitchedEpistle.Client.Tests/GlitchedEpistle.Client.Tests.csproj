@@ -16,4 +16,13 @@
       <ProjectReference Include="..\GlitchedEpistle.Client\GlitchedEpistle.Client.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Include="test.public.rsa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="test.private.rsa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
 </Project>
