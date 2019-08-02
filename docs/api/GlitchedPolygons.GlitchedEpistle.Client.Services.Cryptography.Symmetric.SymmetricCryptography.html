@@ -76,7 +76,7 @@
   <div class="markdown level0 summary"><p>Service interface implementation for symmetrically encrypting/decrypting data (raw <code>byte[]</code> arrays) using <span class="xref">System.Security.Cryptography.AesManaged</span>.<p> </p>
 Please keep in mind that the data you encrypt with <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_Byte___System_String_">EncryptWithPassword(Byte[], String)</a> can only be decrypted using the same password and the corresponding mirror method <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_Byte___System_String_">DecryptWithPassword(Byte[], String)</a>.<p> </p>
 Likewise, data encrypted using <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Encrypt_System_Byte___">Encrypt(Byte[])</a> can only be decrypted again using <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Decrypt_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_">Decrypt(EncryptionResult)</a> respectively.
-Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html">ISymmetricCryptography</a> <span class="xref">langword_csharp_interface</span>.</p>
+Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html">ISymmetricCryptography</a> <code>interface</code>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,7 +125,7 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Decrypt_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L63">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L58">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Decrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Decrypt_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)">Decrypt(EncryptionResult)</h4>
@@ -165,63 +165,7 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td><p>Decrypted <code>byte[]</code> or <span class="xref">null</span> if decryption failed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L195">View Source</a>
-  </span>
-  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String,System.String)">DecryptRSAParameters(String, String)</h4>
-  <div class="markdown level1 summary"><p>Symmetrically decrypts an RSA key that was encrypted using the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_">EncryptRSAParameters(RSAParameters, String)</a> method.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RSAParameters DecryptRSAParameters(string encryptedKey, string password)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">encryptedKey</span></td>
-        <td><p>The encrypted key string.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">password</span></td>
-        <td><p>The password with which the key was encrypted.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Security.Cryptography.RSAParameters</span></td>
-        <td><p>The decrypted <span class="xref">System.Security.Cryptography.RSAParameters</span> key instance.</p>
+        <td><p>Decrypted <code>byte[]</code> or <code>null</code> if decryption failed.</p>
 </td>
       </tr>
     </tbody>
@@ -231,7 +175,7 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L130">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L125">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_Byte___System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)">DecryptWithPassword(Byte[], String)</h4>
@@ -284,14 +228,70 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L179">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.String,System.String)">DecryptWithPassword(String, String)</h4>
+  <div class="markdown level1 summary"><p>Decrypts data that was encrypted using <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_String_System_String_">EncryptWithPassword(String, String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DecryptWithPassword(string data, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The encrypted data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The password that was used to encrypt the data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The decrypted data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Encrypt_System_Byte___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L31">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L26">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Encrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_Encrypt_System_Byte___" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])">Encrypt(Byte[])</h4>
-  <div class="markdown level1 summary"><p>Encrypts the specified data using a randomly generated key and initialization vector.<p>
+  <div class="markdown level1 summary"><p>Encrypts the specified data using a randomly generated key and initialization vector.<p> </p>
 Returns an <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html">EncryptionResult</a> containing the encrypted <code>byte[]</code> array + the used encryption key and iv.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -335,67 +335,10 @@ Returns an <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Service
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L174">View Source</a>
-  </span>
-  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)">EncryptRSAParameters(RSAParameters, String)</h4>
-  <div class="markdown level1 summary"><p>Symmetrically encrypts an RSA key using a password and automatically returns the encoded base-64 <span class="xref">System.String</span>.<p> </p>
-To decrypt again, use the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_System_String_System_String_">DecryptRSAParameters(String, String)</a> method.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string EncryptRSAParameters(RSAParameters key, string password)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Security.Cryptography.RSAParameters</span></td>
-        <td><span class="parametername">key</span></td>
-        <td><p>The RSA key to encrypt.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">password</span></td>
-        <td><p>Password to use to encrypt the key.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The encrypted, encoded base-64 <span class="xref">System.String</span>, ready to be exchanged (or decrypted using <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_System_String_System_String_">DecryptRSAParameters(String, String)</a>).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L92">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L87">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_Byte___System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)">EncryptWithPassword(Byte[], String)</h4>
@@ -446,6 +389,62 @@ To decrypt again, use the <a class="xref" href="GlitchedPolygons.GlitchedEpistle
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L168">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.String,System.String)">EncryptWithPassword(String, String)</h4>
+  <div class="markdown level1 summary"><p>Encrypts data using a password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EncryptWithPassword(string data, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The data to encrypt.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The password used to derive the AES key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The encrypted data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html">ISymmetricCryptography</a>
@@ -461,7 +460,7 @@ To decrypt again, use the <a class="xref" href="GlitchedPolygons.GlitchedEpistle
                     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Symmetric/SymmetricCryptography.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

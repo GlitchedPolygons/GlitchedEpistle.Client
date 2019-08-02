@@ -73,7 +73,10 @@
   
   <h1 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA" class="text-break">Interface IAsymmetricCryptographyRSA
   </h1>
-  <div class="markdown level0 summary"><p>Service interface for encrypting and decrypting <span class="xref">System.String</span>s and <span class="xref">langword_csharp_byte</span>[] arrays.</p>
+  <div class="markdown level0 summary"><p>Service interface for encrypting and decrypting <code>string</code>s and <code>byte</code>[] arrays.<p> </p>
+Please note that these methods can and WILL throw exceptions if the cryptographic operations fail for some reason.<p> </p>
+Make sure that everything you encrypt with these methods will also be decrypted again using the same code.<p> </p>
+DO NOT MIX crypto libraries under any circumstances!</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric</a></h6>
@@ -86,19 +89,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_Byte___System_Security_Cryptography_RSAParameters_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte%5B%5D%2CSystem.Security.Cryptography.RSAParameters)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L44">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L45">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_Byte___System_Security_Cryptography_RSAParameters_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">Decrypt(Byte[], RSAParameters)</h4>
-  <div class="markdown level1 summary"><p>Decrypts the specified bytes using the provided private RSA key.</p>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_Byte___System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.String)">Decrypt(Byte[], String)</h4>
+  <div class="markdown level1 summary"><p>Decrypts the specified bytes using the provided private RSA key (which needs to be a PEM-formatted <code>string</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">byte[] Decrypt(byte[] encryptedData, RSAParameters privateKey)</code></pre>
+    <pre><code class="lang-csharp hljs">byte[] Decrypt(byte[] encryptedData, string privateKeyPem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,9 +120,9 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Security.Cryptography.RSAParameters</span></td>
-        <td><span class="parametername">privateKey</span></td>
-        <td><p>The private key to use for decryption.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">privateKeyPem</span></td>
+        <td><p>The private RSA key to use for decryption (PEM-formatted <code>string</code>).</p>
 </td>
       </tr>
     </tbody>
@@ -135,42 +138,26 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td><p>Decrypted bytes (System.Byte[]) if successful.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Security.Cryptography.CryptographicException</span></td>
-        <td><p>If only the public key is provided, the <code>byte[]</code> array cannot be decrypted.</p>
+        <td><p>Decrypted bytes (System.Byte[]) if successful; <code>null</code> if the passed data or key argument was <code>null</code> or empty.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_String_System_Security_Cryptography_RSAParameters_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String%2CSystem.Security.Cryptography.RSAParameters)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L27">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L29">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_String_System_Security_Cryptography_RSAParameters_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)">Decrypt(String, RSAParameters)</h4>
-  <div class="markdown level1 summary"><p>Decrypts the specified text using the provided RSA private key.</p>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.String)">Decrypt(String, String)</h4>
+  <div class="markdown level1 summary"><p>Decrypts the specified text using the provided RSA private key, which needs to be a PEM-formatted <code>string</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Decrypt(string encryptedText, RSAParameters privateKey)</code></pre>
+    <pre><code class="lang-csharp hljs">string Decrypt(string encryptedText, string privateKeyPem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,9 +176,9 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Security.Cryptography.RSAParameters</span></td>
-        <td><span class="parametername">privateKey</span></td>
-        <td><p>The private RSA key needed for decryption.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">privateKeyPem</span></td>
+        <td><p>The private RSA key needed for decryption (PEM-formatted <code>string</code>).</p>
 </td>
       </tr>
     </tbody>
@@ -207,42 +194,26 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Decrypted <code>string</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Security.Cryptography.CryptographicException</span></td>
-        <td><p>If only the public key is provided, the <code>string</code> cannot be decrypted.</p>
+        <td><p>Decrypted <code>string</code>; <code>null</code> if the passed key or encrypted text argument was <code>null</code> or empty.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_Security_Cryptography_RSAParameters_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte%5B%5D%2CSystem.Security.Cryptography.RSAParameters)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L35">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L37">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_Security_Cryptography_RSAParameters_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)">Encrypt(Byte[], RSAParameters)</h4>
-  <div class="markdown level1 summary"><p>Encrypts the specified bytes using the provided RSA public key.</p>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.String)">Encrypt(Byte[], String)</h4>
+  <div class="markdown level1 summary"><p>Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <code>string</code>..</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">byte[] Encrypt(byte[] data, RSAParameters publicKey)</code></pre>
+    <pre><code class="lang-csharp hljs">byte[] Encrypt(byte[] data, string publicKeyPem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +228,13 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">data</span></td>
-        <td><p>The data (<code>byte[]</code>) to encrypt.</p>
+        <td><p>The data (<code>byte[]</code> array) to encrypt.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Security.Cryptography.RSAParameters</span></td>
-        <td><span class="parametername">publicKey</span></td>
-        <td><p>The public key to use for encryption.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">publicKeyPem</span></td>
+        <td><p>The public key (PEM-formatted <code>string</code>) to use for encryption.</p>
 </td>
       </tr>
     </tbody>
@@ -279,26 +250,26 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td><p>The encrypted bytes (System.Byte[]).</p>
+        <td><p>The encrypted bytes (<code>System.Byte[]</code>); <code>null</code> if the passed data or key argument was <code>null</code> or empty.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_String_System_Security_Cryptography_RSAParameters_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String%2CSystem.Security.Cryptography.RSAParameters)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L18">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L21">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_String_System_Security_Cryptography_RSAParameters_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)">Encrypt(String, RSAParameters)</h4>
-  <div class="markdown level1 summary"><p>Encrypts the specified text using the provided RSA public key.</p>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.String)">Encrypt(String, String)</h4>
+  <div class="markdown level1 summary"><p>Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <code>string</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Encrypt(string text, RSAParameters publicKey)</code></pre>
+    <pre><code class="lang-csharp hljs">string Encrypt(string text, string publicKeyPem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +284,13 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td><p>The text to encrypt.</p>
+        <td><p>The plain text to encrypt.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Security.Cryptography.RSAParameters</span></td>
-        <td><span class="parametername">publicKey</span></td>
-        <td><p>The public key for encryption.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">publicKeyPem</span></td>
+        <td><p>The public RSA key for encryption (PEM-formatted <code>string</code>).</p>
 </td>
       </tr>
     </tbody>
@@ -335,7 +306,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The encrypted <code>string</code>.</p>
+        <td><p>The encrypted <code>string</code>; <code>null</code> if the passed key or plain text argument was <code>null</code> or empty.</p>
 </td>
       </tr>
     </tbody>
@@ -351,7 +322,7 @@
                     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Asymmetric/IAsymmetricCryptographyRSA.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

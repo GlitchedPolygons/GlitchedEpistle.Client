@@ -98,7 +98,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;RSAParameters, RSAParameters&gt;&gt; GenerateKeyPair()</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;string, string&gt;&gt; GenerateKeyPair()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,8 +110,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">System.Security.Cryptography.RSAParameters</span>, <span class="xref">System.Security.Cryptography.RSAParameters</span>&gt;&gt;</td>
-        <td><p>The keypair <span class="xref">System.Tuple</span>, where the first item is the public key and the second is the private key.</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>The keypair <span class="xref">System.Tuple</span>, where the first item is the public RSA key and the second is the private key (both PEM-formatted).</p>
 </td>
       </tr>
     </tbody>

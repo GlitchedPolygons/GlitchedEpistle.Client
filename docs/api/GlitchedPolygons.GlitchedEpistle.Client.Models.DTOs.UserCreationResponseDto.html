@@ -73,7 +73,7 @@
   
   <h1 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto" class="text-break">Class UserCreationResponseDto
   </h1>
-  <div class="markdown level0 summary"><p>A <span class="xref">langword_csharp_class</span> containing the HTTP response data for <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a> registration.</p>
+  <div class="markdown level0 summary"><p>A <code>class</code> containing the HTTP response data for <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a> registration.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -81,16 +81,14 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">UserCreationResponseDto</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html">UserCreationResponseDto</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -109,7 +107,7 @@
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UserCreationResponseDto</code></pre>
+    <pre><code class="lang-csharp hljs">public class UserCreationResponseDto : IEquatable&lt;UserCreationResponseDto&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -339,6 +337,148 @@ public string TotpSecret { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Models/DTOs/UserCreationResponseDto.cs/#L63">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto)">Equals(UserCreationResponseDto)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(UserCreationResponseDto other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html">UserCreationResponseDto</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>An object to compare with this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the current object is equal to the <code data-dev-comment-type="paramref" class="paramref">other</code> parameter; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_System_Object_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Models/DTOs/UserCreationResponseDto.cs/#L79">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_System_Object_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object to compare with the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified object  is equal to the current object; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Models/DTOs/UserCreationResponseDto.cs/#L98">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
 </article>
           </div>
           

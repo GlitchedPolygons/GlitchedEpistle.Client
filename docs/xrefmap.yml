@@ -31,6 +31,25 @@ references:
   commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Extensions
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions
   nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Extensions
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions
+  name: AsymmetricKeyParameterExtensions
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions
+  nameWithType: AsymmetricKeyParameterExtensions
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.ToPemString(Org.BouncyCastle.Crypto.AsymmetricKeyParameter)
+  name: ToPemString(AsymmetricKeyParameter)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_AsymmetricKeyParameterExtensions_ToPemString_Org_BouncyCastle_Crypto_AsymmetricKeyParameter_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.ToPemString(Org.BouncyCastle.Crypto.AsymmetricKeyParameter)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.ToPemString(Org.BouncyCastle.Crypto.AsymmetricKeyParameter)
+  nameWithType: AsymmetricKeyParameterExtensions.ToPemString(AsymmetricKeyParameter)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.ToPemString*
+  name: ToPemString
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_AsymmetricKeyParameterExtensions_ToPemString_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.ToPemString
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.AsymmetricKeyParameterExtensions.ToPemString
+  nameWithType: AsymmetricKeyParameterExtensions.ToPemString
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions
   name: ByteArrayExtensions
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html
@@ -473,6 +492,45 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto
   nameWithType: ConvoChangeMetadataRequestDto
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Auth
+  name: Auth
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_Auth
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Auth
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Auth
+  nameWithType: ConvoChangeMetadataRequestDto.Auth
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Auth*
+  name: Auth
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_Auth_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Auth
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Auth
+  nameWithType: ConvoChangeMetadataRequestDto.Auth
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoId
+  name: ConvoId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_ConvoId
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoId
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoId
+  nameWithType: ConvoChangeMetadataRequestDto.ConvoId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoId*
+  name: ConvoId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_ConvoId_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoId
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoId
+  nameWithType: ConvoChangeMetadataRequestDto.ConvoId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
+  name: ConvoPasswordSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_ConvoPasswordSHA512
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
+  nameWithType: ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoPasswordSHA512*
+  name: ConvoPasswordSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_ConvoPasswordSHA512_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
+  nameWithType: ConvoChangeMetadataRequestDto.ConvoPasswordSHA512
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.CreatorId
   name: CreatorId
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_CreatorId
@@ -499,6 +557,25 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Description
   nameWithType: ConvoChangeMetadataRequestDto.Description
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  name: Equals(ConvoChangeMetadataRequestDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  nameWithType: ConvoChangeMetadataRequestDto.Equals(ConvoChangeMetadataRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals(System.Object)
+  nameWithType: ConvoChangeMetadataRequestDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Equals
+  nameWithType: ConvoChangeMetadataRequestDto.Equals
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ExpirationUTC
   name: ExpirationUTC
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_ExpirationUTC
@@ -512,6 +589,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.ExpirationUTC
   nameWithType: ConvoChangeMetadataRequestDto.ExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.GetHashCode()
+  nameWithType: ConvoChangeMetadataRequestDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.GetHashCode
+  nameWithType: ConvoChangeMetadataRequestDto.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Name
   name: Name
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_Name
@@ -525,19 +615,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.Name
   nameWithType: ConvoChangeMetadataRequestDto.Name
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.PasswordSHA512
-  name: PasswordSHA512
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_PasswordSHA512
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.PasswordSHA512
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.PasswordSHA512
-  nameWithType: ConvoChangeMetadataRequestDto.PasswordSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.PasswordSHA512*
-  name: PasswordSHA512
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_PasswordSHA512_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.PasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
+  name: NewConvoPasswordSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_NewConvoPasswordSHA512
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
+  nameWithType: ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512*
+  name: NewConvoPasswordSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_NewConvoPasswordSHA512_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.PasswordSHA512
-  nameWithType: ConvoChangeMetadataRequestDto.PasswordSHA512
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
+  nameWithType: ConvoChangeMetadataRequestDto.NewConvoPasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.UserId
+  name: UserId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_UserId
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.UserId
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.UserId
+  nameWithType: ConvoChangeMetadataRequestDto.UserId
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.UserId*
+  name: UserId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_UserId_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.UserId
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.UserId
+  nameWithType: ConvoChangeMetadataRequestDto.UserId
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto
   name: ConvoCreationRequestDto
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html
@@ -557,6 +660,25 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Description
   nameWithType: ConvoCreationRequestDto.Description
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto)
+  name: Equals(ConvoCreationRequestDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto)
+  nameWithType: ConvoCreationRequestDto.Equals(ConvoCreationRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals(System.Object)
+  nameWithType: ConvoCreationRequestDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Equals
+  nameWithType: ConvoCreationRequestDto.Equals
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.ExpirationUTC
   name: ExpirationUTC
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_ExpirationUTC
@@ -570,6 +692,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.ExpirationUTC
   nameWithType: ConvoCreationRequestDto.ExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.GetHashCode()
+  nameWithType: ConvoCreationRequestDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.GetHashCode
+  nameWithType: ConvoCreationRequestDto.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.Name
   name: Name
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_Name
@@ -654,6 +789,25 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Description
   nameWithType: ConvoMetadataDto.Description
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto)
+  name: Equals(ConvoMetadataDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto)
+  nameWithType: ConvoMetadataDto.Equals(ConvoMetadataDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals(System.Object)
+  nameWithType: ConvoMetadataDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Equals
+  nameWithType: ConvoMetadataDto.Equals
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.ExpirationUTC
   name: ExpirationUTC
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_ExpirationUTC
@@ -667,6 +821,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.ExpirationUTC
   nameWithType: ConvoMetadataDto.ExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.GetHashCode()
+  nameWithType: ConvoMetadataDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.GetHashCode
+  nameWithType: ConvoMetadataDto.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.Id
   name: Id
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_Id
@@ -757,6 +924,38 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordSHA512
   nameWithType: PostMessageParamsDto.ConvoPasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)
+  name: Equals(PostMessageParamsDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto)
+  nameWithType: PostMessageParamsDto.Equals(PostMessageParamsDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals(System.Object)
+  nameWithType: PostMessageParamsDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Equals
+  nameWithType: PostMessageParamsDto.Equals
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode()
+  nameWithType: PostMessageParamsDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.GetHashCode
+  nameWithType: PostMessageParamsDto.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.MessageBodiesJson
   name: MessageBodiesJson
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_MessageBodiesJson
@@ -815,19 +1014,51 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth
   nameWithType: UserChangePasswordRequestDto.Auth
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
-  name: NewPrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_NewPrivateKeyXmlEncryptedBytesBase64
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64*
-  name: NewPrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_NewPrivateKeyXmlEncryptedBytesBase64_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
+  name: Equals(UserChangePasswordRequestDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
+  nameWithType: UserChangePasswordRequestDto.Equals(UserChangePasswordRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(System.Object)
+  nameWithType: UserChangePasswordRequestDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserChangePasswordRequestDto.NewPrivateKeyXmlEncryptedBytesBase64
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals
+  nameWithType: UserChangePasswordRequestDto.Equals
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.GetHashCode()
+  nameWithType: UserChangePasswordRequestDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.GetHashCode
+  nameWithType: UserChangePasswordRequestDto.GetHashCode
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKey
+  name: NewPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_NewPrivateKey
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKey
+  nameWithType: UserChangePasswordRequestDto.NewPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKey*
+  name: NewPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_NewPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPrivateKey
+  nameWithType: UserChangePasswordRequestDto.NewPrivateKey
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.NewPwSHA512
   name: NewPwSHA512
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_NewPwSHA512
@@ -931,32 +1162,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PasswordSHA512
   nameWithType: UserCreationRequestDto.PasswordSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
-  name: PrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PrivateKeyXmlEncryptedBytesBase64
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64*
-  name: PrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PrivateKeyXmlEncryptedBytesBase64_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey
+  name: PrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PrivateKey
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey
+  nameWithType: UserCreationRequestDto.PrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey*
+  name: PrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserCreationRequestDto.PrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKeyXml
-  name: PublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PublicKeyXml
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKeyXml
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKeyXml
-  nameWithType: UserCreationRequestDto.PublicKeyXml
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKeyXml*
-  name: PublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PublicKeyXml_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey
+  nameWithType: UserCreationRequestDto.PrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey
+  name: PublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PublicKey
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey
+  nameWithType: UserCreationRequestDto.PublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey*
+  name: PublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKeyXml
-  nameWithType: UserCreationRequestDto.PublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey
+  nameWithType: UserCreationRequestDto.PublicKey
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto
   name: UserCreationResponseDto
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html
@@ -976,6 +1207,25 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC
   nameWithType: UserCreationResponseDto.CreationTimestampUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto)
+  name: Equals(UserCreationResponseDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto)
+  nameWithType: UserCreationResponseDto.Equals(UserCreationResponseDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(System.Object)
+  nameWithType: UserCreationResponseDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals
+  nameWithType: UserCreationResponseDto.Equals
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
   name: ExpirationUTC
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_ExpirationUTC
@@ -989,6 +1239,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
   nameWithType: UserCreationResponseDto.ExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode()
+  nameWithType: UserCreationResponseDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode
+  nameWithType: UserCreationResponseDto.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Id
   name: Id
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Id
@@ -1060,6 +1323,38 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto
   nameWithType: UserLoginRequestDto
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
+  name: Equals(UserLoginRequestDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
+  nameWithType: UserLoginRequestDto.Equals(UserLoginRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals(System.Object)
+  nameWithType: UserLoginRequestDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.Equals
+  nameWithType: UserLoginRequestDto.Equals
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.GetHashCode()
+  nameWithType: UserLoginRequestDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.GetHashCode
+  nameWithType: UserLoginRequestDto.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.PasswordSHA512
   name: PasswordSHA512
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_PasswordSHA512
@@ -1118,32 +1413,64 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Auth
   nameWithType: UserLoginSuccessResponseDto.Auth
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
-  name: PrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PrivateKeyXmlEncryptedBytesBase64
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64*
-  name: PrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PrivateKeyXmlEncryptedBytesBase64_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto)
+  name: Equals(UserLoginSuccessResponseDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto)
+  nameWithType: UserLoginSuccessResponseDto.Equals(UserLoginSuccessResponseDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals(System.Object)
+  nameWithType: UserLoginSuccessResponseDto.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserLoginSuccessResponseDto.PrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKeyXml
-  name: PublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PublicKeyXml
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKeyXml
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKeyXml
-  nameWithType: UserLoginSuccessResponseDto.PublicKeyXml
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKeyXml*
-  name: PublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PublicKeyXml_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Equals
+  nameWithType: UserLoginSuccessResponseDto.Equals
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode()
+  nameWithType: UserLoginSuccessResponseDto.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKeyXml
-  nameWithType: UserLoginSuccessResponseDto.PublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode
+  nameWithType: UserLoginSuccessResponseDto.GetHashCode
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey
+  name: PrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PrivateKey
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey
+  nameWithType: UserLoginSuccessResponseDto.PrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey*
+  name: PrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey
+  nameWithType: UserLoginSuccessResponseDto.PrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKey
+  name: PublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PublicKey
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKey
+  nameWithType: UserLoginSuccessResponseDto.PublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKey*
+  name: PublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PublicKey
+  nameWithType: UserLoginSuccessResponseDto.PublicKey
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message
   name: Message
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html
@@ -1266,6 +1593,25 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestampUTC
   nameWithType: User.CreationTimestampUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.User)
+  name: Equals(User)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_User_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.User)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.User)
+  nameWithType: User.Equals(User)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals(System.Object)
+  name: Equals(Object)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_Equals_System_Object_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals(System.Object)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals(System.Object)
+  nameWithType: User.Equals(Object)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals*
+  name: Equals
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_Equals_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals
+  nameWithType: User.Equals
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
   name: ExpirationUTC
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_ExpirationUTC
@@ -1279,6 +1625,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
   nameWithType: User.ExpirationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode
+  name: GetHashCode()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_GetHashCode
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode()
+  nameWithType: User.GetHashCode()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode*
+  name: GetHashCode
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_GetHashCode_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode
+  nameWithType: User.GetHashCode
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Id
   name: Id
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_Id
@@ -1331,45 +1690,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PasswordSHA512
   nameWithType: User.PasswordSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey
-  name: PrivateKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKey
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey
-  nameWithType: User.PrivateKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey*
-  name: PrivateKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKeyPem
+  name: PrivateKeyPem
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKeyPem
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKeyPem
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKeyPem
+  nameWithType: User.PrivateKeyPem
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKeyPem*
+  name: PrivateKeyPem
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKeyPem_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKeyPem
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKey
-  nameWithType: User.PrivateKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey
-  name: PublicKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PublicKey
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey
-  nameWithType: User.PublicKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey*
-  name: PublicKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PublicKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PrivateKeyPem
+  nameWithType: User.PrivateKeyPem
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyPem
+  name: PublicKeyPem
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PublicKeyPem
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyPem
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyPem
+  nameWithType: User.PublicKeyPem
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyPem*
+  name: PublicKeyPem
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PublicKeyPem_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyPem
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKey
-  nameWithType: User.PublicKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml
-  name: PublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PublicKeyXml
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml
-  nameWithType: User.PublicKeyXml
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml*
-  name: PublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PublicKeyXml_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyXml
-  nameWithType: User.PublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.PublicKeyPem
+  nameWithType: User.PublicKeyPem
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Role
   name: Role
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_Role
@@ -1667,12 +2013,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService
   nameWithType: ConvoService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(System.String,System.String,System.String,System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
-  name: ChangeConvoMetadata(String, String, String, String, ConvoChangeMetadataRequestDto)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoService_ChangeConvoMetadata_System_String_System_String_System_String_System_String_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(System.String,System.String,System.String,System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(System.String, System.String, System.String, System.String, GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
-  nameWithType: ConvoService.ChangeConvoMetadata(String, String, String, String, ConvoChangeMetadataRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  name: ChangeConvoMetadata(ConvoChangeMetadataRequestDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoService_ChangeConvoMetadata_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  nameWithType: ConvoService.ChangeConvoMetadata(ConvoChangeMetadataRequestDto)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.ChangeConvoMetadata*
   name: ChangeConvoMetadata
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoService_ChangeConvoMetadata_
@@ -1861,12 +2207,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService
   nameWithType: IConvoService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(System.String,System.String,System.String,System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
-  name: ChangeConvoMetadata(String, String, String, String, ConvoChangeMetadataRequestDto)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoService_ChangeConvoMetadata_System_String_System_String_System_String_System_String_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(System.String,System.String,System.String,System.String,GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(System.String, System.String, System.String, System.String, GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
-  nameWithType: IConvoService.ChangeConvoMetadata(String, String, String, String, ConvoChangeMetadataRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  name: ChangeConvoMetadata(ConvoChangeMetadataRequestDto)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoService_ChangeConvoMetadata_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoChangeMetadataRequestDto_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto)
+  nameWithType: IConvoService.ChangeConvoMetadata(ConvoChangeMetadataRequestDto)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.ChangeConvoMetadata*
   name: ChangeConvoMetadata
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_IConvoService_ChangeConvoMetadata_
@@ -2306,21 +2652,21 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA
   nameWithType: AsymmetricCryptographyRSA
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name: Decrypt(Byte[], RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Decrypt_System_Byte___System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name.vb: Decrypt(Byte(), RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[], System.Security.Cryptography.RSAParameters)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte(), System.Security.Cryptography.RSAParameters)
-  nameWithType: AsymmetricCryptographyRSA.Decrypt(Byte[], RSAParameters)
-  nameWithType.vb: AsymmetricCryptographyRSA.Decrypt(Byte(), RSAParameters)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)
-  name: Decrypt(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Decrypt_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: AsymmetricCryptographyRSA.Decrypt(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[],System.String)
+  name: Decrypt(Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Decrypt_System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[],System.String)
+  name.vb: Decrypt(Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.Byte(), System.String)
+  nameWithType: AsymmetricCryptographyRSA.Decrypt(Byte[], String)
+  nameWithType.vb: AsymmetricCryptographyRSA.Decrypt(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String,System.String)
+  name: Decrypt(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Decrypt_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt(System.String, System.String)
+  nameWithType: AsymmetricCryptographyRSA.Decrypt(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt*
   name: Decrypt
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Decrypt_
@@ -2328,21 +2674,21 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Decrypt
   nameWithType: AsymmetricCryptographyRSA.Decrypt
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name: Encrypt(Byte[], RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Encrypt_System_Byte___System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name.vb: Encrypt(Byte(), RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[], System.Security.Cryptography.RSAParameters)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte(), System.Security.Cryptography.RSAParameters)
-  nameWithType: AsymmetricCryptographyRSA.Encrypt(Byte[], RSAParameters)
-  nameWithType.vb: AsymmetricCryptographyRSA.Encrypt(Byte(), RSAParameters)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)
-  name: Encrypt(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Encrypt_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: AsymmetricCryptographyRSA.Encrypt(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[],System.String)
+  name: Encrypt(Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Encrypt_System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[],System.String)
+  name.vb: Encrypt(Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.Byte(), System.String)
+  nameWithType: AsymmetricCryptographyRSA.Encrypt(Byte[], String)
+  nameWithType.vb: AsymmetricCryptographyRSA.Encrypt(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String,System.String)
+  name: Encrypt(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Encrypt_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt(System.String, System.String)
+  nameWithType: AsymmetricCryptographyRSA.Encrypt(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt*
   name: Encrypt
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Encrypt_
@@ -2388,21 +2734,21 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA
   nameWithType: IAsymmetricCryptographyRSA
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name: Decrypt(Byte[], RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_Byte___System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name.vb: Decrypt(Byte(), RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[], System.Security.Cryptography.RSAParameters)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte(), System.Security.Cryptography.RSAParameters)
-  nameWithType: IAsymmetricCryptographyRSA.Decrypt(Byte[], RSAParameters)
-  nameWithType.vb: IAsymmetricCryptographyRSA.Decrypt(Byte(), RSAParameters)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)
-  name: Decrypt(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: IAsymmetricCryptographyRSA.Decrypt(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.String)
+  name: Decrypt(Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[],System.String)
+  name.vb: Decrypt(Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.Byte(), System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Decrypt(Byte[], String)
+  nameWithType.vb: IAsymmetricCryptographyRSA.Decrypt(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.String)
+  name: Decrypt(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt(System.String, System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Decrypt(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt*
   name: Decrypt
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Decrypt_
@@ -2410,21 +2756,21 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Decrypt
   nameWithType: IAsymmetricCryptographyRSA.Decrypt
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name: Encrypt(Byte[], RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAParameters)
-  name.vb: Encrypt(Byte(), RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[], System.Security.Cryptography.RSAParameters)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte(), System.Security.Cryptography.RSAParameters)
-  nameWithType: IAsymmetricCryptographyRSA.Encrypt(Byte[], RSAParameters)
-  nameWithType.vb: IAsymmetricCryptographyRSA.Encrypt(Byte(), RSAParameters)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)
-  name: Encrypt(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: IAsymmetricCryptographyRSA.Encrypt(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.String)
+  name: Encrypt(Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.String)
+  name.vb: Encrypt(Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte(), System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Encrypt(Byte[], String)
+  nameWithType.vb: IAsymmetricCryptographyRSA.Encrypt(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.String)
+  name: Encrypt(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String, System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Encrypt(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt*
   name: Encrypt
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_
@@ -2463,12 +2809,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography
   nameWithType: IMessageCryptography
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  name: DecryptMessage(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessage_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: IMessageCryptography.DecryptMessage(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String,System.String)
+  name: DecryptMessage(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessage_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String, System.String)
+  nameWithType: IMessageCryptography.DecryptMessage(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage*
   name: DecryptMessage
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessage_
@@ -2476,12 +2822,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage
   nameWithType: IMessageCryptography.DecryptMessage
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  name: EncryptMessage(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: IMessageCryptography.EncryptMessage(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.String)
+  name: EncryptMessage(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String, System.String)
+  nameWithType: IMessageCryptography.EncryptMessage(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage*
   name: EncryptMessage
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_
@@ -2508,12 +2854,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.MessageCryptography
   nameWithType: MessageCryptography.MessageCryptography
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  name: DecryptMessage(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_DecryptMessage_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: MessageCryptography.DecryptMessage(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String,System.String)
+  name: DecryptMessage(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_DecryptMessage_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage(System.String, System.String)
+  nameWithType: MessageCryptography.DecryptMessage(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage*
   name: DecryptMessage
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_DecryptMessage_
@@ -2521,12 +2867,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage
   nameWithType: MessageCryptography.DecryptMessage
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  name: EncryptMessage(String, RSAParameters)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_EncryptMessage_System_String_System_Security_Cryptography_RSAParameters_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String, System.Security.Cryptography.RSAParameters)
-  nameWithType: MessageCryptography.EncryptMessage(String, RSAParameters)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.String)
+  name: EncryptMessage(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_EncryptMessage_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String, System.String)
+  nameWithType: MessageCryptography.EncryptMessage(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage*
   name: EncryptMessage
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_EncryptMessage_
@@ -2617,19 +2963,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Decrypt
   nameWithType: ISymmetricCryptography.Decrypt
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters(System.String,System.String)
-  name: DecryptRSAParameters(String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptRSAParameters_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters(System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters(System.String, System.String)
-  nameWithType: ISymmetricCryptography.DecryptRSAParameters(String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters*
-  name: DecryptRSAParameters
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptRSAParameters_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptRSAParameters
-  nameWithType: ISymmetricCryptography.DecryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)
   name: DecryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptWithPassword_System_Byte___System_String_
@@ -2639,6 +2972,12 @@ references:
   fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.Byte(), System.String)
   nameWithType: ISymmetricCryptography.DecryptWithPassword(Byte[], String)
   nameWithType.vb: ISymmetricCryptography.DecryptWithPassword(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.String,System.String)
+  name: DecryptWithPassword(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptWithPassword_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword(System.String, System.String)
+  nameWithType: ISymmetricCryptography.DecryptWithPassword(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.DecryptWithPassword*
   name: DecryptWithPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_DecryptWithPassword_
@@ -2662,19 +3001,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.Encrypt
   nameWithType: ISymmetricCryptography.Encrypt
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
-  name: EncryptRSAParameters(RSAParameters, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters, System.String)
-  nameWithType: ISymmetricCryptography.EncryptRSAParameters(RSAParameters, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters*
-  name: EncryptRSAParameters
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptRSAParameters_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptRSAParameters
-  nameWithType: ISymmetricCryptography.EncryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)
   name: EncryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptWithPassword_System_Byte___System_String_
@@ -2684,6 +3010,12 @@ references:
   fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.Byte(), System.String)
   nameWithType: ISymmetricCryptography.EncryptWithPassword(Byte[], String)
   nameWithType.vb: ISymmetricCryptography.EncryptWithPassword(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.String,System.String)
+  name: EncryptWithPassword(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptWithPassword_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword(System.String, System.String)
+  nameWithType: ISymmetricCryptography.EncryptWithPassword(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.EncryptWithPassword*
   name: EncryptWithPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_ISymmetricCryptography_EncryptWithPassword_
@@ -2710,19 +3042,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt
   nameWithType: SymmetricCryptography.Decrypt
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String,System.String)
-  name: DecryptRSAParameters(String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters(System.String, System.String)
-  nameWithType: SymmetricCryptography.DecryptRSAParameters(String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters*
-  name: DecryptRSAParameters
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptRSAParameters_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptRSAParameters
-  nameWithType: SymmetricCryptography.DecryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)
   name: DecryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_Byte___System_String_
@@ -2732,6 +3051,12 @@ references:
   fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte(), System.String)
   nameWithType: SymmetricCryptography.DecryptWithPassword(Byte[], String)
   nameWithType.vb: SymmetricCryptography.DecryptWithPassword(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.String,System.String)
+  name: DecryptWithPassword(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.String, System.String)
+  nameWithType: SymmetricCryptography.DecryptWithPassword(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword*
   name: DecryptWithPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_DecryptWithPassword_
@@ -2755,19 +3080,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt
   nameWithType: SymmetricCryptography.Encrypt
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
-  name: EncryptRSAParameters(RSAParameters, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_System_Security_Cryptography_RSAParameters_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters(System.Security.Cryptography.RSAParameters, System.String)
-  nameWithType: SymmetricCryptography.EncryptRSAParameters(RSAParameters, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters*
-  name: EncryptRSAParameters
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptRSAParameters_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptRSAParameters
-  nameWithType: SymmetricCryptography.EncryptRSAParameters
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)
   name: EncryptWithPassword(Byte[], String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_Byte___System_String_
@@ -2777,6 +3089,12 @@ references:
   fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte(), System.String)
   nameWithType: SymmetricCryptography.EncryptWithPassword(Byte[], String)
   nameWithType.vb: SymmetricCryptography.EncryptWithPassword(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.String,System.String)
+  name: EncryptWithPassword(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.String, System.String)
+  nameWithType: SymmetricCryptography.EncryptWithPassword(String, String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword*
   name: EncryptWithPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_SymmetricCryptography_EncryptWithPassword_
@@ -3042,32 +3360,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserExpirationUTC
   nameWithType: IUserService.GetUserExpirationUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
-  name: GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPrivateKeyXmlEncryptedBytesBase64_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String, System.String, System.String)
-  nameWithType: IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64*
-  name: GetUserPrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPrivateKeyXmlEncryptedBytesBase64_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKey(System.String,System.String,System.String)
+  name: GetUserPrivateKey(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPrivateKey_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKey(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKey(System.String, System.String, System.String)
+  nameWithType: IUserService.GetUserPrivateKey(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKey*
+  name: GetUserPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKey
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64
-  nameWithType: IUserService.GetUserPrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String,System.String,System.String)
-  name: GetUserPublicKeyXml(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPublicKeyXml_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml(System.String, System.String, System.String)
-  nameWithType: IUserService.GetUserPublicKeyXml(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml*
-  name: GetUserPublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPublicKeyXml_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPrivateKey
+  nameWithType: IUserService.GetUserPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKey(System.String,System.String,System.String)
+  name: GetUserPublicKey(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPublicKey_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKey(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKey(System.String, System.String, System.String)
+  nameWithType: IUserService.GetUserPublicKey(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKey*
+  name: GetUserPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_GetUserPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKey
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKeyXml
-  nameWithType: IUserService.GetUserPublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.GetUserPublicKey
+  nameWithType: IUserService.GetUserPublicKey
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.Login(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
   name: Login(UserLoginRequestDto)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_IUserService_Login_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_
@@ -3165,32 +3483,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserExpirationUTC
   nameWithType: UserService.GetUserExpirationUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
-  name: GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(System.String, System.String, System.String)
-  nameWithType: UserService.GetUserPrivateKeyXmlEncryptedBytesBase64(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64*
-  name: GetUserPrivateKeyXmlEncryptedBytesBase64
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKeyXmlEncryptedBytesBase64_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKey(System.String,System.String,System.String)
+  name: GetUserPrivateKey(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKey_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKey(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKey(System.String, System.String, System.String)
+  nameWithType: UserService.GetUserPrivateKey(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKey*
+  name: GetUserPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKey
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKeyXmlEncryptedBytesBase64
-  nameWithType: UserService.GetUserPrivateKeyXmlEncryptedBytesBase64
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String,System.String,System.String)
-  name: GetUserPublicKeyXml(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPublicKeyXml_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String, System.String, System.String)
-  nameWithType: UserService.GetUserPublicKeyXml(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml*
-  name: GetUserPublicKeyXml
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPublicKeyXml_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPrivateKey
+  nameWithType: UserService.GetUserPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKey(System.String,System.String,System.String)
+  name: GetUserPublicKey(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPublicKey_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKey(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKey(System.String, System.String, System.String)
+  nameWithType: UserService.GetUserPublicKey(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKey*
+  name: GetUserPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_GetUserPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKey
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml
-  nameWithType: UserService.GetUserPublicKeyXml
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKey
+  nameWithType: UserService.GetUserPublicKey
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Login(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
   name: Login(UserLoginRequestDto)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Users_UserService_Login_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_
@@ -3230,3 +3548,67 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.Validate2FA
   nameWithType: UserService.Validate2FA
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities
+  name: GlitchedPolygons.GlitchedEpistle.Client.Utilities
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.html
+  commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Utilities
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities
+  nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Utilities
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility
+  name: KeyExchangeUtility
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility
+  nameWithType: KeyExchangeUtility
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey(System.String)
+  name: CompressPublicKey(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_CompressPublicKey_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey(System.String)
+  nameWithType: KeyExchangeUtility.CompressPublicKey(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey*
+  name: CompressPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_CompressPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey
+  nameWithType: KeyExchangeUtility.CompressPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey(System.String,System.String)
+  name: DecompressAndDecryptPrivateKey(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressAndDecryptPrivateKey_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey(System.String, System.String)
+  nameWithType: KeyExchangeUtility.DecompressAndDecryptPrivateKey(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey*
+  name: DecompressAndDecryptPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressAndDecryptPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey
+  nameWithType: KeyExchangeUtility.DecompressAndDecryptPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey(System.String)
+  name: DecompressPublicKey(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressPublicKey_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey(System.String)
+  nameWithType: KeyExchangeUtility.DecompressPublicKey(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey*
+  name: DecompressPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey
+  nameWithType: KeyExchangeUtility.DecompressPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey(System.String,System.String)
+  name: EncryptAndCompressPrivateKey(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_EncryptAndCompressPrivateKey_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey(System.String, System.String)
+  nameWithType: KeyExchangeUtility.EncryptAndCompressPrivateKey(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey*
+  name: EncryptAndCompressPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_EncryptAndCompressPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey
+  nameWithType: KeyExchangeUtility.EncryptAndCompressPrivateKey
