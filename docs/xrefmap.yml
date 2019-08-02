@@ -2369,12 +2369,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.AsymmetricKeygenRSA4096
   nameWithType: AsymmetricKeygenRSA4096.AsymmetricKeygenRSA4096
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair(System.String)
-  name: GenerateKeyPair(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA4096_GenerateKeyPair_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair(System.String)
-  nameWithType: AsymmetricKeygenRSA4096.GenerateKeyPair(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair
+  name: GenerateKeyPair()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA4096_GenerateKeyPair
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair()
+  nameWithType: AsymmetricKeygenRSA4096.GenerateKeyPair()
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.GenerateKeyPair*
   name: GenerateKeyPair
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA4096_GenerateKeyPair_
@@ -2438,12 +2438,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen
   nameWithType: IAsymmetricKeygen
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair(System.String)
-  name: GenerateKeyPair(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricKeygen_GenerateKeyPair_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair(System.String)
-  nameWithType: IAsymmetricKeygen.GenerateKeyPair(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair
+  name: GenerateKeyPair()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricKeygen_GenerateKeyPair
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair()
+  nameWithType: IAsymmetricKeygen.GenerateKeyPair()
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.GenerateKeyPair*
   name: GenerateKeyPair
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricKeygen_GenerateKeyPair_

@@ -123,7 +123,7 @@
           "hash": "JGUEl58GMlfG+7QSweGLqg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -183,7 +183,7 @@
           "hash": "HZlLC6RqvtM/4P0/D3Sdnw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -195,7 +195,7 @@
           "hash": "g50Yu/9DLx0LMAWFqJjwIA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -207,7 +207,7 @@
           "hash": "9/AmQbmioEIwh0/egpHdng=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -219,7 +219,7 @@
           "hash": "j3Ma65pmXBxjgJkl2dpHmQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -231,7 +231,7 @@
           "hash": "z73QJWVBwNN5RloP06fhiA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -243,7 +243,7 @@
           "hash": "LvaDs5Sj9kLzsxee1vzm4w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -270,7 +270,7 @@
           "hash": "N0dHkAXFBH8r1YbuoQfuJg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -282,7 +282,7 @@
           "hash": "my9mj5wEyByERe+0vnbd+Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -439,15 +439,18 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.html",
-          "hash": "/lmatBxcpBGvUnii4t+iHA=="
+          "hash": "OdGvORSer/nz5P8q1IG7cQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -466,15 +469,18 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.html",
-          "hash": "As203RBAWLGAY1LknjsaaQ=="
+          "hash": "0EVHPRp/xRhoJQYmyScVhQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -486,7 +492,7 @@
           "hash": "VeXBWGqS37QalVOEAQMm0w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -510,7 +516,7 @@
           "hash": "IB2VSHWBb5ZuzX/4wxjA+g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -522,7 +528,7 @@
           "hash": "1FdSdl9AlNJruLIF6aQbDA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -546,7 +552,7 @@
           "hash": "UACOSMkR7fBWUQyb2DR1WQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -558,7 +564,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html",
-          "hash": "mcOIEeUR2YW4nKsQ9VBYEw=="
+          "hash": "pt9+RvjscGqHxL99o+mPdg=="
         }
       },
       "is_incremental": false,
@@ -672,7 +678,7 @@
           "hash": "PO7oEqzw+wwc6mIlMjEpnQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -684,7 +690,7 @@
           "hash": "ofwtoLWh8KMSSYT9PqV2DA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -696,7 +702,7 @@
           "hash": "iENi++SJqfIilGMbpM3+qw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -791,17 +797,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 56,
-          "skipped_file_count": 53
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
           "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 56,
+          "skipped_file_count": 53
         }
       }
     },
