@@ -62,8 +62,6 @@ namespace GlitchedEpistle.Client.Tests
             Assert.Empty(encr);
         }
         
-        // ---------------------------
-        
         [Fact]
         public void SymmetricCryptography_EncryptBytesUsingPw_DecryptBytesUsingPw_IdenticalAfterwards()
         {
@@ -106,6 +104,21 @@ namespace GlitchedEpistle.Client.Tests
         {
             byte[] encr = crypto.EncryptWithPassword(data, ENCRYPTION_PW);
             Assert.Empty(encr);
+        }
+
+        [Fact]
+        public void SymmetricCryptography_Encrypt_Decrypt_IdenticalAfterwards()
+        {
+            EncryptionResult encr = crypto.Encrypt(data);
+            byte[] decr = crypto.Decrypt(encr);
+            Assert.Equal(decr, data);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_Encrypt_DifferentThanOriginal()
+        {
+            EncryptionResult encr = crypto.Encrypt(data);
+            Assert.NotEqual(encr.EncryptedData, data);
         }
     }
 }
