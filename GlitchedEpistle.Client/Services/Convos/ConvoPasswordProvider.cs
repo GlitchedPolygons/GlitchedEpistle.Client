@@ -19,7 +19,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>The convo's password SHA512 <c>string</c>; <c>null</c> if the password was</returns>
         public string GetPasswordSHA512(string convoId)
         {
-            lock(dictionary)
+            lock (dictionary)
             return dictionary.TryGetValue(convoId, out string pwSHA512) ? pwSHA512 : null;
         }
 
