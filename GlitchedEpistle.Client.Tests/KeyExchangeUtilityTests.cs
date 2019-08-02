@@ -10,9 +10,6 @@ namespace GlitchedEpistle.Client.Tests
 {
     public class KeyExchangeUtilityTests
     {
-        private readonly ICompressionUtility gzip = new GZipUtility();
-        private readonly ISymmetricCryptography crypto = new SymmetricCryptography();
-
         private readonly string privateKeyPem = File.ReadAllText("test.private.rsa");
         private readonly string publicTestKeyPem = File.ReadAllText("test.public.rsa");
 
