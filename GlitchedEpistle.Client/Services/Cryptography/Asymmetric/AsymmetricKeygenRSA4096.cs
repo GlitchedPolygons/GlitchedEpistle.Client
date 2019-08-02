@@ -40,20 +40,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// <returns>The RSA key pair <see cref="Tuple"/>, where the first item is the public key and the second is the private key. If generation failed for some reason, <c>null</c> is returned.</returns>
         public Task<Tuple<RSAParameters, RSAParameters>> GenerateKeyPair()
         {
-            return Task.Run(async () =>
+            return Task.Run(() =>
             {
                 try
                 {
                     var keygen = new RsaKeyPairGenerator();
                     keygen.Init(new KeyGenerationParameters(new SecureRandom(), 4096));
                     AsymmetricCipherKeyPair keyPair = keygen.GenerateKeyPair();
-                    Task<RSAParameters>[] tasks = new Task<RSAParameters>[2]
-                    {
-                        GetRSAParameters(keyPair.Public),
-                        GetRSAParameters(keyPair.Private)
-                    };
-                    RSAParameters[] keys = await Task.WhenAll(tasks);
-                    return new Tuple<RSAParameters, RSAParameters>(keys[0], keys[1]);
+                    return new Tuple<RSAParameters, RSAParameters>(GetRSAParameters(keyPair.Public), GetRSAParameters(keyPair.Private));
                 }
                 catch (Exception e)
                 {
@@ -63,18 +57,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             });
         }
 
-        private Task<RSAParameters> GetRSAParameters(AsymmetricKeyParameter key)
+        private RSAParameters GetRSAParameters(AsymmetricKeyParameter key)
         {
-            return Task.Run(() =>
+            using (var sw = new StringWriter())
             {
-                using (var sw = new StringWriter())
-                {
-                    var pem = new PemWriter(sw);
-                    pem.WriteObject(key);
-                    pem.Writer.Flush();
-                    return RSAParametersExtensions.FromXmlString(sw.ToString().PemToXml());
-                }
-            });
+                var pem = new PemWriter(sw);
+                pem.WriteObject(key);
+                pem.Writer.Flush();
+                return RSAParametersExtensions.FromXmlString(sw.ToString().PemToXml());
+            }
         }
     }
 }

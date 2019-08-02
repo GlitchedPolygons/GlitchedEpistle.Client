@@ -36,7 +36,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         public async Task<UserLoginSuccessResponseDto> Login(UserLoginRequestDto paramsDto)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.POST,
                 resource: new Uri("users/login", UriKind.Relative)
             );
 
