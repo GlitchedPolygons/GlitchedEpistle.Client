@@ -2,6 +2,9 @@
 using System;
 using System.Security.Cryptography;
 
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
+using GlitchedPolygons.Services.CompressionUtility;
+
 using Newtonsoft.Json;
 #endregion
 
@@ -112,7 +115,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
             {
                 return false;
             }
-            return Equals((User) obj);
+            return Equals((User)obj);
         }
 
         /// <summary>Serves as the default hash function.</summary>
