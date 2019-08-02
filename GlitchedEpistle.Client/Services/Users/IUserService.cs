@@ -17,9 +17,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
     public interface IUserService
     {
         /// <summary>
-        /// Logs the specified user in by authenticating the provided credentials
-        /// (POST request to the Glitched Epistle Web API).
-        /// If authentication is successful, a valid JWT <c>string</c> is returned along with the user's keypair.
+        /// Logs the specified user in by authenticating the provided credentials with a POST request to the Glitched Epistle Web API.
+        /// If authentication is successful, a valid authentication token <c>string</c> is returned along with the user's keypair.
         /// That's needed for subsequent requests.
         /// </summary>
         /// <param name="paramsDto">HTTP Request parameters wrapped into a DTO instance.</param>
@@ -58,22 +57,22 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         Task<IEnumerable<ConvoMetadataDto>> GetConvos(string userId, string auth);
 
         /// <summary>
-        /// Gets one or more users' public key XML (RSA key needed for encrypting messages for that user).
+        /// Gets one or more users' public key (RSA key needed for encrypting messages for that user).
         /// </summary>
         /// <param name="userId">Your user identifier.</param>
         /// <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
         /// <param name="auth">The request authentication token.</param>
         /// <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
-        Task<List<Tuple<string, string>>> GetUserPublicKeyXml(string userId, string userIds, string auth);
+        Task<List<Tuple<string, string>>> GetUserPublicKey(string userId, string userIds, string auth);
 
         /// <summary>
-        /// Gets a user's (encrypted, base-64 encoded) private key xml from the server.
+        /// Gets a user's (encrypted, gzipped and base-64 encoded) private key from the server.
         /// </summary>
         /// <param name="userId">The requesting user's id.</param>
         /// <param name="passwordSHA512">The requesting user's password hash (SHA512).</param>
         /// <param name="totp">Two-Factor Authentication token.</param>
         /// <returns><c>null</c> if retrieval failed; the key if the request was successful.</returns>
-        Task<string> GetUserPrivateKeyXmlEncryptedBytesBase64(string userId, string passwordSHA512, string totp);
+        Task<string> GetUserPrivateKey(string userId, string passwordSHA512, string totp);
 
         /// <summary>
         /// Changes the user password.

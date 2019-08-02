@@ -77,7 +77,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 
         /// <summary>
         /// Gets all of the <see cref="Convo"/>'s participants (their ids) comma-separated;
-        /// ready for submitting them with <see cref="IUserService.GetUserPublicKeyXml"/>.
+        /// ready for submitting them with <see cref="IUserService.GetUserPublicKey"/>.
         /// </summary>
         /// <returns>The participant user ids separated by commas.</returns>
         public string GetParticipantIdsCommaSeparated()

@@ -18,17 +18,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string PasswordSHA512 { get; set; }
 
         /// <summary>
-        /// The user's public RSA key (in xml format). This is needed to encrypt messages for this user.
+        /// The user's public RSA key.<para> </para>
+        /// PEM-formatted, and then gzipped via <c>Encoding.UTF8.GetBytes(string)</c> using <c>CompressionLevel.Fastest</c> and ultimately base-64 encoded.
         /// </summary>
         [JsonProperty(PropertyName = "key")]
-        public string PublicKeyXml { get; set; }
+        public string PublicKey { get; set; }
 
         /// <summary>
-        /// The user's private message decryption RSA key,
-        /// xml-formatted and encrypted into <c>byte[]</c> and then Base-64 encoded.
+        /// The user's private message decryption RSA key.<para> </para>
+        /// PEM-formatted and encrypted into <c>byte[]</c> and then gzipped and base-64 encoded.
         /// </summary>
         [JsonProperty("pkey")]
-        public string PrivateKeyXmlEncryptedBytesBase64 { get; set; }
+        public string PrivateKey { get; set; }
 
         /// <summary>
         /// The server creation secret <c>string</c>.
@@ -44,9 +45,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
         public bool Equals(UserCreationRequestDto other)
         {
-            return other != null &&
-                   string.Equals(PasswordSHA512, other.PasswordSHA512) &&
-                   string.Equals(PublicKeyXml, other.PublicKeyXml) &&
+            return string.Equals(PasswordSHA512, other.PasswordSHA512) &&
+                   string.Equals(PublicKey, other.PublicKey) &&
                    string.Equals(CreationSecret, other.CreationSecret);
         }
 
@@ -73,7 +73,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             unchecked
             {
                 int hashCode = PasswordSHA512.GetHashCode();
-                hashCode = (hashCode * 397) ^ PublicKeyXml.GetHashCode();
+                hashCode = (hashCode * 397) ^ PublicKey.GetHashCode();
                 hashCode = (hashCode * 397) ^ CreationSecret.GetHashCode();
                 return hashCode;
             }

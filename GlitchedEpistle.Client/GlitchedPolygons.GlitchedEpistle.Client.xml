@@ -381,7 +381,7 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto">
             <summary>
-            A <see langword="class"/> containing the HTTP response data for <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> registration.
+            A <c>class</c> containing the HTTP response data for <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User"/> registration.
             </summary>
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Id">

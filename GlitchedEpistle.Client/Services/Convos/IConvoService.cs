@@ -54,13 +54,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// The user making the request needs to be the <see cref="Convo"/>'s admin (Creator).<para> </para>
         /// If you're assigning a new admin, he needs to be a participant of the <see cref="Convo"/>, else you'll get a bad request returned from the web api.
         /// </summary>
-        /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's hashed access password.</param>
-        /// <param name="userId">The user identifier (needs to be the admin/creator of the convo).</param>
-        /// <param name="auth">Request authentication token.</param>
-        /// <param name="metadata">The data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
+        /// <param name="metadata">Request DTO containing authentication parameters + the data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
-        Task<bool> ChangeConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth, ConvoChangeMetadataRequestDto metadata);
+        Task<bool> ChangeConvoMetadata(ConvoChangeMetadataRequestDto metadata);
 
         /// <summary>
         /// Gets the convo messages.

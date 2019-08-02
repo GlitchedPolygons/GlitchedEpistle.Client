@@ -9,7 +9,6 @@ using System.Linq.Expressions;
 
 using Dapper;
 
-using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
