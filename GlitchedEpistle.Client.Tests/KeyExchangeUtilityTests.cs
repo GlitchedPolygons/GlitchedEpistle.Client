@@ -1,10 +1,6 @@
-using System.IO;
-
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
-using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-using GlitchedPolygons.Services.CompressionUtility;
-
 using Xunit;
+using System.IO;
+using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 
 namespace GlitchedEpistle.Client.Tests
 {
@@ -24,7 +20,7 @@ namespace GlitchedEpistle.Client.Tests
         [Fact]
         public void KeyExchangeUtility_EncryptAndCompress_DecompressAndDecrypt_IdenticalAfterwards()
         {
-            const string TEST_PW = "test.@#°§çUserPassword$$$___69420  \r\n847KWdHfhoöüä!!]][}$äö\"";
+            const string TEST_PW = "test.@#°§çUserPassword$$$___69420  \r\n847KWdHfhoö\nüä!\t!]]   [}  \r\n\r\n $äö\"";
             string i = KeyExchangeUtility.EncryptAndCompressPrivateKey(privateKeyPem, TEST_PW);
             string o = KeyExchangeUtility.DecompressAndDecryptPrivateKey(i, TEST_PW);
             Assert.Equal(privateKeyPem, o);
