@@ -1,3 +1,5 @@
+using System;
+
 using Xunit;
 using System.IO;
 
@@ -11,6 +13,7 @@ namespace GlitchedEpistle.Client.Tests
         private readonly string privateKeyPem = File.ReadAllText("test.private.rsa");
         private readonly string publicTestKeyPem = File.ReadAllText("test.public.rsa");
         private readonly string text = File.ReadAllText("lorem-ipsum.txt");
+        private readonly byte[] data = new byte[] { 1, 2, 3, 64, 128, 1, 3, 3, 7, 6, 9, 4, 2, 0, 1, 9, 9, 6, 58, 67, 55, 100, 96 };
         
         private const string ENCRYPTION_PW = "encryption-password_239äöü!!$°§%ç&";
         private const string WRONG_DECRYPTION_PW = "wrong-pw__5956kjnsdjkbä$öüö¨  \n  \t zzEmDkf542";
@@ -22,6 +25,13 @@ namespace GlitchedEpistle.Client.Tests
             string decr = crypto.DecryptWithPassword(encr, ENCRYPTION_PW);
 
             Assert.Equal(text, decr);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_EncryptStringUsingPw_NotIdenticalWithOriginal()
+        {
+            string encr = crypto.EncryptWithPassword(text, ENCRYPTION_PW);
+            Assert.NotEqual(encr, text);
         }
         
         [Fact]
@@ -49,6 +59,52 @@ namespace GlitchedEpistle.Client.Tests
         public void SymmetricCryptography_EncryptNullOrEmptyString_ReturnsEmptyString(string data)
         {
             string encr = crypto.EncryptWithPassword(data, ENCRYPTION_PW);
+            Assert.Empty(encr);
+        }
+        
+        // ---------------------------
+        
+        [Fact]
+        public void SymmetricCryptography_EncryptBytesUsingPw_DecryptBytesUsingPw_IdenticalAfterwards()
+        {
+            byte[] encr = crypto.EncryptWithPassword(data, ENCRYPTION_PW);
+            byte[] decr = crypto.DecryptWithPassword(encr, ENCRYPTION_PW);
+
+            Assert.Equal(data, decr);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_EncryptBytesUsingPw_NotIdenticalWithOriginal()
+        {
+            byte[] encr = crypto.EncryptWithPassword(data, ENCRYPTION_PW);
+            Assert.NotEqual(encr, data);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_EncryptBytesUsingPw_DecryptBytesUsingWrongPw_ReturnsNull()
+        {
+            byte[] encr = crypto.EncryptWithPassword(data, ENCRYPTION_PW);
+            byte[] decr = crypto.DecryptWithPassword(encr, WRONG_DECRYPTION_PW);
+
+            Assert.NotEqual(encr, data);
+            Assert.Null(decr);
+        }
+        
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void SymmetricCryptography_EncryptBytesUsingNullOrEmptyPw_ReturnsEmptyBytesArray(string pw)
+        {
+            byte[] encr = crypto.EncryptWithPassword(data, pw);
+            Assert.Empty(encr);
+        }
+        
+        [Theory]
+        [InlineData(null)]
+        [InlineData(new byte[0])]
+        public void SymmetricCryptography_EncryptNullOrEmptyBytes_ReturnsEmptyBytesArray(byte[] data)
+        {
+            byte[] encr = crypto.EncryptWithPassword(data, ENCRYPTION_PW);
             Assert.Empty(encr);
         }
     }
