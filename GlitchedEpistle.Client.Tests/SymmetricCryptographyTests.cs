@@ -10,9 +10,9 @@ namespace GlitchedEpistle.Client.Tests
     public class SymmetricCryptographyTests
     {
         private readonly ISymmetricCryptography crypto = new SymmetricCryptography();
-        private readonly string privateKeyPem = File.ReadAllText("test.private.rsa");
-        private readonly string publicTestKeyPem = File.ReadAllText("test.public.rsa");
-        private readonly string text = File.ReadAllText("lorem-ipsum.txt");
+        private readonly string privateKeyPem = File.ReadAllText("TestData/test.private.rsa");
+        private readonly string publicTestKeyPem = File.ReadAllText("TestData/test.public.rsa");
+        private readonly string text = File.ReadAllText("TestData/lorem-ipsum.txt");
         private readonly byte[] data = new byte[] { 1, 2, 3, 64, 128, 1, 3, 3, 7, 6, 9, 4, 2, 0, 1, 9, 9, 6, 58, 67, 55, 100, 96 };
         
         private const string ENCRYPTION_PW = "encryption-password_239äöü!!$°§%ç&";
@@ -119,6 +119,35 @@ namespace GlitchedEpistle.Client.Tests
         {
             EncryptionResult encr = crypto.Encrypt(data);
             Assert.NotEqual(encr.EncryptedData, data);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_DecryptUsingNull_ReturnsEmptyBytesArray()
+        {
+            byte[] decr = crypto.Decrypt(null);
+            Assert.Empty(decr);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_DecryptEmptyInstance_ReturnsEmptyByteArray()
+        {
+            byte[] decr = crypto.Decrypt(EncryptionResult.Empty);
+            Assert.Empty(decr);
+        }
+        
+        [Fact]
+        public void SymmetricCryptography_Encrypt_DecryptUsingWrongData_ReturnsEmptyBytesArray()
+        {
+            EncryptionResult encr = crypto.Encrypt(data);
+            byte[] decr = crypto.Decrypt(new EncryptionResult()
+            {
+                IV = new byte[] { 4, 5, 6 }, 
+                Key = new byte[] { 1, 2, 3 }, 
+                EncryptedData = new byte[] { 7, 8, 9 }
+            });
+            Assert.False(encr.IsEmpty());
+            Assert.NotEqual(decr, data);
+            Assert.Null(decr);
         }
     }
 }

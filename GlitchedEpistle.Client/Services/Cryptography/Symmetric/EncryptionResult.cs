@@ -41,5 +41,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
                 Key[i] = 0;
             }
         }
+
+        /// <summary>
+        /// Checks whether this <see cref="EncryptionResult"/> instance is empty (all its fields <c>null</c>) or not.
+        /// </summary>
+        /// <returns>Whether this <see cref="EncryptionResult"/> instance is empty (all its fields <c>null</c>) or not.</returns>
+        public bool IsEmpty() => IV is null && Key is null && EncryptedData is null;
+
+        /// <summary>
+        /// Gets a new empty <see cref="EncryptionResult"/> instance.
+        /// </summary>
+        public static EncryptionResult Empty => new EncryptionResult { Key = null, IV = null, EncryptedData = null };
     }
 }
