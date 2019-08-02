@@ -16,10 +16,6 @@ namespace GlitchedEpistle.Client.Tests
         private readonly string text = File.ReadAllText("TestData/lorem-ipsum.txt");
         private readonly string privateKeyPem = File.ReadAllText("TestData/test.private.rsa");
         private readonly string publicTestKeyPem = File.ReadAllText("TestData/test.public.rsa");
-        private readonly byte[] data = new byte[] { 1, 2, 3, 64, 128, 1, 3, 3, 7, 6, 9, 4, 2, 0, 1, 9, 9, 6, 58, 67, 55, 100, 96 };
-
-        private const string ENCRYPTION_PW = "encryption-password_239äöü!!$°§%ç&";
-        private const string WRONG_DECRYPTION_PW = "wrong-pw__5956kjnsdjkbä$öüö¨  \n  \t zzEmDkf542";
 
         [Fact]
         public void MessageCryptography_Encrypt_Decrypt_IdenticalAfterwards()
@@ -27,6 +23,58 @@ namespace GlitchedEpistle.Client.Tests
             string encr = crypto.EncryptMessage(text, publicTestKeyPem);
             string decr = crypto.DecryptMessage(encr, privateKeyPem);
             Assert.Equal(decr, text);
+        }
+        
+        [Fact]
+        public void MessageCryptography_Encrypt_NotIdenticalWithOriginal()
+        {
+            string encr = crypto.EncryptMessage(text, publicTestKeyPem);
+            Assert.NotEqual(encr, text);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void MessageCryptography_EncryptNullOrEmptyString_ReturnsEmptyString(string s)
+        {
+            string encr = crypto.EncryptMessage(s, publicTestKeyPem);
+            Assert.Empty(encr);
+        }
+        
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void MessageCryptography_EncryptStringWithNullOrEmptyKey_ReturnsEmptyString(string s)
+        {
+            string encr = crypto.EncryptMessage(text, s);
+            Assert.Empty(encr);
+        }
+        
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void MessageCryptography_DecryptNullOrEmptyString_ReturnsEmptyString(string s)
+        {
+            string decr = crypto.DecryptMessage(s, publicTestKeyPem);
+            Assert.Empty(decr);
+        }
+        
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void MessageCryptography_DecryptStringWithNullOrEmptyKey_ReturnsEmptyString(string s)
+        {
+            string decr = crypto.DecryptMessage(text, s);
+            Assert.Empty(decr);
+        }
+        
+        [Fact]
+        public void MessageCryptography_Encrypt_DecryptUsingPublicKey_ReturnsNull()
+        {
+            string encr = crypto.EncryptMessage(text, publicTestKeyPem);
+            string decr = crypto.DecryptMessage(encr, publicTestKeyPem);
+            Assert.NotEqual(text,decr);
+            Assert.Null(decr);
         }
     }
 }

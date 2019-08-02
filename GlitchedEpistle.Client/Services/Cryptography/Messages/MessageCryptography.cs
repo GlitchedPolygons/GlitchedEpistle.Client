@@ -1,13 +1,12 @@
-﻿#region
-using System;
+﻿using System;
 using System.Text;
 using System.IO.Compression;
 
 using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
 {
@@ -17,8 +16,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
     /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography" />
     public class MessageCryptography : IMessageCryptography
     {
-        private static readonly CompressionSettings COMPRESSION_SETTINGS = new CompressionSettings { CompressionLevel = CompressionLevel.Optimal };
-
         private readonly ILogger logger;
         private readonly ICompressionUtility gzip;
         private readonly ISymmetricCryptography aes;
@@ -45,13 +42,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         /// </summary>
         /// <param name="messageJson">The message json (<c>string</c>) to encrypt.</param>
         /// <param name="recipientPublicRsaKeyPem">The recipient's public RSA key (used for encryption).</param>
-        /// <returns>The encrypted message <c>string</c>.</returns>
+        /// <returns>The encrypted message <c>string</c>; <c>string.Empty</c> if the passed parameters were <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
         public string EncryptMessage(string messageJson, string recipientPublicRsaKeyPem)
         {
-            if (messageJson is null)
+            if (messageJson.NullOrEmpty())
             {
-                logger.LogError($"{nameof(MessageCryptography)}::{nameof(EncryptMessage)}: Message encryption failed; {nameof(messageJson)} string argument was null. Nothing to encrypt!");
-                return null;
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(EncryptMessage)}: Message encryption failed; {nameof(messageJson)} string argument was null or empty. Nothing to encrypt!");
+                return string.Empty;
+            }
+
+            if (recipientPublicRsaKeyPem.NullOrEmpty())
+            {
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(EncryptMessage)}: Message encryption failed; {nameof(recipientPublicRsaKeyPem)} string argument was null or empty. No key to encrypt with!");
+                return string.Empty;
             }
 
             try
@@ -80,15 +83,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         /// </summary>
         /// <param name="encryptedMessage">The encrypted message <c>string</c> obtained via <see cref="EncryptMessage"/>.</param>
         /// <param name="privateDecryptionRsaKeyPem">Your private message decryption RSA key (PEM-formatted <c>string</c>).</param>
-        /// <returns>The decrypted message json (or <c>null</c> if decryption failed in some way).</returns>
+        /// <returns>The decrypted message json; <c>null</c> if decryption failed in some way; an empty <c>string</c> if the passed arguments were <c>null</c> or empty.</returns>
         public string DecryptMessage(string encryptedMessage, string privateDecryptionRsaKeyPem)
         {
-            if (string.IsNullOrEmpty(encryptedMessage))
+            if (encryptedMessage.NullOrEmpty())
             {
                 logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: The provided {nameof(encryptedMessage)} string is null or empty. Nothing to decrypt!");
-                return null;
+                return string.Empty;
             }
 
+            if (privateDecryptionRsaKeyPem.NullOrEmpty())
+            {
+                logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: The provided {nameof(privateDecryptionRsaKeyPem)} string is null or empty. No key to decrypt with!");
+                return string.Empty;
+            }
+            
             string[] split = gzip.Decompress(encryptedMessage)?.Split('|');
             if (split is null ||  split.Length != 3)
             {
