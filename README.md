@@ -12,3 +12,6 @@ Reference this C# project inside your Glitched Epistle client solution.
 
 API docs can be found here:
 _https://glitchedpolygons.github.io/GlitchedEpistle.Client_
+
+#### Note:
+Commit messages like `.`, `nothing` or `cleanup` mean that it's really not even worth mentioning and can be safely ignored.
