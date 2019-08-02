@@ -496,7 +496,7 @@
             <summary>
             The token needed to authenticate Web API requests.<para> </para>
             <see cref="P:System.Tuple`2.Item1"/> is the token's UTC timestamp (when it was emitted).<para> </para>
-            <see cref="P:System.Tuple`2.Item2"/> is the token <see cref="System.String"/>.
+            <see cref="P:System.Tuple`2.Item2"/> is the token <c>string</c>.
             </summary>
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestampUTC">
@@ -951,7 +951,7 @@
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA">
             <summary>
-            Service interface for encrypting and decrypting <see cref="System.String"/>s and <see langword="byte"/>[] arrays.
+            Service interface for encrypting and decrypting <c>string</c>s and <c>byte</c>[] arrays.
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.String,System.Security.Cryptography.RSAParameters)">
@@ -1017,7 +1017,7 @@
             <summary>
             Decrypts a message that's been encrypted using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/> method.
             </summary>
-            <param name="encryptedMessageJson">The encrypted message json <see cref="System.String"/>.</param>
+            <param name="encryptedMessageJson">The encrypted message json <c>string</c>.</param>
             <param name="privateDecryptionRsaKey">Your private decryption RSA key.</param>
             <returns>The decrypted message json (or <c>null</c> if decryption failed in some way).</returns>
         </member>
@@ -1048,9 +1048,9 @@
             <summary>
             Decrypts a message that's been encrypted using the <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/> method.
             </summary>
-            <param name="encryptedMessage">The encrypted message <see cref="System.String"/> obtained via <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/>.</param>
+            <param name="encryptedMessage">The encrypted message <c>string</c> obtained via <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.Security.Cryptography.RSAParameters)"/>.</param>
             <param name="privateDecryptionRsaKey">Your private message decryption RSA key.</param>
-            <returns>The decrypted message json (or <see langword="null" /> if decryption failed in some way).</returns>
+            <returns>The decrypted message json (or <c>null</c> if decryption failed in some way).</returns>
         </member>
         <member name="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult">
             <summary>
@@ -1123,7 +1123,7 @@
             Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="T:System.Security.Cryptography.AesManaged"/>.<para> </para>
             Please keep in mind that the data you encrypt with <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)"/> can only be decrypted using the same password and the corresponding mirror method <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.DecryptWithPassword(System.Byte[],System.String)"/>.<para> </para>
             Likewise, data encrypted using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])"/> can only be decrypted again using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Decrypt(GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult)"/> respectively.
-            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <see langword="interface"/>.
+            Implements the <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <c>interface</c>.
             </summary>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])">
@@ -1139,7 +1139,7 @@
             Decrypts the specified <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])" />.
             </summary>
             <param name="encryptionResult">The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult" /> that was obtained using <see cref="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.Encrypt(System.Byte[])" />.</param>
-            <returns>Decrypted <c>byte[]</c> or <see langword="null" /> if decryption failed.</returns>
+            <returns>Decrypted <c>byte[]</c> or <c>null</c> if decryption failed.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.EncryptWithPassword(System.Byte[],System.String)">
             <summary>
@@ -1213,7 +1213,7 @@
         </member>
         <member name="P:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item(System.String)">
             <summary>
-            Gets or sets a user setting with its specified key <see cref="System.String"/>.<para> </para>
+            Gets or sets a user setting with its specified key <c>string</c>.<para> </para>
             If you are trying to get an inexistent setting, <c>null</c> (or <c>string.Empty</c>) should be returned.<para> </para>
             If you are trying to set an inexistent setting, the setting shall be created.
             </summary>
@@ -1286,7 +1286,7 @@
             <param name="userId">The user identifier.</param>
             <param name="passwordSHA512">The password hash (SHA-512).</param>
             <param name="totp">The 2FA code.</param>
-            <returns>JWT <see cref="System.String"/> if auth was successful; <c>null</c> otherwise.</returns>
+            <returns>JWT <c>string</c> if auth was successful; <c>null</c> otherwise.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.IUserService.RefreshAuthToken(System.String,System.String)">
             <summary>
@@ -1353,7 +1353,7 @@
             <param name="userId">The user identifier.</param>
             <param name="passwordSHA512">The password hash (SHA-512).</param>
             <param name="totp">The 2FA code.</param>
-            <returns>JWT <see langword="string" /> if auth was successful; <see langword="null" /> otherwise.</returns>
+            <returns>JWT <see langword="string" /> if auth was successful; <c>null</c> otherwise.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.RefreshAuthToken(System.String,System.String)">
             <summary>
@@ -1371,7 +1371,7 @@
             Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> (in UTC).
             </summary>
             <param name="userId">The user id.</param>
-            <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <see langword="null" /> if the user doesn't exist.</returns>
+            <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <c>null</c> if the user doesn't exist.</returns>
         </member>
         <member name="M:GlitchedPolygons.GlitchedEpistle.Client.Services.Users.UserService.GetUserPublicKeyXml(System.String,System.String,System.String)">
             <summary>

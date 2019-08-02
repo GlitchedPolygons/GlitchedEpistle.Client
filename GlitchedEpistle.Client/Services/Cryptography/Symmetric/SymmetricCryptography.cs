@@ -2,11 +2,7 @@
 using System;
 using System.Linq;
 using System.Text;
-using System.IO.Compression;
 using System.Security.Cryptography;
-
-using GlitchedPolygons.Services.CompressionUtility;
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 #endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric
@@ -15,15 +11,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
     /// Service interface implementation for symmetrically encrypting/decrypting data (raw <c>byte[]</c> arrays) using <see cref="AesManaged"/>.<para> </para>
     /// Please keep in mind that the data you encrypt with <see cref="EncryptWithPassword(byte[],string)"/> can only be decrypted using the same password and the corresponding mirror method <see cref="DecryptWithPassword(byte[],string)"/>.<para> </para>
     /// Likewise, data encrypted using <see cref="Encrypt"/> can only be decrypted again using <see cref="Decrypt"/> respectively.
-    /// Implements the <see cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <see langword="interface"/>.
+    /// Implements the <see cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.ISymmetricCryptography" /> <c>interface</c>.
     /// </summary>
     public class SymmetricCryptography : ISymmetricCryptography
     {
         private const int RFC_ITERATIONS = 16384;
-        private static readonly CompressionSettings KEY_COMPRESSION_SETTINGS = new CompressionSettings { CompressionLevel = CompressionLevel.Fastest };
 
         /// <summary>
-        /// Encrypts the specified data using a randomly generated key and initialization vector.<para></para>
+        /// Encrypts the specified data using a randomly generated key and initialization vector.<para> </para>
         /// Returns an <see cref="EncryptionResult" /> containing the encrypted <c>byte[]</c> array + the used encryption key and iv.
         /// </summary>
         /// <param name="data">The data to encrypt.</param>
@@ -59,7 +54,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         /// Decrypts the specified <see cref="EncryptionResult" /> that was obtained using <see cref="Encrypt(System.Byte[])" />.
         /// </summary>
         /// <param name="encryptionResult">The <see cref="EncryptionResult" /> that was obtained using <see cref="Encrypt(System.Byte[])" />.</param>
-        /// <returns>Decrypted <c>byte[]</c> or <see langword="null" /> if decryption failed.</returns>
+        /// <returns>Decrypted <c>byte[]</c> or <c>null</c> if decryption failed.</returns>
         public byte[] Decrypt(EncryptionResult encryptionResult)
         {
             try
@@ -122,7 +117,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         }
 
         /// <summary>
-        /// Decrypts data that was encrypted using <see cref="EncryptWithPassword"/>.
+        /// Decrypts data that was encrypted using <see cref="EncryptWithPassword(byte[],string)"/>.
         /// </summary>
         /// <param name="encryptedBytes">The encrypted data that was returned by <see cref="EncryptWithPassword(byte[],string)"/>.</param>
         /// <param name="password">The password that was used to encrypt the data.</param>
@@ -165,48 +160,25 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         }
 
         /// <summary>
-        /// Symmetrically encrypts an RSA key using a password and automatically returns the encoded base-64 <see cref="System.String"/>.<para> </para>
-        /// To decrypt again, use the <see cref="DecryptRSAParameters"/> method.
+        /// Encrypts data using a password.
         /// </summary>
-        /// <param name="key">The RSA key to encrypt.</param>
-        /// <param name="password">Password to use to encrypt the key.</param>
-        /// <returns>The encrypted, encoded base-64 <see cref="System.String"/>, ready to be exchanged (or decrypted using <see cref="DecryptRSAParameters"/>).</returns>
-        public string EncryptRSAParameters(RSAParameters key, string password)
+        /// <param name="data">The data to encrypt.</param>
+        /// <param name="password">The password used to derive the AES key.</param>
+        /// <returns>The encrypted data.</returns>
+        public string EncryptWithPassword(string data, string password)
         {
-            ICompressionUtility gzip = new GZipUtility();
-
-            return Convert.ToBase64String(
-                inArray: EncryptWithPassword(
-                    password: password,
-                    data: gzip.Compress(
-                        bytes: Encoding.UTF8.GetBytes(key.ToXmlString()), 
-                        compressionSettings: KEY_COMPRESSION_SETTINGS
-                    )
-                )
-            );
+            return Convert.ToBase64String(EncryptWithPassword(Encoding.UTF8.GetBytes(data), password));
         }
 
         /// <summary>
-        /// Symmetrically decrypts an RSA key that was encrypted using the <see cref="EncryptRSAParameters"/> method.
+        /// Decrypts data that was encrypted using <see cref="EncryptWithPassword(string,string)"/>.
         /// </summary>
-        /// <param name="encryptedKey">The encrypted key string.</param>
-        /// <param name="password">The password with which the key was encrypted.</param>
-        /// <returns>The decrypted <see cref="RSAParameters"/> key instance.</returns>
-        public RSAParameters DecryptRSAParameters(string encryptedKey, string password)
+        /// <param name="data">The encrypted data.</param>
+        /// <param name="password">The password that was used to encrypt the data.</param>
+        /// <returns>The decrypted data.</returns>
+        public string DecryptWithPassword(string data, string password)
         {
-            ICompressionUtility gzip = new GZipUtility();
-
-            return RSAParametersExtensions.FromXmlString(
-                Encoding.UTF8.GetString(
-                    bytes: gzip.Decompress(
-                        compressionSettings: KEY_COMPRESSION_SETTINGS,
-                        compressedBytes: DecryptWithPassword(
-                            password: password,
-                            encryptedBytes: Convert.FromBase64String(encryptedKey)
-                        )
-                    )
-                )
-            );
+            return Encoding.UTF8.GetString(DecryptWithPassword(Convert.FromBase64String(data), password));
         }
     }
 }

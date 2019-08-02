@@ -6,7 +6,7 @@
     public interface ISettings
     {
         /// <summary>
-        /// Gets or sets a user setting with its specified key <see cref="System.String"/>.<para> </para>
+        /// Gets or sets a user setting with its specified key <c>string</c>.<para> </para>
         /// If you are trying to get an inexistent setting, <c>null</c> (or <c>string.Empty</c>) should be returned.<para> </para>
         /// If you are trying to set an inexistent setting, the setting shall be created.
         /// </summary>

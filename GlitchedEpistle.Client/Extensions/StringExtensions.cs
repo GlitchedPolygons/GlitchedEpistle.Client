@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Extensions
 {
     /// <summary>
-    /// <see cref="System.String"/> extensions.
+    /// <c>string</c> extensions.
     /// </summary>
     public static class StringExtensions
     {

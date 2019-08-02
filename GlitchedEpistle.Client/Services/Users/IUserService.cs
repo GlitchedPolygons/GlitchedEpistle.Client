@@ -19,7 +19,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials
         /// (POST request to the Glitched Epistle Web API).
-        /// If authentication is successful, a valid JWT <see cref="System.String"/> is returned along with the user's keypair.
+        /// If authentication is successful, a valid JWT <c>string</c> is returned along with the user's keypair.
         /// That's needed for subsequent requests.
         /// </summary>
         /// <param name="paramsDto">HTTP Request parameters wrapped into a DTO instance.</param>

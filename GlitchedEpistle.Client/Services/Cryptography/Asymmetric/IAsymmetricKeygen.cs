@@ -14,7 +14,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// <summary>
         /// Generates a new key pair.
         /// </summary>
-        /// <returns>The keypair <see cref="Tuple"/>, where the first item is the public key and the second is the private key.</returns>
-        Task<Tuple<RSAParameters, RSAParameters>> GenerateKeyPair();
+        /// <returns>The keypair <see cref="Tuple"/>, where the first item is the public RSA key and the second is the private key (both PEM-formatted).</returns>
+        Task<Tuple<string, string>> GenerateKeyPair();
     }
 }

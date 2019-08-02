@@ -1,14 +1,10 @@
 ﻿#region
 using System;
-using System.IO;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
-using GlitchedPolygons.ExtensionMethods.RSAXmlPemStringConverter;
 
-using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Generators;
@@ -35,10 +31,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         }
 
         /// <summary>
-        /// Generates a 4096-bit RSA key pair.
+        /// Generates a 4096-bit RSA key pair.<para> </para>
+        /// Returns the RSA key pair <see cref="Tuple"/>,
+        /// where the first item is the public key and the second is the private key.
+        /// If generation failed for some reason, <c>null</c> is returned.
         /// </summary>
         /// <returns>The RSA key pair <see cref="Tuple"/>, where the first item is the public key and the second is the private key. If generation failed for some reason, <c>null</c> is returned.</returns>
-        public Task<Tuple<RSAParameters, RSAParameters>> GenerateKeyPair()
+        public Task<Tuple<string, string>> GenerateKeyPair()
         {
             return Task.Run(() =>
             {
@@ -47,7 +46,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
                     var keygen = new RsaKeyPairGenerator();
                     keygen.Init(new KeyGenerationParameters(new SecureRandom(), 4096));
                     AsymmetricCipherKeyPair keyPair = keygen.GenerateKeyPair();
-                    return new Tuple<RSAParameters, RSAParameters>(GetRSAParameters(keyPair.Public), GetRSAParameters(keyPair.Private));
+                    return new Tuple<string, string>(keyPair.Public.ToPemString(), keyPair.Private.ToPemString());
                 }
                 catch (Exception e)
                 {
@@ -55,17 +54,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
                     return null;
                 }
             });
-        }
-
-        private RSAParameters GetRSAParameters(AsymmetricKeyParameter key)
-        {
-            using (var sw = new StringWriter())
-            {
-                var pem = new PemWriter(sw);
-                pem.WriteObject(key);
-                pem.Writer.Flush();
-                return RSAParametersExtensions.FromXmlString(sw.ToString().PemToXml());
-            }
         }
     }
 }

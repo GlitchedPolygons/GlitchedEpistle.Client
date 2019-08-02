@@ -33,7 +33,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The token needed to authenticate Web API requests.<para> </para>
         /// <see cref="Tuple{T1,T2}.Item1"/> is the token's UTC timestamp (when it was emitted).<para> </para>
-        /// <see cref="Tuple{T1,T2}.Item2"/> is the token <see cref="System.String"/>.
+        /// <see cref="Tuple{T1,T2}.Item2"/> is the token <c>string</c>.
         /// </summary>
         [JsonIgnore]
         public Tuple<DateTime, string> Token { get; set; } = null;

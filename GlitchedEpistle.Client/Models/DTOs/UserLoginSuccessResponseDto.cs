@@ -8,7 +8,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     public class UserLoginSuccessResponseDto
     {
         /// <summary>
-        /// Valid request authentication token (jwt <see cref="System.String"/>).
+        /// Valid request authentication token (jwt <c>string</c>).
         /// </summary>
         [JsonProperty("auth")]
         public string Auth { get; set; }
@@ -21,7 +21,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string PublicKeyXml { get; set; }
 
         /// <summary>
-        /// The user's private key (xml-formatted, encrypted and base-64 encoded <see cref="System.String"/>).
+        /// The user's private key (xml-formatted, encrypted and base-64 encoded <c>string</c>).
         /// </summary>
         [JsonProperty("pkey")]
         public string PrivateKeyXmlEncryptedBytesBase64 { get; set; }

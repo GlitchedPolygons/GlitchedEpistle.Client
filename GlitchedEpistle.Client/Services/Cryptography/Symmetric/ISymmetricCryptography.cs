@@ -33,7 +33,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         byte[] EncryptWithPassword(byte[] data, string password);
 
         /// <summary>
-        /// Decrypts data that was encrypted using <see cref="EncryptWithPassword"/>.
+        /// Decrypts data that was encrypted using <see cref="EncryptWithPassword(byte[],string)"/>.
         /// </summary>
         /// <param name="encryptedBytes">The encrypted data.</param>
         /// <param name="password">The password that was used to encrypt the data.</param>
@@ -41,20 +41,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetri
         byte[] DecryptWithPassword(byte[] encryptedBytes, string password);
 
         /// <summary>
-        /// Symmetrically encrypts an RSA key using a password and automatically returns the encoded base-64 <see cref="System.String"/>.<para> </para>
-        /// To decrypt again, use the <see cref="DecryptRSAParameters"/> method.
+        /// Encrypts data using a password.
         /// </summary>
-        /// <param name="key">The RSA key to encrypt.</param>
-        /// <param name="password">Password to use to encrypt the key.</param>
-        /// <returns>The encrypted, encoded base-64 <see cref="System.String"/>, ready to be exchanged (or decrypted using <see cref="DecryptRSAParameters"/>).</returns>
-        string EncryptRSAParameters(RSAParameters key, string password);
+        /// <param name="data">The data to encrypt.</param>
+        /// <param name="password">The password used to derive the AES key.</param>
+        /// <returns>The encrypted data.</returns>
+        string EncryptWithPassword(string data, string password);
 
         /// <summary>
-        /// Symmetrically decrypts an RSA key that was encrypted using the <see cref="EncryptRSAParameters"/> method.
+        /// Decrypts data that was encrypted using <see cref="EncryptWithPassword(string,string)"/>.
         /// </summary>
-        /// <param name="encryptedKey">The encrypted key string.</param>
-        /// <param name="password">The password with which the key was encrypted.</param>
-        /// <returns>The decrypted <see cref="RSAParameters"/> key instance.</returns>
-        RSAParameters DecryptRSAParameters(string encryptedKey, string password);
+        /// <param name="data">The encrypted data.</param>
+        /// <param name="password">The password that was used to encrypt the data.</param>
+        /// <returns>The decrypted data.</returns>
+        string DecryptWithPassword(string data, string password);
     }
 }

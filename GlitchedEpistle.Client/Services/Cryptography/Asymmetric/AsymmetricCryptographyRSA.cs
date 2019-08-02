@@ -1,7 +1,16 @@
 ﻿#region
 using System;
-using System.Security.Cryptography;
+using System.IO;
 using System.Text;
+using System.Collections.Generic;
+
+using Org.BouncyCastle.OpenSsl;
+using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Crypto.Engines;
+using Org.BouncyCastle.Crypto.Encodings;
+using Org.BouncyCastle.Crypto.Parameters;
+
+using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 #endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
@@ -13,91 +22,111 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
     public class AsymmetricCryptographyRSA : IAsymmetricCryptographyRSA
     {
         /// <summary>
-        /// Encrypts the specified text using the provided RSA public key.
+        /// Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
-        /// <param name="text">The text to encrypt.</param>
-        /// <param name="publicKey">The public key for encryption.</param>
-        /// <returns>The encrypted <c>string</c>.</returns>
-        public string Encrypt(string text, RSAParameters publicKey)
+        /// <param name="text">The plain text to encrypt.</param>
+        /// <param name="publicKeyPem">The public RSA key for encryption (PEM-formatted <c>string</c>).</param>
+        /// <returns>The encrypted <c>string</c>; <c>null</c> if the passed key or plain text argument was <c>null</c> or empty.</returns>
+        public string Encrypt(string text, string publicKeyPem)
         {
-            if (string.IsNullOrEmpty(text))
+            if (text.NullOrEmpty() || publicKeyPem.NullOrEmpty())
             {
                 return null;
             }
 
-            byte[] encryptedData;
-            using (var rsa = new RSACryptoServiceProvider())
-            {
-                rsa.ImportParameters(publicKey);
-                encryptedData = rsa.Encrypt(Encoding.UTF8.GetBytes(text), true);
-            }
-            return Convert.ToBase64String(encryptedData);
+            return Convert.ToBase64String(Encrypt(Encoding.UTF8.GetBytes(text), publicKeyPem));
         }
 
         /// <summary>
-        /// Decrypts the specified text using the provided RSA private key.
+        /// Decrypts the specified text using the provided RSA private key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
         /// <param name="encryptedText">The encrypted text to decrypt.</param>
-        /// <param name="privateKey">The private RSA key needed for decryption.</param>
-        /// <returns>Decrypted <c>string</c></returns>
-        /// <exception cref="CryptographicException"></exception>
-        public string Decrypt(string encryptedText, RSAParameters privateKey)
+        /// <param name="privateKeyPem">The private RSA key needed for decryption (PEM-formatted <c>string</c>).</param>
+        /// <returns>Decrypted <c>string</c>; <c>null</c> if the passed key or encrypted text argument was <c>null</c> or empty.</returns>
+        public string Decrypt(string encryptedText, string privateKeyPem)
         {
-            if (string.IsNullOrEmpty(encryptedText))
+            if (encryptedText.NullOrEmpty() || privateKeyPem.NullOrEmpty())
             {
                 return null;
             }
 
-            byte[] data;
-            using (var rsa = new RSACryptoServiceProvider())
-            {
-                rsa.ImportParameters(privateKey);
-                if (rsa.PublicOnly)
-                {
-                    throw new CryptographicException($"{nameof(AsymmetricCryptographyRSA)}::{nameof(Decrypt)}: You've provided a public key instead of a private key... for decryption you need the private key!");
-                }
-                data = rsa.Decrypt(Convert.FromBase64String(encryptedText), true);
-            }
-            return Encoding.UTF8.GetString(data);
+            return Encoding.UTF8.GetString(Decrypt(Convert.FromBase64String(encryptedText), privateKeyPem));
         }
 
         /// <summary>
-        /// Encrypts the specified bytes using the provided RSA public key.
+        /// Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>..
         /// </summary>
-        /// <param name="data">The data (<c>byte[]</c>) to encrypt.</param>
-        /// <param name="publicKey">The public key to use for encryption.</param>
-        /// <returns>The encrypted bytes (System.Byte[]).</returns>
-        public byte[] Encrypt(byte[] data, RSAParameters publicKey)
+        /// <param name="data">The data (<c>byte[]</c> array) to encrypt.</param>
+        /// <param name="publicKeyPem">The public key (PEM-formatted <c>string</c>) to use for encryption.</param>
+        /// <returns>The encrypted bytes (<c>System.Byte[]</c>); <c>null</c> if the passed data or key argument was <c>null</c> or empty.</returns>
+        public byte[] Encrypt(byte[] data, string publicKeyPem)
         {
-            byte[] encryptedData;
-            using (var rsa = new RSACryptoServiceProvider())
+            if (data is null || data.Length == 0 || publicKeyPem.NullOrEmpty())
             {
-                rsa.ImportParameters(publicKey);
-                encryptedData = rsa.Encrypt(data, true);
+                return null;
             }
-            return encryptedData;
+
+            RsaKeyParameters keys;
+            using (var stringReader = new StringReader(publicKeyPem))
+            {
+                var pemReader = new PemReader(stringReader);
+                keys = (RsaKeyParameters)pemReader.ReadObject();
+            }
+
+            // PKCS1 OAEP paddings
+            OaepEncoding eng = new OaepEncoding(new RsaEngine());
+            eng.Init(true, keys);
+
+            int length = data.Length;
+            int blockSize = eng.GetInputBlockSize();
+
+            List<byte> encryptedBytes = new List<byte>(length);
+
+            for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
+            {
+                int chunkSize = Math.Min(blockSize, length - chunkPosition);
+                encryptedBytes.AddRange(eng.ProcessBlock(data, chunkPosition, chunkSize));
+            }
+
+            return encryptedBytes.ToArray();
         }
 
         /// <summary>
-        /// Decrypts the specified bytes using the provided private RSA key.
+        /// Decrypts the specified bytes using the provided private RSA key (which needs to be a PEM-formatted <c>string</c>).
         /// </summary>
         /// <param name="encryptedData">The encrypted data bytes (<c>byte[]</c>).</param>
-        /// <param name="privateKey">The private key to use for decryption.</param>
-        /// <returns>Decrypted bytes (System.Byte[]) if successful.</returns>
-        /// <exception cref="CryptographicException"></exception>
-        public byte[] Decrypt(byte[] encryptedData, RSAParameters privateKey)
+        /// <param name="privateKeyPem">The private RSA key to use for decryption (PEM-formatted <c>string</c>).</param>
+        /// <returns>Decrypted bytes (System.Byte[]) if successful; <c>null</c> if the passed data or key argument was <c>null</c> or empty.</returns>
+        public byte[] Decrypt(byte[] encryptedData, string privateKeyPem)
         {
-            byte[] data;
-            using (var rsa = new RSACryptoServiceProvider())
+            if (encryptedData is null || encryptedData.Length == 0 || privateKeyPem.NullOrEmpty())
             {
-                rsa.ImportParameters(privateKey);
-                if (rsa.PublicOnly)
-                {
-                    throw new CryptographicException($"{nameof(AsymmetricCryptographyRSA)}::{nameof(Decrypt)}: You've provided a public key instead of a private key... for decryption you need the private key!");
-                }
-                data = rsa.Decrypt(encryptedData, true);
+                return null;
             }
-            return data;
+
+            AsymmetricCipherKeyPair keys;
+            using (var stringReader = new StringReader(privateKeyPem))
+            {
+                var pemReader = new PemReader(stringReader);
+                keys = (AsymmetricCipherKeyPair)pemReader.ReadObject();
+            }
+
+            // PKCS1 OAEP paddings
+            OaepEncoding eng = new OaepEncoding(new RsaEngine());
+            eng.Init(false, keys.Private);
+
+            int length = encryptedData.Length;
+            int blockSize = eng.GetInputBlockSize();
+
+            List<byte> decryptedBytes = new List<byte>(length);
+
+            for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
+            {
+                int chunkSize = Math.Min(blockSize, length - chunkPosition);
+                decryptedBytes.AddRange(eng.ProcessBlock(encryptedData, chunkPosition, chunkSize));
+            }
+
+            return decryptedBytes.ToArray();
         }
     }
 }

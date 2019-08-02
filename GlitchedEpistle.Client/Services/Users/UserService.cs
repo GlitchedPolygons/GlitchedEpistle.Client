@@ -28,7 +28,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials
         /// (POST request to the Glitched Epistle Web API).
-        /// If authentication is successful, a valid JWT <see cref="System.String"/> is returned along with the user's keypair.
+        /// If authentication is successful, a valid JWT <c>string</c> is returned along with the user's keypair.
         /// That's needed for subsequent requests.
         /// </summary>
         /// <param name="paramsDto">HTTP Request parameters wrapped into a DTO instance.</param>
@@ -131,7 +131,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
         /// Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> (in UTC).
         /// </summary>
         /// <param name="userId">The user id.</param>
-        /// <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <see langword="null" /> if the user doesn't exist.</returns>
+        /// <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <c>null</c> if the user doesn't exist.</returns>
         public async Task<DateTime?> GetUserExpirationUTC(string userId)
         {
             var request = new RestRequest(
