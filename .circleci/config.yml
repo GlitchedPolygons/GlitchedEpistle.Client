@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: microsoft/dotnet:2.2-sdk
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: dotnet restore
+          command: dotnet restore
+      - run:
+          name: Run xunit tests
+          command: dotnet test GlitchedEpistle.Client.Tests/GlitchedEpistle.Client.Tests.csproj
