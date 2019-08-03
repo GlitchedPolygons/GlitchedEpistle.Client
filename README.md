@@ -1,5 +1,5 @@
 # Glitched Epistle
-[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/GlitchedEpistle.Client/api/index.html) [![CircleCI](https://circleci.com/gh/GlitchedPolygons/GlitchedEpistle.Client.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/GlitchedEpistle.Client)
+[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/GlitchedEpistle.Client/api/index.html) [![CircleCI](https://circleci.com/gh/GlitchedPolygons/GlitchedEpistle.Client.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/GlitchedEpistle.Client) [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/GlitchedEpistle.Client.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/GlitchedEpistle.Client)
 ## Shared codebase for implementing clients
 
 Technology used:
