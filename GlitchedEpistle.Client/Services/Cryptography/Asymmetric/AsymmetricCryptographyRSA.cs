@@ -29,6 +29,37 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         }
         
         /// <summary>
+        /// Encrypts or decrypts the input <paramref name="data"/> parameter
+        /// according to the <paramref name="encrypt"/> <c>bool</c> parameter, using the provided RSA <paramref name="key"/>.<para> </para>
+        /// If <paramref name="encrypt"/> is set to <c>false</c>, the method will try to decrypt instead.<para> </para>
+        /// This method can throw exceptions! E.g. don't pass any <c>null</c> or invalid arguments.
+        /// Trying to decrypt with a <c>null</c> or public <paramref name="key"/> will throw exceptions! Make sure to wrap the call to this method in a try/catch block.
+        /// </summary>
+        /// <param name="data">The data to encrypt or decrypt</param>
+        /// <param name="key">The RSA key to use for encryption/decryption.</param>
+        /// <param name="encrypt">Should the method encrypt the passed input <paramref name="data"/> or attempt to decrypt it?</param>
+        /// <returns>The processed data <c>byte[]</c> array; exceptions are thrown in case of a failure.</returns>
+        private static byte[] ProcessData(byte[] data, ICipherParameters key, bool encrypt)
+        {
+            // PKCS1 OAEP paddings
+            OaepEncoding eng = new OaepEncoding(new RsaEngine());
+            eng.Init(encrypt, key);
+
+            int length = data.Length;
+            int blockSize = eng.GetInputBlockSize();
+
+            List<byte> processedBytes = new List<byte>(length);
+
+            for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
+            {
+                int chunkSize = Math.Min(blockSize, length - chunkPosition);
+                processedBytes.AddRange(eng.ProcessBlock(data, chunkPosition, chunkSize));
+            }
+
+            return processedBytes.ToArray();
+        }
+        
+        /// <summary>
         /// Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
         /// <param name="text">The plain text to encrypt.</param>
@@ -95,22 +126,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
                     key = keyPair?.Public ?? new PemReader(stringReader).ReadObject() as RsaKeyParameters;
                 }
 
-                // PKCS1 OAEP paddings
-                OaepEncoding eng = new OaepEncoding(new RsaEngine());
-                eng.Init(true, key);
-
-                int length = data.Length;
-                int blockSize = eng.GetInputBlockSize();
-
-                List<byte> encryptedBytes = new List<byte>(length);
-
-                for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
-                {
-                    int chunkSize = Math.Min(blockSize, length - chunkPosition);
-                    encryptedBytes.AddRange(eng.ProcessBlock(data, chunkPosition, chunkSize));
-                }
-
-                return encryptedBytes.ToArray();
+                return ProcessData(data, key, true);
             }
             catch (Exception)
             {
@@ -133,22 +149,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
 
             try
             {
-                // PKCS1 OAEP paddings
-                OaepEncoding eng = new OaepEncoding(new RsaEngine());
-                eng.Init(false, PemStringToKeyPair(privateKeyPem).Private);
-
-                int length = encryptedData.Length;
-                int blockSize = eng.GetInputBlockSize();
-
-                List<byte> decryptedBytes = new List<byte>(length);
-
-                for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
-                {
-                    int chunkSize = Math.Min(blockSize, length - chunkPosition);
-                    decryptedBytes.AddRange(eng.ProcessBlock(encryptedData, chunkPosition, chunkSize));
-                }
-
-                return decryptedBytes.ToArray();
+                return ProcessData(encryptedData, PemStringToKeyPair(privateKeyPem).Private, false);
             }
             catch (Exception)
             {
