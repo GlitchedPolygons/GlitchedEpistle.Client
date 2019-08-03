@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html",
-          "hash": "ctz4zMX4cv4uxL+kJuQY3w=="
+          "hash": "VH4wJdBPOtuNlnZTokmE5A=="
         }
       },
       "is_incremental": false,
@@ -519,7 +519,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html",
-          "hash": "8g5wZy3L6AlYKyS7Pka2nQ=="
+          "hash": "/v0RvrHnApyzThzshnM0jQ=="
         }
       },
       "is_incremental": false,
@@ -543,7 +543,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html",
-          "hash": "e+39HQUJ3OAn+r1l09V2gA=="
+          "hash": "q2KXHyb+APnMVUCzv6NIaw=="
         }
       },
       "is_incremental": false,
@@ -570,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.SymmetricCryptography.html",
-          "hash": "FEKhoZbWXK27dPMF9tmk5A=="
+          "hash": "vRwtShKIkhdQx+oq90U2UA=="
         }
       },
       "is_incremental": false,
@@ -605,11 +605,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html",
+          "hash": "WiqTldZabLwt382klzLmyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.html",
-          "hash": "JwOw7fZynfAUPvxD51U2kQ=="
+          "hash": "jAmdW/Yin93jWDyTFdouMA=="
         }
       },
       "is_incremental": false,
@@ -753,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dlrQu6e8bQKK8mI0jTV8aQ=="
+          "hash": "bO+w4qyv5VUDnuLr8zCUgw=="
         }
       },
       "is_incremental": false,
@@ -827,17 +839,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 59,
-          "skipped_file_count": 27
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
           "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
+          "skipped_file_count": 54
         }
       }
     },

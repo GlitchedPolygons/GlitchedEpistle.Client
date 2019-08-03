@@ -2905,6 +2905,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Dispose
   nameWithType: EncryptionResult.Dispose
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Empty
+  name: Empty
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_Empty
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Empty
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Empty
+  nameWithType: EncryptionResult.Empty
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Empty*
+  name: Empty
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_Empty_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Empty
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.Empty
+  nameWithType: EncryptionResult.Empty
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.EncryptedData
   name: EncryptedData
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_EncryptedData
@@ -2918,6 +2931,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.EncryptedData
   nameWithType: EncryptionResult.EncryptedData
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IsEmpty
+  name: IsEmpty()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_IsEmpty
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IsEmpty
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IsEmpty()
+  nameWithType: EncryptionResult.IsEmpty()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IsEmpty*
+  name: IsEmpty
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_IsEmpty_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IsEmpty
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IsEmpty
+  nameWithType: EncryptionResult.IsEmpty
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.IV
   name: IV
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric.EncryptionResult.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Symmetric_EncryptionResult_IV
@@ -3153,6 +3179,90 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.LogWarning
   nameWithType: ILogger.LogWarning
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger
+  name: InMemoryLogger
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger
+  nameWithType: InMemoryLogger
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors
+  name: GetErrors()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetErrors
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors()
+  nameWithType: InMemoryLogger.GetErrors()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors*
+  name: GetErrors
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetErrors_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors
+  nameWithType: InMemoryLogger.GetErrors
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages
+  name: GetMessages()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetMessages
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages()
+  nameWithType: InMemoryLogger.GetMessages()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages*
+  name: GetMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages
+  nameWithType: InMemoryLogger.GetMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings
+  name: GetWarnings()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetWarnings
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings()
+  nameWithType: InMemoryLogger.GetWarnings()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings*
+  name: GetWarnings
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetWarnings_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings
+  nameWithType: InMemoryLogger.GetWarnings
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError(System.String)
+  name: LogError(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogError_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError(System.String)
+  nameWithType: InMemoryLogger.LogError(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError*
+  name: LogError
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogError_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError
+  nameWithType: InMemoryLogger.LogError
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage(System.String)
+  name: LogMessage(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogMessage_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage(System.String)
+  nameWithType: InMemoryLogger.LogMessage(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage*
+  name: LogMessage
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogMessage_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage
+  nameWithType: InMemoryLogger.LogMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning(System.String)
+  name: LogWarning(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogWarning_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning(System.String)
+  nameWithType: InMemoryLogger.LogWarning(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning*
+  name: LogWarning
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogWarning_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning
+  nameWithType: InMemoryLogger.LogWarning
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth
   name: GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.html
