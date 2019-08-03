@@ -11,6 +11,8 @@ using Org.BouncyCastle.Crypto.Parameters;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
+using Org.BouncyCastle.Security;
+
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric
 {
     /// <summary>
@@ -19,6 +21,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
     /// <seealso cref="IAsymmetricCryptographyRSA" />
     public class AsymmetricCryptographyRSA : IAsymmetricCryptographyRSA
     {
+        /// <summary>
+        /// The algorithm used for signing and verifying.
+        /// <seealso cref="SignerUtilities"/>
+        /// </summary>
+        private const string SIGNATURE_ALGO = "SHA256withRSA";
+        
         /// <summary>
         /// Tries to convert a PEM-formatted <c>string</c> => <see cref="AsymmetricCipherKeyPair"/>.<para> </para>
         /// Only possible if the provided key is the private key (public keys are typically read with the <see cref="PemReader"/> as <see cref="RsaKeyParameters"/>).
@@ -37,6 +45,34 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             {
                 var pemReader = new PemReader(stringReader);
                 return pemReader.ReadObject() as AsymmetricCipherKeyPair;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                stringReader.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// Tries to convert a PEM-formatted <c>string</c> => <see cref="RsaKeyParameters"/>.<para> </para>
+        /// </summary>
+        /// <param name="rsaKeyPem">The PEM-formatted key <c>string</c> to convert.</param>
+        /// <returns>The converted <see cref="RsaKeyParameters"/>; <c>null</c> if the provided key <c>string</c> was <c>null</c> or empty.</returns>
+        private static RsaKeyParameters PemStringToKeyParameters(string rsaKeyPem)
+        {
+            if (rsaKeyPem.NullOrEmpty())
+            {
+                return null;
+            }
+            
+            var stringReader = new StringReader(rsaKeyPem);
+            try
+            {
+                var pemReader = new PemReader(stringReader);
+                return pemReader.ReadObject() as RsaKeyParameters;
             }
             catch (Exception)
             {
@@ -80,6 +116,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         }
         
         #region Encrypting and decrypting
+        
         /// <summary>
         /// Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
@@ -139,13 +176,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
 
             try
             {
-                ICipherParameters key = null;
                 AsymmetricCipherKeyPair keyPair = PemStringToKeyPair(publicKeyPem);
-                
-                using (var stringReader = new StringReader(publicKeyPem))
-                {
-                    key = keyPair?.Public ?? new PemReader(stringReader).ReadObject() as RsaKeyParameters;
-                }
+                ICipherParameters key = keyPair?.Public ?? PemStringToKeyParameters(publicKeyPem);
 
                 return ProcessData(data, key, true);
             }
@@ -177,25 +209,43 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
                 return null;
             }
         }
+        
         #endregion
         
         #region Signing and verifying
+        
         /// <summary>
         /// Signs the specified <c>string</c> using the provided private RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
-        /// If the procedure succeeds, the calculated signature <c>string</c> is returned (which is base-64 encoded). Otherwise,
-        /// an empty <c>string</c> is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters
+        /// Signature algo is the value of <see cref="SIGNATURE_ALGO"/>; see <see cref="SignerUtilities"/> for more information about what algorithms are supported and what <c>string</c>s to use here.<para> </para>
+        /// If the procedure succeeds, the calculated signature <c>string</c> is returned (which is base-64 encoded).<para> </para>
+        /// Otherwise, an empty <c>string</c> is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters
         /// were <c>null</c> or empty. If the procedure fails entirely, <c>null</c> is returned.
         /// </summary>
         /// <param name="data">The data to sign.</param>
         /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>)</param>
         /// <returns>The signature (base-64 encoded <c>string</c>). <c>string.Empty</c> is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters were <c>null</c> or empty. Returns <c>null</c> if signing failed entirely.</returns>
+        /// <seealso cref="SignerUtilities"/>
         public string Sign(string data, string privateKeyPem)
         {
-            throw new NotImplementedException();
+            if (data.NullOrEmpty() || privateKeyPem.NullOrEmpty())
+            {
+                return string.Empty;
+            }
+
+            try
+            {
+                byte[] signature = Sign(Encoding.UTF8.GetBytes(data), privateKeyPem);
+                return Convert.ToBase64String(signature);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         /// <summary>
-        /// Verifies a signature that was obtained using <see cref="Sign(string,string)"/> with a public RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
+        /// Verifies a signature that was obtained using <see cref="Sign(string,string)"/>
+        /// with a public RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
         /// </summary>
         /// <param name="data">The data whose signature you want to verify.</param>
         /// <param name="signature">The passed <paramref name="data"/>'s signature (return value of <see cref="Sign(string,string)"/>).</param>
@@ -203,7 +253,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// <returns>Whether the data's signature verification succeeded or not.</returns>
         public bool Verify(string data, string signature, string publicKeyPem)
         {
-            throw new NotImplementedException();
+            if (data.NullOrEmpty() || signature.NullOrEmpty() || publicKeyPem.NullOrEmpty())
+            {
+                return false;
+            }
+            try
+            {
+                byte[] signatureBytes = Convert.FromBase64String(signature);
+                return Verify(Encoding.UTF8.GetBytes(data), signatureBytes, publicKeyPem);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -213,11 +275,27 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// were <c>null</c> or empty. If the procedure fails entirely, <c>null</c> is returned.
         /// </summary>
         /// <param name="data">The data to sign.</param>
-        /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>)</param>
+        /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>).</param>
         /// <returns>The signature (<c>byte[]</c>), <c>string.Empty</c> if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters were <c>null</c> or empty. Returns <c>null</c> if signing failed entirely.</returns>
         public byte[] Sign(byte[] data, string privateKeyPem)
         {
-            throw new NotImplementedException();
+            if (data is null || data.Length == 0 || privateKeyPem.NullOrEmpty())
+            {
+                return Array.Empty<byte>();
+            }
+            try
+            {
+                ISigner sig = SignerUtilities.GetSigner(SIGNATURE_ALGO);
+                
+                sig.Init(true, PemStringToKeyPair(privateKeyPem).Private);
+                sig.BlockUpdate(data, 0, data.Length);
+                
+                return sig.GenerateSignature();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -229,8 +307,25 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// <returns>Whether the data's signature verification succeeded or not.</returns>
         public bool Verify(byte[] data, byte[] signature, string publicKeyPem)
         {
-            throw new NotImplementedException();
+            if (data is null || data.Length == 0 || publicKeyPem.NullOrEmpty())
+            {
+                return false;
+            }
+            try
+            {
+                ISigner signer = SignerUtilities.GetSigner(SIGNATURE_ALGO);
+                
+                signer.Init(false, PemStringToKeyParameters(publicKeyPem));
+                signer.BlockUpdate(data, 0, data.Length);
+                
+                return signer.VerifySignature(signature);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
+        
         #endregion
     }
 }
