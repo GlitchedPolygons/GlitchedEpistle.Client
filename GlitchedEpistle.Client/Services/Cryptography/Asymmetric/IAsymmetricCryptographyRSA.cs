@@ -17,7 +17,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// </summary>
         /// <param name="text">The plain text to encrypt.</param>
         /// <param name="publicKeyPem">The public RSA key for encryption (PEM-formatted <c>string</c>).</param>
-        /// <returns>The encrypted <c>string</c>; <c>null</c> if the passed key or plain text argument was <c>null</c> or empty.</returns>
+        /// <returns>The encrypted <c>string</c>; <c>string.Empty</c> if the passed key or plain text argument was <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
         string Encrypt(string text, string publicKeyPem);
 
         /// <summary>
@@ -25,15 +25,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// </summary>
         /// <param name="encryptedText">The encrypted text to decrypt.</param>
         /// <param name="privateKeyPem">The private RSA key needed for decryption (PEM-formatted <c>string</c>).</param>
-        /// <returns>Decrypted <c>string</c>; <c>null</c> if the passed key or encrypted text argument was <c>null</c> or empty.</returns>
+        /// <returns>Decrypted <c>string</c>; <c>null</c> if the passed key or encrypted text argument was <c>null</c> or empty; <c>null</c> if decryption failed.</returns>
         string Decrypt(string encryptedText, string privateKeyPem);
 
         /// <summary>
-        /// Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>..
+        /// Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
         /// <param name="data">The data (<c>byte[]</c> array) to encrypt.</param>
         /// <param name="publicKeyPem">The public key (PEM-formatted <c>string</c>) to use for encryption.</param>
-        /// <returns>The encrypted bytes (<c>System.Byte[]</c>); <c>null</c> if the passed data or key argument was <c>null</c> or empty.</returns>
+        /// <returns>The encrypted bytes (<c>System.Byte[]</c>); <c>Array.Empty&lt;byte&gt;()</c> if the passed data or key argument was <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
         byte[] Encrypt(byte[] data, string publicKeyPem);
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// </summary>
         /// <param name="encryptedData">The encrypted data bytes (<c>byte[]</c>).</param>
         /// <param name="privateKeyPem">The private RSA key to use for decryption (PEM-formatted <c>string</c>).</param>
-        /// <returns>Decrypted bytes (System.Byte[]) if successful; <c>null</c> if the passed data or key argument was <c>null</c> or empty.</returns>
+        /// <returns>Decrypted bytes (System.Byte[]) if successful; an empty <c>byte[]</c> array if the passed data or key argument was <c>null</c> or empty; <c>null</c> if decryption failed.</returns>
         byte[] Decrypt(byte[] encryptedData, string privateKeyPem);
     }
 }

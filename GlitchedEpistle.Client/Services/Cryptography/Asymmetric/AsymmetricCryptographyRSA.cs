@@ -19,12 +19,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
     /// <seealso cref="IAsymmetricCryptographyRSA" />
     public class AsymmetricCryptographyRSA : IAsymmetricCryptographyRSA
     {
+        private static AsymmetricCipherKeyPair PemStringToKeyPair(string rsaKeyPem)
+        {
+            using (var stringReader = new StringReader(rsaKeyPem))
+            {
+                var pemReader = new PemReader(stringReader);
+                return pemReader.ReadObject() as AsymmetricCipherKeyPair;
+            }
+        }
+        
         /// <summary>
         /// Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
         /// <param name="text">The plain text to encrypt.</param>
         /// <param name="publicKeyPem">The public RSA key for encryption (PEM-formatted <c>string</c>).</param>
-        /// <returns>The encrypted <c>string</c>; <c>string.Empty</c> if the passed key or plain text argument was <c>null</c> or empty.</returns>
+        /// <returns>The encrypted <c>string</c>; <c>string.Empty</c> if the passed key or plain text argument was <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
         public string Encrypt(string text, string publicKeyPem)
         {
             if (text.NullOrEmpty() || publicKeyPem.NullOrEmpty())
@@ -46,7 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// </summary>
         /// <param name="encryptedText">The encrypted text to decrypt.</param>
         /// <param name="privateKeyPem">The private RSA key needed for decryption (PEM-formatted <c>string</c>).</param>
-        /// <returns>Decrypted <c>string</c>; <c>null</c> if the passed key or encrypted text argument was <c>null</c> or empty.</returns>
+        /// <returns>Decrypted <c>string</c>; <c>null</c> if the passed key or encrypted text argument was <c>null</c> or empty; <c>null</c> if decryption failed.</returns>
         public string Decrypt(string encryptedText, string privateKeyPem)
         {
             if (encryptedText.NullOrEmpty() || privateKeyPem.NullOrEmpty())
@@ -78,16 +87,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
 
             try
             {
-                RsaKeyParameters keys;
+                ICipherParameters key = null;
+                AsymmetricCipherKeyPair keyPair = PemStringToKeyPair(publicKeyPem);
+                
                 using (var stringReader = new StringReader(publicKeyPem))
                 {
-                    var pemReader = new PemReader(stringReader);
-                    keys = (RsaKeyParameters) pemReader.ReadObject();
+                    key = keyPair?.Public ?? new PemReader(stringReader).ReadObject() as RsaKeyParameters;
                 }
 
                 // PKCS1 OAEP paddings
                 OaepEncoding eng = new OaepEncoding(new RsaEngine());
-                eng.Init(true, keys);
+                eng.Init(true, key);
 
                 int length = data.Length;
                 int blockSize = eng.GetInputBlockSize();
@@ -123,16 +133,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
 
             try
             {
-                AsymmetricCipherKeyPair keys;
-                using (var stringReader = new StringReader(privateKeyPem))
-                {
-                    var pemReader = new PemReader(stringReader);
-                    keys = (AsymmetricCipherKeyPair) pemReader.ReadObject();
-                }
-
                 // PKCS1 OAEP paddings
                 OaepEncoding eng = new OaepEncoding(new RsaEngine());
-                eng.Init(false, keys.Private);
+                eng.Init(false, PemStringToKeyPair(privateKeyPem).Private);
 
                 int length = encryptedData.Length;
                 int blockSize = eng.GetInputBlockSize();

@@ -73,7 +73,8 @@
   
   <h1 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography" class="text-break">Interface IMessageCryptography
   </h1>
-  <div class="markdown level0 summary"><p>Service interface for comfortably encrypting/decrypting epistle messages (usually json strings).</p>
+  <div class="markdown level0 summary"><p>Service interface for comfortably encrypting/decrypting epistle messages (usually json strings).
+<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html">IAsymmetricCryptographyRSA</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages</a></h6>
@@ -89,7 +90,7 @@
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessage_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Messages/IMessageCryptography.cs/#L23">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Messages/IMessageCryptography.cs/#L26">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessage_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessage_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage(System.String,System.String)">DecryptMessage(String, String)</h4>
@@ -113,13 +114,13 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">encryptedMessageJson</span></td>
-        <td><p>The encrypted message json <code>string</code>.</p>
+        <td><p>The encrypted message <code>string</code> obtained via <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_System_String_System_String_">EncryptMessage(String, String)</a>.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">privateDecryptionRsaKeyPem</span></td>
-        <td><p>Your private decryption RSA key (PEM-formatted <code>string</code>).</p>
+        <td><p>Your private message decryption RSA key (PEM-formatted <code>string</code>).</p>
 </td>
       </tr>
     </tbody>
@@ -135,7 +136,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The decrypted message json (or <code>null</code> if decryption failed in some way).</p>
+        <td><p>The decrypted message json; <code>null</code> if decryption failed in some way; an empty <code>string</code> if the passed arguments were <code>null</code> or empty.</p>
 </td>
       </tr>
     </tbody>
@@ -145,7 +146,7 @@
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Messages/IMessageCryptography.cs/#L15">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Messages/IMessageCryptography.cs/#L18">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.String)">EncryptMessage(String, String)</h4>
@@ -170,13 +171,13 @@ whose public encryption RSA key you know (PEM-formatted <code>string</code>).</p
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">messageJson</span></td>
-        <td><p>The message json <code>string</code> to encrypt.</p>
+        <td><p>The message json (<code>string</code>) to encrypt.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">recipientPublicRsaKeyPem</span></td>
-        <td><p>The recipient's public RSA key (PEM-formatted <code>string</code>).</p>
+        <td><p>The recipient's public RSA key (used for encryption).</p>
 </td>
       </tr>
     </tbody>
@@ -192,7 +193,7 @@ whose public encryption RSA key you know (PEM-formatted <code>string</code>).</p
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The encrypted message <code>string</code> (or <code>null</code> if encryption failed in some way).</p>
+        <td><p>The encrypted message <code>string</code>; <code>string.Empty</code> if the passed parameters were <code>null</code> or empty; <code>null</code> if encryption failed.</p>
 </td>
       </tr>
     </tbody>
@@ -208,7 +209,7 @@ whose public encryption RSA key you know (PEM-formatted <code>string</code>).</p
                     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Messages/IMessageCryptography.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/GlitchedEpistle.Client/Services/Cryptography/Messages/IMessageCryptography.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

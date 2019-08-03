@@ -44,7 +44,7 @@ namespace GlitchedEpistle.Client.Tests
         [Theory]
         [InlineData("")]
         [InlineData(null)]
-        public void MessageCryptography_EncryptStringWithNullOrEmptyKey_ReturnsEmptyString(string s)
+        public void MessageCryptography_EncryptWithNullOrEmptyKey_ReturnsEmptyString(string s)
         {
             string encr = crypto.EncryptMessage(text, s);
             Assert.Empty(encr);
@@ -62,7 +62,7 @@ namespace GlitchedEpistle.Client.Tests
         [Theory]
         [InlineData("")]
         [InlineData(null)]
-        public void MessageCryptography_DecryptStringWithNullOrEmptyKey_ReturnsEmptyString(string s)
+        public void MessageCryptography_DecryptWithNullOrEmptyKey_ReturnsEmptyString(string s)
         {
             string decr = crypto.DecryptMessage(text, s);
             Assert.Empty(decr);
@@ -75,6 +75,14 @@ namespace GlitchedEpistle.Client.Tests
             string decr = crypto.DecryptMessage(encr, publicTestKeyPem);
             Assert.NotEqual(text,decr);
             Assert.Null(decr);
+        }
+        
+        [Fact]
+        public void MessageCryptography_EncryptUsingPrivateKey_Decrypt_IdenticalAfterwards_ShouldAlsoWork()
+        {
+            string encr = crypto.EncryptMessage(text, privateKeyPem);
+            string decr = crypto.DecryptMessage(encr, privateKeyPem);
+            Assert.Equal(decr, text);
         }
     }
 }

@@ -96,7 +96,8 @@ namespace GlitchedEpistle.Client.Tests
             string encr = crypto.Encrypt(text, "LOL");
             string decr = crypto.Decrypt(encr, publicTestKeyPem);
             Assert.NotEqual(text,decr);
-            Assert.Null(decr);
+            Assert.Null(encr);
+            Assert.Empty(decr);
         }
     }
 }

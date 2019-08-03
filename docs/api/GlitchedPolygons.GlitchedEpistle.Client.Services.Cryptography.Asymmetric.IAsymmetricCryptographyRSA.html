@@ -138,7 +138,7 @@ DO NOT MIX crypto libraries under any circumstances!</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td><p>Decrypted bytes (System.Byte[]) if successful; <code>null</code> if the passed data or key argument was <code>null</code> or empty.</p>
+        <td><p>Decrypted bytes (System.Byte[]) if successful; an empty <code>byte[]</code> array if the passed data or key argument was <code>null</code> or empty; <code>null</code> if decryption failed.</p>
 </td>
       </tr>
     </tbody>
@@ -194,7 +194,7 @@ DO NOT MIX crypto libraries under any circumstances!</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Decrypted <code>string</code>; <code>null</code> if the passed key or encrypted text argument was <code>null</code> or empty.</p>
+        <td><p>Decrypted <code>string</code>; <code>null</code> if the passed key or encrypted text argument was <code>null</code> or empty; <code>null</code> if decryption failed.</p>
 </td>
       </tr>
     </tbody>
@@ -208,7 +208,7 @@ DO NOT MIX crypto libraries under any circumstances!</p>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Encrypt_System_Byte___System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt(System.Byte[],System.String)">Encrypt(Byte[], String)</h4>
-  <div class="markdown level1 summary"><p>Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <code>string</code>..</p>
+  <div class="markdown level1 summary"><p>Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <code>string</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -250,7 +250,7 @@ DO NOT MIX crypto libraries under any circumstances!</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td><p>The encrypted bytes (<code>System.Byte[]</code>); <code>null</code> if the passed data or key argument was <code>null</code> or empty.</p>
+        <td><p>The encrypted bytes (<code>System.Byte[]</code>); <code>Array.Empty&lt;byte&gt;()</code> if the passed data or key argument was <code>null</code> or empty; <code>null</code> if encryption failed.</p>
 </td>
       </tr>
     </tbody>
@@ -306,7 +306,7 @@ DO NOT MIX crypto libraries under any circumstances!</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The encrypted <code>string</code>; <code>null</code> if the passed key or plain text argument was <code>null</code> or empty.</p>
+        <td><p>The encrypted <code>string</code>; <code>string.Empty</code> if the passed key or plain text argument was <code>null</code> or empty; <code>null</code> if encryption failed.</p>
 </td>
       </tr>
     </tbody>
