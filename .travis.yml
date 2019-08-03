@@ -1,0 +1,16 @@
+language: csharp
+sudo: false # faster builds
+solution: ./GlitchedEpistle.Client.sln
+dist: xenial
+notifications:
+  email: false
+before_install:
+  - git lfs pull
+install:
+  - dotnet restore ./GlitchedEpistle.Client.sln
+mono: none
+dotnet: 2.2
+script:
+  - dotnet restore ./GlitchedEpistle.Client.sln
+  - cd GlitchedEpistle.Client.Tests/
+  - dotnet test
