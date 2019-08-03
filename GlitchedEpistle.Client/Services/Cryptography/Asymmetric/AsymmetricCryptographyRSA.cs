@@ -19,12 +19,32 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
     /// <seealso cref="IAsymmetricCryptographyRSA" />
     public class AsymmetricCryptographyRSA : IAsymmetricCryptographyRSA
     {
+        /// <summary>
+        /// Tries to convert a PEM-formatted <c>string</c> => <see cref="AsymmetricCipherKeyPair"/>.<para> </para>
+        /// Only possible if the provided key is the private key (public keys are typically read with the <see cref="PemReader"/> as <see cref="RsaKeyParameters"/>).
+        /// </summary>
+        /// <param name="rsaKeyPem">The PEM-formatted key <c>string</c> to convert.</param>
+        /// <returns>The converted <see cref="AsymmetricCipherKeyPair"/>; <c>null</c> if the provided key <c>string</c> was <c>null</c>, empty or the public key.</returns>
         private static AsymmetricCipherKeyPair PemStringToKeyPair(string rsaKeyPem)
         {
-            using (var stringReader = new StringReader(rsaKeyPem))
+            if (rsaKeyPem.NullOrEmpty())
+            {
+                return null;
+            }
+            
+            var stringReader = new StringReader(rsaKeyPem);
+            try
             {
                 var pemReader = new PemReader(stringReader);
                 return pemReader.ReadObject() as AsymmetricCipherKeyPair;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                stringReader.Dispose();
             }
         }
         
@@ -59,6 +79,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             return processedBytes.ToArray();
         }
         
+        #region Encrypting and decrypting
         /// <summary>
         /// Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
@@ -156,5 +177,60 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
                 return null;
             }
         }
+        #endregion
+        
+        #region Signing and verifying
+        /// <summary>
+        /// Signs the specified <c>string</c> using the provided private RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
+        /// If the procedure succeeds, the calculated signature <c>string</c> is returned (which is base-64 encoded). Otherwise,
+        /// an empty <c>string</c> is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters
+        /// were <c>null</c> or empty. If the procedure fails entirely, <c>null</c> is returned.
+        /// </summary>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>)</param>
+        /// <returns>The signature (base-64 encoded <c>string</c>). <c>string.Empty</c> is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters were <c>null</c> or empty. Returns <c>null</c> if signing failed entirely.</returns>
+        public string Sign(string data, string privateKeyPem)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Verifies a signature that was obtained using <see cref="Sign(string,string)"/> with a public RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
+        /// </summary>
+        /// <param name="data">The data whose signature you want to verify.</param>
+        /// <param name="signature">The passed <paramref name="data"/>'s signature (return value of <see cref="Sign(string,string)"/>).</param>
+        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to use for signature verification.</param>
+        /// <returns>Whether the data's signature verification succeeded or not.</returns>
+        public bool Verify(string data, string signature, string publicKeyPem)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Signs the specified data <c>byte[]</c> array using the provided private RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
+        /// If the procedure succeeds, the calculated signature <c>byte[]</c> array is returned. Otherwise,
+        /// an empty <c>byte[]</c> array is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters
+        /// were <c>null</c> or empty. If the procedure fails entirely, <c>null</c> is returned.
+        /// </summary>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>)</param>
+        /// <returns>The signature (<c>byte[]</c>), <c>string.Empty</c> if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters were <c>null</c> or empty. Returns <c>null</c> if signing failed entirely.</returns>
+        public byte[] Sign(byte[] data, string privateKeyPem)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Verifies a signature that was obtained using <see cref="Sign(byte[],string)"/> with a public RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
+        /// </summary>
+        /// <param name="data">The data whose signature you want to verify.</param>
+        /// <param name="signature">The passed <paramref name="data"/>'s signature (return value of <see cref="Sign(byte[],string)"/>).</param>
+        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to use for signature verification.</param>
+        /// <returns>Whether the data's signature verification succeeded or not.</returns>
+        public bool Verify(byte[] data, byte[] signature, string publicKeyPem)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

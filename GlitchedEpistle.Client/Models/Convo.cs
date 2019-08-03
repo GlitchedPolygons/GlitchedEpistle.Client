@@ -73,7 +73,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// Determines whether this <see cref="Convo"/> is expired.
         /// </summary>
         /// <returns><c>true</c> if the <see cref="Convo"/> is expired; otherwise, <c>false</c>.</returns>
-        public bool IsExpired() => DateTime.UtcNow > ExpirationUTC;
+        public bool IsExpired()
+        {
+            return DateTime.UtcNow > ExpirationUTC;
+        }
 
         /// <summary>
         /// Gets all of the <see cref="Convo"/>'s participants (their ids) comma-separated;
@@ -114,6 +117,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
             return stringBuilder.ToString();
         }
 
+        #region Operators
         /// <summary>
         /// Converts a <see cref="Convo"/> object into a data-transfer object for the backend (<see cref="ConvoMetadataDto"/>).
         /// </summary>
@@ -132,7 +136,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                 BannedUsers = convo.GetBannedUsersCommaSeparated()
             };
         }
+        #endregion
 
+        #region Equality
         /// <summary>
         /// Checks for equality against a <see cref="ConvoMetadataDto"/> data transfer object (coming from the backend).
         /// </summary>
@@ -168,5 +174,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && BannedUsers.UnorderedEqual(other.BannedUsers)
                    && Participants.UnorderedEqual(other.Participants);
         }
+        #endregion
     }
 }
