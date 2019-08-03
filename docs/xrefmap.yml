@@ -2696,6 +2696,50 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Encrypt
   nameWithType: AsymmetricCryptographyRSA.Encrypt
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.Byte[],System.String)
+  name: Sign(Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Sign_System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.Byte[],System.String)
+  name.vb: Sign(Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.Byte(), System.String)
+  nameWithType: AsymmetricCryptographyRSA.Sign(Byte[], String)
+  nameWithType.vb: AsymmetricCryptographyRSA.Sign(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.String,System.String)
+  name: Sign(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Sign_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign(System.String, System.String)
+  nameWithType: AsymmetricCryptographyRSA.Sign(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign*
+  name: Sign
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Sign_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Sign
+  nameWithType: AsymmetricCryptographyRSA.Sign
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.Byte[],System.Byte[],System.String)
+  name: Verify(Byte[], Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Verify_System_Byte___System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.Byte[],System.Byte[],System.String)
+  name.vb: Verify(Byte(), Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.Byte[], System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.Byte(), System.Byte(), System.String)
+  nameWithType: AsymmetricCryptographyRSA.Verify(Byte[], Byte[], String)
+  nameWithType.vb: AsymmetricCryptographyRSA.Verify(Byte(), Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.String,System.String,System.String)
+  name: Verify(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Verify_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify(System.String, System.String, System.String)
+  nameWithType: AsymmetricCryptographyRSA.Verify(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify*
+  name: Verify
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_AsymmetricCryptographyRSA_Verify_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.Verify
+  nameWithType: AsymmetricCryptographyRSA.Verify
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096
   name: AsymmetricKeygenRSA4096
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA4096.html
@@ -2778,6 +2822,50 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Encrypt
   nameWithType: IAsymmetricCryptographyRSA.Encrypt
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.Byte[],System.String)
+  name: Sign(Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Sign_System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.Byte[],System.String)
+  name.vb: Sign(Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.Byte(), System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Sign(Byte[], String)
+  nameWithType.vb: IAsymmetricCryptographyRSA.Sign(Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.String,System.String)
+  name: Sign(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Sign_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign(System.String, System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Sign(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign*
+  name: Sign
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Sign_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Sign
+  nameWithType: IAsymmetricCryptographyRSA.Sign
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.Byte[],System.Byte[],System.String)
+  name: Verify(Byte[], Byte[], String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Verify_System_Byte___System_Byte___System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.Byte[],System.Byte[],System.String)
+  name.vb: Verify(Byte(), Byte(), String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.Byte[], System.Byte[], System.String)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.Byte(), System.Byte(), System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Verify(Byte[], Byte[], String)
+  nameWithType.vb: IAsymmetricCryptographyRSA.Verify(Byte(), Byte(), String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.String,System.String,System.String)
+  name: Verify(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Verify_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.String, System.String, System.String)
+  nameWithType: IAsymmetricCryptographyRSA.Verify(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify*
+  name: Verify
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_Verify_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify
+  nameWithType: IAsymmetricCryptographyRSA.Verify
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen
   name: IAsymmetricKeygen
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetric.IAsymmetricKeygen.html
