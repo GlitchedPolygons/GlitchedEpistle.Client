@@ -10,9 +10,9 @@ namespace GlitchedEpistle.Client.Tests
     public class SymmetricCryptographyTests
     {
         private readonly ISymmetricCryptography crypto = new SymmetricCryptography();
-        private readonly string privateKeyPem = File.ReadAllText("TestData/test.private.rsa");
-        private readonly string publicTestKeyPem = File.ReadAllText("TestData/test.public.rsa");
-        private readonly string text = File.ReadAllText("TestData/lorem-ipsum.txt");
+        private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");
+        private readonly string publicTestKeyPem = File.ReadAllText("TestData/KeyPair1/Public");
+        private readonly string text = File.ReadAllText("TestData/LoremIpsum.txt");
         private readonly byte[] data = new byte[] { 1, 2, 3, 64, 128, 1, 3, 3, 7, 6, 9, 4, 2, 0, 1, 9, 9, 6, 58, 67, 55, 100, 96 };
         
         private const string ENCRYPTION_PW = "encryption-password_239äöü!!$°§%ç&";

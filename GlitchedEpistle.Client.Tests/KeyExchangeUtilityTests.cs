@@ -6,8 +6,8 @@ namespace GlitchedEpistle.Client.Tests
 {
     public class KeyExchangeUtilityTests
     {
-        private readonly string privateKeyPem = File.ReadAllText("TestData/test.private.rsa");
-        private readonly string publicTestKeyPem = File.ReadAllText("TestData/test.public.rsa");
+        private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");
+        private readonly string publicTestKeyPem = File.ReadAllText("TestData/KeyPair1/Public");
 
         [Fact]
         public void KeyExchangeUtility_Compress_Decompress_IdenticalAfterwards()

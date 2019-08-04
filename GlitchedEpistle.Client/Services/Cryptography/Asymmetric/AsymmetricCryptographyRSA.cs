@@ -25,96 +25,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         /// The algorithm used for signing and verifying.
         /// <seealso cref="SignerUtilities"/>
         /// </summary>
-        private const string SIGNATURE_ALGO = "SHA256withRSA";
-        
-        /// <summary>
-        /// Tries to convert a PEM-formatted <c>string</c> => <see cref="AsymmetricCipherKeyPair"/>.<para> </para>
-        /// Only possible if the provided key is the private key (public keys are typically read with the <see cref="PemReader"/> as <see cref="RsaKeyParameters"/>).
-        /// </summary>
-        /// <param name="rsaKeyPem">The PEM-formatted key <c>string</c> to convert.</param>
-        /// <returns>The converted <see cref="AsymmetricCipherKeyPair"/>; <c>null</c> if the provided key <c>string</c> was <c>null</c>, empty or the public key.</returns>
-        private static AsymmetricCipherKeyPair PemStringToKeyPair(string rsaKeyPem)
-        {
-            if (rsaKeyPem.NullOrEmpty())
-            {
-                return null;
-            }
-            
-            var stringReader = new StringReader(rsaKeyPem);
-            try
-            {
-                var pemReader = new PemReader(stringReader);
-                return pemReader.ReadObject() as AsymmetricCipherKeyPair;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-            finally
-            {
-                stringReader.Dispose();
-            }
-        }
+        private readonly string signatureAlgo;
 
         /// <summary>
-        /// Tries to convert a PEM-formatted <c>string</c> => <see cref="RsaKeyParameters"/>.<para> </para>
+        /// Instantiates a new <see cref="AsymmetricCryptographyRSA"/> instance
+        /// to use for encrypting/decrypting, signing and verifying data strings and bytes.
         /// </summary>
-        /// <param name="rsaKeyPem">The PEM-formatted key <c>string</c> to convert.</param>
-        /// <returns>The converted <see cref="RsaKeyParameters"/>; <c>null</c> if the provided key <c>string</c> was <c>null</c> or empty.</returns>
-        private static RsaKeyParameters PemStringToKeyParameters(string rsaKeyPem)
+        /// <param name="signatureAlgo">The signature algorithm to use in the signing and verifying methods. Check out <see cref="SignerUtilities"/> for more information about what <c>string</c> values are valid here.</param>
+        public AsymmetricCryptographyRSA(string signatureAlgo = "SHA256withRSA")
         {
-            if (rsaKeyPem.NullOrEmpty())
-            {
-                return null;
-            }
-            
-            var stringReader = new StringReader(rsaKeyPem);
-            try
-            {
-                var pemReader = new PemReader(stringReader);
-                return pemReader.ReadObject() as RsaKeyParameters;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-            finally
-            {
-                stringReader.Dispose();
-            }
+            this.signatureAlgo = signatureAlgo;
         }
-        
-        /// <summary>
-        /// Encrypts or decrypts the input <paramref name="data"/> parameter
-        /// according to the <paramref name="encrypt"/> <c>bool</c> parameter, using the provided RSA <paramref name="key"/>.<para> </para>
-        /// If <paramref name="encrypt"/> is set to <c>false</c>, the method will try to decrypt instead.<para> </para>
-        /// This method can throw exceptions! E.g. don't pass any <c>null</c> or invalid arguments.
-        /// Trying to decrypt with a <c>null</c> or public <paramref name="key"/> will throw exceptions! Make sure to wrap the call to this method in a try/catch block.
-        /// </summary>
-        /// <param name="data">The data to encrypt or decrypt</param>
-        /// <param name="key">The RSA key to use for encryption/decryption.</param>
-        /// <param name="encrypt">Should the method encrypt the passed input <paramref name="data"/> or attempt to decrypt it?</param>
-        /// <returns>The processed data <c>byte[]</c> array; exceptions are thrown in case of a failure.</returns>
-        private static byte[] ProcessData(byte[] data, ICipherParameters key, bool encrypt)
-        {
-            // PKCS1 OAEP paddings
-            OaepEncoding eng = new OaepEncoding(new RsaEngine());
-            eng.Init(encrypt, key);
 
-            int length = data.Length;
-            int blockSize = eng.GetInputBlockSize();
-
-            List<byte> processedBytes = new List<byte>(length);
-
-            for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
-            {
-                int chunkSize = Math.Min(blockSize, length - chunkPosition);
-                processedBytes.AddRange(eng.ProcessBlock(data, chunkPosition, chunkSize));
-            }
-
-            return processedBytes.ToArray();
-        }
-        
         #region Encrypting and decrypting
         
         /// <summary>
@@ -216,7 +138,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
         
         /// <summary>
         /// Signs the specified <c>string</c> using the provided private RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
-        /// Signature algo is the value of <see cref="SIGNATURE_ALGO"/>; see <see cref="SignerUtilities"/> for more information about what algorithms are supported and what <c>string</c>s to use here.<para> </para>
+        /// Signature algo is the value of <see cref="signatureAlgo"/>; see <see cref="SignerUtilities"/> for more information about what algorithms are supported and what <c>string</c>s to use here.<para> </para>
         /// If the procedure succeeds, the calculated signature <c>string</c> is returned (which is base-64 encoded).<para> </para>
         /// Otherwise, an empty <c>string</c> is returned if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters
         /// were <c>null</c> or empty. If the procedure fails entirely, <c>null</c> is returned.
@@ -285,7 +207,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             }
             try
             {
-                ISigner sig = SignerUtilities.GetSigner(SIGNATURE_ALGO);
+                ISigner sig = SignerUtilities.GetSigner(signatureAlgo);
                 
                 sig.Init(true, PemStringToKeyPair(privateKeyPem).Private);
                 sig.BlockUpdate(data, 0, data.Length);
@@ -313,7 +235,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             }
             try
             {
-                ISigner signer = SignerUtilities.GetSigner(SIGNATURE_ALGO);
+                ISigner signer = SignerUtilities.GetSigner(signatureAlgo);
                 
                 signer.Init(false, PemStringToKeyParameters(publicKeyPem));
                 signer.BlockUpdate(data, 0, data.Length);
@@ -324,6 +246,98 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Asymmetr
             {
                 return false;
             }
+        }
+        
+        #endregion
+        
+        #region Conversions
+        
+        /// <summary>
+        /// Tries to convert a PEM-formatted <c>string</c> => <see cref="AsymmetricCipherKeyPair"/>.<para> </para>
+        /// Only possible if the provided key is the private key (public keys are typically read with the <see cref="PemReader"/> as <see cref="RsaKeyParameters"/>).
+        /// </summary>
+        /// <param name="rsaKeyPem">The PEM-formatted key <c>string</c> to convert.</param>
+        /// <returns>The converted <see cref="AsymmetricCipherKeyPair"/>; <c>null</c> if the provided key <c>string</c> was <c>null</c>, empty or the public key.</returns>
+        private static AsymmetricCipherKeyPair PemStringToKeyPair(string rsaKeyPem)
+        {
+            if (rsaKeyPem.NullOrEmpty())
+            {
+                return null;
+            }
+            
+            var stringReader = new StringReader(rsaKeyPem);
+            try
+            {
+                var pemReader = new PemReader(stringReader);
+                return pemReader.ReadObject() as AsymmetricCipherKeyPair;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                stringReader.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// Tries to convert a PEM-formatted <c>string</c> => <see cref="RsaKeyParameters"/>.<para> </para>
+        /// </summary>
+        /// <param name="rsaKeyPem">The PEM-formatted key <c>string</c> to convert.</param>
+        /// <returns>The converted <see cref="RsaKeyParameters"/>; <c>null</c> if the provided key <c>string</c> was <c>null</c> or empty.</returns>
+        private static RsaKeyParameters PemStringToKeyParameters(string rsaKeyPem)
+        {
+            if (rsaKeyPem.NullOrEmpty())
+            {
+                return null;
+            }
+            
+            var stringReader = new StringReader(rsaKeyPem);
+            try
+            {
+                var pemReader = new PemReader(stringReader);
+                return pemReader.ReadObject() as RsaKeyParameters;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                stringReader.Dispose();
+            }
+        }
+        
+        /// <summary>
+        /// Encrypts or decrypts the input <paramref name="data"/> parameter
+        /// according to the <paramref name="encrypt"/> <c>bool</c> parameter, using the provided RSA <paramref name="key"/>.<para> </para>
+        /// If <paramref name="encrypt"/> is set to <c>false</c>, the method will try to decrypt instead.<para> </para>
+        /// This method can throw exceptions! E.g. don't pass any <c>null</c> or invalid arguments.
+        /// Trying to decrypt with a <c>null</c> or public <paramref name="key"/> will throw exceptions! Make sure to wrap the call to this method in a try/catch block.
+        /// </summary>
+        /// <param name="data">The data to encrypt or decrypt</param>
+        /// <param name="key">The RSA key to use for encryption/decryption.</param>
+        /// <param name="encrypt">Should the method encrypt the passed input <paramref name="data"/> or attempt to decrypt it?</param>
+        /// <returns>The processed data <c>byte[]</c> array; exceptions are thrown in case of a failure.</returns>
+        private static byte[] ProcessData(byte[] data, ICipherParameters key, bool encrypt)
+        {
+            // PKCS1 OAEP paddings
+            OaepEncoding eng = new OaepEncoding(new RsaEngine());
+            eng.Init(encrypt, key);
+
+            int length = data.Length;
+            int blockSize = eng.GetInputBlockSize();
+
+            List<byte> processedBytes = new List<byte>(length);
+
+            for (int chunkPosition = 0; chunkPosition < length; chunkPosition += blockSize)
+            {
+                int chunkSize = Math.Min(blockSize, length - chunkPosition);
+                processedBytes.AddRange(eng.ProcessBlock(data, chunkPosition, chunkSize));
+            }
+
+            return processedBytes.ToArray();
         }
         
         #endregion

@@ -13,9 +13,9 @@ namespace GlitchedEpistle.Client.Tests
     {
         private readonly IMessageCryptography crypto = new MessageCryptography(new SymmetricCryptography(), new AsymmetricCryptographyRSA(), new GZipUtility(), new InMemoryLogger());
         
-        private readonly string text = File.ReadAllText("TestData/lorem-ipsum.txt");
-        private readonly string privateKeyPem = File.ReadAllText("TestData/test.private.rsa");
-        private readonly string publicTestKeyPem = File.ReadAllText("TestData/test.public.rsa");
+        private readonly string text = File.ReadAllText("TestData/LoremIpsum.txt");
+        private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");
+        private readonly string publicTestKeyPem = File.ReadAllText("TestData/KeyPair1/Public");
 
         [Fact]
         public void MessageCryptography_Encrypt_Decrypt_IdenticalAfterwards()

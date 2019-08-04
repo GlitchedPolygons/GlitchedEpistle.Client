@@ -17,13 +17,19 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="TestData\lorem-ipsum.txt">
+        <Content Include="TestData\KeyPair1\Private">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <Content Include="TestData\test.private.rsa">
+        <Content Include="TestData\KeyPair1\Public">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <Content Include="TestData\test.public.rsa">
+        <Content Include="TestData\KeyPair2\Private">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="TestData\KeyPair2\Public">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="TestData\LoremIpsum.txt">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
