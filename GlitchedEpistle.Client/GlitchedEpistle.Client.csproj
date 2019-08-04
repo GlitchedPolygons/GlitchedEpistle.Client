@@ -6,7 +6,7 @@
     <RootNamespace>GlitchedPolygons.GlitchedEpistle.Client</RootNamespace>
     <Authors>Glitched Polygons</Authors>
     <Description>Shared code base for all epistle clients.</Description>
-    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.txt</PackageLicenseUrl>
     <Platforms>AnyCPU;x64</Platforms>
     <Version>1.1.0</Version>
     <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/GlitchedEpistle.Client/b73845791295eab9d08e11815b582ae84ae26427/Docs/docfx_project/_exported_templates/default/favicon.ico</PackageIconUrl>
@@ -18,19 +18,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <DocumentationFile>C:\git\glitched-polygons\glitched-epistle\GlitchedEpistle.Client\GlitchedEpistle.Client\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\GlitchedPolygons.GlitchedEpistle.Client.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
