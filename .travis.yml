@@ -1,11 +1,11 @@
 language: csharp
 sudo: false # faster builds
-solution: ./GlitchedEpistle.Client.sln
 dist: xenial
 notifications:
   email: false
+env:
+  - DOTNET_CLI_TELEMETRY_OPTOUT=1
 before_install:
-  - export DOTNET_CLI_TELEMETRY_OPTOUT=1
   - git lfs pull
 install:
   - dotnet restore ./GlitchedEpistle.Client.sln
