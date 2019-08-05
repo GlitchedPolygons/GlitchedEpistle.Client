@@ -3,15 +3,13 @@ jobs:
   build:
     docker:
       - image: microsoft/dotnet:2.2-sdk
-      - environment:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
       - checkout
       - run:
-          name: Disable dotnet telemetry
-          command: export DOTNET_CLI_TELEMETRY_OPTOUT=1
+          name: Disable .NET Telemetry
+          command: echo 'export DOTNET_CLI_TELEMETRY_OPTOUT=1' >> $BASH_ENV && source $BASH_ENV
       - run:
-          name: dotnet restore
+          name: Restore NuGet dependencies
           command: dotnet restore
       - run:
           name: Run xunit tests
