@@ -6,6 +6,7 @@ notifications:
   email: false
 before_install:
   - git lfs pull
+  - export DOTNET_CLI_TELEMETRY_OPTOUT=1
 install:
   - dotnet restore ./GlitchedEpistle.Client.sln
 mono: none

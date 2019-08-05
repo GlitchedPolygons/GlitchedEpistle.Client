@@ -6,6 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Disable dotnet telemetry
+          command: export DOTNET_CLI_TELEMETRY_OPTOUT=1
+      - run:
           name: dotnet restore
           command: dotnet restore
       - run:
