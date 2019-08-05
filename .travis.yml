@@ -8,7 +8,7 @@ env:
 before_install:
   - git lfs pull
 install:
-  - dotnet restore ./GlitchedEpistle.Client.sln
+  - dotnet restore
 mono: none
 dotnet: 2.2
 script:
