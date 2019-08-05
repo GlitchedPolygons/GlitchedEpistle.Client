@@ -4,4 +4,3 @@
 ---
 
 * Namespace:  _`GlitchedPolygons.GlitchedEpistle.Client`_
-* API Version:  _`1.0.7`_

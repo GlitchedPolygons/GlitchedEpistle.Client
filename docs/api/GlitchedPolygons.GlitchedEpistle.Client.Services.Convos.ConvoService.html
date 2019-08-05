@@ -86,11 +86,35 @@ Implements the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Ser
     <h5>Implements</h5>
     <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoService.html">IConvoService</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Convos</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Convos_ConvoService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConvoService : object, IConvoService</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConvoService : IConvoService</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -140,7 +164,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the convo's metadata was changed successfully or not.</p>
 </td>
       </tr>
@@ -202,7 +226,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p><code>null</code> if creation failed; the created <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>'s unique id.</p>
 </td>
       </tr>
@@ -270,7 +294,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether deletion was successful or not.</p>
 </td>
       </tr>
@@ -344,7 +368,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>[]&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>[]&gt;</td>
         <td><p>The retrieved <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>s (<code>null</code> if everything is up to date or if something failed).</p>
 </td>
       </tr>
@@ -412,7 +436,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html">ConvoMetadataDto</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html">ConvoMetadataDto</a>&gt;</td>
         <td><p>The convo's metadata wrapped into a DTO (<code>null</code> if something failed).</p>
 </td>
       </tr>
@@ -486,7 +510,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>'s index integer; if something fails, <code>-1</code> is returned.</p>
 </td>
       </tr>
@@ -554,7 +578,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> was joined successfully or not.</p>
 </td>
       </tr>
@@ -634,7 +658,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the user was kicked out successfully or not.</p>
 </td>
       </tr>
@@ -702,7 +726,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a> was left successfully or not.</p>
 </td>
       </tr>
@@ -758,7 +782,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the message was posted successfully or not.</p>
 </td>
       </tr>

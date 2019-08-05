@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Text;
-using System.IO.Compression;
 
 using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.Services.Cryptography.Symmetric;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
 {

@@ -1,12 +1,5 @@
-﻿#region
-using System;
-using System.Security.Cryptography;
-
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
-using GlitchedPolygons.Services.CompressionUtility;
-
+﻿using System;
 using Newtonsoft.Json;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {

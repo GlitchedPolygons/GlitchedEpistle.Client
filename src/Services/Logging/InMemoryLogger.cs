@@ -4,7 +4,8 @@ using System.Collections.Generic;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Logging
 {
     /// <summary>
-    /// <see cref="ILogger"/> implementation that keeps its logs stored in memory. Excellent for unit testing purposes.
+    /// <see cref="ILogger"/> implementation that keeps its logs stored in memory.<para> </para>
+    /// Excellent for unit testing and debugging purposes.
     /// </summary>
     public class InMemoryLogger : ILogger
     {

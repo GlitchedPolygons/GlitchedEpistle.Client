@@ -1,10 +1,10 @@
 ﻿using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.Services.Cryptography.Symmetric;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Users;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Convos;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Symmetric;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
 {
