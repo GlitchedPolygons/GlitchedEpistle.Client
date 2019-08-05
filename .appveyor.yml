@@ -1,0 +1,8 @@
+version: 1.0.{build}
+image: Ubuntu1804
+environment:
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+build_script:
+- sh: cd src && dotnet build -c Release && cd ..
+test_script:
+- sh: cd tests && dotnet add package Appveyor.TestLogger --version 2.0.0 && dotnet restore && dotnet test --test-adapter-path:. --logger:Appveyor
