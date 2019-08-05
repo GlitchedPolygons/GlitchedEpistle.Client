@@ -9,12 +9,19 @@ Technology used:
 * C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md))
 * [RestSharp](https://github.com/restsharp/RestSharp)
 * [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
-* [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp)
+* [GlitchedPolygons.RepositoryPattern.SQLite](https://github.com/GlitchedPolygons/RepositoryPattern.SQLite)
+* [GlitchedPolygons.Services.CompressionUtility](https://github.com/GlitchedPolygons/CompressionUtility)
+* [GlitchedPolygons.Services.Cryptography.Symmetric](https://github.com/GlitchedPolygons/Cryptography.Symmetric)
+* [GlitchedPolygons.Services.Cryptography.Asymmetric](https://github.com/GlitchedPolygons/Cryptography.Asymmetric)
+
+ <PackageReference Include="" Version="1.0.1" />
+    <PackageReference Include="" Version="1.0.3" />
+    <PackageReference Include="GlitchedPolygons.Services.Cryptography.Asymmetric" Version="1.0.0" />
+    <PackageReference Include="GlitchedPolygons.Services.Cryptography.Symmetric" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="RestSharp" Version="106.6.9" />
 
 Reference this C# project inside your Glitched Epistle client solution.
 
 API docs can be found here:
-_https://glitchedpolygons.github.io/GlitchedEpistle.Client_
-
-#### Note:
-Commit messages like `.`, `nothing` or `cleanup` mean that it's really not even worth mentioning and can be safely ignored.
+_[glitchedpolygons.github.io/GlitchedEpistle.Client](https://glitchedpolygons.github.io/GlitchedEpistle.Client/api/index.html)_
