@@ -11,6 +11,6 @@ install:
 mono: none
 dotnet: 2.2
 script:
-  - dotnet restore ./GlitchedEpistle.Client.sln
-  - cd GlitchedEpistle.Client.Tests/
+  - dotnet restore
+  - cd tests/
   - dotnet test

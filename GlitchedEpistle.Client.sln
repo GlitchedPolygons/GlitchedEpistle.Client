@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchedEpistle.Client", "GlitchedEpistle.Client\GlitchedEpistle.Client.csproj", "{27A814A4-57DC-4243-A54E-0290B30156FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchedEpistle.Client", "src\GlitchedEpistle.Client.csproj", "{27A814A4-57DC-4243-A54E-0290B30156FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchedEpistle.Client.Tests", "GlitchedEpistle.Client.Tests\GlitchedEpistle.Client.Tests.csproj", "{9F3AF6F0-6B5F-47E9-9883-5824B54DA7C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchedEpistle.Client.Tests", "tests\GlitchedEpistle.Client.Tests.csproj", "{9F3AF6F0-6B5F-47E9-9883-5824B54DA7C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
