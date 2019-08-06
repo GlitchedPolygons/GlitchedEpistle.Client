@@ -247,38 +247,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the operation was successful or not.</returns>
         public async Task<bool> AddRange(IEnumerable<Convo> convos)
         {
-            var sql = new StringBuilder($"INSERT INTO \"{tableName}\" VALUES ", 1024);
-
-            foreach (var convo in convos)
-            {
-                if (convo.Id.NullOrEmpty())
-                {
-                    throw new ArgumentException($"{nameof(ConvoRepositorySQLite)}::{nameof(AddRange)}: One or more {nameof(convo)} Id member is null or empty. Very bad! Convos should be added to the local sqlite db using their backend unique id as primary key.");
-                }
-
-                sql.Append("('")
-                    .Append(convo.Id).Append("', '")
-                    .Append(convo.CreatorId).Append("', '")
-                    .Append(convo.Name).Append("', '")
-                    .Append(convo.Description).Append("', ")
-                    .Append(convo.CreationTimestampUTC.ToUnixTimeMilliseconds()).Append(", ")
-                    .Append(convo.ExpirationUTC.ToUnixTimeMilliseconds()).Append(", '")
-                    .Append(convo.GetParticipantIdsCommaSeparated()).Append("', '")
-                    .Append(convo.GetBannedUsersCommaSeparated())
-                    .Append("'),");
-            }
-
-            string command = sql.ToString().TrimEnd(',');
-
-            if (!command.Contains('(') || !command.Contains(')'))
+            if (convos is null)
             {
                 return false;
             }
 
+            bool success = false;
+            string sql = $"INSERT INTO \"{tableName}\" VALUES (@Id, @CreatorId, @Name, @Description, @CreationTimestampUTC, @ExpirationUTC, @Participants, @BannedUsers)";
+
             using (var dbcon = OpenConnection())
             {
-                return await dbcon.ExecuteAsync(command) > 0;
+                success = await dbcon.ExecuteAsync(sql, convos.Where(c => c.Id.NotNullNotEmpty()).Select(c => new
+                {
+                    Id = c.Id,
+                    CreatorId = c.CreatorId,
+                    Name = c.Name,
+                    Description = c.Description,
+                    CreationTimestampUTC = c.CreationTimestampUTC.ToUnixTimeMilliseconds(),
+                    ExpirationUTC = c.ExpirationUTC.ToUnixTimeMilliseconds(),
+                    Participants = c.GetParticipantIdsCommaSeparated(),
+                    BannedUsers = c.GetBannedUsersCommaSeparated()
+                })) > 0;
             }
+
+            return success;
         }
 
         /// <summary>
