@@ -8,7 +8,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 using RestSharp;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
 {
     /// <summary>
     /// Service class for redeeming subscription coupons.

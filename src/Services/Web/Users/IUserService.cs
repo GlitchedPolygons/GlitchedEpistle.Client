@@ -7,7 +7,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {
     /// <summary>
     /// Service interface for logging into Glitched Epistle

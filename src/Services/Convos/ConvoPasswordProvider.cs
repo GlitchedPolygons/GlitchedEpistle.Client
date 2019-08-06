@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
-    /// Default implementation (thread safe through usage of standard locks) of the  <see cref="IConvoPasswordProvider"/> interface.
+    /// Default implementation (thread safe through usage of standard locks) of the <see cref="IConvoPasswordProvider"/> interface.
     /// </summary>
-    /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.Convos.IConvoPasswordProvider" />
+    /// <seealso cref="IConvoPasswordProvider" />
     public class ConvoPasswordProvider : IConvoPasswordProvider
     {
         private readonly Dictionary<string, string> dictionary = new Dictionary<string, string>(8);

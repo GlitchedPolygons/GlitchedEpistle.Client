@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Coupons
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
 {
     /// <summary>
     /// Service interface for redeeming subscription coupons.

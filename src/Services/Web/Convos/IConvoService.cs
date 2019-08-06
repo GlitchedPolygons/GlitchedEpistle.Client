@@ -5,7 +5,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
     /// Service interface responsible for accessing convos on the web API (remote).

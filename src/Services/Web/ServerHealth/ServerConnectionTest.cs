@@ -7,13 +7,13 @@ using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 using RestSharp;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
 {
     /// <summary>
     /// Class for testing the connection to the epistle server.
-    /// Implements the <see cref="GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest" /> interface.
+    /// Implements the <see cref="IServerConnectionTest" /> interface.
     /// </summary>
-    /// <seealso cref="GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth.IServerConnectionTest" />
+    /// <seealso cref="IServerConnectionTest" />
     public class ServerConnectionTest : IServerConnectionTest
     {
         private readonly RestClient restClient = new RestClient(URLs.EPISTLE);

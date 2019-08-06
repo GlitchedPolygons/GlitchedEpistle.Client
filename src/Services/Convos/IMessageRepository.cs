@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
     /// Message repository.

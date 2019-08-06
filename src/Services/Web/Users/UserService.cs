@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using RestSharp;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Users
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {
     /// <summary>
     /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.<para> </para>

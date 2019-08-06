@@ -13,7 +13,7 @@ using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
     /// SQLite repository class for accessing all locally stored <see cref="Convo"/>s.<para> </para>

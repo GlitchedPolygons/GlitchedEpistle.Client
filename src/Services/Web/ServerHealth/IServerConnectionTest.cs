@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 #endregion
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Services.ServerHealth
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
 {
     /// <summary>
     /// Service interface for testing the connection to the epistle server.
