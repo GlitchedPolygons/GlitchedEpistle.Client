@@ -273,11 +273,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
             {
                 success = await dbcon.ExecuteAsync(sql, new
                 {
-                    message.Id,
-                    message.SenderId,
-                    message.SenderName,
+                    Id = message.Id,
+                    SenderId = message.SenderId,
+                    SenderName = message.SenderName,
                     TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
-                    message.Body,
+                    Body = message.Body,
                 }) > 0;
             }
             
@@ -291,35 +291,27 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Convos
         /// <returns>Whether the operation was successful or not.</returns>
         public async Task<bool> AddRange(IEnumerable<Message> messages)
         {
-            var sql = new StringBuilder($"INSERT OR IGNORE INTO \"{tableName}\" VALUES ", 512);
-
-            foreach (var message in messages)
-            {
-                if (message.Id.NullOrEmpty())
-                {
-                    throw new ArgumentException($"{nameof(MessageRepositorySQLite)}::{nameof(AddRange)}: One or more {nameof(messages)} Id member is null or empty. Very bad! Messages should be added to the local sqlite db using their backend unique id as primary key.");
-                }
-
-                sql.Append("('")
-                    .Append(message.Id).Append("', '")
-                    .Append(message.SenderId).Append("', '")
-                    .Append(message.SenderName).Append("', ")
-                    .Append(message.TimestampUTC.ToUnixTimeMilliseconds()).Append(", '")
-                    .Append(message.Body)
-                    .Append("'),");
-            }
-
-            string command = sql.ToString().TrimEnd(',');
-
-            if (!command.Contains('(') || !command.Contains(')'))
+            if (messages is null)
             {
                 return false;
             }
 
+            bool success = false;
+            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
+
             using (var dbcon = OpenConnection())
             {
-                return await dbcon.ExecuteAsync(command) > 0;
+                success = await dbcon.ExecuteAsync(sql, messages.Where(m => m.Id.NotNullNotEmpty()).Select(m => new
+                {
+                    Id = m.Id,
+                    SenderId = m.SenderId,
+                    SenderName = m.SenderName,
+                    TimestampUTC = m.TimestampUTC.ToUnixTimeMilliseconds(),
+                    Body = m.Body,
+                })) > 0;
             }
+
+            return success;
         }
 
         /// <summary>
