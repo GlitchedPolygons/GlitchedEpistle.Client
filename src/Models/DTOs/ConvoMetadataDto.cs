@@ -1,9 +1,6 @@
-﻿#region
-using System;
+﻿using System;
 using System.Linq;
-
 using Newtonsoft.Json;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -78,7 +75,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
                 CreationTimestampUTC = dto.CreationTimestampUTC,
                 ExpirationUTC = dto.ExpirationUTC,
                 Participants = dto.Participants.Split(',').ToList(),
-                BannedUsers = dto.Participants.Split(',').ToList()
+                BannedUsers = dto.BannedUsers.Split(',').ToList()
             };
         }
 
@@ -96,10 +93,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return true;
             }
-            return string.Equals(Id, other.Id) &&
-                   string.Equals(CreatorId, other.CreatorId) &&
-                   string.Equals(Participants, other.Participants) &&
-                   string.Equals(BannedUsers, other.BannedUsers);
+            return string.Equals(Id, other.Id) && string.Equals(CreatorId, other.CreatorId) && string.Equals(Name, other.Name) && string.Equals(Description, other.Description) && string.Equals(Participants, other.Participants) && string.Equals(BannedUsers, other.BannedUsers);
         }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -115,7 +109,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return true;
             }
-            return obj.GetType() == GetType() && Equals((ConvoMetadataDto)obj);
+            if (obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+            return Equals((ConvoMetadataDto) obj);
         }
 
         /// <summary>Serves as the default hash function.</summary>
@@ -126,10 +124,34 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 int hashCode = Id.GetHashCode();
                 hashCode = (hashCode * 397) ^ CreatorId.GetHashCode();
+                hashCode = (hashCode * 397) ^ Name.GetHashCode();
+                hashCode = (hashCode * 397) ^ Description.GetHashCode();
                 hashCode = (hashCode * 397) ^ Participants.GetHashCode();
                 hashCode = (hashCode * 397) ^ BannedUsers.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// Calls <c>return Equals(<paramref name="left"/>, <paramref name="right"/>);</c>
+        /// </summary>
+        /// <param name="left">Left-hand side of the operator.</param>
+        /// <param name="right">Right-hand side of the operator.</param>
+        /// <returns><c>Equals(<paramref name="left"/>, <paramref name="right"/>);</c></returns>
+        public static bool operator ==(ConvoMetadataDto left, ConvoMetadataDto right)
+        {
+            return Equals(left, right);
+        }
+
+        /// <summary>
+        /// Calls <c>return !Equals(<paramref name="left"/>, <paramref name="right"/>);</c>
+        /// </summary>
+        /// <param name="left">Left-hand side of the operator.</param>
+        /// <param name="right">Right-hand side of the operator.</param>
+        /// <returns><c>!Equals(<paramref name="left"/>, <paramref name="right"/>);</c></returns>
+        public static bool operator !=(ConvoMetadataDto left, ConvoMetadataDto right)
+        {
+            return !Equals(left, right);
         }
         #endregion
     }
