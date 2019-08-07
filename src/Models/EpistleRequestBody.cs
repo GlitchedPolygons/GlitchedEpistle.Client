@@ -26,7 +26,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The request body. These are the endpoint parameters.<para> </para>
         /// Typically, this is some request DTO (like for example <see cref="ConvoCreationRequestDto"/>)
-        /// that was serialized into JSON and gzipped.
+        /// that was serialized into JSON and gzipped.<para> </para>
+        /// If the body is really short and/or represents only a single value, you can also assign the value directly instead of serializing + gzipping it.
         /// </summary>
         [JsonProperty("body")]
         public string Body { get; set; }

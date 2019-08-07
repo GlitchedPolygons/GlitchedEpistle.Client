@@ -241,5 +241,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
             return JsonConvert.DeserializeObject<UserCreationResponseDto>(response.Content, JSON_SERIALIZER_SETTINGS);
         }
+
+        /// <summary>
+        /// Deletes a user irreversibly from the backend's db.<para> </para>
+        /// <paramref name="requestBody.Body"/> should directly be the unprocessed <see cref="User.PasswordSHA512"/>.
+        /// </summary>
+        /// <param name="requestBody">Request parameters DTO wrapped into an <see cref="EpistleRequestBody"/>.</param>
+        /// <returns>Whether deletion was successful or not.</returns>
+        public async Task<bool> DeleteUser(EpistleRequestBody requestBody)
+        {
+            var request = new RestRequest(
+                method: Method.POST,
+                resource: new Uri("users/delete", UriKind.Relative)
+            );
+
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
+
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            return response.StatusCode == HttpStatusCode.NoContent;
+        }
     }
 }

@@ -87,5 +87,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <param name="userCreationRequestDto">DTO containing user creation parameters (for the request body).</param>
         /// <returns>The user creation response data containing the TOTP secret to show only ONCE to the user (won't be stored)... or <c>null</c> if the creation failed.</returns>
         Task<UserCreationResponseDto> CreateUser(UserCreationRequestDto userCreationRequestDto);
+
+        /// <summary>
+        /// Deletes a user irreversibly from the backend's db.<para> </para>
+        /// <paramref name="requestBody.Body"/> should directly be the unprocessed <see cref="User.PasswordSHA512"/>.
+        /// </summary>
+        /// <param name="requestBody">Request parameters DTO wrapped into an <see cref="EpistleRequestBody"/>.</param>
+        /// <returns>Whether deletion was successful or not.</returns>
+        Task<bool> DeleteUser(EpistleRequestBody requestBody);
     }
 }
