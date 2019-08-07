@@ -12,6 +12,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     public class ConvoCreationRequestDto : IEquatable<ConvoCreationRequestDto>
     {
         /// <summary>
+        /// Two-Factor Authentication token.
+        /// </summary>
+        [JsonProperty(PropertyName = "totp")]
+        public string Totp { get; set; }
+
+        /// <summary>
         /// <see cref="Convo"/> name (title).
         /// </summary>
         [JsonProperty(PropertyName = "name")]
