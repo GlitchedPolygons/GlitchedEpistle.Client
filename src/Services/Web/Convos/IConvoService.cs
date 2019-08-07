@@ -73,35 +73,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         Task<int> IndexOf(string convoId, string convoPasswordSHA512, string userId, string auth, string messageId);
 
         /// <summary>
-        /// Join a <see cref="Convo"/>.
+        /// Join a <see cref="Convo" />.
         /// </summary>
-        /// <param name="convoId">The identifier of the <see cref="Convo"/> that you're trying to join.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
-        /// <param name="userId">The user's identifier (who wants to join).</param>
-        /// <param name="auth">The authentication token.</param>
-        /// <returns>Whether the <see cref="Convo"/> was joined successfully or not.</returns>
-        Task<bool> JoinConvo(string convoId, string convoPasswordSHA512, string userId, string auth);
+        /// <param name="requestBody">Request body containing the convo join parameters.</param>
+        /// <returns>Whether the <see cref="Convo" /> was joined successfully or not.</returns>
+        Task<bool> JoinConvo(EpistleRequestBody requestBody);
 
         /// <summary>
         /// Leave a <see cref="Convo"/>.
         /// </summary>
-        /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="totp">2FA TOTP code.</param>
-        /// <param name="userId">The user identifier (who's leaving the convo).</param>
-        /// <param name="auth">The request authentication token.</param>
+        /// <param name="requestBody">The request parameters.</param>
         /// <returns>Whether the <see cref="Convo"/> was left successfully or not.</returns>
-        Task<bool> LeaveConvo(string convoId, string totp, string userId, string auth);
+        Task<bool> LeaveConvo(EpistleRequestBody requestBody);
 
         /// <summary>
         /// Kick a user from a conversation.
         /// </summary>
-        /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
-        /// <param name="convoAdminId">Your user id (you need to be a <see cref="Convo"/>'s admin in order to kick people out of it).</param>
-        /// <param name="auth">The request authentication token.</param>
-        /// <param name="userIdToKick">The user id of who you're kicking out.</param>
-        /// <param name="permaBan">If set to <c>true</c>, the kicked user won't be able to rejoin the convo permanently.</param>
+        /// <param name="requestBody">Request parameters for kicking a <see cref="User"/> out of a <see cref="Convo"/>.</param>
         /// <returns>Whether the user was kicked out successfully or not.</returns>
-        Task<bool> KickUser(string convoId, string convoPasswordSHA512, string convoAdminId, string auth, string userIdToKick, bool permaBan);
+        Task<bool> KickUser(EpistleRequestBody requestBody);
     }
 }
