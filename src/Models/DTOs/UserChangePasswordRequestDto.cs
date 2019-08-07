@@ -7,7 +7,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     /// <summary>
     /// DTO for password change requests to the Epistle Web API.
     /// </summary>
-    public class UserChangePasswordRequestDto: IEquatable<UserChangePasswordRequestDto>
+    public class UserChangePasswordRequestDto : IEquatable<UserChangePasswordRequestDto>
     {
         /// <summary>
         /// The <see cref="User"/> id of who wants to change his password.

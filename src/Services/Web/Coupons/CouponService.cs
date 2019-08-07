@@ -3,7 +3,10 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Constants;
+
+using Newtonsoft.Json;
 
 using RestSharp;
 #endregion
@@ -20,19 +23,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
         /// <summary>
         /// Redeems a coupon code to extend a user's Epistle account membership.
         /// </summary>
-        /// <param name="code">The coupon code.</param>
-        /// <param name="userId">The user identifier to which the coupon should be applied.</param>
-        /// <param name="auth">The jwt auth token.</param>
+        /// <param name="requestBody">Request body containing the coupon redeeming parameters (auth, etc...).</param>
         /// <returns>Whether the coupon code was redeemed successfully or not.</returns>
-        public async Task<bool> UseCoupon(string code, string userId, string auth)
+        public async Task<bool> UseCoupon(EpistleRequestBody requestBody)
         {
             var request = new RestRequest(
-                method: Method.PUT,
-                resource: new Uri($"coupons/{code}", UriKind.Relative)
+                method: Method.POST,
+                resource: new Uri("coupons/redeem", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(auth), auth);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;

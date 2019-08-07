@@ -1,5 +1,7 @@
 ﻿#region
 using System.Threading.Tasks;
+
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
 #endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
@@ -12,10 +14,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
         /// <summary>
         /// Redeems a coupon code to extend a user's Epistle account membership.
         /// </summary>
-        /// <param name="code">The coupon code.</param>
-        /// <param name="userId">The user identifier to which the coupon should be applied.</param>
-        /// <param name="auth">The jwt auth token.</param>
+        /// <param name="requestBody">Request body containing the coupon redeeming parameters (auth, etc...).</param>
         /// <returns>Whether the coupon code was redeemed successfully or not.</returns>
-        Task<bool> UseCoupon(string code, string userId, string auth);
+        Task<bool> UseCoupon(EpistleRequestBody requestBody);
     }
 }
