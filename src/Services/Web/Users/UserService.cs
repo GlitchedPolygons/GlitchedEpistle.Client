@@ -20,7 +20,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
     /// Implements the <see cref="IUserService" /> interface.
     /// </summary>
     /// <seealso cref="IUserService" />
-    public class UserService : IUserService
+    public class UserService : EpistleWebApiService, IUserService
     {
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
         private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
@@ -208,13 +208,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         public async Task<bool> ChangeUserPassword(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.PUT,
-                resource: new Uri("users/change-pw", UriKind.Relative)
-            );
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
-
+            var request = EpistleRequest(requestBody, "users/change-pw", Method.PUT);
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;
         }
@@ -250,13 +244,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <returns>Whether deletion was successful or not.</returns>
         public async Task<bool> DeleteUser(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.POST,
-                resource: new Uri("users/delete", UriKind.Relative)
-            );
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
-
+            var request = EpistleRequest(requestBody, "users/delete");
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.NoContent;
         }

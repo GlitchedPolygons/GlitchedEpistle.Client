@@ -20,20 +20,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <summary>
         /// Deletes a convo server-side.
         /// </summary>
-        /// <param name="convoId">The <see cref="Convo"/>'s identifier.</param>
-        /// <param name="totp">2FA token.</param>
-        /// <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
-        /// <param name="auth">The authentication JWT.</param>
+        /// <param name="requestBody">Request body containing the convo deletion parameters (auth, etc...).</param>
         /// <returns>Whether deletion was successful or not.</returns>
-        Task<bool> DeleteConvo(string convoId, string totp, string userId, string auth);
+        Task<bool> DeleteConvo(EpistleRequestBody requestBody);
 
         /// <summary>
-        /// Posts a message to a <see cref="Convo"/>.
+        /// Posts a message to a <see cref="Convo" />.
         /// </summary>
-        /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="messageDto">The message post parameters (for the request body).</param>
+        /// <param name="requestBody">Request body containing the message post parameters.</param>
         /// <returns>Whether the message was posted successfully or not.</returns>
-        Task<bool> PostMessage(string convoId, PostMessageParamsDto messageDto);
+        Task<bool> PostMessage(EpistleRequestBody requestBody);
 
         /// <summary>
         /// Gets a convo's metadata (description, timestamp, etc...).
@@ -50,9 +46,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// The user making the request needs to be the <see cref="Convo"/>'s admin (Creator).<para> </para>
         /// If you're assigning a new admin, he needs to be a participant of the <see cref="Convo"/>, else you'll get a bad request returned from the web api.
         /// </summary>
-        /// <param name="metadata">Request DTO containing authentication parameters + the data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
+        /// <param name="requestBody">Request body containing the authentication parameters + the data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db)..</param>
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
-        Task<bool> ChangeConvoMetadata(ConvoChangeMetadataRequestDto metadata);
+        Task<bool> ChangeConvoMetadata(EpistleRequestBody requestBody);
 
         /// <summary>
         /// Gets the convo messages.

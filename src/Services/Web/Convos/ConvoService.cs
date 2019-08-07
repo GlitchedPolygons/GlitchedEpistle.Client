@@ -18,7 +18,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     /// Implements the <see cref="IConvoService" /> <c>interface</c>.
     /// </summary>
     /// <seealso cref="IConvoService" />
-    public class ConvoService : IConvoService
+    public class ConvoService : EpistleWebApiService, IConvoService
     {
         private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
 
@@ -30,55 +30,29 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns><c>null</c> if creation failed; the created <see cref="Convo"/>'s unique id.</returns>
         public async Task<string> CreateConvo(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.POST,
-                resource: new Uri("convos/create", UriKind.Relative)
-            );
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
-
-            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            IRestResponse response = await restClient.ExecuteTaskAsync(EpistleRequest(requestBody, "convos/create"));
             return response.Content;
         }
 
         /// <summary>
         /// Deletes a convo server-side.
         /// </summary>
-        /// <param name="convoId">The <see cref="Convo" />'s identifier.</param>
-        /// <param name="totp">2FA token.</param>
-        /// <param name="userId">The user identifier (who's making the request; needs to be the convo's admin).</param>
-        /// <param name="auth">The authentication JWT.</param>
+        /// <param name="requestBody">Request body containing the convo deletion parameters (auth, etc...).</param>
         /// <returns>Whether deletion was successful or not.</returns>
-        public async Task<bool> DeleteConvo(string convoId, string totp, string userId, string auth)
+        public async Task<bool> DeleteConvo(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.DELETE,
-                resource: new Uri($"convos/{convoId}", UriKind.Relative)
-            );
-
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(totp), totp);
-
-            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            IRestResponse response = await restClient.ExecuteTaskAsync(EpistleRequest(requestBody, "convos/delete"));
             return response.IsSuccessful;
         }
 
         /// <summary>
         /// Posts a message to a <see cref="Convo" />.
         /// </summary>
-        /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="messageDto">The message post parameters (for the request body).</param>
+        /// <param name="requestBody">Request body containing the message post parameters.</param>
         /// <returns>Whether the message was posted successfully or not.</returns>
-        public async Task<bool> PostMessage(string convoId, PostMessageParamsDto messageDto)
+        public async Task<bool> PostMessage(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.POST,
-                resource: new Uri($"convos/{convoId}", UriKind.Relative)
-            );
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(messageDto), ParameterType.RequestBody);
-
+            var request = EpistleRequest(requestBody, "convos/post");
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
         }
@@ -111,17 +85,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// The user making the request needs to be the <see cref="Convo"/>'s admin (Creator).<para> </para>
         /// If you're assigning a new admin, he needs to be a participant of the <see cref="Convo"/>, else you'll get a bad request returned from the web api.
         /// </summary>
-        /// <param name="metadata">Request DTO containing authentication parameters + the data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db).</param>
+        /// <param name="requestBody">Request body containing the authentication parameters + the data that needs to be changed (<c>null</c> fields will be ignored; fields with values will be updated and persisted into the server's db)..</param>
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
-        public async Task<bool> ChangeConvoMetadata(ConvoChangeMetadataRequestDto metadata)
+        public async Task<bool> ChangeConvoMetadata(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.PUT,
-                resource: new Uri("convos/metadata", UriKind.Relative)
-            );
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(metadata), ParameterType.RequestBody);
-
+            var request = EpistleRequest(requestBody, "convos/metadata", Method.PUT);
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful;
         }

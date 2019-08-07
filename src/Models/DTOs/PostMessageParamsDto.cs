@@ -9,27 +9,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     public class PostMessageParamsDto : IEquatable<PostMessageParamsDto>
     {
         /// <summary>
+        /// The convo's unique ID.
+        /// </summary>
+        [JsonProperty("id")]
+        public string ConvoId { get; set; }
+
+        /// <summary>
         /// The conversation's access pw.
         /// </summary>
         [JsonProperty(PropertyName = "pw")]
         public string ConvoPasswordSHA512 { get; set; }
 
         /// <summary>
-        /// The message author's user id.
-        /// </summary>
-        [JsonProperty(PropertyName = "userId")]
-        public string UserId { get; set; }
-
-        /// <summary>
-        /// The message author's request authentication token.
-        /// </summary>
-        [JsonProperty(PropertyName = "auth")]
-        public string Auth { get; set; }
-
-        /// <summary>
         /// The message author's username (to display).
         /// </summary>
-        [JsonProperty(PropertyName = "senderName")]
+        [JsonProperty(PropertyName = "sndr")]
         public string SenderName { get; set; }
 
         /// <summary>
@@ -52,7 +46,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return true;
             }
-            return string.Equals(ConvoPasswordSHA512, other.ConvoPasswordSHA512) && string.Equals(UserId, other.UserId) && string.Equals(Auth, other.Auth) && string.Equals(SenderName, other.SenderName) && string.Equals(MessageBodiesJson, other.MessageBodiesJson);
+            return string.Equals(ConvoId, other.ConvoId) && string.Equals(ConvoPasswordSHA512, other.ConvoPasswordSHA512) && string.Equals(SenderName, other.SenderName) && string.Equals(MessageBodiesJson, other.MessageBodiesJson);
         }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -81,13 +75,34 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         {
             unchecked
             {
-                int hashCode = (ConvoPasswordSHA512 != null ? ConvoPasswordSHA512.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (UserId != null ? UserId.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Auth != null ? Auth.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (SenderName != null ? SenderName.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (MessageBodiesJson != null ? MessageBodiesJson.GetHashCode() : 0);
+                int hashCode = ConvoId.GetHashCode();
+                hashCode = (hashCode * 397) ^ ConvoPasswordSHA512.GetHashCode();
+                hashCode = (hashCode * 397) ^ SenderName.GetHashCode();
+                hashCode = (hashCode * 397) ^ MessageBodiesJson.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// Compares the two objects for equality.
+        /// </summary>
+        /// <param name="left">Left-hand side of the operator.</param>
+        /// <param name="right">Right-hand side of the operator.</param>
+        /// <returns>Whether the two objects are equal.</returns>
+        public static bool operator ==(PostMessageParamsDto left, PostMessageParamsDto right)
+        {
+            return Equals(left, right);
+        }
+
+        /// <summary>
+        /// Compares the two objects for inequality.
+        /// </summary>
+        /// <param name="left">Left-hand side of the operator.</param>
+        /// <param name="right">Right-hand side of the operator.</param>
+        /// <returns>Whether the two objects are not equal.</returns>
+        public static bool operator !=(PostMessageParamsDto left, PostMessageParamsDto right)
+        {
+            return !Equals(left, right);
         }
         #endregion
     }

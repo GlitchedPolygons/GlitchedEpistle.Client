@@ -16,7 +16,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
     /// <summary>
     /// Service class for redeeming subscription coupons.
     /// </summary>
-    public class CouponService : ICouponService
+    public class CouponService : EpistleWebApiService, ICouponService
     {
         private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
 
@@ -27,13 +27,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
         /// <returns>Whether the coupon code was redeemed successfully or not.</returns>
         public async Task<bool> UseCoupon(EpistleRequestBody requestBody)
         {
-            var request = new RestRequest(
-                method: Method.POST,
-                resource: new Uri("coupons/redeem", UriKind.Relative)
-            );
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
-
+            var request = EpistleRequest(requestBody, "coupons/redeem");
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;
         }
