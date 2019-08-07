@@ -30,8 +30,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns><c>null</c> if creation failed; the created <see cref="Convo"/>'s unique id.</returns>
         public async Task<string> CreateConvo(EpistleRequestBody requestBody)
         {
-            IRestResponse response = await restClient.ExecuteTaskAsync(EpistleRequest(requestBody, "convos/create"));
-            return response.Content;
+            var request = EpistleRequest(requestBody, "convos/create");
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful ? response.Content : null;
         }
 
         /// <summary>
