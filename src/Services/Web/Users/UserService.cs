@@ -199,18 +199,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         }
 
         /// <summary>
-        /// Changes the user password.
+        /// Changes the user password.<para> </para>
+        /// Remember that <paramref name="requestBody"/>'s field
+        /// <see cref="EpistleRequestBody.Body"/> should be the <see cref="UserChangePasswordRequestDto"/>
+        /// instance serialized into JSON and then gzipped!
         /// </summary>
-        /// <param name="paramsDto">Request parameters DTO.</param>
+        /// <param name="requestBody">Request parameters DTO wrapped into an <see cref="EpistleRequestBody"/>.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        public async Task<bool> ChangeUserPassword(UserChangePasswordRequestDto paramsDto)
+        public async Task<bool> ChangeUserPassword(EpistleRequestBody requestBody)
         {
             var request = new RestRequest(
                 method: Method.PUT,
                 resource: new Uri("users/change-pw", UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonConvert.SerializeObject(paramsDto), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.StatusCode == HttpStatusCode.OK;

@@ -10,18 +10,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
     public class UserChangePasswordRequestDto : IEquatable<UserChangePasswordRequestDto>
     {
         /// <summary>
-        /// The <see cref="User"/> id of who wants to change his password.
-        /// </summary>
-        [JsonProperty("userId")]
-        public string UserId { get; set; }
-
-        /// <summary>
-        /// Request authentication token.
-        /// </summary>
-        [JsonProperty("auth")]
-        public string Auth { get; set; }
-
-        /// <summary>
         /// Old password SHA512.
         /// </summary>
         [JsonProperty("oldPwSHA512")]
@@ -54,7 +42,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return true;
             }
-            return string.Equals(UserId, other.UserId) && string.Equals(Auth, other.Auth) && string.Equals(OldPwSHA512, other.OldPwSHA512) && string.Equals(NewPwSHA512, other.NewPwSHA512) && string.Equals(NewPrivateKey, other.NewPrivateKey);
+            return string.Equals(OldPwSHA512, other.OldPwSHA512) && string.Equals(NewPwSHA512, other.NewPwSHA512) && string.Equals(NewPrivateKey, other.NewPrivateKey);
         }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -83,11 +71,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         {
             unchecked
             {
-                int hashCode = (UserId != null ? UserId.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Auth != null ? Auth.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (OldPwSHA512 != null ? OldPwSHA512.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (NewPwSHA512 != null ? NewPwSHA512.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (NewPrivateKey != null ? NewPrivateKey.GetHashCode() : 0);
+                int hashCode = OldPwSHA512.GetHashCode();
+                hashCode = (hashCode * 397) ^ NewPwSHA512.GetHashCode();
+                hashCode = (hashCode * 397) ^ NewPrivateKey.GetHashCode();
                 return hashCode;
             }
         }

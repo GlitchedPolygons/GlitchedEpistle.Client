@@ -77,9 +77,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <summary>
         /// Changes the user password.
         /// </summary>
-        /// <param name="paramsDto">Request parameters DTO.</param>
+        /// <param name="requestBody">Request parameters DTO wrapped into an <see cref="EpistleRequestBody"/>.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
-        Task<bool> ChangeUserPassword(UserChangePasswordRequestDto paramsDto);
+        Task<bool> ChangeUserPassword(EpistleRequestBody requestBody);
 
         /// <summary>
         /// Creates a new user.
