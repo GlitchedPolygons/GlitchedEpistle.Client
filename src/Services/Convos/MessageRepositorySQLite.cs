@@ -300,6 +300,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
 
             using (var dbcon = OpenConnection())
+            using (var t = dbcon.BeginTransaction())
             {
                 success = await dbcon.ExecuteAsync(sql, messages.Where(m => m.Id.NotNullNotEmpty()).Select(m => new
                 {
@@ -308,7 +309,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     SenderName = m.SenderName,
                     TimestampUTC = m.TimestampUTC.ToUnixTimeMilliseconds(),
                     Body = m.Body,
-                })) > 0;
+                }), t) > 0;
+
+                if (success)
+                {
+                    t.Commit();
+                }
             }
 
             return success;
