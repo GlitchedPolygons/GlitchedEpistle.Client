@@ -25,6 +25,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string ConvoPasswordSHA512 { get; set; }
 
         /// <summary>
+        /// 2FA token.
+        /// </summary>
+        [JsonProperty("totp")]
+        public string Totp { get; set; }
+
+        /// <summary>
         /// The new convo admin.
         /// </summary>
         [JsonProperty(PropertyName = "creatorId")]
