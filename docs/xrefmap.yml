@@ -950,19 +950,6 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto
   nameWithType: UserChangePasswordRequestDto
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth
-  name: Auth
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_Auth
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth
-  nameWithType: UserChangePasswordRequestDto.Auth
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth*
-  name: Auth
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_Auth_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Auth
-  nameWithType: UserChangePasswordRequestDto.Auth
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
   name: Equals(UserChangePasswordRequestDto)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_
@@ -1034,19 +1021,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.OldPwSHA512
   nameWithType: UserChangePasswordRequestDto.OldPwSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.UserId
-  name: UserId
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_UserId
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.UserId
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.UserId
-  nameWithType: UserChangePasswordRequestDto.UserId
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.UserId*
-  name: UserId
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_UserId_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.UserId
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.UserId
-  nameWithType: UserChangePasswordRequestDto.UserId
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto
   name: UserCreationRequestDto
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html
@@ -2395,12 +2369,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.ChangeConvoMetadata
   nameWithType: ConvoService.ChangeConvoMetadata
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto,System.String,System.String)
-  name: CreateConvo(ConvoCreationRequestDto, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_CreateConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto, System.String, System.String)
-  nameWithType: ConvoService.CreateConvo(ConvoCreationRequestDto, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  name: CreateConvo(EpistleRequestBody)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_CreateConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  nameWithType: ConvoService.CreateConvo(EpistleRequestBody)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.CreateConvo*
   name: CreateConvo
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_CreateConvo_
@@ -2589,12 +2563,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.ChangeConvoMetadata
   nameWithType: IConvoService.ChangeConvoMetadata
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto,System.String,System.String)
-  name: CreateConvo(ConvoCreationRequestDto, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_CreateConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoCreationRequestDto_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto, System.String, System.String)
-  nameWithType: IConvoService.CreateConvo(ConvoCreationRequestDto, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  name: CreateConvo(EpistleRequestBody)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_CreateConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  nameWithType: IConvoService.CreateConvo(EpistleRequestBody)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.CreateConvo*
   name: CreateConvo
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_CreateConvo_
@@ -3065,12 +3039,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService
   nameWithType: IUserService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
-  name: ChangeUserPassword(UserChangePasswordRequestDto)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
-  nameWithType: IUserService.ChangeUserPassword(UserChangePasswordRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  name: ChangeUserPassword(EpistleRequestBody)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  nameWithType: IUserService.ChangeUserPassword(EpistleRequestBody)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.ChangeUserPassword*
   name: ChangeUserPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_ChangeUserPassword_
@@ -3091,6 +3065,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.CreateUser
   nameWithType: IUserService.CreateUser
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.DeleteUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  name: DeleteUser(EpistleRequestBody)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_DeleteUser_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.DeleteUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.DeleteUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  nameWithType: IUserService.DeleteUser(EpistleRequestBody)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.DeleteUser*
+  name: DeleteUser
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_DeleteUser_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.DeleteUser
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.DeleteUser
+  nameWithType: IUserService.DeleteUser
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetConvos(System.String,System.String)
   name: GetConvos(String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetConvos_System_String_System_String_
@@ -3188,12 +3175,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService
   nameWithType: UserService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
-  name: ChangeUserPassword(UserChangePasswordRequestDto)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangePasswordRequestDto_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto)
-  nameWithType: UserService.ChangeUserPassword(UserChangePasswordRequestDto)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  name: ChangeUserPassword(EpistleRequestBody)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_ChangeUserPassword_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  nameWithType: UserService.ChangeUserPassword(EpistleRequestBody)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.ChangeUserPassword*
   name: ChangeUserPassword
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_ChangeUserPassword_
@@ -3214,6 +3201,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.CreateUser
   nameWithType: UserService.CreateUser
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.DeleteUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  name: DeleteUser(EpistleRequestBody)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_DeleteUser_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.DeleteUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.DeleteUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
+  nameWithType: UserService.DeleteUser(EpistleRequestBody)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.DeleteUser*
+  name: DeleteUser
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_DeleteUser_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.DeleteUser
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.DeleteUser
+  nameWithType: UserService.DeleteUser
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetConvos(System.String,System.String)
   name: GetConvos(String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetConvos_System_String_System_String_

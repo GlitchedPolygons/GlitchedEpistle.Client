@@ -23,22 +23,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
 
         /// <summary>
-        /// Creates a new convo on the server.
+        /// Creates a new convo on the server.<para> </para>
+        /// "<paramref name="requestBody.Body"/>" should be the <see cref="ConvoCreationRequestDto"/> serialized into JSON and gzipped.
         /// </summary>
-        /// <param name="convoRequestDto">The convo creation DTO.</param>
-        /// <param name="userId">The user identifier (who's making the request).</param>
-        /// <param name="auth">The authentication token (JWT).</param>
-        /// <returns><c>null</c> if creation failed; the created <see cref="Convo" />'s unique id.</returns>
-        public async Task<string> CreateConvo(ConvoCreationRequestDto convoRequestDto, string userId, string auth)
+        /// <param name="requestBody">Request body containing the coupon redeeming parameters (auth, etc...).</param>
+        /// <returns><c>null</c> if creation failed; the created <see cref="Convo"/>'s unique id.</returns>
+        public async Task<string> CreateConvo(EpistleRequestBody requestBody)
         {
             var request = new RestRequest(
                 method: Method.POST,
                 resource: new Uri("convos/create", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(auth), auth);
-            request.AddParameter("application/json", JsonConvert.SerializeObject(convoRequestDto), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.Content;
