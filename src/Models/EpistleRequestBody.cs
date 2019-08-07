@@ -69,8 +69,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// Verifies the <see cref="Signature"/> using the provided <paramref name="crypto"/> instance.
         /// </summary>
-        /// <param name="crypto"></param>
-        /// <param name="publicRsaKeyPem"></param>
+        /// <param name="crypto">The <see cref="IAsymmetricCryptographyRSA"/> instance to use for signature verification.</param>
+        /// <param name="publicRsaKeyPem">The public RSA key (PEM-formatted) to use for verifying the signature.</param>
         /// <returns>Whether the <see cref="Signature"/> could be verified or not.</returns>
         /// <seealso cref="IAsymmetricCryptographyRSA.Verify(string,string,string)"/>
         public bool VerifySignature(IAsymmetricCryptographyRSA crypto, string publicRsaKeyPem)
