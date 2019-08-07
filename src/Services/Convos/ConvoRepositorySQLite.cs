@@ -256,6 +256,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             string sql = $"INSERT INTO \"{tableName}\" VALUES (@Id, @CreatorId, @Name, @Description, @CreationTimestampUTC, @ExpirationUTC, @Participants, @BannedUsers)";
 
             using (var dbcon = OpenConnection())
+            using (var t = dbcon.BeginTransaction())
             {
                 success = await dbcon.ExecuteAsync(sql, convos.Where(c => c.Id.NotNullNotEmpty()).Select(c => new
                 {
@@ -267,7 +268,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     ExpirationUTC = c.ExpirationUTC.ToUnixTimeMilliseconds(),
                     Participants = c.GetParticipantIdsCommaSeparated(),
                     BannedUsers = c.GetBannedUsersCommaSeparated()
-                })) > 0;
+                }), t) > 0;
+
+                if (success)
+                {
+                    t.Commit();
+                }
             }
 
             return success;
