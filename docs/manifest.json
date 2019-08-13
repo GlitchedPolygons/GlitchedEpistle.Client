@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/epistle/GlitchedEpistle.Client/docs/docfx_project",
+  "source_base_path": "C:/git/glitched-polygons/glitched-epistle/GlitchedEpistle.Client/docs/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.html",
-          "hash": "VrkmpBSV0nm+juHT6RVtVA=="
+          "hash": "fQ9kw7aabcZOYP2lak0i9g=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html",
-          "hash": "suFTOwPbray6F+ixB+RNlw=="
+          "hash": "jDoKbCfhuTU8l0gvTcIQYw=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.html",
-          "hash": "oZ/ngT1RZjDOt9vVpIgAqg=="
+          "hash": "4rhNlNO5M3K7s31ZsDfo0g=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html",
-          "hash": "4Q00TX/kZ7DL0wHYn9bsmA=="
+          "hash": "dZDj9un1sLKmNVPTt+99xw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html",
-          "hash": "gxSNUQrXyaVlM5EuP+ga5Q=="
+          "hash": "ifB2rZwYVsgxf0Szt6ww6w=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html",
-          "hash": "col1nxZsCMHHwXJ/mNPrYg=="
+          "hash": "28LZcWrnAwkw8G8D/lbeWA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.html",
-          "hash": "iQ5Fo46xRo0ItBezmebmig=="
+          "hash": "4sqjlFONEn4XntId+mYWJw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html",
-          "hash": "pEC+4dtMbBD95SZc60GutA=="
+          "hash": "Xt2BERxqKwvS0NrvVfZs+A=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoChangeMetadataRequestDto.html",
-          "hash": "glo8BvZ1r6EohwvtEe+u6g=="
+          "hash": "o6ZfjXNnUomaiKl9GewY+g=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoCreationRequestDto.html",
-          "hash": "mWkCsDw6w/3nKGJx/7/gQQ=="
+          "hash": "6bpBbztCVvQKFzjnkpSoFg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoDeletionRequestDto.html",
-          "hash": "FZeYdneTazPP+6M30ufyuw=="
+          "hash": "W6NsEASh1+C8OMRvtnC+Cw=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoJoinRequestDto.html",
-          "hash": "fWZDImWSH931FShSw92A2Q=="
+          "hash": "AnBWOg2+7XC5lXDP6/ls7Q=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoKickUserRequestDto.html",
-          "hash": "6unt+M2tCi+lghnC9YNxOA=="
+          "hash": "ZUf3OclGJepIJFRhTScGew=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoLeaveRequestDto.html",
-          "hash": "cRi6DZhQmhFtYSBIhon+hw=="
+          "hash": "5iIJ1t3/inRJrbWxWnCEAg=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html",
-          "hash": "UZGy+cGJDlWBAw2/pg4XZg=="
+          "hash": "0r4Zz/ohjBnJQHV5+uK6iQ=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html",
-          "hash": "Nc04Bsejfohl67woU2w8Bw=="
+          "hash": "y5kSUymI7rUqfvQ6CvqMpg=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.html",
-          "hash": "EgHigQneIaaujMwakIlJsg=="
+          "hash": "dBo6ysjZecjl2CieRoHkGg=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html",
-          "hash": "f8sH3E33r0jgq173vWz20g=="
+          "hash": "inUVHgxOec2Gy3fgD+8+DQ=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html",
-          "hash": "AxIjXgz/2HTx+/PZR6WDDA=="
+          "hash": "TL/21d0uA3HiAqG2nqEiaQ=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto.html",
-          "hash": "d5oYYy04Bjvj0ohy+l/TJg=="
+          "hash": "hSSo0lM6UUkE3M4szkV2Fw=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html",
-          "hash": "g+QuWd0jEQm16uvMB7yqbw=="
+          "hash": "2Bz5ImWFcixRzhl51Cb38A=="
         }
       },
       "is_incremental": false,
@@ -280,15 +280,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "ReferencedXrefPropertyNotString"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.html",
-          "hash": "D3aOAmkHNCYhCxIEJSVbjQ=="
+          "hash": "Z5EhzNo/6rp7/JvgwM/vbQ=="
         }
       },
       "is_incremental": false,
@@ -300,22 +297,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html",
-          "hash": "RfToirAi2EUFlTICPKHM4w=="
+          "hash": "FnoFbJ/QDM1jxxwIhHETrw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "ReferencedXrefPropertyNotString"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html",
-          "hash": "4Z/IXAR+X0uUPESY8q0QKQ=="
+          "hash": "qBGDsOaCNUTclqPGnnK5iQ=="
         }
       },
       "is_incremental": false,
@@ -339,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html",
-          "hash": "rW7b2DgJLCDXnWyozpk7CQ=="
+          "hash": "MfLFRrM6spoDmr1/E3DFXw=="
         }
       },
       "is_incremental": false,
@@ -351,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html",
-          "hash": "aPMKft2e2cq5XNL+nBwZXw=="
+          "hash": "d9iU9eJAln1a27yQf8obBg=="
         }
       },
       "is_incremental": false,
@@ -363,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.html",
-          "hash": "tHbJSHjqWBeKnna2p330aw=="
+          "hash": "6W58GX8y78s7tBXFjGHynQ=="
         }
       },
       "is_incremental": false,
@@ -387,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.html",
-          "hash": "gI+soqTTuSZK/6p2f3lnzw=="
+          "hash": "9LITpW5xEtxSqpk//1PPrA=="
         }
       },
       "is_incremental": false,
@@ -435,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoPasswordProvider.html",
-          "hash": "6I5NGWbGV2zWgZbWdfONow=="
+          "hash": "iHDXL+s9j5IHvnHwyV53QQ=="
         }
       },
       "is_incremental": false,
@@ -450,7 +444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html",
-          "hash": "RiaTwuHqlmGytEmHLv1p0w=="
+          "hash": "OR+RA2yOBglplPUbU0JoOg=="
         }
       },
       "is_incremental": false,
@@ -462,7 +456,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html",
-          "hash": "/mzuPoWmmIhPKdSzlSeddw=="
+          "hash": "rbmCgHBrK6bNP3H6rh985Q=="
         }
       },
       "is_incremental": false,
@@ -486,7 +480,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html",
-          "hash": "5OCt1RFcmZQ+ALXEbSY2Lw=="
+          "hash": "pY6hViagHM1waf1SHVXo8g=="
         }
       },
       "is_incremental": false,
@@ -498,7 +492,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageRepository.html",
-          "hash": "4+oPfmupfv/Ybr3il5gJrQ=="
+          "hash": "l7IOGMOtCbn9HuRZEqxYew=="
         }
       },
       "is_incremental": false,
@@ -513,7 +507,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html",
-          "hash": "dtqKJpJ1J55sz0OeBI4Pzg=="
+          "hash": "CQWrSwYbXFKpa9E/IN/AvA=="
         }
       },
       "is_incremental": false,
@@ -537,7 +531,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.html",
-          "hash": "U6R3PeW9It+dVS7XqEL9nw=="
+          "hash": "Y7dOOcHo3WdMGK4WJR3baQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +543,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.html",
-          "hash": "w90s4dyQ0XAg0Kv3+Zj+kg=="
+          "hash": "Geyr4oMkwslHNnMj6gKFyQ=="
         }
       },
       "is_incremental": false,
@@ -573,7 +567,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService.html",
-          "hash": "WyB4YDuPhUSuvTRWnGEupw=="
+          "hash": "EoqecsnTJy1cvHcSpW4GNA=="
         }
       },
       "is_incremental": false,
@@ -585,7 +579,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.html",
-          "hash": "grEHwqrSHeVx3VyVKSJEgw=="
+          "hash": "MRupk3aWL3u6SfBi1SDHgg=="
         }
       },
       "is_incremental": false,
@@ -597,7 +591,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html",
-          "hash": "uqOMG00FI3xTAApERVrZbQ=="
+          "hash": "v0sm/E9ejHeW8h1WHctF4A=="
         }
       },
       "is_incremental": false,
@@ -621,19 +615,22 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html",
-          "hash": "ioJAWi+zgMMTZPqnjr400g=="
+          "hash": "wPA2uPm26arLs3BUgh0U6g=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html",
-          "hash": "nMw1nfQTZEXO3GCMIuo7Eg=="
+          "hash": "1mcw2JaTyRx3evQ+iZGpDg=="
         }
       },
       "is_incremental": false,
@@ -669,7 +666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html",
-          "hash": "qcgIXZDjEULOsQ94N8CUzw=="
+          "hash": "587Xu5Z9DMEnV+Jy9GkXQQ=="
         }
       },
       "is_incremental": false,
@@ -720,7 +717,7 @@
           "hash": "fMvDF86Hf6ztxNAtvFYbvQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -747,7 +744,7 @@
           "hash": "tFhCqC8WkTK7Xk+tAAKfqQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -766,10 +763,12 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -779,24 +778,24 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 56,
-          "skipped_file_count": 38
-        },
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 56,
+          "skipped_file_count": 0
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

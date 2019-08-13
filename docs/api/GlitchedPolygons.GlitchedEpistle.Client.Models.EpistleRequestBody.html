@@ -81,35 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EpistleRequestBody</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.html">GlitchedPolygons.GlitchedEpistle.Client.Models</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EpistleRequestBody</code></pre>
+    <pre><code class="lang-csharp hljs">public class EpistleRequestBody : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -127,8 +103,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;auth&quot;)]
-public string Auth { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Auth { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,8 +137,7 @@ If the body is really short and/or represents only a single value, you can also 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;body&quot;)]
-public string Body { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Body { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,8 +173,7 @@ Only ever sign using the user's private message RSA key that the server does not
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;sig&quot;)]
-public string Signature { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Signature { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,8 +204,7 @@ public string Signature { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;userId&quot;)]
-public string UserId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string UserId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,13 +225,13 @@ public string UserId { get; set; }</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Sign_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.Sign(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Sign_IAsymmetricCryptographyRSA_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.Sign(IAsymmetricCryptographyRSA%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Models/EpistleRequestBody.cs/#L64">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Sign_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.Sign*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Sign_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.Sign(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,System.String)">Sign(IAsymmetricCryptographyRSA, String)</h4>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Sign_IAsymmetricCryptographyRSA_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.Sign(IAsymmetricCryptographyRSA,System.String)">Sign(IAsymmetricCryptographyRSA, String)</h4>
   <div class="markdown level1 summary"><p>Fluent way to sign an <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.html">EpistleRequestBody</a>.<p> </p>
 Assigns the calculated signature to <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.html#GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Signature">Signature</a> and returns itself.</p>
 </div>
@@ -279,9 +251,9 @@ Assigns the calculated signature to <a class="xref" href="GlitchedPolygons.Glitc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA</span></td>
+        <td><span class="xref">IAsymmetricCryptographyRSA</span></td>
         <td><span class="parametername">crypto</span></td>
-        <td><p>The <span class="xref">GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA</span> implementation to use for signing.</p>
+        <td><p>The <see cref="!:IAsymmetricCryptographyRSA"></see> implementation to use for signing.</p>
 </td>
       </tr>
       <tr>
@@ -309,13 +281,13 @@ Assigns the calculated signature to <a class="xref" href="GlitchedPolygons.Glitc
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_VerifySignature_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.VerifySignature(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_VerifySignature_IAsymmetricCryptographyRSA_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.VerifySignature(IAsymmetricCryptographyRSA%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Models/EpistleRequestBody.cs/#L77">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_VerifySignature_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.VerifySignature*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_VerifySignature_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.VerifySignature(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,System.String)">VerifySignature(IAsymmetricCryptographyRSA, String)</h4>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_VerifySignature_IAsymmetricCryptographyRSA_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.VerifySignature(IAsymmetricCryptographyRSA,System.String)">VerifySignature(IAsymmetricCryptographyRSA, String)</h4>
   <div class="markdown level1 summary"><p>Verifies the <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.html#GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_Signature">Signature</a> using the provided <code data-dev-comment-type="paramref" class="paramref">crypto</code> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -334,9 +306,9 @@ Assigns the calculated signature to <a class="xref" href="GlitchedPolygons.Glitc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA</span></td>
+        <td><span class="xref">IAsymmetricCryptographyRSA</span></td>
         <td><span class="parametername">crypto</span></td>
-        <td><p>The <span class="xref">GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA</span> instance to use for signature verification.</p>
+        <td><p>The <see cref="!:IAsymmetricCryptographyRSA"></see> instance to use for signature verification.</p>
 </td>
       </tr>
       <tr>
@@ -363,10 +335,6 @@ Assigns the calculated signature to <a class="xref" href="GlitchedPolygons.Glitc
       </tr>
     </tbody>
   </table>
-  <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_VerifySignature_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_System_String__seealso">See Also</h5>
-  <div class="seealso">
-      <div><span class="xref">GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.Verify(System.String,System.String,System.String)</span></div>
-  </div>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
