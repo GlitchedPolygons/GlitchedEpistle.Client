@@ -86,11 +86,35 @@ Excellent for unit testing and debugging purposes.</p>
     <h5>Implements</h5>
     <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.html">ILogger</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Logging</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InMemoryLogger : object, ILogger</code></pre>
+    <pre><code class="lang-csharp hljs">public class InMemoryLogger : ILogger</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -99,7 +123,7 @@ Excellent for unit testing and debugging purposes.</p>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetErrors.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L60">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L78">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetErrors_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetErrors" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetErrors">GetErrors()</h4>
@@ -120,8 +144,8 @@ Excellent for unit testing and debugging purposes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A new <see cref="!:ICollection&lt;T>"></see> that is a copy of the currently logged errors.</p>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A new <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> that is a copy of the currently logged errors.</p>
 </td>
       </tr>
     </tbody>
@@ -131,7 +155,7 @@ Excellent for unit testing and debugging purposes.</p>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetMessages.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L36">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L54">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetMessages_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetMessages" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetMessages">GetMessages()</h4>
@@ -152,8 +176,8 @@ Excellent for unit testing and debugging purposes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A new <see cref="!:ICollection&lt;T>"></see> that is a copy of the currently logged messages.</p>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A new <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> that is a copy of the currently logged messages.</p>
 </td>
       </tr>
     </tbody>
@@ -163,7 +187,7 @@ Excellent for unit testing and debugging purposes.</p>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetWarnings.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L48">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L66">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetWarnings_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_GetWarnings" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.GetWarnings">GetWarnings()</h4>
@@ -184,8 +208,8 @@ Excellent for unit testing and debugging purposes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A new <see cref="!:ICollection&lt;T>"></see> that is a copy of the currently logged warnings.</p>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A new <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> that is a copy of the currently logged warnings.</p>
 </td>
       </tr>
     </tbody>
@@ -195,7 +219,7 @@ Excellent for unit testing and debugging purposes.</p>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogError_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L96">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L114">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogError_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogError_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogError(System.String)">LogError(String)</h4>
@@ -229,7 +253,7 @@ Excellent for unit testing and debugging purposes.</p>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogMessage_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L72">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L90">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogMessage_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogMessage_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogMessage(System.String)">LogMessage(String)</h4>
@@ -263,7 +287,7 @@ Excellent for unit testing and debugging purposes.</p>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogWarning_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L84">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L102">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogWarning_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_LogWarning_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger.LogWarning(System.String)">LogWarning(String)</h4>
@@ -307,7 +331,7 @@ Excellent for unit testing and debugging purposes.</p>
                     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.InMemoryLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Logging/InMemoryLogger.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
