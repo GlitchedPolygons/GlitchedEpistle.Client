@@ -16,12 +16,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
 using System.Collections.Generic;
-
 using Newtonsoft.Json;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -37,22 +34,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string Id { get; set; }
 
         /// <summary>
-        /// The user's password hashed with SHA512.
-        /// </summary>
-        [JsonProperty(PropertyName = "pw")]
-        public string PasswordSHA512 { get; set; }
-
-        /// <summary>
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
         public DateTime CreationTimestampUTC { get; set; }
-
-        /// <summary>
-        /// The user's role. 
-        /// </summary>
-        [JsonProperty(PropertyName = "role")]
-        public string Role { get; set; }
 
         /// <summary>
         /// The user's 2FA TOTP secret.
@@ -88,7 +73,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return true;
             }
-            return string.Equals(Id, other.Id) && string.Equals(PasswordSHA512, other.PasswordSHA512) && string.Equals(Role, other.Role) && string.Equals(TotpSecret, other.TotpSecret);
+            return string.Equals(Id, other.Id) && string.Equals(TotpSecret, other.TotpSecret);
         }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -118,8 +103,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             unchecked
             {
                 int hashCode = (Id != null ? Id.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (PasswordSHA512 != null ? PasswordSHA512.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Role != null ? Role.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (TotpSecret != null ? TotpSecret.GetHashCode() : 0);
                 return hashCode;
             }
