@@ -24,6 +24,7 @@ using System.Collections.Generic;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 
 using Newtonsoft.Json;
 
@@ -40,7 +41,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
     public class UserService : EpistleWebApiService, IUserService
     {
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
-        private readonly RestClient restClient = new RestClient(URLs.EpistleAPI_v1);
+        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
 
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials

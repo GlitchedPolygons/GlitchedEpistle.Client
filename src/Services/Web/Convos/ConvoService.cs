@@ -23,6 +23,7 @@ using System.Threading.Tasks;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 
 using Newtonsoft.Json;
 
@@ -38,7 +39,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     /// <seealso cref="IConvoService" />
     public class ConvoService : EpistleWebApiService, IConvoService
     {
-        private readonly RestClient restClient = new RestClient(URLs.EpistleAPI_v1);
+        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
 
         /// <summary>
         /// Creates a new convo on the server.<para> </para>

@@ -22,6 +22,7 @@ using System.Net;
 using System.Threading.Tasks;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
+using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 
 using Newtonsoft.Json;
 
@@ -35,7 +36,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
     /// </summary>
     public class CouponService : EpistleWebApiService, ICouponService
     {
-        private readonly RestClient restClient = new RestClient(URLs.EpistleAPI_v1);
+        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
 
         /// <summary>
         /// Redeems a coupon code to extend a user's Epistle account membership.

@@ -21,6 +21,7 @@ using System;
 using System.Threading.Tasks;
 
 using GlitchedPolygons.GlitchedEpistle.Client;
+using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 
 using RestSharp;
 #endregion
@@ -34,7 +35,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
     /// <seealso cref="IServerConnectionTest" />
     public class ServerConnectionTest : IServerConnectionTest
     {
-        private readonly RestClient restClient = new RestClient(URLs.Epistle);
+        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleBaseUrl);
 
         /// <summary>
         /// Tests the connection to the epistle server.<para> </para>
