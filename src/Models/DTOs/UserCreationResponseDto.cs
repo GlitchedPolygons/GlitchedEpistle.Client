@@ -37,7 +37,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
-        public DateTime CreationTimestampUTC { get; set; }
+        public DateTime CreationUTC { get; set; }
 
         /// <summary>
         /// The user's 2FA TOTP secret.
@@ -52,12 +52,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <value>The 2FA TOTP emergency backup codes.</value>
         [JsonProperty(PropertyName = "sos")]
         public List<string> TotpEmergencyBackupCodes { get; set; }
-
-        /// <summary>
-        /// The exact <see cref="DateTime"/> (UTC) this user's access to Epistle expires.
-        /// </summary>
-        [JsonProperty(PropertyName = "exp")]
-        public DateTime ExpirationUTC { get; set; }
 
         #region Equality
         /// <summary>Indicates whether the current object is equal to another object of the same type.</summary>

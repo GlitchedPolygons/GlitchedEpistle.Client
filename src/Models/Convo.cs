@@ -65,7 +65,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// The <see cref="DateTime"/> (UTC) this conversation was created.
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
-        public DateTime CreationTimestampUTC { get; set; }
+        public DateTime CreationUTC { get; set; }
 
         /// <summary>
         /// The exact UTC <see cref="DateTime"/> when the convo will expire.<para> </para>
@@ -148,7 +148,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                 CreatorId = convo.CreatorId,
                 Name = convo.Name,
                 Description = convo.Description,
-                CreationTimestampUTC = convo.CreationTimestampUTC,
+                CreationTimestampUTC = convo.CreationUTC,
                 ExpirationUTC = convo.ExpirationUTC,
                 Participants = convo.GetParticipantIdsCommaSeparated(),
                 BannedUsers = convo.GetBannedUsersCommaSeparated()
@@ -170,7 +170,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && CreatorId == other.CreatorId
                    && Description == other.Description
                    && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
-                   && CreationTimestampUTC.AlmostEquals(other.CreationTimestampUTC)
+                   && CreationUTC.AlmostEquals(other.CreationTimestampUTC)
                    && BannedUsers.UnorderedEqual(other.BannedUsers.Split(','))
                    && Participants.UnorderedEqual(other.Participants.Split(','));
         }
@@ -188,7 +188,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && CreatorId == other.CreatorId
                    && Description == other.Description
                    && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
-                   && CreationTimestampUTC.AlmostEquals(other.CreationTimestampUTC)
+                   && CreationUTC.AlmostEquals(other.CreationUTC)
                    && BannedUsers.UnorderedEqual(other.BannedUsers)
                    && Participants.UnorderedEqual(other.Participants);
         }

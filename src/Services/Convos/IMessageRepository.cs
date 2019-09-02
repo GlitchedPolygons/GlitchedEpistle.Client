@@ -27,7 +27,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     /// <summary>
     /// Message repository.
     /// </summary>
-    public interface IMessageRepository : IRepository<Message, string>
+    public interface IMessageRepository : IRepository<Message, long>
     {
         /// <summary>
         /// Gets the <see cref="Message.Id"/> from the most recent <see cref="Message"/> in the repository.

@@ -126,11 +126,36 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             var request = new RestRequest(
                 method: Method.GET,
-                resource: new Uri($"convos/{convoId}/{tailId}", UriKind.Relative)
+                resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
 
-            request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(tailId), tailId);
+            request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
+
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
+        }
+
+        /// <summary>
+        /// Gets the latest and greatest messages from a convo!
+        /// </summary>
+        /// <param name="convoId">The convo's identifier.</param>
+        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="userId">The user identifier (needs to be a convo participant).</param>
+        /// <param name="auth">The request authentication token.</param>
+        /// <param name="n">How many messages to retrieve?</param>
+        /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
+        public async Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long n)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"convos/{convoId}/{n}", UriKind.Relative)
+            );
+
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);

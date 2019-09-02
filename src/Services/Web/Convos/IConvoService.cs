@@ -80,15 +80,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, string tailId = null);
 
         /// <summary>
-        /// Gets the index of a message inside a <see cref="Convo"/>.
+        /// Gets the latest and greatest messages from a convo!
         /// </summary>
         /// <param name="convoId">The convo's identifier.</param>
         /// <param name="convoPasswordSHA512">The convo's password hash.</param>
-        /// <param name="userId">The user identifier of who's making the request.</param>
-        /// <param name="auth">The request authentication JWT.</param>
-        /// <param name="messageId">The message identifier.</param>
-        /// <returns>The <see cref="Message"/>'s index integer; if something fails, <c>-1</c> is returned.</returns>
-        Task<int> IndexOf(string convoId, string convoPasswordSHA512, string userId, string auth, string messageId);
+        /// <param name="userId">The user identifier (needs to be a convo participant).</param>
+        /// <param name="auth">The request authentication token.</param>
+        /// <param name="n">How many messages to retrieve?</param>
+        /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
+        Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long n);
 
         /// <summary>
         /// Join a <see cref="Convo" />.

@@ -56,7 +56,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The <see cref="Convo"/>'s creation timestamp (UTC).
         /// </summary>
         [JsonProperty(PropertyName = "iat")]
-        public DateTime CreationTimestampUTC { get; set; }
+        public DateTime CreationUTC { get; set; }
 
         /// <summary>
         /// Convo expiration <see cref="DateTime"/> (UTC).
@@ -90,7 +90,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
                 CreatorId = dto.CreatorId,
                 Name = dto.Name,
                 Description = dto.Description,
-                CreationTimestampUTC = dto.CreationTimestampUTC,
+                CreationUTC = dto.CreationUTC,
                 ExpirationUTC = dto.ExpirationUTC,
                 Participants = dto.Participants.Split(',').ToList(),
                 BannedUsers = dto.BannedUsers.Split(',').ToList()

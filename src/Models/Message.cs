@@ -27,14 +27,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
     /// <summary>
     /// An epistle message.
     /// </summary>
-    public class Message : IEquatable<Message>, IEntity<string>
+    public class Message : IEquatable<Message>, IEntity<long>
     {
         /// <summary>
-        /// Gets the message's unique identifier, which is <para> </para>
-        /// md5( <see cref="SenderId"/> + <see cref="TimestampUTC"/> )
+        /// Gets the message's unique identifier.
         /// </summary>
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// The sender's ID.

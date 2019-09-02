@@ -51,7 +51,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             this.tableName = nameof(Message);
             this.connectionString = connectionString;
-            string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" TEXT NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
+            string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
             using (var sqlc = OpenConnection())
             {
                 sqlc.Execute(sql);
@@ -75,7 +75,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         /// <param name="id">The <see cref="Message"/>'s unique identifier.</param>
         /// <returns>The first found <see cref="Message"/>; <c>null</c> if nothing was found.</returns>
-        public Message this[string id]
+        public Message this[long id]
         {
             get
             {
@@ -94,7 +94,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                         reader.Read();
                         return new Message
                         {
-                            Id = reader.GetString(0),
+                            Id = reader.GetInt64(0),
                             SenderId = reader.GetString(1),
                             SenderName = reader.GetString(2),
                             TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
@@ -122,7 +122,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         /// <param name="id">The <see cref="Message"/>'s unique identifier.</param>
         /// <returns>The first found <see cref="Message"/>; <c>null</c> if nothing was found.</returns>
-        public async Task<Message> Get(string id)
+        public async Task<Message> Get(long id)
         {
             using (var sqlc = new SQLiteConnection(connectionString))
             {
@@ -139,7 +139,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     await reader.ReadAsync();
                     return new Message
                     {
-                        Id = reader.GetString(0),
+                        Id = reader.GetInt64(0),
                         SenderId = reader.GetString(1),
                         SenderName = reader.GetString(2),
                         TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
@@ -172,7 +172,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     {
                         messages.Add(new Message
                         {
-                            Id = reader.GetString(0),
+                            Id = reader.GetInt64(0),
                             SenderId = reader.GetString(1),
                             SenderName = reader.GetString(2),
                             TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
@@ -218,7 +218,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     {
                         messages.Add(new Message
                         {
-                            Id = reader.GetString(0),
+                            Id = reader.GetInt64(0),
                             SenderId = reader.GetString(1),
                             SenderName = reader.GetString(2),
                             TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
@@ -279,11 +279,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 return false;
             }
 
-            if (message.Id.NullOrEmpty())
-            {
-                throw new ArgumentException($"{nameof(MessageRepositorySQLite)}::{nameof(Add)}: The {nameof(message)}'s Id property is null or empty. Very bad! Messages should be added to the local sqlite db using their backend unique id as primary key.");
-            }
-
             bool success = false;
             string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
             
@@ -320,7 +315,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             using (var dbcon = OpenConnection())
             using (var t = dbcon.BeginTransaction())
             {
-                success = await dbcon.ExecuteAsync(sql, messages.Where(m => m.Id.NotNullNotEmpty()).Select(m => new
+                success = await dbcon.ExecuteAsync(sql, messages.Select(m => new
                 {
                     Id = m.Id,
                     SenderId = m.SenderId,
@@ -383,7 +378,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         /// <param name="id">The unique id of the <see cref="Message"/> to remove.</param>
         /// <returns>Whether the <see cref="Message"/> could be removed successfully or not.</returns>
-        public async Task<bool> Remove(string id)
+        public async Task<bool> Remove(long id)
         {
             bool result = false;
             IDbConnection sqlc = null;
@@ -452,7 +447,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         /// <param name="ids">The unique ids of the <see cref="Message"/>s to remove.</param>
         /// <returns>Whether all <see cref="Message"/>s were removed successfully or not.</returns>
-        public async Task<bool> RemoveRange(IEnumerable<string> ids)
+        public async Task<bool> RemoveRange(IEnumerable<long> ids)
         {
             bool result = false;
             IDbConnection sqlc = null;
@@ -465,7 +460,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     .Append('\"')
                     .Append(" WHERE \"Id\" IN (");
 
-                foreach (string id in ids)
+                foreach (long id in ids)
                 {
                     sql.Append('\'').Append(id).Append('\'').Append(", ");
                 }
