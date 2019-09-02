@@ -18,9 +18,9 @@
 
 #region
 using System;
+using System.Globalization;
 using System.Threading.Tasks;
 
-using GlitchedPolygons.GlitchedEpistle.Client.Constants;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
@@ -38,7 +38,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     /// <seealso cref="IConvoService" />
     public class ConvoService : EpistleWebApiService, IConvoService
     {
-        private readonly RestClient restClient = new RestClient(URLs.EPISTLE_API_V1);
+        private readonly RestClient restClient = new RestClient(URLs.EpistleAPI_v1);
 
         /// <summary>
         /// Creates a new convo on the server.<para> </para>
@@ -122,7 +122,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="auth">The request authentication token.</param>
         /// <param name="tailId">The id of the tail message from which to start retrieving subsequent messages (e.g. starting from message id that evaluates to index 4 will not include <c>convo.Messages[4]</c>). Here you would pass the id of the last message the client already has. If this is null or empty, all messages will be retrieved!</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
-        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, string tailId = null)
+        public async Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long tailId = 0)
         {
             var request = new RestRequest(
                 method: Method.GET,
@@ -131,8 +131,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(tailId), tailId);
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
+            request.AddQueryParameter(nameof(tailId), tailId.ToString(CultureInfo.InvariantCulture));
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
@@ -160,31 +160,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
             IRestResponse response = await restClient.ExecuteTaskAsync(request);
             return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
-        }
-
-        /// <summary>
-        /// Gets the index of a message inside a <see cref="Convo" />.
-        /// </summary>
-        /// <param name="convoId">The convo's identifier.</param>
-        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
-        /// <param name="userId">The user identifier of who's making the request.</param>
-        /// <param name="auth">The request authentication JWT.</param>
-        /// <param name="messageId">The message identifier.</param>
-        /// <returns>The <see cref="Message" />'s index integer; if something fails, <c>-1</c> is returned.</returns>
-        public async Task<int> IndexOf(string convoId, string convoPasswordSHA512, string userId, string auth, string messageId)
-        {
-            var request = new RestRequest(
-                method: Method.GET,
-                resource: new Uri($"convos/indexof/{convoId}", UriKind.Relative)
-            );
-
-            request.AddQueryParameter(nameof(userId), userId);
-            request.AddQueryParameter(nameof(auth), auth);
-            request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
-            request.AddQueryParameter(nameof(messageId), messageId);
-
-            IRestResponse response = await restClient.ExecuteTaskAsync(request);
-            return int.TryParse(response.Content, out int i) ? i : -1;
         }
 
         /// <summary>

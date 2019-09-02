@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Constants
+namespace GlitchedPolygons.GlitchedEpistle.Client
 {
     /// <summary>
     /// Class containing important <c>const</c> URLs.
@@ -26,11 +26,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Constants
         /// <summary>
         /// The Glitched Epistle base URL.
         /// </summary>
-        public const string EPISTLE = "https://epistle.glitchedpolygons.com/";
+        private static string epistleUrl = "https://epistle.glitchedpolygons.com/";
+
+        /// <summary>
+        /// Sets the Epistle server base url that this client connects to.
+        /// </summary>
+        /// <param name="url"></param>
+        public static void SetEpistleServerUrl(string url)
+        {
+            epistleUrl = url;
+        }
 
         /// <summary>
         /// The Glitched Epistle Web API base URL.
         /// </summary>
-        public const string EPISTLE_API_V1 = "https://epistle.glitchedpolygons.com/api/v1/";
+        public static string EpistleAPI_v1 => epistleUrl + "api/v1/";
     }
 }

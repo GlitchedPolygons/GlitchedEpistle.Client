@@ -148,7 +148,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                 CreatorId = convo.CreatorId,
                 Name = convo.Name,
                 Description = convo.Description,
-                CreationTimestampUTC = convo.CreationUTC,
+                CreationUTC = convo.CreationUTC,
                 ExpirationUTC = convo.ExpirationUTC,
                 Participants = convo.GetParticipantIdsCommaSeparated(),
                 BannedUsers = convo.GetBannedUsersCommaSeparated()
@@ -170,7 +170,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && CreatorId == other.CreatorId
                    && Description == other.Description
                    && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
-                   && CreationUTC.AlmostEquals(other.CreationTimestampUTC)
+                   && CreationUTC.AlmostEquals(other.CreationUTC)
                    && BannedUsers.UnorderedEqual(other.BannedUsers.Split(','))
                    && Participants.UnorderedEqual(other.Participants.Split(','));
         }

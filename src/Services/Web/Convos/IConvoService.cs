@@ -77,7 +77,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="auth">The request authentication token.</param>
         /// <param name="tailId">The id of the tail message from which to start retrieving subsequent messages (e.g. starting from message id that evaluates to index 4 will not include <c>convo.Messages[4]</c>). Here you would pass the id of the last message the client already has. If this is null or empty, all messages will be retrieved!</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
-        Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, string tailId = null);
+        Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long tailId = 0);
 
         /// <summary>
         /// Gets the latest and greatest messages from a convo!
