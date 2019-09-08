@@ -1,4 +1,5 @@
 # Glitched Epistle
+[![License Shield](https://img.shields.io/badge/license-GPLv3-brightgreen)](https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/LICENSE)
 [![API Docs](https://img.shields.io/badge/api-docs-informational)](https://glitchedpolygons.github.io/GlitchedEpistle.Client/api/index.html)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/1nbq83g1iqibs6hr/branch/master?svg=true)](https://ci.appveyor.com/project/GlitchedPolygons/glitchedepistle-client/branch/master)
 [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/GlitchedEpistle.Client.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/GlitchedEpistle.Client)
