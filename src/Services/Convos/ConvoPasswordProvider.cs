@@ -17,9 +17,7 @@
 */
 
 using System.Collections.Generic;
-
 using GlitchedPolygons.ExtensionMethods;
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
@@ -40,7 +38,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public string GetPasswordSHA512(string convoId)
         {
             lock (dictionary)
-            return dictionary.TryGetValue(convoId, out string pwSHA512) ? pwSHA512 : null;
+            {
+                return dictionary.TryGetValue(convoId, out string pwSHA512) ? pwSHA512 : null;
+            }
         }
 
         /// <summary>
@@ -53,7 +53,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             if (convoId.NotNullNotEmpty() && passwordSHA512.NotNullNotEmpty())
             {
                 lock (dictionary)
-                dictionary[convoId] = passwordSHA512;
+                {
+                    dictionary[convoId] = passwordSHA512;
+                }
             }
         }
 
@@ -78,7 +80,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public void Clear()
         {
             lock (dictionary)
-            dictionary.Clear();
+            {
+                dictionary.Clear();
+            }
         }
     }
 }

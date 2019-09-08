@@ -69,7 +69,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         Task<bool> ChangeConvoMetadata(EpistleRequestBody requestBody);
 
         /// <summary>
-        /// Gets the convo messages.
+        /// Gets the last convo messages since a specific message's <see cref="Message.Id"/>.
         /// </summary>
         /// <param name="convoId">The convo's identifier.</param>
         /// <param name="convoPasswordSHA512">The convo's password hash.</param>
@@ -77,7 +77,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="auth">The request authentication token.</param>
         /// <param name="tailId">The id of the tail message from which to start retrieving subsequent messages (e.g. starting from message id that evaluates to index 4 will not include <c>convo.Messages[4]</c>). Here you would pass the id of the last message the client already has. If this is null or empty, all messages will be retrieved!</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
-        Task<Message[]> GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long tailId = 0);
+        Task<Message[]> GetConvoMessagesSinceTailId(string convoId, string convoPasswordSHA512, string userId, string auth, long tailId = 0);
 
         /// <summary>
         /// Gets the latest and greatest messages from a convo!
@@ -89,6 +89,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="n">How many messages to retrieve?</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if everything is up to date or if something failed).</returns>
         Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long n);
+
+        /// <summary>
+        /// Gets a specific range of messages from the db, sorted by descending timestamp.<para> </para>
+        /// Both the <paramref name="fromId"/> and <paramref name="toId"/> arguments are INCLUSIVE!
+        /// </summary>
+        /// <param name="convoId">The convo id whose latest and greatest messages you want to retrieve.</param>
+        /// <param name="userId">The user id for whom to retrieve the messages.</param>
+        /// <param name="convoPasswordSHA512">The convo's password SHA512.</param>
+        /// <param name="fromId">The <see cref="Message.Id"/> from which to start looking for messages onwards (inclusive).</param>
+        /// <param name="toId">The <see cref="Message.Id"/> until which to retrieve messages (inclusive).</param>
+        /// <param name="auth">Request authorization token.</param>
+        /// <returns>The retrieved messages (or an empty array if nothing was found). <c>null</c> if the request failed altogether.</returns>
+        Task<Message[]> GetConvoMessagesFromRange(string convoId, string convoPasswordSHA512, long fromId, long toId, string userId, string auth);
 
         /// <summary>
         /// Join a <see cref="Convo" />.

@@ -5,83 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.html",
-          "hash": "pXyGr/8gtuY6ng9GFier+g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Constants.html",
-          "hash": "eY7qT1dil6fVXpk95EK4SQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html",
-          "hash": "mDxDP3/g+A27tndwZRjk9Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.html",
-          "hash": "mmjdctbh+1w/PwIS2hlnlA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html",
-          "hash": "qxILUUBh40dTNIf6OhASAg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html",
-          "hash": "zWsEILmwF103pwerNnZ8rw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html",
-          "hash": "qJLfOrcO1bTAL7nQLBPu6g=="
+          "hash": "AC4CXsdAooBMIsjcLm12tg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.html",
-          "hash": "iQ5Fo46xRo0ItBezmebmig=="
+          "hash": "DkQXw6wHEo1smJPN4zrYzw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html",
-          "hash": "CtPeP1KEQLl+4qp/XJuvaw=="
+          "hash": "Iy0LDkxrPt+Ro/xYkI5wsQ=="
         }
       },
       "is_incremental": false,
@@ -189,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html",
-          "hash": "/p/KiiVBxtdRKIen6HXEOQ=="
+          "hash": "tTj/Wr9bvcd9kDlI6z3+5w=="
         }
       },
       "is_incremental": false,
@@ -237,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html",
-          "hash": "B0eEbP3ZAq4dDLhKv8U7hA=="
+          "hash": "1/TYRSS8QTk52gEpxd36uQ=="
         }
       },
       "is_incremental": false,
@@ -300,7 +228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html",
-          "hash": "Ob2lN6v8oF6sdmKJVRqmMw=="
+          "hash": "/TpBBu+bXQZtDAm3bO63tQ=="
         }
       },
       "is_incremental": false,
@@ -315,7 +243,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html",
-          "hash": "gIL4Ciofp7VByB4PqhxCrQ=="
+          "hash": "riLknDIkvn0nfPCWynXmiA=="
         }
       },
       "is_incremental": false,
@@ -351,7 +279,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html",
-          "hash": "WMr4WL8nonjM6LnUUHnlpQ=="
+          "hash": "KoOqz42uj5BZMNH89k7pLg=="
         }
       },
       "is_incremental": false,
@@ -435,7 +363,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoPasswordProvider.html",
-          "hash": "8iAM2ufznt87ZWDW53qzzQ=="
+          "hash": "h3BHuFdovn4MNAn8NT64Wg=="
         }
       },
       "is_incremental": false,
@@ -450,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html",
-          "hash": "OexurDmg64zDRQvLH7EKlQ=="
+          "hash": "dMrBsqJePXA5SUq4T7t5ag=="
         }
       },
       "is_incremental": false,
@@ -462,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html",
-          "hash": "6NpwBO/OOrn0wjm0GUH60g=="
+          "hash": "lPSS/aXVYdPBShZWvOlPHw=="
         }
       },
       "is_incremental": false,
@@ -486,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html",
-          "hash": "JoNwli30FS9QhAXB31i18Q=="
+          "hash": "IT4cqgiDmWDiJ8pfePH2mg=="
         }
       },
       "is_incremental": false,
@@ -498,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageRepository.html",
-          "hash": "62YeF3V9rzxCMfD0zhW18g=="
+          "hash": "qDW98AsVDunwQ+eZqeqaCg=="
         }
       },
       "is_incremental": false,
@@ -513,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html",
-          "hash": "purOLs0tKJssdEtuH6RlxA=="
+          "hash": "q7Tc+PuTKWYSs9GvST6Q5Q=="
         }
       },
       "is_incremental": false,
@@ -533,47 +461,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.html",
-          "hash": "6opteW2G0/d2rCZGcsGJzw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.html",
-          "hash": "/WWduEyuylcb3aZcqzppuA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.html",
-          "hash": "TPUJM01rpVCqAxFjix/vhw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService.html",
-          "hash": "9rEcgHWrTKwXjRshdMpKYw=="
+          "hash": "HgWchGSBsI6XelqKYGJCSg=="
         }
       },
       "is_incremental": false,
@@ -597,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html",
-          "hash": "JJClWtGfHvtO+UyRLOao7A=="
+          "hash": "pSg+1OSzWMeAzjqj+cqTcg=="
         }
       },
       "is_incremental": false,
@@ -621,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html",
-          "hash": "s4J8LjM74615rt3jevE+lA=="
+          "hash": "+VW5RFvsNkP2D2WrsK0hAQ=="
         }
       },
       "is_incremental": false,
@@ -633,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html",
-          "hash": "gSWLICRcjRymHLQSc2FkfQ=="
+          "hash": "LW1JOrpETlh13+u74gwdsA=="
         }
       },
       "is_incremental": false,
@@ -645,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.html",
-          "hash": "8YWX/RwP/UsybPf/mK00KQ=="
+          "hash": "bxzg+QTEqycvQZ7pyBP6gA=="
         }
       },
       "is_incremental": false,
@@ -677,11 +569,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html",
+          "hash": "ZFmzIiVpK6Lqv4LdtxZ4BQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.html",
-          "hash": "zAqq6rvfdgvn/gFE4dynyA=="
+          "hash": "GIUo4JDZviz4UHyOCQ7LFA=="
         }
       },
       "is_incremental": false,
@@ -696,7 +600,7 @@
           "hash": "eCbl70ldg0gyiZrUEC7P4g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -705,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "QOpFUP2vnWodIwHQXl8l6g=="
+          "hash": "1D3dmFhUIfQpzbukZKxufA=="
         }
       },
       "is_incremental": false,
@@ -772,6 +676,13 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -781,15 +692,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 56,
-          "skipped_file_count": 13
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 48,
+          "skipped_file_count": 28
         }
       }
     },

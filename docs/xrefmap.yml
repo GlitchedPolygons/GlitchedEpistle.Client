@@ -1,215 +1,18 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Constants
-  name: GlitchedPolygons.GlitchedEpistle.Client.Constants
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Constants.html
-  commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Constants
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Constants
-  nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Constants
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs
-  name: URLs
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs
-  nameWithType: URLs
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE
-  name: EPISTLE
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.html#GlitchedPolygons_GlitchedEpistle_Client_Constants_URLs_EPISTLE
-  commentId: F:GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE
-  nameWithType: URLs.EPISTLE
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE_API_V1
-  name: EPISTLE_API_V1
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.html#GlitchedPolygons_GlitchedEpistle_Client_Constants_URLs_EPISTLE_API_V1
-  commentId: F:GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE_API_V1
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Constants.URLs.EPISTLE_API_V1
-  nameWithType: URLs.EPISTLE_API_V1
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions
   name: GlitchedPolygons.GlitchedEpistle.Client.Extensions
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.html
   commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Extensions
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions
   nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Extensions
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions
-  name: ByteArrayExtensions
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions
-  nameWithType: ByteArrayExtensions
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString(System.Byte[])
-  name: GetFileSizeString(Byte[])
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_ByteArrayExtensions_GetFileSizeString_System_Byte___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString(System.Byte[])
-  name.vb: GetFileSizeString(Byte())
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString(System.Byte[])
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString(System.Byte())
-  nameWithType: ByteArrayExtensions.GetFileSizeString(Byte[])
-  nameWithType.vb: ByteArrayExtensions.GetFileSizeString(Byte())
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString*
-  name: GetFileSizeString
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_ByteArrayExtensions_GetFileSizeString_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.ByteArrayExtensions.GetFileSizeString
-  nameWithType: ByteArrayExtensions.GetFileSizeString
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions
-  name: CollectionExtensions
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions
-  nameWithType: CollectionExtensions
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual*
-  name: UnorderedEqual
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_CollectionExtensions_UnorderedEqual_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual
-  nameWithType: CollectionExtensions.UnorderedEqual
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})
-  name: UnorderedEqual<T>(ICollection<T>, ICollection<T>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_CollectionExtensions_UnorderedEqual__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_ICollection___0__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})
-  name.vb: UnorderedEqual(Of T)(ICollection(Of T), ICollection(Of T))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual<T>(System.Collections.Generic.ICollection<T>, System.Collections.Generic.ICollection<T>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Extensions.CollectionExtensions.UnorderedEqual(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.ICollection(Of T))
-  nameWithType: CollectionExtensions.UnorderedEqual<T>(ICollection<T>, ICollection<T>)
-  nameWithType.vb: CollectionExtensions.UnorderedEqual(Of T)(ICollection(Of T), ICollection(Of T))
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions
-  name: DateTimeExtensions
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions
-  nameWithType: DateTimeExtensions
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals(System.DateTime,System.DateTime,System.Double)
-  name: AlmostEquals(DateTime, DateTime, Double)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_AlmostEquals_System_DateTime_System_DateTime_System_Double_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals(System.DateTime,System.DateTime,System.Double)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals(System.DateTime, System.DateTime, System.Double)
-  nameWithType: DateTimeExtensions.AlmostEquals(DateTime, DateTime, Double)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals*
-  name: AlmostEquals
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_AlmostEquals_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.AlmostEquals
-  nameWithType: DateTimeExtensions.AlmostEquals
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeMilliseconds(System.Int64)
-  name: FromUnixTimeMilliseconds(Int64)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_FromUnixTimeMilliseconds_System_Int64_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeMilliseconds(System.Int64)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeMilliseconds(System.Int64)
-  nameWithType: DateTimeExtensions.FromUnixTimeMilliseconds(Int64)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeMilliseconds*
-  name: FromUnixTimeMilliseconds
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_FromUnixTimeMilliseconds_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeMilliseconds
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeMilliseconds
-  nameWithType: DateTimeExtensions.FromUnixTimeMilliseconds
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds(System.Int64)
-  name: FromUnixTimeSeconds(Int64)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_FromUnixTimeSeconds_System_Int64_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds(System.Int64)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds(System.Int64)
-  nameWithType: DateTimeExtensions.FromUnixTimeSeconds(Int64)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds*
-  name: FromUnixTimeSeconds
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_FromUnixTimeSeconds_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.FromUnixTimeSeconds
-  nameWithType: DateTimeExtensions.FromUnixTimeSeconds
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeMilliseconds(System.DateTime)
-  name: ToUnixTimeMilliseconds(DateTime)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeMilliseconds_System_DateTime_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeMilliseconds(System.DateTime)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeMilliseconds(System.DateTime)
-  nameWithType: DateTimeExtensions.ToUnixTimeMilliseconds(DateTime)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeMilliseconds*
-  name: ToUnixTimeMilliseconds
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeMilliseconds_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeMilliseconds
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeMilliseconds
-  nameWithType: DateTimeExtensions.ToUnixTimeMilliseconds
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
-  name: ToUnixTimeSeconds(DateTime)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeSeconds_System_DateTime_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds(System.DateTime)
-  nameWithType: DateTimeExtensions.ToUnixTimeSeconds(DateTime)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds*
-  name: ToUnixTimeSeconds
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DateTimeExtensions_ToUnixTimeSeconds_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DateTimeExtensions.ToUnixTimeSeconds
-  nameWithType: DateTimeExtensions.ToUnixTimeSeconds
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions
-  name: DirectoryInfoExtensions
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions
-  nameWithType: DirectoryInfoExtensions
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively(System.IO.DirectoryInfo)
-  name: DeleteRecursively(DirectoryInfo)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DirectoryInfoExtensions_DeleteRecursively_System_IO_DirectoryInfo_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively(System.IO.DirectoryInfo)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively(System.IO.DirectoryInfo)
-  nameWithType: DirectoryInfoExtensions.DeleteRecursively(DirectoryInfo)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively*
-  name: DeleteRecursively
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_DirectoryInfoExtensions_DeleteRecursively_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.DirectoryInfoExtensions.DeleteRecursively
-  nameWithType: DirectoryInfoExtensions.DeleteRecursively
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions
   name: StringExtensions
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions
   nameWithType: StringExtensions
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5(System.String,System.Boolean)
-  name: MD5(String, Boolean)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_MD5_System_String_System_Boolean_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5(System.String,System.Boolean)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5(System.String, System.Boolean)
-  nameWithType: StringExtensions.MD5(String, Boolean)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5*
-  name: MD5
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_MD5_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.MD5
-  nameWithType: StringExtensions.MD5
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty(System.String)
-  name: NotNullNotEmpty(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_NotNullNotEmpty_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty(System.String)
-  nameWithType: StringExtensions.NotNullNotEmpty(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty*
-  name: NotNullNotEmpty
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_NotNullNotEmpty_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NotNullNotEmpty
-  nameWithType: StringExtensions.NotNullNotEmpty
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty(System.String)
-  name: NullOrEmpty(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_NullOrEmpty_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty(System.String)
-  nameWithType: StringExtensions.NullOrEmpty(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty*
-  name: NullOrEmpty
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_NullOrEmpty_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.NullOrEmpty
-  nameWithType: StringExtensions.NullOrEmpty
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser(System.String)
   name: OpenUrlInBrowser(String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_OpenUrlInBrowser_System_String_
@@ -223,19 +26,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.OpenUrlInBrowser
   nameWithType: StringExtensions.OpenUrlInBrowser
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String,System.Boolean)
-  name: SHA512(String, Boolean)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_SHA512_System_String_System_Boolean_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String,System.Boolean)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512(System.String, System.Boolean)
-  nameWithType: StringExtensions.SHA512(String, Boolean)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512*
-  name: SHA512
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.html#GlitchedPolygons_GlitchedEpistle_Client_Extensions_StringExtensions_SHA512_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions.SHA512
-  nameWithType: StringExtensions.SHA512
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models
   name: GlitchedPolygons.GlitchedEpistle.Client.Models
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.html
@@ -261,19 +51,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.BannedUsers
   nameWithType: Convo.BannedUsers
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC
-  name: CreationTimestampUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_CreationTimestampUTC
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC
-  nameWithType: Convo.CreationTimestampUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC*
-  name: CreationTimestampUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_CreationTimestampUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationUTC
+  name: CreationUTC
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_CreationUTC
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationUTC
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationUTC
+  nameWithType: Convo.CreationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationUTC*
+  name: CreationUTC
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_CreationUTC_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationUTC
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationTimestampUTC
-  nameWithType: Convo.CreationTimestampUTC
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreationUTC
+  nameWithType: Convo.CreationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.CreatorId
   name: CreatorId
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_CreatorId
@@ -834,19 +624,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.BannedUsers
   nameWithType: ConvoMetadataDto.BannedUsers
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC
-  name: CreationTimestampUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_CreationTimestampUTC
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC
-  nameWithType: ConvoMetadataDto.CreationTimestampUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC*
-  name: CreationTimestampUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_CreationTimestampUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationUTC
+  name: CreationUTC
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_CreationUTC
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationUTC
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationUTC
+  nameWithType: ConvoMetadataDto.CreationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationUTC*
+  name: CreationUTC
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_CreationUTC_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationUTC
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationTimestampUTC
-  nameWithType: ConvoMetadataDto.CreationTimestampUTC
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreationUTC
+  nameWithType: ConvoMetadataDto.CreationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.CreatorId
   name: CreatorId
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.ConvoMetadataDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_ConvoMetadataDto_CreatorId
@@ -1272,19 +1062,19 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto
   nameWithType: UserCreationResponseDto
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC
-  name: CreationTimestampUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_CreationTimestampUTC
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC
-  nameWithType: UserCreationResponseDto.CreationTimestampUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC*
-  name: CreationTimestampUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_CreationTimestampUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC
+  name: CreationUTC
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_CreationUTC
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC
+  nameWithType: UserCreationResponseDto.CreationUTC
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC*
+  name: CreationUTC
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_CreationUTC_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationTimestampUTC
-  nameWithType: UserCreationResponseDto.CreationTimestampUTC
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC
+  nameWithType: UserCreationResponseDto.CreationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto)
   name: Equals(UserCreationResponseDto)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Equals_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_
@@ -1304,19 +1094,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Equals
   nameWithType: UserCreationResponseDto.Equals
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
-  name: ExpirationUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_ExpirationUTC
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
-  nameWithType: UserCreationResponseDto.ExpirationUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC*
-  name: ExpirationUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_ExpirationUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.ExpirationUTC
-  nameWithType: UserCreationResponseDto.ExpirationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode
   name: GetHashCode()
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode
@@ -1343,32 +1120,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Id
   nameWithType: UserCreationResponseDto.Id
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512
-  name: PasswordSHA512
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_PasswordSHA512
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512
-  nameWithType: UserCreationResponseDto.PasswordSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512*
-  name: PasswordSHA512
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_PasswordSHA512_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.PasswordSHA512
-  nameWithType: UserCreationResponseDto.PasswordSHA512
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role
-  name: Role
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Role
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role
-  nameWithType: UserCreationResponseDto.Role
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role*
-  name: Role
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_Role_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.Role
-  nameWithType: UserCreationResponseDto.Role
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.TotpEmergencyBackupCodes
   name: TotpEmergencyBackupCodes
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_TotpEmergencyBackupCodes
@@ -1793,19 +1544,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Equals
   nameWithType: User.Equals
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
-  name: ExpirationUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_ExpirationUTC
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
-  nameWithType: User.ExpirationUTC
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC*
-  name: ExpirationUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_ExpirationUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.ExpirationUTC
-  nameWithType: User.ExpirationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode
   name: GetHashCode()
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_GetHashCode
@@ -1832,19 +1570,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Id
   nameWithType: User.Id
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired
-  name: IsExpired()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_IsExpired
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired()
-  nameWithType: User.IsExpired()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired*
-  name: IsExpired
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_IsExpired_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.IsExpired
-  nameWithType: User.IsExpired
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.User.LoginFailures
   name: LoginFailures
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_LoginFailures
@@ -2556,19 +2281,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.DeleteConvo
   nameWithType: ConvoService.DeleteConvo
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.String)
-  name: GetConvoMessages(String, String, String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMessages_System_String_System_String_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessages(System.String, System.String, System.String, System.String, System.String)
-  nameWithType: ConvoService.GetConvoMessages(String, String, String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessages*
-  name: GetConvoMessages
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMessages_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesFromRange(System.String,System.String,System.Int64,System.Int64,System.String,System.String)
+  name: GetConvoMessagesFromRange(String, String, Int64, Int64, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMessagesFromRange_System_String_System_String_System_Int64_System_Int64_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesFromRange(System.String,System.String,System.Int64,System.Int64,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesFromRange(System.String, System.String, System.Int64, System.Int64, System.String, System.String)
+  nameWithType: ConvoService.GetConvoMessagesFromRange(String, String, Int64, Int64, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesFromRange*
+  name: GetConvoMessagesFromRange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMessagesFromRange_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesFromRange
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessages
-  nameWithType: ConvoService.GetConvoMessages
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesFromRange
+  nameWithType: ConvoService.GetConvoMessagesFromRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesSinceTailId(System.String,System.String,System.String,System.String,System.Int64)
+  name: GetConvoMessagesSinceTailId(String, String, String, String, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMessagesSinceTailId_System_String_System_String_System_String_System_String_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesSinceTailId(System.String,System.String,System.String,System.String,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesSinceTailId(System.String, System.String, System.String, System.String, System.Int64)
+  nameWithType: ConvoService.GetConvoMessagesSinceTailId(String, String, String, String, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesSinceTailId*
+  name: GetConvoMessagesSinceTailId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMessagesSinceTailId_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesSinceTailId
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMessagesSinceTailId
+  nameWithType: ConvoService.GetConvoMessagesSinceTailId
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMetadata(System.String,System.String,System.String,System.String)
   name: GetConvoMetadata(String, String, String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetConvoMetadata_System_String_System_String_System_String_System_String_
@@ -2582,19 +2320,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetConvoMetadata
   nameWithType: ConvoService.GetConvoMetadata
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)
-  name: IndexOf(String, String, String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_IndexOf_System_String_System_String_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.IndexOf(System.String, System.String, System.String, System.String, System.String)
-  nameWithType: ConvoService.IndexOf(String, String, String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.IndexOf*
-  name: IndexOf
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_IndexOf_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.IndexOf
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
+  name: GetLastConvoMessages(String, String, String, String, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64)
+  nameWithType: ConvoService.GetLastConvoMessages(String, String, String, String, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages*
+  name: GetLastConvoMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetLastConvoMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.IndexOf
-  nameWithType: ConvoService.IndexOf
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages
+  nameWithType: ConvoService.GetLastConvoMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.JoinConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
   name: JoinConvo(EpistleRequestBody)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_JoinConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
@@ -2750,19 +2488,32 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.DeleteConvo
   nameWithType: IConvoService.DeleteConvo
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.String)
-  name: GetConvoMessages(String, String, String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessages_System_String_System_String_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages(System.String, System.String, System.String, System.String, System.String)
-  nameWithType: IConvoService.GetConvoMessages(String, String, String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages*
-  name: GetConvoMessages
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessages_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange(System.String,System.String,System.Int64,System.Int64,System.String,System.String)
+  name: GetConvoMessagesFromRange(String, String, Int64, Int64, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesFromRange_System_String_System_String_System_Int64_System_Int64_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange(System.String,System.String,System.Int64,System.Int64,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange(System.String, System.String, System.Int64, System.Int64, System.String, System.String)
+  nameWithType: IConvoService.GetConvoMessagesFromRange(String, String, Int64, Int64, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange*
+  name: GetConvoMessagesFromRange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesFromRange_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages
-  nameWithType: IConvoService.GetConvoMessages
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange
+  nameWithType: IConvoService.GetConvoMessagesFromRange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId(System.String,System.String,System.String,System.String,System.Int64)
+  name: GetConvoMessagesSinceTailId(String, String, String, String, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesSinceTailId_System_String_System_String_System_String_System_String_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId(System.String,System.String,System.String,System.String,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId(System.String, System.String, System.String, System.String, System.Int64)
+  nameWithType: IConvoService.GetConvoMessagesSinceTailId(String, String, String, String, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId*
+  name: GetConvoMessagesSinceTailId
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesSinceTailId_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId
+  nameWithType: IConvoService.GetConvoMessagesSinceTailId
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMetadata(System.String,System.String,System.String,System.String)
   name: GetConvoMetadata(String, String, String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMetadata_System_String_System_String_System_String_System_String_
@@ -2776,19 +2527,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMetadata
   nameWithType: IConvoService.GetConvoMetadata
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)
-  name: IndexOf(String, String, String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_IndexOf_System_String_System_String_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf(System.String, System.String, System.String, System.String, System.String)
-  nameWithType: IConvoService.IndexOf(String, String, String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf*
-  name: IndexOf
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_IndexOf_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
+  name: GetLastConvoMessages(String, String, String, String, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64)
+  nameWithType: IConvoService.GetLastConvoMessages(String, String, String, String, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages*
+  name: GetLastConvoMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf
-  nameWithType: IConvoService.IndexOf
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages
+  nameWithType: IConvoService.GetLastConvoMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.JoinConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
   name: JoinConvo(EpistleRequestBody)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_JoinConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
@@ -2937,12 +2688,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find
   nameWithType: MessageRepositorySQLite.Find
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get(System.String)
-  name: Get(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Get_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get(System.String)
-  nameWithType: MessageRepositorySQLite.Get(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get(System.Int64)
+  name: Get(Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Get_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get(System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get(System.Int64)
+  nameWithType: MessageRepositorySQLite.Get(Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Get*
   name: Get
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Get_
@@ -2989,15 +2740,15 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.GetLastMessages
   nameWithType: MessageRepositorySQLite.GetLastMessages
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item(System.String)
-  name: Item[String]
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Item_System_String_
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item(System.String)
-  name.vb: Item(String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item[System.String]
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item(System.String)
-  nameWithType: MessageRepositorySQLite.Item[String]
-  nameWithType.vb: MessageRepositorySQLite.Item(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item(System.Int64)
+  name: Item[Int64]
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Item_System_Int64_
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item(System.Int64)
+  name.vb: Item(Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item[System.Int64]
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item(System.Int64)
+  nameWithType: MessageRepositorySQLite.Item[Int64]
+  nameWithType.vb: MessageRepositorySQLite.Item(Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Item*
   name: Item
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Item_
@@ -3011,12 +2762,12 @@ references:
   commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(GlitchedPolygons.GlitchedEpistle.Client.Models.Message)
   nameWithType: MessageRepositorySQLite.Remove(Message)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(System.String)
-  name: Remove(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Remove_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(System.String)
-  nameWithType: MessageRepositorySQLite.Remove(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(System.Int64)
+  name: Remove(Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Remove_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove(System.Int64)
+  nameWithType: MessageRepositorySQLite.Remove(Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Remove*
   name: Remove
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Remove_
@@ -3046,15 +2797,15 @@ references:
   fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
   nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Message>)
   nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Message))
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
-  name: RemoveRange(IEnumerable<String>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
-  name.vb: RemoveRange(IEnumerable(Of String))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of System.String))
-  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<String>)
-  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of String))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.Int64})
+  name: RemoveRange(IEnumerable<Int64>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_Int64__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.Int64})
+  name.vb: RemoveRange(IEnumerable(Of Int64))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<System.Int64>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of System.Int64))
+  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Int64>)
+  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Int64))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name: RemoveRange(Expression<Func<Message, Boolean>>)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
@@ -3100,50 +2851,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Update
   nameWithType: MessageRepositorySQLite.Update
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
-  name: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.html
-  commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
-  nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService
-  name: CouponService
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService
-  nameWithType: CouponService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.UseCoupon(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
-  name: UseCoupon(EpistleRequestBody)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Coupons_CouponService_UseCoupon_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.UseCoupon(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.UseCoupon(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
-  nameWithType: CouponService.UseCoupon(EpistleRequestBody)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.UseCoupon*
-  name: UseCoupon
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Coupons_CouponService_UseCoupon_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.UseCoupon
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.CouponService.UseCoupon
-  nameWithType: CouponService.UseCoupon
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService
-  name: ICouponService
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService
-  nameWithType: ICouponService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.UseCoupon(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
-  name: UseCoupon(EpistleRequestBody)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Coupons_ICouponService_UseCoupon_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.UseCoupon(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.UseCoupon(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
-  nameWithType: ICouponService.UseCoupon(EpistleRequestBody)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.UseCoupon*
-  name: UseCoupon
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Coupons_ICouponService_UseCoupon_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.UseCoupon
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Coupons.ICouponService.UseCoupon
-  nameWithType: ICouponService.UseCoupon
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService
   name: EpistleWebApiService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService.html
@@ -3271,19 +2978,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetConvos
   nameWithType: IUserService.GetConvos
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserExpirationUTC(System.String)
-  name: GetUserExpirationUTC(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserExpirationUTC_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserExpirationUTC(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserExpirationUTC(System.String)
-  nameWithType: IUserService.GetUserExpirationUTC(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserExpirationUTC*
-  name: GetUserExpirationUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserExpirationUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserExpirationUTC
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserExpirationUTC
-  nameWithType: IUserService.GetUserExpirationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPrivateKey(System.String,System.String,System.String)
   name: GetUserPrivateKey(String, String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserPrivateKey_System_String_System_String_System_String_
@@ -3407,19 +3101,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetConvos
   nameWithType: UserService.GetConvos
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserExpirationUTC(System.String)
-  name: GetUserExpirationUTC(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserExpirationUTC_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserExpirationUTC(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserExpirationUTC(System.String)
-  nameWithType: UserService.GetUserExpirationUTC(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserExpirationUTC*
-  name: GetUserExpirationUTC
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserExpirationUTC_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserExpirationUTC
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserExpirationUTC
-  nameWithType: UserService.GetUserExpirationUTC
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPrivateKey(System.String,System.String,System.String)
   name: GetUserPrivateKey(String, String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserPrivateKey_System_String_System_String_System_String_
@@ -3549,3 +3230,48 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey
   nameWithType: KeyExchangeUtility.EncryptAndCompressPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility
+  name: UrlUtility
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility
+  nameWithType: UrlUtility
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleAPI_v1
+  name: EpistleAPI_v1
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_EpistleAPI_v1
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleAPI_v1
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleAPI_v1
+  nameWithType: UrlUtility.EpistleAPI_v1
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleAPI_v1*
+  name: EpistleAPI_v1
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_EpistleAPI_v1_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleAPI_v1
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleAPI_v1
+  nameWithType: UrlUtility.EpistleAPI_v1
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl
+  name: EpistleBaseUrl
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_EpistleBaseUrl
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl
+  nameWithType: UrlUtility.EpistleBaseUrl
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl*
+  name: EpistleBaseUrl
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_EpistleBaseUrl_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl
+  nameWithType: UrlUtility.EpistleBaseUrl
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl(System.String)
+  name: SetEpistleServerUrl(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_SetEpistleServerUrl_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl(System.String)
+  nameWithType: UrlUtility.SetEpistleServerUrl(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl*
+  name: SetEpistleServerUrl
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_SetEpistleServerUrl_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl
+  nameWithType: UrlUtility.SetEpistleServerUrl

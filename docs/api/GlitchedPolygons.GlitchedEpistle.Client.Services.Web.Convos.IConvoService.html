@@ -166,7 +166,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
       <tr>
         <td><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody.html">EpistleRequestBody</a></td>
         <td><span class="parametername">requestBody</span></td>
-        <td><p>Request body containing the coupon redeeming parameters (auth, etc...).</p>
+        <td><p>Request body containing the parameters (auth, etc...).</p>
 </td>
       </tr>
     </tbody>
@@ -239,19 +239,100 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessages_System_String_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesFromRange_System_String_System_String_System_Int64_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange(System.String%2CSystem.String%2CSystem.Int64%2CSystem.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L80">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L104">View Source</a>
   </span>
-  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessages_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessages_System_String_System_String_System_String_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessages(System.String,System.String,System.String,System.String,System.String)">GetConvoMessages(String, String, String, String, String)</h4>
-  <div class="markdown level1 summary"><p>Gets the convo messages.</p>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesFromRange_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesFromRange_System_String_System_String_System_Int64_System_Int64_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesFromRange(System.String,System.String,System.Int64,System.Int64,System.String,System.String)">GetConvoMessagesFromRange(String, String, Int64, Int64, String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a specific range of messages from the db, sorted by descending timestamp.<p> </p>
+Both the <code data-dev-comment-type="paramref" class="paramref">fromId</code> and <code data-dev-comment-type="paramref" class="paramref">toId</code> arguments are INCLUSIVE!</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Message[]&gt; GetConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, string tailId = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Message[]&gt; GetConvoMessagesFromRange(string convoId, string convoPasswordSHA512, long fromId, long toId, string userId, string auth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">convoId</span></td>
+        <td><p>The convo id whose latest and greatest messages you want to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">convoPasswordSHA512</span></td>
+        <td><p>The convo's password SHA512.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">fromId</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_Id">Id</a> from which to start looking for messages onwards (inclusive).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">toId</span></td>
+        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_Id">Id</a> until which to retrieve messages (inclusive).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The user id for whom to retrieve the messages.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">auth</span></td>
+        <td><p>Request authorization token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>[]&gt;</td>
+        <td><p>The retrieved messages (or an empty array if nothing was found). <code>null</code> if the request failed altogether.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesSinceTailId_System_String_System_String_System_String_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L80">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesSinceTailId_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetConvoMessagesSinceTailId_System_String_System_String_System_String_System_String_System_Int64_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetConvoMessagesSinceTailId(System.String,System.String,System.String,System.String,System.Int64)">GetConvoMessagesSinceTailId(String, String, String, String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Gets the last convo messages since a specific message's <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_Id">Id</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Message[]&gt; GetConvoMessagesSinceTailId(string convoId, string convoPasswordSHA512, string userId, string auth, long tailId = 0L)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,7 +369,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">tailId</span></td>
         <td><p>The id of the tail message from which to start retrieving subsequent messages (e.g. starting from message id that evaluates to index 4 will not include <code>convo.Messages[4]</code>). Here you would pass the id of the last message the client already has. If this is null or empty, all messages will be retrieved!</p>
 </td>
@@ -381,19 +462,19 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_IndexOf_System_String_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L91">View Source</a>
   </span>
-  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_IndexOf_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf*"></a>
-  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_IndexOf_System_String_System_String_System_String_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.IndexOf(System.String,System.String,System.String,System.String,System.String)">IndexOf(String, String, String, String, String)</h4>
-  <div class="markdown level1 summary"><p>Gets the index of a message inside a <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Convo.html">Convo</a>.</p>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)">GetLastConvoMessages(String, String, String, String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Gets the latest and greatest messages from a convo!</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;int&gt; IndexOf(string convoId, string convoPasswordSHA512, string userId, string auth, string messageId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Message[]&gt; GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long n)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,19 +501,19 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">userId</span></td>
-        <td><p>The user identifier of who's making the request.</p>
+        <td><p>The user identifier (needs to be a convo participant).</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">auth</span></td>
-        <td><p>The request authentication JWT.</p>
+        <td><p>The request authentication token.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">messageId</span></td>
-        <td><p>The message identifier.</p>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">n</span></td>
+        <td><p>How many messages to retrieve?</p>
 </td>
       </tr>
     </tbody>
@@ -447,8 +528,8 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>The <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>'s index integer; if something fails, <code>-1</code> is returned.</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>[]&gt;</td>
+        <td><p>The retrieved <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html">Message</a>s (<code>null</code> if everything is up to date or if something failed).</p>
 </td>
       </tr>
     </tbody>
@@ -458,7 +539,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_JoinConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.JoinConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L98">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L111">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_JoinConvo_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.JoinConvo*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_JoinConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.JoinConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)">JoinConvo(EpistleRequestBody)</h4>
@@ -508,7 +589,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_KickUser_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.KickUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L112">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L125">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_KickUser_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.KickUser*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_KickUser_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.KickUser(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)">KickUser(EpistleRequestBody)</h4>
@@ -558,7 +639,7 @@ If you're assigning a new admin, he needs to be a participant of the <a class="x
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_LeaveConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.LeaveConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L105">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Web/Convos/IConvoService.cs/#L118">View Source</a>
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_LeaveConvo_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.LeaveConvo*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_LeaveConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.LeaveConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)">LeaveConvo(EpistleRequestBody)</h4>
