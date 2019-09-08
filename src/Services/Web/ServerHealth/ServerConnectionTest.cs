@@ -33,9 +33,29 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
     /// Implements the <see cref="IServerConnectionTest" /> interface.
     /// </summary>
     /// <seealso cref="IServerConnectionTest" />
-    public class ServerConnectionTest : IServerConnectionTest
+    public class ServerConnectionTest : IServerConnectionTest, IDisposable
     {
-        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleBaseUrl);
+        private RestClient restClient = new RestClient(UrlUtility.EpistleBaseUrl);
+
+        public ServerConnectionTest()
+        {
+            UrlUtility.ChangedEpistleServerUrl += UrlUtility_ChangedEpistleServerUrl;
+        }
+
+        ~ServerConnectionTest()
+        {
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            UrlUtility.ChangedEpistleServerUrl -= UrlUtility_ChangedEpistleServerUrl;
+        }
+
+        private void UrlUtility_ChangedEpistleServerUrl()
+        {
+            restClient = new RestClient(UrlUtility.EpistleBaseUrl);
+        }
 
         /// <summary>
         /// Tests the connection to the epistle server.<para> </para>

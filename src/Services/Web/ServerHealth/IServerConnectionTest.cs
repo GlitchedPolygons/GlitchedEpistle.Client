@@ -17,6 +17,7 @@
 */
 
 #region
+using System;
 using System.Threading.Tasks;
 #endregion
 
@@ -25,7 +26,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
     /// <summary>
     /// Service interface for testing the connection to the epistle server.
     /// </summary>
-    public interface IServerConnectionTest
+    public interface IServerConnectionTest : IDisposable
     {
         /// <summary>
         /// Tests the connection to the epistle server.<para> </para>

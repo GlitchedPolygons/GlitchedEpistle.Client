@@ -39,10 +39,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
     /// Implements the <see cref="IUserService" /> interface.
     /// </summary>
     /// <seealso cref="IUserService" />
-    public class UserService : EpistleWebApiService, IUserService
+    public class UserService : EpistleWebApiService, IUserService, IDisposable
     {
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
-        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+        private RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+
+        public UserService()
+        {
+            UrlUtility.ChangedEpistleServerUrl += UrlUtility_ChangedEpistleServerUrl;
+        }
+
+        ~UserService()
+        {
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            UrlUtility.ChangedEpistleServerUrl -= UrlUtility_ChangedEpistleServerUrl;
+        }
+
+        private void UrlUtility_ChangedEpistleServerUrl()
+        {
+            restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+        }
 
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials

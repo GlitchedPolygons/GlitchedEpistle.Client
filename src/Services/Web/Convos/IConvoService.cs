@@ -16,6 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+using System;
 using System.Threading.Tasks;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
@@ -25,7 +26,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     /// <summary>
     /// Service interface responsible for accessing convos on the web API (remote).
     /// </summary>
-    public interface IConvoService
+    public interface IConvoService : IDisposable
     {
         /// <summary>
         /// Creates a new convo on the server.<para> </para>

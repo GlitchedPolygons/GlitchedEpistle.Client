@@ -37,9 +37,29 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     /// Implements the <see cref="IConvoService" /> <c>interface</c>.
     /// </summary>
     /// <seealso cref="IConvoService" />
-    public class ConvoService : EpistleWebApiService, IConvoService
+    public class ConvoService : EpistleWebApiService, IConvoService, IDisposable
     {
-        private readonly RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+        private RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+
+        public ConvoService()
+        {
+            UrlUtility.ChangedEpistleServerUrl += UrlUtility_ChangedEpistleServerUrl;
+        }
+
+        ~ConvoService()
+        {
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            UrlUtility.ChangedEpistleServerUrl -= UrlUtility_ChangedEpistleServerUrl;
+        }
+
+        private void UrlUtility_ChangedEpistleServerUrl()
+        {
+            restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+        }
 
         /// <summary>
         /// Creates a new convo on the server.<para> </para>
