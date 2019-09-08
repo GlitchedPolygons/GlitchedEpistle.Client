@@ -29,8 +29,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {
     /// <summary>
     /// Service interface for logging into Glitched Epistle
-    /// and receiving an auth token back from the Web API,
-    /// as well as extending a user's expiration date.
+    /// and receiving an auth token back from the Web API.
     /// </summary>
     public interface IUserService : IDisposable
     {

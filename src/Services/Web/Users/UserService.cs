@@ -34,8 +34,7 @@ using RestSharp;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {
     /// <summary>
-    /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's
-    /// ation date.<para> </para>
+    /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API.
     /// Implements the <see cref="IUserService" /> interface.
     /// </summary>
     /// <seealso cref="IUserService" />
