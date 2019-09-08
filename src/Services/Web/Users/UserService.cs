@@ -34,7 +34,8 @@ using RestSharp;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {
     /// <summary>
-    /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's expiration date.<para> </para>
+    /// Service interface for logging into Glitched Epistle and receiving an auth token back from the Web API, as well as extending a user's
+    /// ation date.<para> </para>
     /// Implements the <see cref="IUserService" /> interface.
     /// </summary>
     /// <seealso cref="IUserService" />
@@ -144,27 +145,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             {
                 return Array.Empty<ConvoMetadataDto>();
             }
-        }
-
-        /// <summary>
-        /// Gets a <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> (in UTC).
-        /// </summary>
-        /// <param name="userId">The user id.</param>
-        /// <returns>The <see cref="T:GlitchedPolygons.GlitchedEpistle.Client.Models.User" />'s expiration <see cref="T:System.DateTime" /> in UTC; <c>null</c> if the user doesn't exist.</returns>
-        public async Task<DateTime?> GetUserExpirationUTC(string userId)
-        {
-            var request = new RestRequest(
-                method: Method.GET,
-                resource: new Uri($"users/exp/{userId}", UriKind.Relative)
-            );
-
-            IRestResponse response = await restClient.ExecuteTaskAsync(request);
-            if (response.StatusCode == HttpStatusCode.OK && DateTime.TryParse(response.Content, out DateTime exp))
-            {
-                return exp;
-            }
-
-            return null;
         }
 
         /// <summary>

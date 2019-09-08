@@ -17,6 +17,8 @@
 */
 
 using System.Collections.Generic;
+
+using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos

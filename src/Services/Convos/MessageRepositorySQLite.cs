@@ -27,6 +27,7 @@ using System.Linq.Expressions;
 
 using Dapper;
 
+using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 

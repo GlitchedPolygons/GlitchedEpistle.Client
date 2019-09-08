@@ -22,6 +22,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 
+using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;

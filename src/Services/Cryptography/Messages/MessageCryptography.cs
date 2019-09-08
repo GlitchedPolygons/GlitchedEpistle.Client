@@ -19,6 +19,7 @@
 using System;
 using System.Text;
 
+using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.Services.CompressionUtility;
 using GlitchedPolygons.Services.Cryptography.Symmetric;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;

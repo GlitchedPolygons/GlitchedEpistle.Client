@@ -59,12 +59,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public DateTime CreationTimestampUTC { get; set; }
 
         /// <summary>
-        /// The exact <see cref="DateTime"/> (UTC) this user's access to Epistle expires.
-        /// </summary>
-        [JsonProperty(PropertyName = "exp")]
-        public DateTime ExpirationUTC { get; set; } = DateTime.MinValue;
-
-        /// <summary>
         /// The user's private message decryption RSA key (PEM-formatted).
         /// </summary>
         [JsonIgnore]
@@ -82,15 +76,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         [JsonProperty(PropertyName = "fail")]
         public int LoginFailures { get; set; }
-
-        /// <summary>
-        /// Checks whether the <see cref="User"/>'s epistle membership is expired.
-        /// </summary>
-        /// <returns>Whether the <see cref="User"/>'s epistle membership is expired or not.</returns>
-        public bool IsExpired()
-        {
-            return DateTime.UtcNow > ExpirationUTC;
-        }
 
         #region Equality
         /// <summary>Indicates whether the current object is equal to another object of the same type.</summary>

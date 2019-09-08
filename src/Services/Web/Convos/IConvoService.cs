@@ -31,7 +31,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// Creates a new convo on the server.<para> </para>
         /// "<paramref name="requestBody.Body"/>" should be the <see cref="ConvoCreationRequestDto"/> serialized into JSON and gzipped.
         /// </summary>
-        /// <param name="requestBody">Request body containing the coupon redeeming parameters (auth, etc...).</param>
+        /// <param name="requestBody">Request body containing the parameters (auth, etc...).</param>
         /// <returns><c>null</c> if creation failed; the created <see cref="Convo"/>'s unique id.</returns>
         Task<string> CreateConvo(EpistleRequestBody requestBody);
 

@@ -27,9 +27,11 @@ using System.Data.SQLite;
 
 using Dapper;
 
+using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
+
+using StringExtensions = GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {

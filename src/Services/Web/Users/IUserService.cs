@@ -60,13 +60,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         Task<bool> Validate2FA(string userId, string totp);
 
         /// <summary>
-        /// Gets a <see cref="User"/>'s expiration <see cref="DateTime"/> (in UTC).
-        /// </summary>
-        /// <param name="userId">The user id.</param>
-        /// <returns>The <see cref="User"/>'s expiration <see cref="DateTime"/> in UTC; <c>null</c> if the user doesn't exist.</returns>
-        Task<DateTime?> GetUserExpirationUTC(string userId);
-
-        /// <summary>
         /// Gets the <see cref="Convo"/>s in which the specified <see cref="User"/> is involved (participant or creator thereof).
         /// </summary>
         /// <param name="userId">The user id.</param>

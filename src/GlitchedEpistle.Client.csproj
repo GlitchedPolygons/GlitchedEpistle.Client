@@ -46,6 +46,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GlitchedPolygons.ExtensionMethods" Version="1.0.6" />
     <PackageReference Include="GlitchedPolygons.RepositoryPattern.SQLite" Version="1.0.2" />
     <PackageReference Include="GlitchedPolygons.Services.CompressionUtility" Version="1.1.0" />
     <PackageReference Include="GlitchedPolygons.Services.Cryptography.Asymmetric" Version="1.0.1" />
