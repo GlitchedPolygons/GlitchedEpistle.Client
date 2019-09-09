@@ -40,6 +40,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private readonly string tableName;
         private readonly string connectionString;
         private readonly string getAllSql, getLastMessageIdSql;
+
         /// <summary>
         /// Creates an instance of the <see cref="MessageRepositorySQLite"/> class that will provide 
         /// functionality for accessing an epistle <see cref="Message"/> storage database using SQLite.<para> </para>

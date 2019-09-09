@@ -31,8 +31,6 @@ using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 
-using StringExtensions = GlitchedPolygons.GlitchedEpistle.Client.Extensions.StringExtensions;
-
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
