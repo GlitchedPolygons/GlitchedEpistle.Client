@@ -39,7 +39,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     {
         private readonly string tableName;
         private readonly string connectionString;
-
+        private readonly string getAllSql, getLastMessageIdSql;
         /// <summary>
         /// Creates an instance of the <see cref="MessageRepositorySQLite"/> class that will provide 
         /// functionality for accessing an epistle <see cref="Message"/> storage database using SQLite.<para> </para>
@@ -51,6 +51,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             this.tableName = nameof(Message);
             this.connectionString = connectionString;
+
+            getAllSql = $"SELECT * FROM \"{tableName}\" ORDER BY \"TimestampUTC\" ASC";
+            getLastMessageIdSql = $"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1";
+
             string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
             using (var sqlc = OpenConnection())
             {
@@ -112,7 +116,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             using (var sqlc = OpenConnection())
             {
-                string id = await sqlc.QueryFirstOrDefaultAsync<string>($"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1");
+                string id = await sqlc.QueryFirstOrDefaultAsync<string>(getLastMessageIdSql);
                 return id;
             }
         }
@@ -160,7 +164,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             {
                 await sqlc.OpenAsync();
 
-                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" ORDER BY \"TimestampUTC\" ASC", sqlc))
+                using (var cmd = new SQLiteCommand(getAllSql, sqlc))
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (!reader.HasRows)
