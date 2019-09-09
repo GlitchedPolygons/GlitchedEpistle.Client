@@ -19,11 +19,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
         /// <summary>
         /// Sets the Epistle server base url that this client connects to.
         /// </summary>
-        /// <param name="url"></param>
+        /// <param name="url">The new Epistle Server URL. </param>
         public static void SetEpistleServerUrl(string url)
         {
             epistleUrl = url;
-            epistleApiUrlV1 = url + "api/v1/";
+            epistleApiUrlV1 = url.TrimEnd('/') + "/api/v1/";
             ChangedEpistleServerUrl?.Invoke();
         }
 

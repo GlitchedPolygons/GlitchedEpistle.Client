@@ -16,14 +16,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {

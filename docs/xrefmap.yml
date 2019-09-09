@@ -1467,6 +1467,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Id
   nameWithType: Message.Id
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.IsFromServer
+  name: IsFromServer()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_IsFromServer
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.IsFromServer
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.IsFromServer()
+  nameWithType: Message.IsFromServer()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.IsFromServer*
+  name: IsFromServer
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_IsFromServer_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.IsFromServer
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.IsFromServer
+  nameWithType: Message.IsFromServer
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.SenderId
   name: SenderId
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_SenderId

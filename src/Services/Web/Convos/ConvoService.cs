@@ -16,7 +16,6 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -28,7 +27,6 @@ using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 using Newtonsoft.Json;
 
 using RestSharp;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {

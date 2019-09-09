@@ -23,7 +23,6 @@ using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.Services.CompressionUtility;
 using GlitchedPolygons.Services.Cryptography.Symmetric;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages

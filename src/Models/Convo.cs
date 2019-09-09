@@ -16,20 +16,16 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
 using System.Text;
 using System.Collections.Generic;
-using System.Linq;
 
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.RepositoryPattern;
-using GlitchedPolygons.GlitchedEpistle.Client.Extensions;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
 
 using Newtonsoft.Json;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
