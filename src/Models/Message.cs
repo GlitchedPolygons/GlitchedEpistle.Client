@@ -59,6 +59,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
 
+        /// <summary>
+        /// Checks whether the <see cref="Message"/> comes from a <see cref="User"/> or from the Epistle server.
+        /// </summary>
+        public bool IsFromServer()
+        {
+            return SenderId == "SERVER" && SenderName == "SERVER";
+        }
+
         #region Equality
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" /> is equal to this instance.
