@@ -40,13 +40,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web
         /// <returns>The <see cref="RestRequest"/>, ready to be submitted.</returns>
         protected RestRequest EpistleRequest(EpistleRequestBody requestBody, string endpoint, Method method = Method.POST)
         {
+            if (method != Method.POST && method != Method.PUT)
+            {
+                throw new ArgumentException($"{nameof(EpistleWebApiService)}::{nameof(EpistleRequest)}: Non-PUT or POST HTTP method passed. Please only add request bodies to POST and PUT requests!");
+            }
+
             var request = new RestRequest(
                 method: method,
                 resource: new Uri(endpoint, UriKind.Relative)
             );
 
             request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
-            
+
             return request;
         }
     }
