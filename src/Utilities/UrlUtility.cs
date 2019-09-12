@@ -53,11 +53,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
             {
                 return null;
             }
+
+            url = url.TrimEnd('/');
+
             if (!url.Contains("http://") && !url.Contains("https://"))
             {
-                url = (DEFAULT_PREPEND_SCHEME_HTTPS ? "https://" : "http://") + url;
+                url = (DEFAULT_PREPEND_SCHEME_HTTPS && !url.Contains("localhost") && !url.Contains("127.0.0.1") ? "https://" : "http://") + url;
             }
-            return url.TrimEnd('/');
+
+            return url;
         }
 
         /// <summary>
