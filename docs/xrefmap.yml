@@ -2934,12 +2934,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest
   nameWithType: IServerConnectionTest
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection
-  name: TestConnection()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_TestConnection
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection()
-  nameWithType: IServerConnectionTest.TestConnection()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection(System.String)
+  name: TestConnection(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_TestConnection_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection(System.String)
+  nameWithType: IServerConnectionTest.TestConnection(String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.TestConnection*
   name: TestConnection
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_TestConnection_
@@ -2953,19 +2953,6 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest
   nameWithType: ServerConnectionTest
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.#ctor
-  name: ServerConnectionTest()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest__ctor
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.#ctor
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.ServerConnectionTest()
-  nameWithType: ServerConnectionTest.ServerConnectionTest()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.#ctor*
-  name: ServerConnectionTest
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest__ctor_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.ServerConnectionTest
-  nameWithType: ServerConnectionTest.ServerConnectionTest
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Dispose
   name: Dispose()
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest_Dispose
@@ -2979,25 +2966,12 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Dispose
   nameWithType: ServerConnectionTest.Dispose
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Finalize
-  name: Finalize()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest_Finalize
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Finalize
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Finalize()
-  nameWithType: ServerConnectionTest.Finalize()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Finalize*
-  name: Finalize
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest_Finalize_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Finalize
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.Finalize
-  nameWithType: ServerConnectionTest.Finalize
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection
-  name: TestConnection()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest_TestConnection
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection()
-  nameWithType: ServerConnectionTest.TestConnection()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection(System.String)
+  name: TestConnection(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest_TestConnection_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection(System.String)
+  nameWithType: ServerConnectionTest.TestConnection(String)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.TestConnection*
   name: TestConnection
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_ServerConnectionTest_TestConnection_
@@ -3398,6 +3372,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.EpistleBaseUrl
   nameWithType: UrlUtility.EpistleBaseUrl
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.FixUrl(System.String)
+  name: FixUrl(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_FixUrl_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.FixUrl(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.FixUrl(System.String)
+  nameWithType: UrlUtility.FixUrl(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.FixUrl*
+  name: FixUrl
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_FixUrl_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.FixUrl
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.FixUrl
+  nameWithType: UrlUtility.FixUrl
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.SetEpistleServerUrl(System.String)
   name: SetEpistleServerUrl(String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_UrlUtility_SetEpistleServerUrl_System_String_
