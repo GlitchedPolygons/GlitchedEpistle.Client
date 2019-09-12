@@ -7,6 +7,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
     /// </summary>
     public static class UrlUtility
     {
+        /// <summary>
+        /// If the user does not specify http or https explicitly, should https:// prepended to the url by default or plain http?
+        /// </summary>
+        private const bool DEFAULT_PREPEND_SCHEME_HTTPS = true;
+
         private static string epistleUrl = "https://epistle.glitchedpolygons.com/";
         private static string epistleApiUrlV1 = "https://epistle.glitchedpolygons.com/api/v1/";
 
@@ -22,8 +27,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
         /// <param name="url">The new Epistle Server URL. </param>
         public static void SetEpistleServerUrl(string url)
         {
-            epistleUrl = url;
-            epistleApiUrlV1 = url.TrimEnd('/') + "/api/v1/";
+            if (!url.Contains("http://") && !url.Contains("https://"))
+            {
+                url = DEFAULT_PREPEND_SCHEME_HTTPS ? "https://" : "http://" + url;
+            }
+            epistleUrl = url.TrimEnd('/');
+            epistleApiUrlV1 = url + "/api/v1/";
             ChangedEpistleServerUrl?.Invoke();
         }
 

@@ -68,7 +68,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
                 method: Method.GET,
                 resource: new Uri("marco", UriKind.Relative)
             );
-            return (await restClient.ExecuteTaskAsync(request))?.Content == "polo";
+            var response = await restClient.ExecuteTaskAsync(request);
+            return response?.Content.ToLower() == "polo";
         }
     }
 }
