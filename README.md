@@ -4,6 +4,7 @@
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/1nbq83g1iqibs6hr/branch/master?svg=true)](https://ci.appveyor.com/project/GlitchedPolygons/glitchedepistle-client/branch/master)
 [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/GlitchedEpistle.Client.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/GlitchedEpistle.Client)
 [![CircleCI](https://circleci.com/gh/GlitchedPolygons/GlitchedEpistle.Client.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/GlitchedEpistle.Client)
+[![NuGet](https://buildstats.info/nuget/GlitchedPolygons.GlitchedEpistle.Client)](https://www.nuget.org/packages/GlitchedPolygons.GlitchedEpistle.Client)
 
 ## Shared codebase for implementing clients
 
