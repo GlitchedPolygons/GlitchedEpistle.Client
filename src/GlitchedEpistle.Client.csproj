@@ -34,6 +34,9 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
+    <Copyright>Raphael Beck</Copyright>
+    <AssemblyVersion>2019.4.0.0</AssemblyVersion>
+    <FileVersion>2019.4.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
