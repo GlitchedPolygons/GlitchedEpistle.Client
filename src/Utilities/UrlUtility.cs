@@ -1,5 +1,7 @@
 ﻿using System;
 
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
+
 namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
 {
     /// <summary>
@@ -14,6 +16,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
 
         private static string epistleUrl = "https://epistle.glitchedpolygons.com/";
         private static string epistleApiUrlV1 = "https://epistle.glitchedpolygons.com/api/v1/";
+        private static IServerConnectionTest connectionTest = new ServerConnectionTest();
 
         /// <summary>
         /// This event is raised whenever the Epistle server
@@ -27,13 +30,34 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
         /// <param name="url">The new Epistle Server URL. </param>
         public static void SetEpistleServerUrl(string url)
         {
+            url = FixUrl(url);
+
+            // Only update the URL and raise the changed URL event if the connection can be established safely!
+            if (connectionTest.TestConnection(url).GetAwaiter().GetResult())
+            {
+                epistleUrl = url.TrimEnd('/');
+                epistleApiUrlV1 = epistleUrl + "/api/v1/";
+                ChangedEpistleServerUrl?.Invoke();
+            }
+        }
+
+        /// <summary>
+        /// Removes trailing slashes from a URL and prepends http(s):// if that's missing.<para> </para>
+        /// This is NO guarantee that the connection to the url can be established!
+        /// </summary>
+        /// <param name="url">The url <c>string</c> to fix.</param>
+        /// <returns>The fixed url <c>string</c></returns>
+        public static string FixUrl(string url)
+        {
+            if (url is null)
+            {
+                return null;
+            }
             if (!url.Contains("http://") && !url.Contains("https://"))
             {
-                url = DEFAULT_PREPEND_SCHEME_HTTPS ? "https://" : "http://" + url;
+                url = (DEFAULT_PREPEND_SCHEME_HTTPS ? "https://" : "http://") + url;
             }
-            epistleUrl = url.TrimEnd('/');
-            epistleApiUrlV1 = url + "/api/v1/";
-            ChangedEpistleServerUrl?.Invoke();
+            return url.TrimEnd('/');
         }
 
         /// <summary>

@@ -16,15 +16,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
 using System.Threading.Tasks;
-
-using GlitchedPolygons.GlitchedEpistle.Client;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-
 using RestSharp;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
 {
@@ -33,43 +28,36 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
     /// Implements the <see cref="IServerConnectionTest" /> interface.
     /// </summary>
     /// <seealso cref="IServerConnectionTest" />
-    public class ServerConnectionTest : IServerConnectionTest, IDisposable
+    public class ServerConnectionTest : IServerConnectionTest
     {
-        private RestClient restClient = new RestClient(UrlUtility.EpistleBaseUrl);
-
-        public ServerConnectionTest()
-        {
-            UrlUtility.ChangedEpistleServerUrl += UrlUtility_ChangedEpistleServerUrl;
-        }
-
-        ~ServerConnectionTest()
-        {
-            Dispose();
-        }
-
-        public void Dispose()
-        {
-            UrlUtility.ChangedEpistleServerUrl -= UrlUtility_ChangedEpistleServerUrl;
-        }
-
-        private void UrlUtility_ChangedEpistleServerUrl()
-        {
-            restClient = new RestClient(UrlUtility.EpistleBaseUrl);
-        }
-
         /// <summary>
         /// Tests the connection to the epistle server.<para> </para>
         /// Returns <c>true</c> if the connection could be established or <c>false</c> if the server did not respond.
         /// </summary>
         /// <returns>Whether the connection to the epistle server could be established successfully or not.</returns>
-        public async Task<bool> TestConnection()
+        public async Task<bool> TestConnection(string serverUrl = null)
         {
-            var request = new RestRequest(
-                method: Method.GET,
-                resource: new Uri("marco", UriKind.Relative)
-            );
-            var response = await restClient.ExecuteTaskAsync(request);
-            return response?.Content.ToLower() == "polo";
+            try
+            {
+                var restClient = new RestClient(UrlUtility.FixUrl(serverUrl) ?? UrlUtility.EpistleBaseUrl);
+
+                var request = new RestRequest(
+                    method: Method.GET,
+                    resource: new Uri("marco", UriKind.Relative)
+                );
+
+                var response = await restClient.ExecuteTaskAsync(request);
+                return response?.Content.ToLower() == "polo";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public void Dispose()
+        {
+            //nop
         }
     }
 }

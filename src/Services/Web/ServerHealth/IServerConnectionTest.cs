@@ -32,7 +32,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
         /// Tests the connection to the epistle server.<para> </para>
         /// Returns <c>true</c> if the connection could be established or <c>false</c> if the server did not respond.
         /// </summary>
+        /// <param name="serverUrl">The URL to test.</param>
         /// <returns>Whether the connection to the epistle server could be established successfully or not.</returns>
-        Task<bool> TestConnection();
+        Task<bool> TestConnection(string serverUrl = null);
     }
 }
