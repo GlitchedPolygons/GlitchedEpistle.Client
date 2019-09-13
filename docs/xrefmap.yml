@@ -2676,6 +2676,41 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageRepository.GetLastMessages
   nameWithType: IMessageRepository.GetLastMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender
+  name: IMessageSender
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender
+  nameWithType: IMessageSender
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String,System.Byte[])
+  name: PostFile(Convo, String, Byte[])
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageSender_PostFile_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_String_System_Byte___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String,System.Byte[])
+  name.vb: PostFile(Convo, String, Byte())
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.String, System.Byte[])
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.String, System.Byte())
+  nameWithType: IMessageSender.PostFile(Convo, String, Byte[])
+  nameWithType.vb: IMessageSender.PostFile(Convo, String, Byte())
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile*
+  name: PostFile
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageSender_PostFile_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostFile
+  nameWithType: IMessageSender.PostFile
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String)
+  name: PostText(Convo, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageSender_PostText_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.String)
+  nameWithType: IMessageSender.PostText(Convo, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText*
+  name: PostText
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageSender_PostText_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText
+  nameWithType: IMessageSender.PostText
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite
   name: MessageRepositorySQLite
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html
@@ -2903,6 +2938,60 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Update
   nameWithType: MessageRepositorySQLite.Update
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender
+  name: MessageSender
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender
+  nameWithType: MessageSender
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings)
+  name: MessageSender(User, IUserService, IConvoPasswordProvider, IConvoService, IAsymmetricCryptographyRSA, IMessageCryptography, ICompressionUtilityAsync, ISettings)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender__ctor_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoPasswordProvider_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_ISettings_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MessageSender(GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings)
+  nameWithType: MessageSender.MessageSender(User, IUserService, IConvoPasswordProvider, IConvoService, IAsymmetricCryptographyRSA, IMessageCryptography, ICompressionUtilityAsync, ISettings)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor*
+  name: MessageSender
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MessageSender
+  nameWithType: MessageSender.MessageSender
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MAX_FILE_SIZE_BYTES
+  name: MAX_FILE_SIZE_BYTES
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender_MAX_FILE_SIZE_BYTES
+  commentId: F:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MAX_FILE_SIZE_BYTES
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MAX_FILE_SIZE_BYTES
+  nameWithType: MessageSender.MAX_FILE_SIZE_BYTES
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String,System.Byte[])
+  name: PostFile(Convo, String, Byte[])
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender_PostFile_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_String_System_Byte___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String,System.Byte[])
+  name.vb: PostFile(Convo, String, Byte())
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.String, System.Byte[])
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.String, System.Byte())
+  nameWithType: MessageSender.PostFile(Convo, String, Byte[])
+  nameWithType.vb: MessageSender.PostFile(Convo, String, Byte())
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile*
+  name: PostFile
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender_PostFile_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostFile
+  nameWithType: MessageSender.PostFile
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostText(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String)
+  name: PostText(Convo, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender_PostText_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostText(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostText(GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.String)
+  nameWithType: MessageSender.PostText(Convo, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostText*
+  name: PostText
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender_PostText_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostText
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.PostText
+  nameWithType: MessageSender.PostText
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService
   name: EpistleWebApiService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.EpistleWebApiService.html
