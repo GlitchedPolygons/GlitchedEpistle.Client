@@ -67,8 +67,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             this.userService = userService;
             this.convoService = convoService;
             this.convoPasswordProvider = convoPasswordProvider;
-
-            userSettings.Load();
         }
 #pragma warning restore 1591
         

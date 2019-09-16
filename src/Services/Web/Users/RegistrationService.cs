@@ -100,7 +100,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 }
 
                 appSettings.LastUserId = userCreationResponse.Id;
-                appSettings.Save();
                 
                 // Handle this event back in the client UI,
                 // since it's there where the backup codes + 2FA secret (QR) will be displayed.

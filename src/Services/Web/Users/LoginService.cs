@@ -82,7 +82,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             try
             {
                 user.Id = appSettings.LastUserId = userId;
-                appSettings.Save();
 
                 user.PublicKeyPem = KeyExchangeUtility.DecompressPublicKey(response.PublicKey);
                 user.PrivateKeyPem = KeyExchangeUtility.DecompressAndDecryptPrivateKey(response.PrivateKey, userPassword);
