@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/epistle/GlitchedEpistle.Client/docs/docfx_project",
+  "source_base_path": "C:/git/glitched-polygons/glitched-epistle/GlitchedEpistle.Client/docs/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -569,6 +569,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.html",
+          "hash": "ulhbLTqPtbYSYMnf/MdE9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.yml",
       "output": {
         ".html": {
@@ -593,6 +605,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html",
+          "hash": "4tWes7UvCG5mLzu6Fg5u1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.yml",
       "output": {
         ".html": {
@@ -609,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.html",
-          "hash": "c79GAEZrYO/6Uh57vhYHKA=="
+          "hash": "5emMK/si12VA9XoB2G3BAw=="
         }
       },
       "is_incremental": false,
@@ -681,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "EXAW4GvuHomJ4zH2/3UXvA=="
+          "hash": "o7zGixXETbg5H7Z67UnFFw=="
         }
       },
       "is_incremental": false,
@@ -758,8 +782,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 54,
-          "skipped_file_count": 41
+          "total_file_count": 56,
+          "skipped_file_count": 6
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,

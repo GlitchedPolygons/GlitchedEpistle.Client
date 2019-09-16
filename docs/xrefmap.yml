@@ -3157,6 +3157,25 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login
   nameWithType: ILoginService.Login
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService
+  name: IRegistrationService
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService
+  nameWithType: IRegistrationService
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.CreateUser(System.String,System.String)
+  name: CreateUser(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IRegistrationService_CreateUser_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.CreateUser(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.CreateUser(System.String, System.String)
+  nameWithType: IRegistrationService.CreateUser(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.CreateUser*
+  name: CreateUser
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IRegistrationService_CreateUser_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.CreateUser
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.CreateUser
+  nameWithType: IRegistrationService.CreateUser
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService
   name: IUserService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html
@@ -3312,6 +3331,38 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login
   nameWithType: LoginService.Login
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService
+  name: RegistrationService
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService
+  nameWithType: RegistrationService
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService)
+  name: RegistrationService(IAsymmetricKeygenRSA, IServerConnectionTest, ILogger, IUserService)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService__ctor_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.RegistrationService(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService)
+  nameWithType: RegistrationService.RegistrationService(IAsymmetricKeygenRSA, IServerConnectionTest, ILogger, IUserService)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor*
+  name: RegistrationService
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.RegistrationService
+  nameWithType: RegistrationService.RegistrationService
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.CreateUser(System.String,System.String)
+  name: CreateUser(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService_CreateUser_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.CreateUser(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.CreateUser(System.String, System.String)
+  nameWithType: RegistrationService.CreateUser(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.CreateUser*
+  name: CreateUser
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService_CreateUser_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.CreateUser
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.CreateUser
+  nameWithType: RegistrationService.CreateUser
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService
   name: UserService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html
