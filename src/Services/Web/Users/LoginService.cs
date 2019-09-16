@@ -72,7 +72,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
                 return 0;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return 3;
             }
