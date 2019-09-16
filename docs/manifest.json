@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/git/glitched-polygons/glitched-epistle/GlitchedEpistle.Client/docs/docfx_project",
+  "source_base_path": "C:/epistle/GlitchedEpistle.Client/docs/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html",
-          "hash": "V1Eb23PuoscFS53LrDmG/Q=="
+          "hash": "lzNP4aBoZHKuque95c//hw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.html",
-          "hash": "8qB7ag5As82HjcgwdOtcQA=="
+          "hash": "6fTaVJcpFrLboRQhaIFQ/w=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.html",
-          "hash": "ulhbLTqPtbYSYMnf/MdE9Q=="
+          "hash": "az84J3S3v1/J71pwWXMW1g=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html",
-          "hash": "Vj9+PLMrIICbKXqgxGlXpQ=="
+          "hash": "10kVmDqA6BgU/nJh3PQz3Q=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html",
-          "hash": "4tWes7UvCG5mLzu6Fg5u1w=="
+          "hash": "e5d8JVvc5vBMta9awxw5zw=="
         }
       },
       "is_incremental": false,
@@ -772,24 +772,24 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 56,
-          "skipped_file_count": 6
+          "skipped_file_count": 50
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
           "skipped_file_count": 3
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },

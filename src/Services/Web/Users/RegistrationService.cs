@@ -23,6 +23,7 @@ using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
@@ -36,16 +37,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
     {
         private readonly ILogger logger;
         private readonly IUserService userService;
+        private readonly IAppSettings appSettings;
         private readonly IAsymmetricKeygenRSA keygen;
         private readonly IServerConnectionTest connectionTest;
         private static readonly RSAKeySize RSA_KEY_SIZE = new RSA4096();
 
 #pragma warning disable 1591
-        public RegistrationService(IAsymmetricKeygenRSA keygen, IServerConnectionTest connectionTest, ILogger logger, IUserService userService)
+        public RegistrationService(IAsymmetricKeygenRSA keygen, IServerConnectionTest connectionTest, ILogger logger, IUserService userService, IAppSettings appSettings)
         {
             this.logger = logger;
             this.keygen = keygen;
             this.userService = userService;
+            this.appSettings = appSettings;
             this.connectionTest = connectionTest;
         }
 #pragma warning restore 1591
@@ -96,8 +99,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                     return new Tuple<int, UserCreationResponseDto>(3, null);
                 }
 
-                // Handle this event back in the main view model,
-                // since it's there where the backup codes + 2FA secret (QR) will be shown.
+                appSettings.LastUserId = userCreationResponse.Id;
+                appSettings.Save();
+                
+                // Handle this event back in the client UI,
+                // since it's there where the backup codes + 2FA secret (QR) will be displayed.
                 logger?.LogMessage($"Created user {userCreationResponse.Id}.");
                 return new Tuple<int, UserCreationResponseDto>(0, userCreationResponse);
             }
