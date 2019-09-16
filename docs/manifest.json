@@ -335,6 +335,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings.html",
+          "hash": "26KyoTzoyGhr3jfJ27RoBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.yml",
       "output": {
         ".html": {
@@ -347,11 +359,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings.html",
+          "hash": "Mdu1iHT+9qsxOXXLBYmhDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.html",
-          "hash": "8J8I/zhR73D9fe7qoD8d8g=="
+          "hash": "MNQHSjEOnyNz9m7tVqaDiw=="
         }
       },
       "is_incremental": false,
@@ -390,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html",
-          "hash": "N4FAL77o5HeVhBuMEOzZ0Q=="
+          "hash": "MHaF7qBhZGNPBNtmR0f1yw=="
         }
       },
       "is_incremental": false,
@@ -426,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageRepository.html",
-          "hash": "qDW98AsVDunwQ+eZqeqaCg=="
+          "hash": "OiK/n1iGNDdf9jaaRSkz/A=="
         }
       },
       "is_incremental": false,
@@ -453,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html",
-          "hash": "QjtITWZmPlF7R0FHFWEPVA=="
+          "hash": "NDsuKwnmzWVLSB6Y+Z00uw=="
         }
       },
       "is_incremental": false,
@@ -465,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html",
-          "hash": "P1g2NGNgecgEEvCOt9bwGg=="
+          "hash": "V1Eb23PuoscFS53LrDmG/Q=="
         }
       },
       "is_incremental": false,
@@ -477,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.html",
-          "hash": "iSXl/6ebFVyyAFQydwP9yg=="
+          "hash": "CZKptAKrvNCEaOUcfhmF2Q=="
         }
       },
       "is_incremental": false,
@@ -513,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.ServerConnectionTest.html",
-          "hash": "85L865aJK9w/Z4gq+/zovA=="
+          "hash": "J/QDpsFoH6Ay09XToiYU6w=="
         }
       },
       "is_incremental": false,
@@ -533,6 +557,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.html",
+          "hash": "8qB7ag5As82HjcgwdOtcQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.yml",
       "output": {
         ".html": {
@@ -545,11 +581,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html",
+          "hash": "Vj9+PLMrIICbKXqgxGlXpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.yml",
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html",
-          "hash": "Fd75JIXuHdZd6PRjPrL2NA=="
+          "hash": "ONU278jtpr/vv3VEY49cSA=="
         }
       },
       "is_incremental": false,
@@ -561,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.html",
-          "hash": "ETihcrygKRxbiSfu6WlYNw=="
+          "hash": "c79GAEZrYO/6Uh57vhYHKA=="
         }
       },
       "is_incremental": false,
@@ -633,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FFU2zb8Zkq16U3BmrUN2CQ=="
+          "hash": "EXAW4GvuHomJ4zH2/3UXvA=="
         }
       },
       "is_incremental": false,
@@ -707,17 +755,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 54,
+          "skipped_file_count": 41
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
           "skipped_file_count": 3
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 50,
-          "skipped_file_count": 45
         }
       }
     },
