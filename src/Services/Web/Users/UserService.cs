@@ -40,7 +40,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
     {
         private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
         private RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
-
+        
+#pragma warning disable 1591
         public UserService()
         {
             UrlUtility.ChangedEpistleServerUrl += UrlUtility_ChangedEpistleServerUrl;
@@ -55,12 +56,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         {
             UrlUtility.ChangedEpistleServerUrl -= UrlUtility_ChangedEpistleServerUrl;
         }
+#pragma warning restore 1591
 
         private void UrlUtility_ChangedEpistleServerUrl()
         {
             restClient = new RestClient(UrlUtility.EpistleAPI_v1);
         }
-
+        
         /// <summary>
         /// Logs the specified user in by authenticating the provided credentials
         /// (POST request to the Glitched Epistle Web API).

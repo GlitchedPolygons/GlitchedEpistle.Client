@@ -33,7 +33,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Models;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
-    /// SQLite repository class for accessing a <see cref="Convo"/>'s messages.<para> </para>
+    /// SQLite repository class for accessing a <see cref="Convo"/>'s messages locally.<para> </para>
     /// </summary>
     public class MessageRepositorySQLite : IMessageRepository
     {

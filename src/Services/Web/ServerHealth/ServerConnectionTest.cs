@@ -54,10 +54,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
                 return false;
             }
         }
-
+        
+#pragma warning disable 1591
         public void Dispose()
         {
             //nop
         }
+#pragma warning restore 1591
     }
 }

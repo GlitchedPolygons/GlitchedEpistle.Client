@@ -39,6 +39,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     {
         private RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
 
+#pragma warning disable 1591
         public ConvoService()
         {
             UrlUtility.ChangedEpistleServerUrl += UrlUtility_ChangedEpistleServerUrl;
@@ -53,6 +54,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             UrlUtility.ChangedEpistleServerUrl -= UrlUtility_ChangedEpistleServerUrl;
         }
+#pragma warning restore 1591
 
         private void UrlUtility_ChangedEpistleServerUrl()
         {

@@ -25,7 +25,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Models;
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
-    /// Message repository.
+    /// Message repository to keep on the client machine.
     /// </summary>
     public interface IMessageRepository : IRepository<Message, long>
     {

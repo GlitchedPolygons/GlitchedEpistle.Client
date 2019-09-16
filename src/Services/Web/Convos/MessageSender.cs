@@ -55,7 +55,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// The maximum allowed file size for a convo's message.
         /// </summary>
         public const long MAX_FILE_SIZE_BYTES = 20971520;
-
+        
+#pragma warning disable 1591
         public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync gzip, IUserSettings settings)
         {
             this.rsa = rsa;
@@ -67,7 +68,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             this.convoService = convoService;
             this.convoPasswordProvider = convoPasswordProvider;
         }
-
+#pragma warning restore 1591
+        
         /// <summary>
         /// Sends a text message to a <see cref="Convo"/>.
         /// </summary>
