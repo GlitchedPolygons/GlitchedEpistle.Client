@@ -1997,32 +1997,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Item
   nameWithType: ISettings.Item
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load
-  name: Load()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_ISettings_Load
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load()
-  nameWithType: ISettings.Load()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load*
-  name: Load
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_ISettings_Load_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Load
-  nameWithType: ISettings.Load
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save
-  name: Save()
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_ISettings_Save
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save()
-  nameWithType: ISettings.Save()
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save*
-  name: Save
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_ISettings_Save_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.Save
-  nameWithType: ISettings.Save
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings
   name: IUserSettings
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings.html

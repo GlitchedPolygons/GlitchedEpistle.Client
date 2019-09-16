@@ -339,10 +339,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings.html",
-          "hash": "26KyoTzoyGhr3jfJ27RoBQ=="
+          "hash": "u1QrhUFiMxBgX1F5OM3vHQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -351,10 +351,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.ISettings.html",
-          "hash": "31ThfnDCgEHoMJAEVcv6OA=="
+          "hash": "2DU/1WZbZEbNut1yATA5Fg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -363,10 +363,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings.html",
-          "hash": "Mdu1iHT+9qsxOXXLBYmhDw=="
+          "hash": "kglv+S/vnFYYDvedSm+zUQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -378,7 +378,7 @@
           "hash": "MNQHSjEOnyNz9m7tVqaDiw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,10 +489,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html",
-          "hash": "lzNP4aBoZHKuque95c//hw=="
+          "hash": "ivkKgBF3usjNCkaKVTPhkQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -504,7 +504,7 @@
           "hash": "CZKptAKrvNCEaOUcfhmF2Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -600,7 +600,7 @@
           "hash": "10kVmDqA6BgU/nJh3PQz3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -776,7 +776,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 56,
-          "skipped_file_count": 55
+          "skipped_file_count": 52
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
