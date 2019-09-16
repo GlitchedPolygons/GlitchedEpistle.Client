@@ -42,8 +42,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     public class MessageSender : IMessageSender
     {
         private readonly User user;
-        private readonly IUserSettings settings;
         private readonly IUserService userService;
+        private readonly IUserSettings userSettings;
         private readonly IConvoService convoService;
         private readonly IMessageCryptography crypto;
         private readonly ICompressionUtilityAsync gzip;
@@ -57,13 +57,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public const long MAX_FILE_SIZE_BYTES = 20971520;
         
 #pragma warning disable 1591
-        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync gzip, IUserSettings settings)
+        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync gzip, IUserSettings userSettings)
         {
             this.rsa = rsa;
             this.user = user;
             this.gzip = gzip;
             this.crypto = crypto;
-            this.settings = settings;
+            this.userSettings = userSettings;
             this.userService = userService;
             this.convoService = convoService;
             this.convoPasswordProvider = convoPasswordProvider;
@@ -130,7 +130,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
             var postParamsDto = new PostMessageParamsDto
             {
-                SenderName = settings.Username,
+                SenderName = userSettings.Username,
                 ConvoId = convo.Id,
                 ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
                 MessageBodiesJson = JsonConvert.SerializeObject(encryptedMessagesBag)
