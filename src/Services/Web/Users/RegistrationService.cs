@@ -60,8 +60,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// 0 = Success! The user was created and the related data was loaded into session <see cref="User"/>.<para> </para>
         /// 1 = Connection to the Epistle server could not be established.<para> </para>
         /// 2 = RSA Key generation failed/incomplete.<para> </para>
-        /// 3 = User registration failed server-side.
-        /// 4 = User registration failed client-side.
+        /// 3 = User registration failed server-side.<para> </para>
+        /// 4 = User registration failed client-side.<para> </para>
         /// </summary>
         /// <param name="password">The user's password (NOT the SHA512!)</param>
         /// <param name="userCreationSecret">The backend's user creation secret.</param>
