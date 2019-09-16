@@ -33,7 +33,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
 
         private static string epistleUrl = "https://epistle.glitchedpolygons.com/";
         private static string epistleApiUrlV1 = "https://epistle.glitchedpolygons.com/api/v1/";
-        private static IServerConnectionTest connectionTest = new ServerConnectionTest();
+        private static readonly IServerConnectionTest CONNECTION_TEST = new ServerConnectionTest();
 
         /// <summary>
         /// This event is raised whenever the Epistle server
@@ -44,13 +44,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
         /// <summary>
         /// Sets the Epistle server base url that this client connects to.
         /// </summary>
-        /// <param name="url">The new Epistle Server URL. </param>
+        /// <param name="url">The new Epistle Server URL.</param>
         public static void SetEpistleServerUrl(string url)
         {
             url = FixUrl(url);
 
             // Only update the URL and raise the changed URL event if the connection can be established safely!
-            if (connectionTest.TestConnection(url).GetAwaiter().GetResult())
+            if (CONNECTION_TEST.TestConnection(url).GetAwaiter().GetResult())
             {
                 epistleUrl = url.TrimEnd('/');
                 epistleApiUrlV1 = epistleUrl + "/api/v1/";

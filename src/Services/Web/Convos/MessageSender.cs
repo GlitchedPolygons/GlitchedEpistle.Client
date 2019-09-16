@@ -1,19 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Collections.Concurrent;
-
-using GlitchedPolygons.ExtensionMethods;
-using GlitchedPolygons.GlitchedEpistle.Client.Models;
-using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
-using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
-using GlitchedPolygons.Services.CompressionUtility;
-using GlitchedPolygons.Services.Cryptography.Asymmetric;
-
-/*
+﻿/*
     Glitched Epistle - Client
     Copyright (C) 2019  Raphael Beck
 
@@ -31,6 +16,21 @@ using GlitchedPolygons.Services.Cryptography.Asymmetric;
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Collections.Concurrent;
+
+using GlitchedPolygons.ExtensionMethods;
+using GlitchedPolygons.GlitchedEpistle.Client.Models;
+using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
+using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.Services.Cryptography.Asymmetric;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -42,7 +42,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     public class MessageSender : IMessageSender
     {
         private readonly User user;
-        private readonly ISettings settings;
+        private readonly IUserSettings settings;
         private readonly IUserService userService;
         private readonly IConvoService convoService;
         private readonly IMessageCryptography crypto;
@@ -56,7 +56,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         public const long MAX_FILE_SIZE_BYTES = 20971520;
 
-        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync gzip, ISettings settings)
+        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync gzip, IUserSettings settings)
         {
             this.rsa = rsa;
             this.user = user;
@@ -128,7 +128,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
             var postParamsDto = new PostMessageParamsDto
             {
-                SenderName = settings["Username"],
+                SenderName = settings.Username,
                 ConvoId = convo.Id,
                 ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
                 MessageBodiesJson = JsonConvert.SerializeObject(encryptedMessagesBag)
