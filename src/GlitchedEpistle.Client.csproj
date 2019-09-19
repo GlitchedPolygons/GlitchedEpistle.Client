@@ -26,7 +26,6 @@
     <Authors>Glitched Polygons</Authors>
     <Description>Shared code base for all Glitched Epistle clients.</Description>
     <Platforms>AnyCPU;x64</Platforms>
-    <PackageVersion>2019.4.0.4</PackageVersion>
     <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/GlitchedEpistle.Client/b73845791295eab9d08e11815b582ae84ae26427/Docs/docfx_project/_exported_templates/default/favicon.ico</PackageIconUrl>
     <RepositoryUrl>https://github.com/GlitchedPolygons/GlitchedEpistle.Client</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GlitchedPolygons/GlitchedEpistle.Client</PackageProjectUrl>
@@ -35,8 +34,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <Copyright>Raphael Beck</Copyright>
-    <AssemblyVersion>2019.4.0.4</AssemblyVersion>
-    <FileVersion>2019.4.0.4</FileVersion>
+    <PackageVersion>2019.4.0.5</PackageVersion>
+    <AssemblyVersion>2019.4.0.5</AssemblyVersion>
+    <FileVersion>2019.4.0.5</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

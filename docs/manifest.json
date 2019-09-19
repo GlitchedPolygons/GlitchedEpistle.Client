@@ -598,6 +598,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IPasswordChanger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IPasswordChanger.html",
+          "hash": "NVS6frEyhD+anIzD0A2QvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.yml",
       "output": {
@@ -634,6 +649,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.html",
+          "hash": "Egk/wM98nH2huyiCcYzjAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.yml",
       "output": {
@@ -663,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.html",
-          "hash": "5emMK/si12VA9XoB2G3BAw=="
+          "hash": "nS747GAu7qDg9zSq+y+vOA=="
         }
       },
       "is_incremental": false,
@@ -735,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dW/LIt0auylZ1FCioyJdvA=="
+          "hash": "bw+h+93Wfsu1U+6ShvUSWw=="
         }
       },
       "is_incremental": false,
@@ -809,17 +839,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 58,
-          "skipped_file_count": 55
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
           "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
+          "skipped_file_count": 57
         }
       }
     },
