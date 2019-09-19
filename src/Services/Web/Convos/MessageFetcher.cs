@@ -82,7 +82,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                                 currentTailId = retrievedMessages[i].Id;
                             }
                         }
-                        callback?.Invoke(retrievedMessages);
+                        if (!ct.IsCancellationRequested)
+                        {
+                            callback?.Invoke(retrievedMessages);
+                        }
                     }
 
                     Thread.Sleep(fetchTimeoutMilliseconds);
