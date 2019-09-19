@@ -113,11 +113,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <summary>
         /// Gets the <see cref="Message.Id"/> from the most recent <see cref="Message"/> in the repository.
         /// </summary>
-        public async Task<string> GetLastMessageId()
+        public async Task<long> GetLastMessageId()
         {
             using (var sqlc = OpenConnection())
             {
-                string id = await sqlc.QueryFirstOrDefaultAsync<string>(getLastMessageIdSql);
+                long id = await sqlc.QueryFirstOrDefaultAsync<long>(getLastMessageIdSql);
                 return id;
             }
         }

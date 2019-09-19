@@ -32,7 +32,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <summary>
         /// Gets the <see cref="Message.Id"/> from the most recent <see cref="Message"/> in the repository.
         /// </summary>
-        Task<string> GetLastMessageId();
+        Task<long> GetLastMessageId();
 
         /// <summary>
         /// Gets the n latest <see cref="Message"/>s from the repo, optionally starting from an offset index.
