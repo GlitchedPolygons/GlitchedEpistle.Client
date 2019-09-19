@@ -2682,6 +2682,41 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.PostMessage
   nameWithType: IConvoService.PostMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher
+  name: IMessageFetcher
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher
+  nameWithType: IMessageFetcher
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+  name: StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StartAutoFetchingMessages_System_String_System_String_System_Int64_System_Action_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message___System_Action_System_Int32_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+  name.vb: StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action<System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>>, System.Action, System.Int32)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action(Of System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message)), System.Action, System.Int32)
+  nameWithType: IMessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
+  nameWithType.vb: IMessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages*
+  name: StartAutoFetchingMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StartAutoFetchingMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages
+  nameWithType: IMessageFetcher.StartAutoFetchingMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  name: StopAutoFetchingMessages(CancellationTokenSource)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StopAutoFetchingMessages_System_Threading_CancellationTokenSource_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  nameWithType: IMessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages*
+  name: StopAutoFetchingMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StopAutoFetchingMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages
+  nameWithType: IMessageFetcher.StopAutoFetchingMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageRepository
   name: IMessageRepository
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageRepository.html
@@ -2749,6 +2784,54 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageSender.PostText
   nameWithType: IMessageSender.PostText
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher
+  name: MessageFetcher
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher
+  nameWithType: MessageFetcher
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.GlitchedEpistle.Client.Models.User)
+  name: MessageFetcher(IConvoService, User)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher__ctor_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GlitchedPolygons_GlitchedEpistle_Client_Models_User_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.GlitchedEpistle.Client.Models.User)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.MessageFetcher(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService, GlitchedPolygons.GlitchedEpistle.Client.Models.User)
+  nameWithType: MessageFetcher.MessageFetcher(IConvoService, User)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.#ctor*
+  name: MessageFetcher
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.MessageFetcher
+  nameWithType: MessageFetcher.MessageFetcher
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+  name: StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StartAutoFetchingMessages_System_String_System_String_System_Int64_System_Action_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message___System_Action_System_Int32_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+  name.vb: StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action<System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>>, System.Action, System.Int32)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action(Of System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message)), System.Action, System.Int32)
+  nameWithType: MessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
+  nameWithType.vb: MessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages*
+  name: StartAutoFetchingMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StartAutoFetchingMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages
+  nameWithType: MessageFetcher.StartAutoFetchingMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  name: StopAutoFetchingMessages(CancellationTokenSource)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StopAutoFetchingMessages_System_Threading_CancellationTokenSource_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  nameWithType: MessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages*
+  name: StopAutoFetchingMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StopAutoFetchingMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages
+  nameWithType: MessageFetcher.StopAutoFetchingMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite
   name: MessageRepositorySQLite
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html
