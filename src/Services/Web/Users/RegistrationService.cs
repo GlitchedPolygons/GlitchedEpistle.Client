@@ -42,6 +42,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         private readonly IServerConnectionTest connectionTest;
         private static readonly RSAKeySize RSA_KEY_SIZE = new RSA4096();
 
+        private Task<Tuple<string, string>> keyGenerationTask;
+        
 #pragma warning disable 1591
         public RegistrationService(IAsymmetricKeygenRSA keygen, IServerConnectionTest connectionTest, ILogger logger, IUserService userService, IAppSettings appSettings)
         {
@@ -50,6 +52,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             this.userService = userService;
             this.appSettings = appSettings;
             this.connectionTest = connectionTest;
+
+            keyGenerationTask = Task.Run(() => keygen.GenerateKeyPair(RSA_KEY_SIZE));
         }
 #pragma warning restore 1591
 
@@ -73,7 +77,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 return new Tuple<int, UserCreationResponseDto>(1, null);
             }
 
-            Tuple<string, string> keyPair = await keygen.GenerateKeyPair(RSA_KEY_SIZE);
+            Tuple<string, string> keyPair = await keyGenerationTask;
+            
+            keyGenerationTask = Task.Run(() => keygen.GenerateKeyPair(RSA_KEY_SIZE));
 
             if (keyPair is null || keyPair.Item1.NullOrEmpty() || keyPair.Item2.NullOrEmpty())
             {
