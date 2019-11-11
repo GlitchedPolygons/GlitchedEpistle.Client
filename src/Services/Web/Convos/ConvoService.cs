@@ -184,6 +184,33 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         }
 
         /// <summary>
+        /// Gets the previous messages from a convo starting from a specific <see cref="Message.Id"/>.<para> </para>
+        /// The <paramref name="fromId"/> is EXCLUSIVE!
+        /// </summary>
+        /// <param name="convoId">The convo's identifier.</param>
+        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="userId">The user identifier (needs to be a convo participant).</param>
+        /// <param name="auth">The request authentication token.</param>
+        /// <param name="fromId">The message id from which to start looking for previous message backwards (EXCLUSIVE!).</param>
+        /// <param name="n">How many messages to retrieve?</param>
+        /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if there are no previous messages or if something failed).</returns>
+        public async Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long fromId, long n)
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri($"convos/{convoId}/prev/{n}", UriKind.Relative)
+            );
+
+            request.AddQueryParameter(nameof(auth), auth);
+            request.AddQueryParameter(nameof(userId), userId);
+            request.AddQueryParameter(nameof(fromId), fromId.ToString());
+            request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
+
+            IRestResponse response = await restClient.ExecuteTaskAsync(request);
+            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
+        }
+
+        /// <summary>
         /// Gets a specific range of messages from the db, sorted by descending timestamp.<para> </para>
         /// Both the <paramref name="fromId"/> and <paramref name="toId"/> arguments are INCLUSIVE!
         /// </summary>

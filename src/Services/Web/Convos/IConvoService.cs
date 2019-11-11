@@ -103,7 +103,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="auth">Request authorization token.</param>
         /// <returns>The retrieved messages (or an empty array if nothing was found). <c>null</c> if the request failed altogether.</returns>
         Task<Message[]> GetConvoMessagesFromRange(string convoId, string convoPasswordSHA512, long fromId, long toId, string userId, string auth);
-
+        
+        /// <summary>
+        /// Gets the previous messages from a convo starting from a specific <see cref="Message.Id"/>.<para> </para>
+        /// The <paramref name="fromId"/> is EXCLUSIVE!
+        /// </summary>
+        /// <param name="convoId">The convo's identifier.</param>
+        /// <param name="convoPasswordSHA512">The convo's password hash.</param>
+        /// <param name="userId">The user identifier (needs to be a convo participant).</param>
+        /// <param name="auth">The request authentication token.</param>
+        /// <param name="fromId">The message id from which to start looking for previous message backwards (EXCLUSIVE!).</param>
+        /// <param name="n">How many messages to retrieve?</param>
+        /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if there are no previous messages or if something failed).</returns>
+        Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long fromId, long n);
+        
         /// <summary>
         /// Join a <see cref="Convo" />.
         /// </summary>
