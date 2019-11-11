@@ -2416,6 +2416,12 @@ references:
   commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64)
   nameWithType: ConvoService.GetLastConvoMessages(String, String, String, String, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  name: GetLastConvoMessages(String, String, String, String, Int64, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64, System.Int64)
+  nameWithType: ConvoService.GetLastConvoMessages(String, String, String, String, Int64, Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages*
   name: GetLastConvoMessages
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetLastConvoMessages_
@@ -2623,6 +2629,12 @@ references:
   commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64)
   nameWithType: IConvoService.GetLastConvoMessages(String, String, String, String, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  name: GetLastConvoMessages(String, String, String, String, Int64, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64, System.Int64)
+  nameWithType: IConvoService.GetLastConvoMessages(String, String, String, String, Int64, Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages*
   name: GetLastConvoMessages
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_
