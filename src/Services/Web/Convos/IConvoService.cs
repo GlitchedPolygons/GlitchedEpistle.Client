@@ -115,7 +115,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="fromId">The message id from which to start looking for previous message backwards (EXCLUSIVE!).</param>
         /// <param name="n">How many messages to retrieve?</param>
         /// <returns>The retrieved <see cref="Message" />s (<c>null</c> if there are no previous messages or if something failed).</returns>
-        Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long fromId, long n);
+        Task<Message[]> GetPreviousMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long fromId, long n);
         
         /// <summary>
         /// Join a <see cref="Convo" />.

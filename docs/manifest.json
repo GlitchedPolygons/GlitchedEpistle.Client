@@ -414,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html",
-          "hash": "Uu3ch37mrK/C2o39OqPKiA=="
+          "hash": "GhdTMi1Y3WqUqmM7EIVhyA=="
         }
       },
       "is_incremental": false,
@@ -438,7 +438,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html",
-          "hash": "5AQ944SpVNcu7gYN9Tp8yg=="
+          "hash": "QpxHd6kcieQG+p/GR6GMjw=="
         }
       },
       "is_incremental": false,
@@ -672,7 +672,7 @@
           "hash": "o01JGd+BJt2nDxJu956+Ig=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -839,17 +839,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
+          "skipped_file_count": 58
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
           "skipped_file_count": 3
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 60,
-          "skipped_file_count": 57
         }
       }
     },

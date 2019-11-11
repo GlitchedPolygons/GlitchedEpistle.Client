@@ -2416,12 +2416,6 @@ references:
   commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64)
   nameWithType: ConvoService.GetLastConvoMessages(String, String, String, String, Int64)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
-  name: GetLastConvoMessages(String, String, String, String, Int64, Int64)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64, System.Int64)
-  nameWithType: ConvoService.GetLastConvoMessages(String, String, String, String, Int64, Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages*
   name: GetLastConvoMessages
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetLastConvoMessages_
@@ -2429,6 +2423,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages
   nameWithType: ConvoService.GetLastConvoMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  name: GetPreviousMessages(String, String, String, String, Int64, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetPreviousMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages(System.String, System.String, System.String, System.String, System.Int64, System.Int64)
+  nameWithType: ConvoService.GetPreviousMessages(String, String, String, String, Int64, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages*
+  name: GetPreviousMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetPreviousMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages
+  nameWithType: ConvoService.GetPreviousMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.JoinConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
   name: JoinConvo(EpistleRequestBody)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_JoinConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
@@ -2629,12 +2636,6 @@ references:
   commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64)
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64)
   nameWithType: IConvoService.GetLastConvoMessages(String, String, String, String, Int64)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
-  name: GetLastConvoMessages(String, String, String, String, Int64, Int64)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages(System.String, System.String, System.String, System.String, System.Int64, System.Int64)
-  nameWithType: IConvoService.GetLastConvoMessages(String, String, String, String, Int64, Int64)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages*
   name: GetLastConvoMessages
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetLastConvoMessages_
@@ -2642,6 +2643,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages
   nameWithType: IConvoService.GetLastConvoMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  name: GetPreviousMessages(String, String, String, String, Int64, Int64)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetPreviousMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages(System.String, System.String, System.String, System.String, System.Int64, System.Int64)
+  nameWithType: IConvoService.GetPreviousMessages(String, String, String, String, Int64, Int64)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages*
+  name: GetPreviousMessages
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetPreviousMessages_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages
+  nameWithType: IConvoService.GetPreviousMessages
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.JoinConvo(GlitchedPolygons.GlitchedEpistle.Client.Models.EpistleRequestBody)
   name: JoinConvo(EpistleRequestBody)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_JoinConvo_GlitchedPolygons_GlitchedEpistle_Client_Models_EpistleRequestBody_
