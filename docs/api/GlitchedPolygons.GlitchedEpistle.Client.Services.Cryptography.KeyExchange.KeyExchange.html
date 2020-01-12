@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KeyExchange
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KeyExchange
+   ">
+    <meta name="generator" content="docfx 2.43.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange">
+  
+  
+  <h1 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange" class="text-break">Class KeyExchange
+  </h1>
+  <div class="markdown level0 summary"><p>This key utility was extracted first of all, obviously,
+to avoid code duplication and provide a single point of exchange where API consumers can prepare user RSA keys
+for submission to the backend and, conversely, deserialize them back into the client's domain model easily.<p> </p>
+Secondly, it's also some sort of code entry point for whoever wants to verify Epistle's safety:
+you can Shift-F12/navigate into the various message exchange/encryption relevant implementations
+from here and convince yourself whether this product is for you or not, by reading the source code.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">KeyExchange</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html">IKeyExchange</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange</a></h6>
+  <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
+  <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KeyExchange : IKeyExchange</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange__ctor_GlitchedPolygons_Services_Cryptography_Symmetric_ISymmetricCryptography_GlitchedPolygons_Services_CompressionUtility_ICompressionUtility_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.%23ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography%2CGlitchedPolygons.Services.CompressionUtility.ICompressionUtility%2CGlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L43">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange__ctor_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.#ctor*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange__ctor_GlitchedPolygons_Services_Cryptography_Symmetric_ISymmetricCryptography_GlitchedPolygons_Services_CompressionUtility_ICompressionUtility_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync)">KeyExchange(ISymmetricCryptography, ICompressionUtility, ICompressionUtilityAsync)</h4>
+  <div class="markdown level1 summary"><p>Creates a new key exchange utility instance using the specified <span class="xref">GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography</span> and <span class="xref">GlitchedPolygons.Services.CompressionUtility.ICompressionUtility</span> cryptography/compression providers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyExchange(ISymmetricCryptography aes, ICompressionUtility compressionUtility, ICompressionUtilityAsync compressionUtilityAsync)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography</span></td>
+        <td><span class="parametername">aes</span></td>
+        <td><p>The AES implementation to use for encrypting and decrypting private keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GlitchedPolygons.Services.CompressionUtility.ICompressionUtility</span></td>
+        <td><span class="parametername">compressionUtility</span></td>
+        <td><p>The compression algo to use for (de)compressing keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync</span></td>
+        <td><span class="parametername">compressionUtilityAsync</span></td>
+        <td><p>Asynchronous variant of the compression utility to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKey_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L111">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKey_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKey_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey(System.String)">CompressPublicKey(String)</h4>
+  <div class="markdown level1 summary"><p>Returns the compressed, base-64 encoded <code data-dev-comment-type="paramref" class="paramref">publicKeyPem</code>... ready to be exchanged with the backend.</p>
+<param name="publicKeyPem">The public RSA key (PEM-formatted) to compress.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CompressPublicKey(string publicKeyPem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">publicKeyPem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKeyAsync_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L121">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKeyAsync_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKeyAsync_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync(System.String)">CompressPublicKeyAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous variant of <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_CompressPublicKey_System_String_">CompressPublicKey(String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CompressPublicKeyAsync(string publicKeyPem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">publicKeyPem</span></td>
+        <td><p>The public RSA key (PEM-formatted) to compress.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The compressed key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKey_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L91">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKey_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKey_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey(System.String,System.String)">DecompressAndDecryptPrivateKey(String, String)</h4>
+  <div class="markdown level1 summary"><p>Decompresses and decrypts a private RSA key
+that was encrypted and compressed using <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_System_String_System_String_">EncryptAndCompressPrivateKey(String, String)</a>,
+ready to be assigned to <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKeyPem">PrivateKeyPem</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DecompressAndDecryptPrivateKey(string encryptedCompressedKey, string userPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">encryptedCompressedKey</span></td>
+        <td><p>The encrypted and compressed private key that you'd get from/to the backend (THE SERVER NEVER HAS YOUR PRIVATE KEY IN PLAIN TEXT).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userPassword</span></td>
+        <td><p>The user's password (NOT the hash).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The raw PEM-formatted private RSA Key (ready to be assigned to <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKeyPem">PrivateKeyPem</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKeyAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L102">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKeyAsync_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKeyAsync_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String,System.String)">DecompressAndDecryptPrivateKeyAsync(String, String)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous variant of <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressAndDecryptPrivateKey_System_String_System_String_">DecompressAndDecryptPrivateKey(String, String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; DecompressAndDecryptPrivateKeyAsync(string encryptedCompressedKey, string userPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">encryptedCompressedKey</span></td>
+        <td><p>The encrypted and compressed private key that you'd get from/to the backend (THE SERVER NEVER HAS YOUR PRIVATE KEY IN PLAIN TEXT).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userPassword</span></td>
+        <td><p>The user's password (NOT the hash).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The raw PEM-formatted private RSA Key (ready to be assigned to <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PrivateKeyPem">PrivateKeyPem</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKey_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L132">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKey_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKey_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey(System.String)">DecompressPublicKey(String)</h4>
+  <div class="markdown level1 summary"><p>Decompresses the <code data-dev-comment-type="paramref" class="paramref">compressedPublicKeyPem</code> that is
+coming from a backend request's response and was initially compressed using <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKey_System_String_">CompressPublicKey(String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DecompressPublicKey(string compressedPublicKeyPem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">compressedPublicKeyPem</span></td>
+        <td><p>The compressed public key pem <code>string</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The decompressed <code data-dev-comment-type="paramref" class="paramref">compressedPublicKeyPem</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKeyAsync_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L142">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKeyAsync_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKeyAsync_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync(System.String)">DecompressPublicKeyAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous variant of <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressPublicKey_System_String_">DecompressPublicKey(String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; DecompressPublicKeyAsync(string compressedPublicKeyPem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">compressedPublicKeyPem</span></td>
+        <td><p>The compressed public key pem <code>string</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The decompressed <code data-dev-comment-type="paramref" class="paramref">compressedPublicKeyPem</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L67">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey(System.String,System.String)">EncryptAndCompressPrivateKey(String, String)</h4>
+  <div class="markdown level1 summary"><p>Encrypts <code data-dev-comment-type="paramref" class="paramref">privateKeyPem</code> into a portable <code>string</code>
+that is safe to exchange with the backend, AS LONG AS THE USER'S PASSWORD IS NOT COMPROMISED.<p> </p>
+THE SERVER NEVER HAS YOUR PRIVATE KEY IN PLAIN TEXT!<p> </p>
+The private key is encrypted using the user's password, NOT ITS HASH!
+Otherwise the server could decrypt the key, because it does have the user's <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html#GlitchedPolygons_GlitchedEpistle_Client_Models_User_PasswordSHA512">PasswordSHA512</a>.<p> </p>
+Because of this, it is highly advisable to change user passwords often and use an offline, open-source password manager (such as KeePass).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EncryptAndCompressPrivateKey(string privateKeyPem, string userPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">privateKeyPem</span></td>
+        <td><p>The user's private RSA key (PEM-formatted <code>string</code>).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userPassword</span></td>
+        <td><p>The user's password (NOT its SHA512!).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p><code>string</code> that contains the encrypted and compressed <code data-dev-comment-type="paramref" class="paramref">privateKeyPem</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a></div>
+      <div><span class="xref">GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography</span></div>
+      <div><span class="xref">GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA</span></div>
+      <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html">IMessageCryptography</a></div>
+      <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html">IUserService</a></div>
+      <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html">IConvoService</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKeyAsync_System_String_System_String_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L78">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKeyAsync_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync*"></a>
+  <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKeyAsync_System_String_System_String_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync(System.String,System.String)">EncryptAndCompressPrivateKeyAsync(String, String)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous variant of <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_EncryptAndCompressPrivateKey_System_String_System_String_">EncryptAndCompressPrivateKey(String, String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; EncryptAndCompressPrivateKeyAsync(string privateKeyPem, string userPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">privateKeyPem</span></td>
+        <td><p>The user's private RSA key (PEM-formatted <code>string</code>).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userPassword</span></td>
+        <td><p>The user's password (NOT its SHA512!).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p><code>string</code> that contains the encrypted and compressed <code data-dev-comment-type="paramref" class="paramref">privateKeyPem</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html">IKeyExchange</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/blob/master/src/Services/Cryptography/KeyExchange/KeyExchange.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

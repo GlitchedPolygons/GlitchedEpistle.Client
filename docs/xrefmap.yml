@@ -1661,6 +1661,245 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.User.Token
   nameWithType: User.Token
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
+  name: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.html
+  commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
+  nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange
+  name: IKeyExchange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange
+  nameWithType: IKeyExchange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKey(System.String)
+  name: CompressPublicKey(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_CompressPublicKey_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKey(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKey(System.String)
+  nameWithType: IKeyExchange.CompressPublicKey(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKey*
+  name: CompressPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_CompressPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKey
+  nameWithType: IKeyExchange.CompressPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKeyAsync(System.String)
+  name: CompressPublicKeyAsync(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_CompressPublicKeyAsync_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKeyAsync(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKeyAsync(System.String)
+  nameWithType: IKeyExchange.CompressPublicKeyAsync(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKeyAsync*
+  name: CompressPublicKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_CompressPublicKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.CompressPublicKeyAsync
+  nameWithType: IKeyExchange.CompressPublicKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKey(System.String,System.String)
+  name: DecompressAndDecryptPrivateKey(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressAndDecryptPrivateKey_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKey(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKey(System.String, System.String)
+  nameWithType: IKeyExchange.DecompressAndDecryptPrivateKey(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKey*
+  name: DecompressAndDecryptPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressAndDecryptPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKey
+  nameWithType: IKeyExchange.DecompressAndDecryptPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String,System.String)
+  name: DecompressAndDecryptPrivateKeyAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressAndDecryptPrivateKeyAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String, System.String)
+  nameWithType: IKeyExchange.DecompressAndDecryptPrivateKeyAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKeyAsync*
+  name: DecompressAndDecryptPrivateKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressAndDecryptPrivateKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressAndDecryptPrivateKeyAsync
+  nameWithType: IKeyExchange.DecompressAndDecryptPrivateKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKey(System.String)
+  name: DecompressPublicKey(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressPublicKey_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKey(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKey(System.String)
+  nameWithType: IKeyExchange.DecompressPublicKey(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKey*
+  name: DecompressPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKey
+  nameWithType: IKeyExchange.DecompressPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKeyAsync(System.String)
+  name: DecompressPublicKeyAsync(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressPublicKeyAsync_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKeyAsync(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKeyAsync(System.String)
+  nameWithType: IKeyExchange.DecompressPublicKeyAsync(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKeyAsync*
+  name: DecompressPublicKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_DecompressPublicKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.DecompressPublicKeyAsync
+  nameWithType: IKeyExchange.DecompressPublicKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKey(System.String,System.String)
+  name: EncryptAndCompressPrivateKey(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_EncryptAndCompressPrivateKey_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKey(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKey(System.String, System.String)
+  nameWithType: IKeyExchange.EncryptAndCompressPrivateKey(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKey*
+  name: EncryptAndCompressPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_EncryptAndCompressPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKey
+  nameWithType: IKeyExchange.EncryptAndCompressPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKeyAsync(System.String,System.String)
+  name: EncryptAndCompressPrivateKeyAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_EncryptAndCompressPrivateKeyAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKeyAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKeyAsync(System.String, System.String)
+  nameWithType: IKeyExchange.EncryptAndCompressPrivateKeyAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKeyAsync*
+  name: EncryptAndCompressPrivateKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_EncryptAndCompressPrivateKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange.EncryptAndCompressPrivateKeyAsync
+  nameWithType: IKeyExchange.EncryptAndCompressPrivateKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange
+  name: KeyExchange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange
+  nameWithType: KeyExchange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync)
+  name: KeyExchange(ISymmetricCryptography, ICompressionUtility, ICompressionUtilityAsync)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange__ctor_GlitchedPolygons_Services_Cryptography_Symmetric_ISymmetricCryptography_GlitchedPolygons_Services_CompressionUtility_ICompressionUtility_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.KeyExchange(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography, GlitchedPolygons.Services.CompressionUtility.ICompressionUtility, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync)
+  nameWithType: KeyExchange.KeyExchange(ISymmetricCryptography, ICompressionUtility, ICompressionUtilityAsync)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.#ctor*
+  name: KeyExchange
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.KeyExchange
+  nameWithType: KeyExchange.KeyExchange
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey(System.String)
+  name: CompressPublicKey(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKey_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey(System.String)
+  nameWithType: KeyExchange.CompressPublicKey(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey*
+  name: CompressPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKey
+  nameWithType: KeyExchange.CompressPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync(System.String)
+  name: CompressPublicKeyAsync(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKeyAsync_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync(System.String)
+  nameWithType: KeyExchange.CompressPublicKeyAsync(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync*
+  name: CompressPublicKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_CompressPublicKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.CompressPublicKeyAsync
+  nameWithType: KeyExchange.CompressPublicKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey(System.String,System.String)
+  name: DecompressAndDecryptPrivateKey(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKey_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey(System.String, System.String)
+  nameWithType: KeyExchange.DecompressAndDecryptPrivateKey(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey*
+  name: DecompressAndDecryptPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKey
+  nameWithType: KeyExchange.DecompressAndDecryptPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String,System.String)
+  name: DecompressAndDecryptPrivateKeyAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKeyAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync(System.String, System.String)
+  nameWithType: KeyExchange.DecompressAndDecryptPrivateKeyAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync*
+  name: DecompressAndDecryptPrivateKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressAndDecryptPrivateKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressAndDecryptPrivateKeyAsync
+  nameWithType: KeyExchange.DecompressAndDecryptPrivateKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey(System.String)
+  name: DecompressPublicKey(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKey_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey(System.String)
+  nameWithType: KeyExchange.DecompressPublicKey(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey*
+  name: DecompressPublicKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKey
+  nameWithType: KeyExchange.DecompressPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync(System.String)
+  name: DecompressPublicKeyAsync(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKeyAsync_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync(System.String)
+  nameWithType: KeyExchange.DecompressPublicKeyAsync(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync*
+  name: DecompressPublicKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_DecompressPublicKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.DecompressPublicKeyAsync
+  nameWithType: KeyExchange.DecompressPublicKeyAsync
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey(System.String,System.String)
+  name: EncryptAndCompressPrivateKey(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey(System.String, System.String)
+  nameWithType: KeyExchange.EncryptAndCompressPrivateKey(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey*
+  name: EncryptAndCompressPrivateKey
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKey_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKey
+  nameWithType: KeyExchange.EncryptAndCompressPrivateKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync(System.String,System.String)
+  name: EncryptAndCompressPrivateKeyAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKeyAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync(System.String, System.String)
+  nameWithType: KeyExchange.EncryptAndCompressPrivateKeyAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync*
+  name: EncryptAndCompressPrivateKeyAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_KeyExchange_EncryptAndCompressPrivateKeyAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.KeyExchange.EncryptAndCompressPrivateKeyAsync
+  nameWithType: KeyExchange.EncryptAndCompressPrivateKeyAsync
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
   name: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.html
@@ -3091,12 +3330,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender
   nameWithType: MessageSender
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings)
-  name: MessageSender(User, IUserService, IConvoPasswordProvider, IConvoService, IAsymmetricCryptographyRSA, IMessageCryptography, ICompressionUtilityAsync, IUserSettings)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender__ctor_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoPasswordProvider_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IUserSettings_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MessageSender(GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings)
-  nameWithType: MessageSender.MessageSender(User, IUserService, IConvoPasswordProvider, IConvoService, IAsymmetricCryptographyRSA, IMessageCryptography, ICompressionUtilityAsync, IUserSettings)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  name: MessageSender(User, IUserService, IConvoPasswordProvider, IConvoService, IAsymmetricCryptographyRSA, IMessageCryptography, ICompressionUtilityAsync, IUserSettings, IKeyExchange)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender__ctor_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoPasswordProvider_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IUserSettings_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.MessageSender(GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoPasswordProvider, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IUserSettings, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  nameWithType: MessageSender.MessageSender(User, IUserService, IConvoPasswordProvider, IConvoService, IAsymmetricCryptographyRSA, IMessageCryptography, ICompressionUtilityAsync, IUserSettings, IKeyExchange)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.#ctor*
   name: MessageSender
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageSender__ctor_
@@ -3407,12 +3646,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService
   nameWithType: LoginService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Models.User)
-  name: LoginService(IServerConnectionTest, IUserService, IAppSettings, User)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService__ctor_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IAppSettings_GlitchedPolygons_GlitchedEpistle_Client_Models_User_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Models.User)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.LoginService(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings, GlitchedPolygons.GlitchedEpistle.Client.Models.User)
-  nameWithType: LoginService.LoginService(IServerConnectionTest, IUserService, IAppSettings, User)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  name: LoginService(IServerConnectionTest, IUserService, IAppSettings, User, IKeyExchange)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService__ctor_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IAppSettings_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.LoginService(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings, GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  nameWithType: LoginService.LoginService(IServerConnectionTest, IUserService, IAppSettings, User, IKeyExchange)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor*
   name: LoginService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService__ctor_
@@ -3439,12 +3678,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger
   nameWithType: PasswordChanger
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA)
-  name: PasswordChanger(User, IUserService, ILogger, ICompressionUtilityAsync, IAsymmetricCryptographyRSA)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_PasswordChanger__ctor_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.PasswordChanger(GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA)
-  nameWithType: PasswordChanger.PasswordChanger(User, IUserService, ILogger, ICompressionUtilityAsync, IAsymmetricCryptographyRSA)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  name: PasswordChanger(User, IUserService, ILogger, ICompressionUtilityAsync, IAsymmetricCryptographyRSA, IKeyExchange)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_PasswordChanger__ctor_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.PasswordChanger(GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  nameWithType: PasswordChanger.PasswordChanger(User, IUserService, ILogger, ICompressionUtilityAsync, IAsymmetricCryptographyRSA, IKeyExchange)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.#ctor*
   name: PasswordChanger
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_PasswordChanger__ctor_
@@ -3471,12 +3710,12 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService
   nameWithType: RegistrationService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings)
-  name: RegistrationService(IAsymmetricKeygenRSA, IServerConnectionTest, ILogger, IUserService, IAppSettings)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService__ctor_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IAppSettings_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.RegistrationService(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings)
-  nameWithType: RegistrationService.RegistrationService(IAsymmetricKeygenRSA, IServerConnectionTest, ILogger, IUserService, IAppSettings)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  name: RegistrationService(IAsymmetricKeygenRSA, IServerConnectionTest, ILogger, IUserService, IAppSettings, IKeyExchange)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService__ctor_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IAppSettings_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.RegistrationService(GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
+  nameWithType: RegistrationService.RegistrationService(IAsymmetricKeygenRSA, IServerConnectionTest, ILogger, IUserService, IAppSettings, IKeyExchange)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.#ctor*
   name: RegistrationService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_RegistrationService__ctor_
@@ -3665,64 +3904,6 @@ references:
   commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Utilities
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities
   nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Utilities
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility
-  name: KeyExchangeUtility
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility
-  nameWithType: KeyExchangeUtility
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey(System.String)
-  name: CompressPublicKey(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_CompressPublicKey_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey(System.String)
-  nameWithType: KeyExchangeUtility.CompressPublicKey(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey*
-  name: CompressPublicKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_CompressPublicKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.CompressPublicKey
-  nameWithType: KeyExchangeUtility.CompressPublicKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey(System.String,System.String)
-  name: DecompressAndDecryptPrivateKey(String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressAndDecryptPrivateKey_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey(System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey(System.String, System.String)
-  nameWithType: KeyExchangeUtility.DecompressAndDecryptPrivateKey(String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey*
-  name: DecompressAndDecryptPrivateKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressAndDecryptPrivateKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressAndDecryptPrivateKey
-  nameWithType: KeyExchangeUtility.DecompressAndDecryptPrivateKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey(System.String)
-  name: DecompressPublicKey(String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressPublicKey_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey(System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey(System.String)
-  nameWithType: KeyExchangeUtility.DecompressPublicKey(String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey*
-  name: DecompressPublicKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_DecompressPublicKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.DecompressPublicKey
-  nameWithType: KeyExchangeUtility.DecompressPublicKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey(System.String,System.String)
-  name: EncryptAndCompressPrivateKey(String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_EncryptAndCompressPrivateKey_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey(System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey(System.String, System.String)
-  nameWithType: KeyExchangeUtility.EncryptAndCompressPrivateKey(String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey*
-  name: EncryptAndCompressPrivateKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.html#GlitchedPolygons_GlitchedEpistle_Client_Utilities_KeyExchangeUtility_EncryptAndCompressPrivateKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Utilities.KeyExchangeUtility.EncryptAndCompressPrivateKey
-  nameWithType: KeyExchangeUtility.EncryptAndCompressPrivateKey
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility
   name: UrlUtility
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Utilities.UrlUtility.html

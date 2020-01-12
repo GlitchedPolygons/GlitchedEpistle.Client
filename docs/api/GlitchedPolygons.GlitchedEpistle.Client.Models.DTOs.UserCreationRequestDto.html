@@ -185,7 +185,7 @@ public string PasswordSHA512 { get; set; }</code></pre>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PrivateKey_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PrivateKey" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PrivateKey">PrivateKey</h4>
   <div class="markdown level1 summary"><p>The user's private message decryption RSA key.<p> </p>
-PEM-formatted and encrypted into <code>byte[]</code> and then gzipped and base-64 encoded.</p>
+PEM-formatted and encrypted into <code>byte[]</code> and then compressed and base-64 encoded.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -218,7 +218,7 @@ public string PrivateKey { get; set; }</code></pre>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PublicKey_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationRequestDto_PublicKey" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.PublicKey">PublicKey</h4>
   <div class="markdown level1 summary"><p>The user's public RSA key.<p> </p>
-PEM-formatted, and then gzipped via <code>Encoding.UTF8.GetBytes(string)</code> using <code>CompressionLevel.Fastest</code> and ultimately base-64 encoded.</p>
+PEM-formatted, and then compressed via <code>Encoding.UTF8.GetBytes(string)</code> using <code>CompressionLevel.Fastest</code> and ultimately base-64 encoded.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
