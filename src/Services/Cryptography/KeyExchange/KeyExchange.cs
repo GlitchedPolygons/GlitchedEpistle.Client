@@ -27,7 +27,9 @@ using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
 {
-    /// <inheritdoc />
+    /// <summary>
+    /// <see cref="IKeyExchange"/> implementation.
+    /// </summary>
     public class KeyExchange : IKeyExchange
     {
         private readonly ISymmetricCryptography aes;
