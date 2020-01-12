@@ -1,6 +1,6 @@
 /*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@ using System.Threading.Tasks;
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
@@ -36,12 +37,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         private readonly User user;
         private readonly IUserService userService;
         private readonly IAppSettings appSettings;
+        private readonly IKeyExchange keyExchange;
         private readonly IServerConnectionTest connectionTest;
 
 #pragma warning disable 1591
-        public LoginService(IServerConnectionTest connectionTest, IUserService userService, IAppSettings appSettings, User user)
+        public LoginService(IServerConnectionTest connectionTest, IUserService userService, IAppSettings appSettings, User user, IKeyExchange keyExchange)
         {
             this.user = user;
+            this.keyExchange = keyExchange;
             this.appSettings = appSettings;
             this.userService = userService;
             this.connectionTest = connectionTest;
@@ -83,8 +86,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             {
                 user.Id = appSettings.LastUserId = userId;
 
-                user.PublicKeyPem = KeyExchangeUtility.DecompressPublicKey(response.PublicKey);
-                user.PrivateKeyPem = KeyExchangeUtility.DecompressAndDecryptPrivateKey(response.PrivateKey, userPassword);
+                user.PublicKeyPem = await keyExchange.DecompressPublicKeyAsync(response.PublicKey);
+                user.PrivateKeyPem = await keyExchange.DecompressAndDecryptPrivateKeyAsync(response.PrivateKey, userPassword);
                 user.Token = new Tuple<DateTime, string>(DateTime.UtcNow, response.Auth);
 
                 return 0;

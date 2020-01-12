@@ -1,6 +1,6 @@
 /*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,14 +37,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 
         /// <summary>
         /// The user's public RSA key.<para> </para>
-        /// PEM-formatted, and then gzipped via <c>Encoding.UTF8.GetBytes(string)</c> using <c>CompressionLevel.Fastest</c> and ultimately base-64 encoded.
+        /// PEM-formatted, and then compressed via <c>Encoding.UTF8.GetBytes(string)</c> using <c>CompressionLevel.Fastest</c> and ultimately base-64 encoded.
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string PublicKey { get; set; }
 
         /// <summary>
         /// The user's private message decryption RSA key.<para> </para>
-        /// PEM-formatted and encrypted into <c>byte[]</c> and then gzipped and base-64 encoded.
+        /// PEM-formatted and encrypted into <c>byte[]</c> and then compressed and base-64 encoded.
         /// </summary>
         [JsonProperty("pkey")]
         public string PrivateKey { get; set; }

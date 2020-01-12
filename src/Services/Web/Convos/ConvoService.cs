@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
         /// <summary>
         /// Creates a new convo on the server.<para> </para>
-        /// "<paramref name="requestBody.Body"/>" should be the <see cref="ConvoCreationRequestDto"/> serialized into JSON and gzipped.
+        /// "<paramref name="requestBody.Body"/>" should be the <see cref="ConvoCreationRequestDto"/> serialized into JSON and compressed.
         /// </summary>
         /// <param name="requestBody">Request body containing the parameters (auth, etc...).</param>
         /// <returns><c>null</c> if creation failed; the created <see cref="Convo"/>'s unique id.</returns>

@@ -1,6 +1,6 @@
 /*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,14 +18,13 @@
 
 using System;
 using System.Threading.Tasks;
-
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
-using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-using GlitchedPolygons.Services.CompressionUtility;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
+using GlitchedPolygons.Services.CompressionUtility;
 
 using Newtonsoft.Json;
 
@@ -39,17 +38,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         private readonly User user;
         private readonly ILogger logger;
         private readonly IUserService userService;
-        private readonly ICompressionUtilityAsync gzip;
+        private readonly IKeyExchange keyExchange;
         private readonly IAsymmetricCryptographyRSA crypto;
+        private readonly ICompressionUtilityAsync compressionUtility;
         
 #pragma warning disable 1591
-        public PasswordChanger(User user, IUserService userService, ILogger logger, ICompressionUtilityAsync gzip, IAsymmetricCryptographyRSA crypto)
+        public PasswordChanger(User user, IUserService userService, ILogger logger, ICompressionUtilityAsync compressionUtility, IAsymmetricCryptographyRSA crypto, IKeyExchange keyExchange)
         {
             this.user = user;
-            this.gzip = gzip;
             this.crypto = crypto;
             this.logger = logger;
+            this.keyExchange = keyExchange;
             this.userService = userService;
+            this.compressionUtility = compressionUtility;
         }
 #pragma warning restore 1591
         
@@ -80,14 +81,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 Totp = totp,
                 OldPwSHA512 = oldPw.SHA512(),
                 NewPwSHA512 = newPw.SHA512(),
-                NewPrivateKey = KeyExchangeUtility.EncryptAndCompressPrivateKey(user.PrivateKeyPem, newPw)
+                NewPrivateKey = await keyExchange.EncryptAndCompressPrivateKeyAsync(user.PrivateKeyPem, newPw)
             };
 
             var requestBody = new EpistleRequestBody
             {
                 UserId = user.Id,
                 Auth = user.Token.Item2,
-                Body = await gzip.Compress(JsonConvert.SerializeObject(dto))
+                Body = await compressionUtility.Compress(JsonConvert.SerializeObject(dto))
             };
 
             bool success = await userService.ChangeUserPassword(requestBody.Sign(crypto, user.PrivateKeyPem));

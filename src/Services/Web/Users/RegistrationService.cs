@@ -1,6 +1,6 @@
 /*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,14 +18,13 @@
 
 using System;
 using System.Threading.Tasks;
-
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
-using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
@@ -38,19 +37,22 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         private readonly ILogger logger;
         private readonly IUserService userService;
         private readonly IAppSettings appSettings;
+        private readonly IKeyExchange keyExchange;
         private readonly IAsymmetricKeygenRSA keygen;
         private readonly IServerConnectionTest connectionTest;
+        
         private static readonly RSAKeySize RSA_KEY_SIZE = new RSA4096();
 
         private Task<Tuple<string, string>> keyGenerationTask;
         
 #pragma warning disable 1591
-        public RegistrationService(IAsymmetricKeygenRSA keygen, IServerConnectionTest connectionTest, ILogger logger, IUserService userService, IAppSettings appSettings)
+        public RegistrationService(IAsymmetricKeygenRSA keygen, IServerConnectionTest connectionTest, ILogger logger, IUserService userService, IAppSettings appSettings, IKeyExchange keyExchange)
         {
             this.logger = logger;
             this.keygen = keygen;
             this.userService = userService;
             this.appSettings = appSettings;
+            this.keyExchange = keyExchange;
             this.connectionTest = connectionTest;
 
             keyGenerationTask = Task.Run(() => keygen.GenerateKeyPair(RSA_KEY_SIZE));
@@ -95,8 +97,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 {
                     PasswordSHA512 = password.SHA512(),
                     CreationSecret = userCreationSecret,
-                    PublicKey = KeyExchangeUtility.CompressPublicKey(publicKeyPem),
-                    PrivateKey = KeyExchangeUtility.EncryptAndCompressPrivateKey(privateKeyPem, password),
+                    PublicKey = await keyExchange.CompressPublicKeyAsync(publicKeyPem),
+                    PrivateKey = await keyExchange.EncryptAndCompressPrivateKeyAsync(privateKeyPem, password),
                 });
 
                 if (userCreationResponse is null)

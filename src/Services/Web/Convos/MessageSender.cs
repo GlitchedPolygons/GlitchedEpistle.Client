@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,12 +24,12 @@ using System.Collections.Concurrent;
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
-using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
-using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
+using GlitchedPolygons.Services.CompressionUtility;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -42,30 +42,32 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     public class MessageSender : IMessageSender
     {
         private readonly User user;
+        private readonly IKeyExchange keyExchange;
         private readonly IUserService userService;
         private readonly IUserSettings userSettings;
         private readonly IConvoService convoService;
         private readonly IMessageCryptography crypto;
-        private readonly ICompressionUtilityAsync gzip;
         private readonly IAsymmetricCryptographyRSA rsa;
+        private readonly ICompressionUtilityAsync compressionUtility;
         private readonly IConvoPasswordProvider convoPasswordProvider;
         private static readonly char[] MSG_TRIM_CHARS = { '\n', '\r', '\t' };
 
         /// <summary>
-        /// The maximum allowed file size for a convo's message.
+        /// The maximum allowed file size for a convo's message (currently 32MB).
         /// </summary>
-        public const long MAX_FILE_SIZE_BYTES = 20971520;
+        public const long MAX_FILE_SIZE_BYTES = 33554432;
         
 #pragma warning disable 1591
-        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync gzip, IUserSettings userSettings)
+        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync compressionUtility, IUserSettings userSettings, IKeyExchange keyExchange)
         {
             this.rsa = rsa;
             this.user = user;
-            this.gzip = gzip;
             this.crypto = crypto;
-            this.userSettings = userSettings;
+            this.keyExchange = keyExchange;
             this.userService = userService;
+            this.userSettings = userSettings;
             this.convoService = convoService;
+            this.compressionUtility = compressionUtility;
             this.convoPasswordProvider = convoPasswordProvider;
         }
 #pragma warning restore 1591
@@ -114,17 +116,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private async Task<bool> PostMessageToConvo(Convo convo, string messageBodyJson)
         {
             // Get the keys of all convo participants here.
-            List<Tuple<string, string>> keys = await userService.GetUserPublicKey(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
+            List<Tuple<string, string>> publicKeys = await userService.GetUserPublicKey(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
 
             // Encrypt the message for every convo participant individually
-            // and put the result in a temporary concurrent dictionary.
-            var encryptedMessagesBag = new ConcurrentDictionary<string, string>();
-
-            Parallel.ForEach(keys, key =>
+            // and put the results into a temporary "ConcurrentDictionary".
+            var encryptedMessages = new ConcurrentDictionary<string, string>();
+            
+            Parallel.ForEach(publicKeys, key =>
             {
                 if (key != null && key.Item1.NotNullNotEmpty() && key.Item2.NotNullNotEmpty() && messageBodyJson.NotNullNotEmpty())
                 {
-                    encryptedMessagesBag[key.Item1] = crypto.EncryptMessage(messageBodyJson, KeyExchangeUtility.DecompressPublicKey(key.Item2));
+                    encryptedMessages[key.Item1] = crypto.EncryptMessage(messageBodyJson, keyExchange.DecompressPublicKey(key.Item2));
                 }
             });
 
@@ -133,14 +135,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 SenderName = userSettings.Username,
                 ConvoId = convo.Id,
                 ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
-                MessageBodiesJson = JsonConvert.SerializeObject(encryptedMessagesBag)
+                MessageBodiesJson = JsonConvert.SerializeObject(encryptedMessages)
             };
 
             var body = new EpistleRequestBody
             {
                 UserId = user.Id,
                 Auth = user.Token.Item2,
-                Body = await gzip.Compress(JsonConvert.SerializeObject(postParamsDto))
+                Body = await compressionUtility.Compress(JsonConvert.SerializeObject(postParamsDto))
             };
 
             bool success = await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem));

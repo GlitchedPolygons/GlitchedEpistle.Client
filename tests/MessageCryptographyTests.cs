@@ -1,6 +1,6 @@
 /*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ namespace GlitchedEpistle.Client.Tests
 {
     public class MessageCryptographyTests
     {
-        private readonly IMessageCryptography crypto = new MessageCryptography(new SymmetricCryptography(), new AsymmetricCryptographyRSA(), new GZipUtility(), new InMemoryLogger());
+        private readonly IMessageCryptography crypto = new MessageCryptography(new SymmetricCryptography(), new AsymmetricCryptographyRSA(), new BrotliUtility(), new InMemoryLogger());
         
         private readonly string text = File.ReadAllText("TestData/LoremIpsum.txt");
         private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");

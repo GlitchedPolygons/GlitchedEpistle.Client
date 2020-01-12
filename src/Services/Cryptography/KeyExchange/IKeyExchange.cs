@@ -1,6 +1,6 @@
-﻿/*
+/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-using GlitchedPolygons.Services.CompressionUtility;
+using System.Threading.Tasks;
 using GlitchedPolygons.Services.Cryptography.Symmetric;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
@@ -24,7 +24,7 @@ using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
 
-namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
+namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
 {
     /// <summary>
     /// This key utility was extracted first of all, obviously,
@@ -34,7 +34,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
     /// you can Shift-F12/navigate into the various message exchange/encryption relevant implementations
     /// from here and convince yourself whether this product is for you or not, by reading the source code.
     /// </summary>
-    public static class KeyExchangeUtility
+    public interface IKeyExchange
     {
         /// <summary>
         /// Encrypts <paramref name="privateKeyPem"/> into a portable <c>string</c>
@@ -53,13 +53,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
         /// <param name="privateKeyPem">The user's private RSA key (PEM-formatted <c>string</c>).</param>
         /// <param name="userPassword">The user's password (NOT its SHA512!).</param>
         /// <returns><c>string</c> that contains the encrypted and compressed <paramref name="privateKeyPem"/>.</returns>
-        public static string EncryptAndCompressPrivateKey(string privateKeyPem, string userPassword)
-        {
-            ICompressionUtility gzip = new GZipUtility();
-            ISymmetricCryptography crypto = new SymmetricCryptography();
-
-            return gzip.Compress(crypto.EncryptWithPassword(privateKeyPem, userPassword));
-        }
+        string EncryptAndCompressPrivateKey(string privateKeyPem, string userPassword);
+        
+        /// <summary>
+        /// Asynchronous variant of <see cref="EncryptAndCompressPrivateKey"/>.
+        /// </summary>
+        /// <param name="privateKeyPem">The user's private RSA key (PEM-formatted <c>string</c>).</param>
+        /// <param name="userPassword">The user's password (NOT its SHA512!).</param>
+        /// <returns><c>string</c> that contains the encrypted and compressed <paramref name="privateKeyPem"/>.</returns>
+        Task<string> EncryptAndCompressPrivateKeyAsync(string privateKeyPem, string userPassword);
 
         /// <summary>
         /// Decompresses and decrypts a private RSA key 
@@ -69,26 +71,43 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Utilities
         /// <param name="encryptedCompressedKey">The encrypted and compressed private key that you'd get from/to the backend (THE SERVER NEVER HAS YOUR PRIVATE KEY IN PLAIN TEXT).</param>
         /// <param name="userPassword">The user's password (NOT the hash).</param>
         /// <returns>The raw PEM-formatted private RSA Key (ready to be assigned to <see cref="User.PrivateKeyPem"/>).</returns>
-        public static string DecompressAndDecryptPrivateKey(string encryptedCompressedKey, string userPassword)
-        {
-            ICompressionUtility gzip = new GZipUtility();
-            ISymmetricCryptography crypto = new SymmetricCryptography();
-
-            return crypto.DecryptWithPassword(gzip.Decompress(encryptedCompressedKey), userPassword);
-        }
+        string DecompressAndDecryptPrivateKey(string encryptedCompressedKey, string userPassword);
 
         /// <summary>
-        /// Returns the gzipped, base-64 encoded <paramref name="publicKeyPem"/>... ready to be exchanged with the backend.
-        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to compress.</param>
+        /// Asynchronous variant of <see cref="DecompressAndDecryptPrivateKey"/>.
         /// </summary>
-        public static string CompressPublicKey(string publicKeyPem) => new GZipUtility().Compress(publicKeyPem);
+        /// <param name="encryptedCompressedKey">The encrypted and compressed private key that you'd get from/to the backend (THE SERVER NEVER HAS YOUR PRIVATE KEY IN PLAIN TEXT).</param>
+        /// <param name="userPassword">The user's password (NOT the hash).</param>
+        /// <returns>The raw PEM-formatted private RSA Key (ready to be assigned to <see cref="User.PrivateKeyPem"/>).</returns>
+        Task<string> DecompressAndDecryptPrivateKeyAsync(string encryptedCompressedKey, string userPassword);
+        
+        /// <summary>
+        /// Returns the compressed, base-64 encoded <paramref name="publicKeyPem"/>... ready to be exchanged with the backend.
+        /// </summary>
+        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to compress.</param>
+        /// <returns>The compressed key.</returns>
+        string CompressPublicKey(string publicKeyPem);
 
+        /// <summary>
+        /// Asynchronous variant of <see cref="CompressPublicKey"/>.
+        /// </summary>
+        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to compress.</param>
+        /// <returns>The compressed key.</returns>
+        Task<string> CompressPublicKeyAsync(string publicKeyPem);
+        
         /// <summary>
         /// Decompresses the <paramref name="compressedPublicKeyPem"/> that is
         /// coming from a backend request's response and was initially compressed using <see cref="CompressPublicKey"/>.
         /// </summary>
         /// <param name="compressedPublicKeyPem">The compressed public key pem <c>string</c>.</param>
         /// <returns>The decompressed <paramref name="compressedPublicKeyPem"/>.</returns>
-        public static string DecompressPublicKey(string compressedPublicKeyPem) => new GZipUtility().Decompress(compressedPublicKeyPem);
+        string DecompressPublicKey(string compressedPublicKeyPem);
+        
+        /// <summary>
+        /// Asynchronous variant of <see cref="DecompressPublicKey"/>.
+        /// </summary>
+        /// <param name="compressedPublicKeyPem">The compressed public key pem <c>string</c>.</param>
+        /// <returns>The decompressed <paramref name="compressedPublicKeyPem"/>.</returns>
+        Task<string> DecompressPublicKeyAsync(string compressedPublicKeyPem);
     }
 }

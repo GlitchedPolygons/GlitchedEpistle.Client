@@ -1,6 +1,6 @@
 /*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,29 +18,35 @@
 
 using Xunit;
 using System.IO;
+using System.Threading.Tasks;
+
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
+using GlitchedPolygons.Services.CompressionUtility;
+using GlitchedPolygons.Services.Cryptography.Symmetric;
 
 namespace GlitchedEpistle.Client.Tests
 {
     public class KeyExchangeUtilityTests
     {
+        private readonly IKeyExchange keyExchange = new KeyExchange(new SymmetricCryptography(), new BrotliUtility(), new BrotliUtilityAsync());
         private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");
         private readonly string publicTestKeyPem = File.ReadAllText("TestData/KeyPair1/Public");
 
         [Fact]
-        public void KeyExchangeUtility_Compress_Decompress_IdenticalAfterwards()
+        public async Task KeyExchangeUtility_Compress_Decompress_IdenticalAfterwards()
         {
-            string compressedKey = KeyExchangeUtility.CompressPublicKey(publicTestKeyPem);
-            string decompressedKey = KeyExchangeUtility.DecompressPublicKey(compressedKey);
+            string compressedKey = await keyExchange.CompressPublicKeyAsync(publicTestKeyPem);
+            string decompressedKey = await keyExchange.DecompressPublicKeyAsync(compressedKey);
             Assert.Equal(publicTestKeyPem, decompressedKey);
         }
 
         [Fact]
-        public void KeyExchangeUtility_EncryptAndCompress_DecompressAndDecrypt_IdenticalAfterwards()
+        public async Task KeyExchangeUtility_EncryptAndCompress_DecompressAndDecrypt_IdenticalAfterwards()
         {
             const string TEST_PW = "test.@#°§çUserPassword$$$___69420  \r\n847KWdHfhoö\nüä!\t!]]   [}  \r\n\r\n $äö\"";
-            string i = KeyExchangeUtility.EncryptAndCompressPrivateKey(privateKeyPem, TEST_PW);
-            string o = KeyExchangeUtility.DecompressAndDecryptPrivateKey(i, TEST_PW);
+            string i = await keyExchange.EncryptAndCompressPrivateKeyAsync(privateKeyPem, TEST_PW);
+            string o = await keyExchange.DecompressAndDecryptPrivateKeyAsync(i, TEST_PW);
             Assert.Equal(privateKeyPem, o);
         }
     }

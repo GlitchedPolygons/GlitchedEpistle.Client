@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,8 +44,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The request body. These are the endpoint parameters.<para> </para>
         /// Typically, this is some request DTO (like for example <see cref="ConvoCreationRequestDto"/>)
-        /// that was serialized into JSON and gzipped.<para> </para>
-        /// If the body is really short and/or represents only a single value, you can also assign the value directly instead of serializing + gzipping it.
+        /// that was serialized into JSON and compressed.<para> </para>
+        /// If the body is really short and/or represents only a single value, you can also assign the value directly instead of serializing + compressing it.
         /// </summary>
         [JsonProperty("body")]
         public string Body { get; set; }

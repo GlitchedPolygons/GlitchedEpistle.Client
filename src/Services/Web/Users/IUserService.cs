@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -74,7 +74,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         Task<List<Tuple<string, string>>> GetUserPublicKey(string userId, string userIds, string auth);
 
         /// <summary>
-        /// Gets a user's (encrypted, gzipped and base-64 encoded) private key from the server.
+        /// Gets a user's (encrypted, compressed and base-64 encoded) private key from the server.
         /// </summary>
         /// <param name="userId">The requesting user's id.</param>
         /// <param name="passwordSHA512">The requesting user's password hash (SHA512).</param>

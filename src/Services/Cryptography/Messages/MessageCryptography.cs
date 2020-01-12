@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,23 +34,23 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
     public class MessageCryptography : IMessageCryptography
     {
         private readonly ILogger logger;
-        private readonly ICompressionUtility gzip;
         private readonly ISymmetricCryptography aes;
         private readonly IAsymmetricCryptographyRSA rsa;
+        private readonly ICompressionUtility compressionUtility;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageCryptography"/> class.
         /// </summary>
         /// <param name="logger"><see cref="ILogger"/> instance for logging any cryptographic errors that might occur.</param>
-        /// <param name="gzip">The <see cref="ICompressionUtility"/> instance needed for compression (should be injected via IoC).</param>
+        /// <param name="compressionUtility">The <see cref="ICompressionUtility"/> instance needed for compression (should be injected via IoC).</param>
         /// <param name="aes">The <see cref="ISymmetricCryptography"/> instance (should be injected via IoC).</param>
         /// <param name="rsa">The <see cref="IAsymmetricCryptographyRSA"/> instance (should be injected via IoC).</param>
-        public MessageCryptography(ISymmetricCryptography aes, IAsymmetricCryptographyRSA rsa, ICompressionUtility gzip, ILogger logger)
+        public MessageCryptography(ISymmetricCryptography aes, IAsymmetricCryptographyRSA rsa, ICompressionUtility compressionUtility, ILogger logger)
         {
             this.aes = aes;
             this.rsa = rsa;
-            this.gzip = gzip;
             this.logger = logger;
+            this.compressionUtility = compressionUtility;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
                     stringBuilder.Append(Convert.ToBase64String(encryptionResult.IV));
                     stringBuilder.Append('|');
                     stringBuilder.Append(Convert.ToBase64String(encryptionResult.EncryptedData));
-                    return gzip.Compress(stringBuilder.ToString());
+                    return compressionUtility.Compress(stringBuilder.ToString());
                 }
             }
             catch (Exception)
@@ -115,7 +115,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
                 return string.Empty;
             }
             
-            string[] split = gzip.Decompress(encryptedMessage)?.Split('|');
+            string[] split = compressionUtility.Decompress(encryptedMessage)?.Split('|');
             if (split is null ||  split.Length != 3)
             {
                 logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: The provided {nameof(encryptedMessage)} string is not in the right format! Please make sure that you do not modify the string that you obtain via the {nameof(MessageCryptography)}::{nameof(EncryptMessage)} method before passing it into this decryption method...");

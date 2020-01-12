@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -194,7 +194,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         }
 
         /// <summary>
-        /// Gets a user's (encrypted, gzipped and base-64 encoded) private key from the server.
+        /// Gets a user's (encrypted, compressed and base-64 encoded) private key from the server.
         /// </summary>
         /// <param name="userId">The requesting user's id.</param>
         /// <param name="passwordSHA512">The requesting user's password hash (SHA512).</param>
@@ -219,7 +219,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// Changes the user password.<para> </para>
         /// Remember that <paramref name="requestBody"/>'s field
         /// <see cref="EpistleRequestBody.Body"/> should be the <see cref="UserChangePasswordRequestDto"/>
-        /// instance serialized into JSON and then gzipped!
+        /// instance serialized into JSON and then compressed!
         /// </summary>
         /// <param name="requestBody">Request parameters DTO wrapped into an <see cref="EpistleRequestBody"/>.</param>
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>

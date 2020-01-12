@@ -1,6 +1,6 @@
 ﻿/*
     Glitched Epistle - Client
-    Copyright (C) 2019  Raphael Beck
+    Copyright (C) 2020  Raphael Beck
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string PublicKey { get; set; }
 
         /// <summary>
-        /// The user's private key; PEM-formatted and encrypted into <c>byte[]</c> and then gzipped and base-64 encoded.
+        /// The user's private key; PEM-formatted and encrypted into <c>byte[]</c> and then compressed and base-64 encoded.
         /// </summary>
         [JsonProperty("pkey")]
         public string PrivateKey { get; set; }
