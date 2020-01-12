@@ -17,9 +17,9 @@
 */
 
 using System;
+using RestSharp;
 using System.Threading.Tasks;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-using RestSharp;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
 {
