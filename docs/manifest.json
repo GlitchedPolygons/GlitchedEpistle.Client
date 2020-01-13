@@ -282,7 +282,7 @@
           "hash": "b3NHDlx+PyF3PVRTjnmuYA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -294,7 +294,7 @@
           "hash": "pL+28qJNtSqFcwhzK4cy5w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -555,10 +555,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageSender.html",
-          "hash": "ufKGa7cz4FTWeU8oSAPK9g=="
+          "hash": "etRn6M326Q/HdN7eolr+gw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -570,7 +570,7 @@
           "hash": "d1FUMuqusoZIjae9xwoGLA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
