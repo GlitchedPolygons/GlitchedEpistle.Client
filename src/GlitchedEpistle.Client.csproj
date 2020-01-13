@@ -34,9 +34,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <Copyright>Raphael Beck</Copyright>
-    <PackageVersion>2020.2.0.1</PackageVersion>
-    <AssemblyVersion>2020.2.0.1</AssemblyVersion>
-    <FileVersion>2020.2.0.1</FileVersion>
+    <PackageVersion>2020.2.0.2</PackageVersion>
+    <AssemblyVersion>2020.2.0.2</AssemblyVersion>
+    <FileVersion>2020.2.0.2</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

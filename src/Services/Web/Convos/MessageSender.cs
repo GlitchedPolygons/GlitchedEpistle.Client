@@ -29,7 +29,6 @@ using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
-using GlitchedPolygons.Services.CompressionUtility;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -48,7 +47,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private readonly IConvoService convoService;
         private readonly IMessageCryptography crypto;
         private readonly IAsymmetricCryptographyRSA rsa;
-        private readonly ICompressionUtilityAsync compressionUtility;
         private readonly IConvoPasswordProvider convoPasswordProvider;
         private static readonly char[] MSG_TRIM_CHARS = { '\n', '\r', '\t' };
 
@@ -58,7 +56,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public const long MAX_FILE_SIZE_BYTES = 33554432;
         
 #pragma warning disable 1591
-        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, ICompressionUtilityAsync compressionUtility, IUserSettings userSettings, IKeyExchange keyExchange)
+        public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, IUserSettings userSettings, IKeyExchange keyExchange)
         {
             this.rsa = rsa;
             this.user = user;
@@ -67,7 +65,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             this.userService = userService;
             this.userSettings = userSettings;
             this.convoService = convoService;
-            this.compressionUtility = compressionUtility;
             this.convoPasswordProvider = convoPasswordProvider;
         }
 #pragma warning restore 1591
@@ -116,13 +113,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private async Task<bool> PostMessageToConvo(Convo convo, string messageBodyJson)
         {
             // Get the keys of all convo participants here.
-            List<Tuple<string, string>> publicKeys = await userService.GetUserPublicKey(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
+            Task<List<Tuple<string, string>>> publicKeys = userService.GetUserPublicKey(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
 
             // Encrypt the message for every convo participant individually
             // and put the results into a temporary "ConcurrentDictionary".
             var encryptedMessages = new ConcurrentDictionary<string, string>();
             
-            Parallel.ForEach(publicKeys, key =>
+            Parallel.ForEach(await publicKeys, key =>
             {
                 if (key != null && key.Item1.NotNullNotEmpty() && key.Item2.NotNullNotEmpty() && messageBodyJson.NotNullNotEmpty())
                 {
@@ -142,7 +139,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             {
                 UserId = user.Id,
                 Auth = user.Token.Item2,
-                Body = await compressionUtility.Compress(JsonConvert.SerializeObject(postParamsDto))
+                Body = JsonConvert.SerializeObject(postParamsDto)
             };
 
             bool success = await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem));
