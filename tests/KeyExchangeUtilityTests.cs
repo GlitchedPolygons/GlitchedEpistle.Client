@@ -29,7 +29,7 @@ namespace GlitchedEpistle.Client.Tests
 {
     public class KeyExchangeUtilityTests
     {
-        private readonly IKeyExchange keyExchange = new KeyExchange(new SymmetricCryptography(), new BrotliUtility(), new BrotliUtilityAsync());
+        private readonly IKeyExchange keyExchange = new KeyExchange(new SymmetricCryptography(), new LzmaUtility(), new LzmaUtilityAsync());
         private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");
         private readonly string publicTestKeyPem = File.ReadAllText("TestData/KeyPair1/Public");
 
@@ -44,7 +44,7 @@ namespace GlitchedEpistle.Client.Tests
         [Fact]
         public async Task KeyExchangeUtility_EncryptAndCompress_DecompressAndDecrypt_IdenticalAfterwards()
         {
-            const string TEST_PW = "test.@#°§çUserPassword$$$___69420  \r\n847KWdHfhoö\nüä!\t!]]   [}  \r\n\r\n $äö\"";
+            const string TEST_PW = "test.@#°§çUserPassword$$$__ bvgcgfc-jgvgch-67554-hjvghcv _69420  \r\n847KWdHfhoö\nüä!\t!]]   [}  \r\n\r\n $äö\"";
             string i = await keyExchange.EncryptAndCompressPrivateKeyAsync(privateKeyPem, TEST_PW);
             string o = await keyExchange.DecompressAndDecryptPrivateKeyAsync(i, TEST_PW);
             Assert.Equal(privateKeyPem, o);
