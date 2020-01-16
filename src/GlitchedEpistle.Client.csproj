@@ -26,6 +26,7 @@
     <Authors>Glitched Polygons</Authors>
     <Description>Shared code base for all Glitched Epistle clients.</Description>
     <Platforms>AnyCPU;x64</Platforms>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/GlitchedEpistle.Client/b73845791295eab9d08e11815b582ae84ae26427/Docs/docfx_project/_exported_templates/default/favicon.ico</PackageIconUrl>
     <RepositoryUrl>https://github.com/GlitchedPolygons/GlitchedEpistle.Client</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GlitchedPolygons/GlitchedEpistle.Client</PackageProjectUrl>
@@ -62,6 +63,7 @@
       <Pack>True</Pack>
       <CopyToOutputDirectory>True</CopyToOutputDirectory>
     </None>
+    <None Include="icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
