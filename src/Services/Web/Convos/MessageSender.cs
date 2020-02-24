@@ -74,6 +74,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the message submission was successful or failed.</returns>
         public Task<bool> PostText(Convo convo, string message)
         {
+            
             return PostMessageToConvo(convo, new JObject
             {
                 ["text"] = message.TrimEnd(MSG_TRIM_CHARS).TrimStart(MSG_TRIM_CHARS)
