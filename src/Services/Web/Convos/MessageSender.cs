@@ -89,8 +89,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             writer.WriteEndObject();
             
             await writer.FlushAsync().ConfigureAwait(false);
-            
-            return await PostMessageToConvo(convo, Encoding.UTF8.GetString(output.ToArray())).ConfigureAwait(false);
+
+            string utf8 = Encoding.UTF8.GetString(output.ToArray());
+            return await PostMessageToConvo(convo, utf8).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -117,7 +118,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             
             await writer.FlushAsync().ConfigureAwait(false);
 
-            return await PostMessageToConvo(convo, Encoding.UTF8.GetString(output.ToArray())).ConfigureAwait(false);
+            string utf8 = Encoding.UTF8.GetString(output.ToArray());
+            return await PostMessageToConvo(convo, utf8).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -129,20 +131,27 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private async Task<bool> PostMessageToConvo(Convo convo, string messageBodyJson)
         {
             // Get the keys of all convo participants here.
-            Task<IDictionary<string,string>> publicKeys = userService.GetUserPublicKeys(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
+            IDictionary<string, string> publicKeys = await userService.GetUserPublicKeys(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2).ConfigureAwait(false);
 
-            // Encrypt the message for every convo participant individually
-            // and put the results into a temporary "ConcurrentDictionary".
-            var encryptedMessages = new ConcurrentDictionary<string, string>();
-            
-            Parallel.ForEach(await publicKeys, key =>
+            // Encrypt the message for every convo participant individually.
+            await using (var output = new MemoryStream())
+            await using (var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS))
             {
-                if (key != null && key.Item1.NotNullNotEmpty() && key.Item2.NotNullNotEmpty() && messageBodyJson.NotNullNotEmpty())
+                
+            }
+            
+            writer.WriteStartObject();
+            
+            Parallel.ForEach(publicKeys, keyValuePair =>
+            {
+                if (keyValuePair.Key.NotNullNotEmpty() && keyValuePair.Value.NotNullNotEmpty() && messageBodyJson.NotNullNotEmpty())
                 {
-                    encryptedMessages[key.Item1] = crypto.EncryptMessage(messageBodyJson, keyExchange.DecompressPublicKey(key.Item2));
+                    writer.WriteString(keyValuePair.Key, crypto.EncryptMessage(messageBodyJson, keyExchange.DecompressPublicKey(keyValuePair.Value)));
                 }
             });
-
+            
+            writer.WriteEndObject();
+            
             var postParamsDto = new PostMessageParamsDto
             {
                 SenderName = userSettings.Username,

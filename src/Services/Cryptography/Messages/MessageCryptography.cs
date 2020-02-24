@@ -18,6 +18,7 @@
 
 using System;
 using System.Text;
+using System.Threading.Tasks;
 
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.Services.CompressionUtility;
@@ -96,6 +97,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
         }
 
         /// <summary>
+        /// Asynchronously encrypts a message json <c>string</c> for a specific recipient,
+        /// whose public encryption RSA key you know (PEM-formatted <c>string</c>).
+        /// </summary>
+        /// <param name="messageJson">The message json (<c>string</c>) to encrypt.</param>
+        /// <param name="recipientPublicRsaKeyPem">The recipient's public RSA key (used for encryption).</param>
+        /// <returns>The encrypted message <c>string</c>; <c>string.Empty</c> if the passed parameters were <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
+        public Task<string> EncryptMessageAsync(string messageJson, string recipientPublicRsaKeyPem)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Decrypts a message that's been encrypted using the <see cref="EncryptMessage(string,string)"/> method.
         /// </summary>
         /// <param name="encryptedMessage">The encrypted message <c>string</c> obtained via <see cref="EncryptMessage"/>.</param>
@@ -144,6 +157,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
             {
                 encryptionResult?.Dispose();
             }
+        }
+
+        /// <summary>
+        /// Asynchronously decrypts a message that's been encrypted using the <see cref="IMessageCryptography.EncryptMessageAsync"/> method.
+        /// </summary>
+        /// <param name="encryptedMessageJson">The encrypted message <c>string</c> obtained via <see cref="IMessageCryptography.EncryptMessageAsync"/>.</param>
+        /// <param name="privateDecryptionRsaKeyPem">Your private message decryption RSA key (PEM-formatted <c>string</c>).</param>
+        /// <returns>The decrypted message json; <c>null</c> if decryption failed in some way; an empty <c>string</c> if the passed arguments were <c>null</c> or empty.</returns>
+        public Task<string> DecryptMessageAsync(string encryptedMessageJson, string privateDecryptionRsaKeyPem)
+        {
+            throw new NotImplementedException();
         }
     }
 }

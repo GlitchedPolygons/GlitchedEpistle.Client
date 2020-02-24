@@ -77,9 +77,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExcha
         /// <param name="privateKeyPem">The user's private RSA key (PEM-formatted <c>string</c>).</param>
         /// <param name="userPassword">The user's password (NOT its SHA512!).</param>
         /// <returns><c>string</c> that contains the encrypted and compressed <paramref name="privateKeyPem"/>.</returns>
-        public Task<string> EncryptAndCompressPrivateKeyAsync(string privateKeyPem, string userPassword)
+        public async Task<string> EncryptAndCompressPrivateKeyAsync(string privateKeyPem, string userPassword)
         {
-            return compressionUtilityAsync.Compress(aes.EncryptWithPassword(privateKeyPem, userPassword));
+            string encryptedKey = await aes.EncryptWithPasswordAsync(privateKeyPem, userPassword).ConfigureAwait(false);
+            return await compressionUtilityAsync.Compress(encryptedKey).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -103,7 +104,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExcha
         /// <returns>The raw PEM-formatted private RSA Key (ready to be assigned to <see cref="User.PrivateKeyPem"/>).</returns>
         public async Task<string> DecompressAndDecryptPrivateKeyAsync(string encryptedCompressedKey, string userPassword)
         {
-            return aes.DecryptWithPassword(await compressionUtilityAsync.Decompress(encryptedCompressedKey), userPassword);
+            string decompressedKey = await compressionUtilityAsync.Decompress(encryptedCompressedKey).ConfigureAwait(false);
+            return await aes.DecryptWithPasswordAsync(decompressedKey, userPassword).ConfigureAwait(false);
         }
 
         /// <summary>

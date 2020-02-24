@@ -18,6 +18,7 @@
 
 using System;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
