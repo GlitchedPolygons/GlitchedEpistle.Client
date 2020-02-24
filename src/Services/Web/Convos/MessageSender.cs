@@ -17,6 +17,9 @@
 */
 
 using System;
+using System.IO;
+using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
@@ -46,6 +49,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private readonly IAsymmetricCryptographyRSA rsa;
         private readonly IConvoPasswordProvider convoPasswordProvider;
         private static readonly char[] MSG_TRIM_CHARS = { '\n', '\r', '\t' };
+        private static readonly JsonWriterOptions JSON_WRITER_OPTIONS = new JsonWriterOptions
+        {
+            Indented = false
+        };
 
         /// <summary>
         /// The maximum allowed file size for a convo's message (currently 32MB).
@@ -72,13 +79,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="convo">The <see cref="Convo"/> to post the message into (will use the <see cref="Convo.Id"/> and other credentials for establishing a connection to the Epistle server).</param>
         /// <param name="message"></param>
         /// <returns>Whether the message submission was successful or failed.</returns>
-        public Task<bool> PostText(Convo convo, string message)
+        public async Task<bool> PostText(Convo convo, string message)
         {
+            await using var output = new MemoryStream();
+            await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
             
-            return PostMessageToConvo(convo, new JObject
-            {
-                ["text"] = message.TrimEnd(MSG_TRIM_CHARS).TrimStart(MSG_TRIM_CHARS)
-            }.ToString(Formatting.None));
+            writer.WriteStartObject();
+            writer.WriteString("text", message.TrimEnd(MSG_TRIM_CHARS).TrimStart(MSG_TRIM_CHARS));
+            writer.WriteEndObject();
+            
+            await writer.FlushAsync().ConfigureAwait(false);
+            
+            return await PostMessageToConvo(convo, Encoding.UTF8.GetString(output.ToArray())).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -88,18 +100,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="fileName">The file name.</param>
         /// <param name="fileBytes">File <c>byte[]</c> </param>
         /// <returns>Whether the message could be submitted successfully to the backend or not.</returns>
-        public Task<bool> PostFile(Convo convo, string fileName, byte[] fileBytes)
+        public async Task<bool> PostFile(Convo convo, string fileName, byte[] fileBytes)
         {
             if (fileBytes.LongLength > MAX_FILE_SIZE_BYTES || fileName.NullOrEmpty() || fileBytes.NullOrEmpty())
             {
-                return Task.FromResult(false);
+                return false;
             }
+            
+            await using var output = new MemoryStream();
+            await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
+            
+            writer.WriteStartObject();
+            writer.WriteString("fileName", fileName);
+            writer.WriteString("fileBase64", Convert.ToBase64String(fileBytes));
+            writer.WriteEndObject();
+            
+            await writer.FlushAsync().ConfigureAwait(false);
 
-            return PostMessageToConvo(convo, new JObject
-            {
-                ["fileName"] = fileName,
-                ["fileBase64"] = Convert.ToBase64String(fileBytes)
-            }.ToString(Formatting.None));
+            return await PostMessageToConvo(convo, Encoding.UTF8.GetString(output.ToArray())).ConfigureAwait(false);
         }
 
         /// <summary>
