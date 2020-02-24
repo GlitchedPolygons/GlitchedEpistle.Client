@@ -23,6 +23,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
+using System.Linq;
 
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
@@ -130,45 +131,79 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the message could be submitted successfully or not.</returns>
         private async Task<bool> PostMessageToConvo(Convo convo, string messageBodyJson)
         {
-            // Get the keys of all convo participants here.
-            IDictionary<string, string> publicKeys = await userService.GetUserPublicKeys(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2).ConfigureAwait(false);
-
-            // Encrypt the message for every convo participant individually.
-            await using (var output = new MemoryStream())
-            await using (var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS))
+            if (messageBodyJson.NullOrEmpty())
             {
-                
+                return false;
             }
             
+            // Get the keys of all convo participants here.
+            IDictionary<string, string> publicKeys = await userService.GetUserPublicKeys(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2).ConfigureAwait(false);
+            
+            if (publicKeys is null)
+            {
+                return false;
+            }
+
+            // Encrypt the message for every convo participant individually.
+            await using var output = new MemoryStream();
+            await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
+
             writer.WriteStartObject();
-            
-            Parallel.ForEach(publicKeys, keyValuePair =>
+
+            foreach (KeyValuePair<string, string> kvp in publicKeys)
             {
-                if (keyValuePair.Key.NotNullNotEmpty() && keyValuePair.Value.NotNullNotEmpty() && messageBodyJson.NotNullNotEmpty())
+                if (kvp.Key.NullOrEmpty() || kvp.Value.NullOrEmpty())
                 {
-                    writer.WriteString(keyValuePair.Key, crypto.EncryptMessage(messageBodyJson, keyExchange.DecompressPublicKey(keyValuePair.Value)));
+                    continue;
                 }
-            });
-            
+                
+                string encryptMessage = await crypto.EncryptMessageAsync(messageBodyJson, keyExchange.DecompressPublicKey(kvp.Value)).ConfigureAwait(false);
+                writer.WriteString(kvp.Key, encryptMessage);
+            }
+
             writer.WriteEndObject();
+            await writer.FlushAsync().ConfigureAwait(false);
+
+            try
+            {
+                var postParamsDto = new PostMessageParamsDto
+                {
+                    SenderName = userSettings.Username,
+                    ConvoId = convo.Id,
+                    ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
+                    MessageBodiesJson = Encoding.UTF8.GetString(output.ToArray())
+                };
+
+                var body = new EpistleRequestBody
+                {
+                    UserId = user.Id,
+                    Auth = user.Token.Item2,
+                    Body = JsonSerializer.Serialize(postParamsDto)
+                };
+
+                return await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem)).ConfigureAwait(false);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private async IAsyncEnumerable<string> EncryptMessageForUsers(string messageBodyJson, IDictionary<string, string> publicKeys)
+        {
+            if (messageBodyJson.NullOrEmpty())
+            {
+                yield break;
+            }
             
-            var postParamsDto = new PostMessageParamsDto
+            foreach (KeyValuePair<string, string> kvp in publicKeys)
             {
-                SenderName = userSettings.Username,
-                ConvoId = convo.Id,
-                ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
-                MessageBodiesJson = JsonSerializer.Serialize(encryptedMessages)
-            };
-
-            var body = new EpistleRequestBody
-            {
-                UserId = user.Id,
-                Auth = user.Token.Item2,
-                Body = JsonSerializer.Serialize(postParamsDto)
-            };
-
-            bool success = await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem)).ConfigureAwait(false);
-            return success;
+                if (kvp.Key.NullOrEmpty() || kvp.Value.NullOrEmpty())
+                {
+                    continue;
+                }
+                yield return await crypto.EncryptMessageAsync(messageBodyJson, keyExchange.DecompressPublicKey(kvp.Value)).ConfigureAwait(false);
+            }
         }
     }
 }

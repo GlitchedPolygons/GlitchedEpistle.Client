@@ -108,7 +108,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(auth), auth);
 
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
+            return response?.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(totp), totp);
 
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            return response.StatusCode == HttpStatusCode.OK;
+            return response?.StatusCode == HttpStatusCode.OK;
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
 
-            if (response.StatusCode != HttpStatusCode.OK)
+            if (response?.StatusCode != HttpStatusCode.OK)
             {
                 return Array.Empty<ConvoMetadataDto>();
             }
@@ -181,12 +181,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(auth), auth);
 
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            if (response.StatusCode != HttpStatusCode.OK)
+            if (response?.StatusCode != HttpStatusCode.OK)
             {
                 return null;
             }
 
-            return JsonSerializer.Deserialize<Dictionary<string, string>>(response.Content);
+            try
+            {
+                return JsonSerializer.Deserialize<Dictionary<string, string>>(response.Content);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -208,7 +215,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(totp), totp);
 
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
+            return response?.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
         /// <summary>
@@ -223,7 +230,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         {
             var request = EpistleRequest(requestBody, "users/change-pw", Method.PUT);
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            return response.StatusCode == HttpStatusCode.OK;
+            return response?.StatusCode == HttpStatusCode.OK;
         }
 
         /// <summary>
@@ -241,12 +248,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddParameter("application/json", JsonSerializer.Serialize(userCreationRequestDto), ParameterType.RequestBody);
 
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            if (response.StatusCode != HttpStatusCode.OK)
+            if (response?.StatusCode != HttpStatusCode.OK)
             {
                 return null;
             }
 
-            return JsonSerializer.Deserialize<UserCreationResponseDto>(response.Content);
+            try
+            {
+                return JsonSerializer.Deserialize<UserCreationResponseDto>(response.Content);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -259,7 +273,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         {
             var request = EpistleRequest(requestBody, "users/delete");
             IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-            return response.StatusCode == HttpStatusCode.NoContent;
+            return response?.StatusCode == HttpStatusCode.NoContent;
         }
     }
 }
