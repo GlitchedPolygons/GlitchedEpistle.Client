@@ -88,7 +88,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
                     return compressionUtility.Compress(stringBuilder.ToString());
                 }
             }
-            catch (Exception)
+            catch
             {
                 logger.LogError($"{nameof(MessageCryptography)}::{nameof(EncryptMessage)}: Message encryption failed. Eventually an encryption key problem? Passed recipient public RSA key:\r\n{recipientPublicRsaKeyPem}");
                 return null;
@@ -135,7 +135,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages
 
                 return Encoding.UTF8.GetString(aes.Decrypt(encryptionResult));
             }
-            catch (Exception)
+            catch
             {
                 logger.LogError($"{nameof(MessageCryptography)}::{nameof(DecryptMessage)}: Message decryption failed. Perhaps wrong or missing keys? Or invalid message format?");
                 return null;

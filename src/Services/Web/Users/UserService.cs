@@ -85,7 +85,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 var r = JsonSerializer.Deserialize<UserLoginSuccessResponseDto>(response.Content);
                 return response.StatusCode == HttpStatusCode.OK ? r : null;
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -155,8 +155,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
             try
             {
-                var convos = JsonSerializer.Deserialize<ConvoMetadataDto[]>(response.Content);
-                return convos;
+                return JsonSerializer.Deserialize<ConvoMetadataDto[]>(response.Content);
             }
             catch
             {
