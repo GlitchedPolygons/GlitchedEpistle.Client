@@ -65,7 +65,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <returns>The status code (as described in the summary).</returns>
         public async Task<int> Login(string userId, string userPassword, string totp)
         {
-            if (!await connectionTest.TestConnection())
+            if (!await connectionTest.TestConnection().ConfigureAwait(false))
             {
                 return 1;
             }
@@ -75,7 +75,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 UserId = userId,
                 PasswordSHA512 = userPassword.SHA512(),
                 Totp = totp
-            });
+            }).ConfigureAwait(false);
 
             if (response is null || response.Auth.NullOrEmpty() || response.PrivateKey.NullOrEmpty())
             {
@@ -86,13 +86,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             {
                 user.Id = appSettings.LastUserId = userId;
 
-                user.PublicKeyPem = await keyExchange.DecompressPublicKeyAsync(response.PublicKey);
-                user.PrivateKeyPem = await keyExchange.DecompressAndDecryptPrivateKeyAsync(response.PrivateKey, userPassword);
+                user.PublicKeyPem = await keyExchange.DecompressPublicKeyAsync(response.PublicKey).ConfigureAwait(false);
+                user.PrivateKeyPem = await keyExchange.DecompressAndDecryptPrivateKeyAsync(response.PrivateKey, userPassword).ConfigureAwait(false);
                 user.Token = new Tuple<DateTime, string>(DateTime.UtcNow, response.Auth);
 
                 return 0;
             }
-            catch (Exception)
+            catch
             {
                 return 3;
             }

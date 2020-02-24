@@ -18,8 +18,6 @@
 
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos;
 
-using Newtonsoft.Json;
-
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
     /// <summary>
@@ -31,31 +29,31 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The convo's identifier.
         /// </summary>
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string ConvoId { get; set; }
 
         /// <summary>
         /// The convo's password hashed using SHA512.
         /// </summary>
-        [JsonProperty("pw")]
+        [JsonPropertyName("pw")]
         public string ConvoPasswordSHA512 { get; set; }
 
         /// <summary>
         /// Two-Factor Authentication token.
         /// </summary>
-        [JsonProperty("totp")]
+        [JsonPropertyName("totp")]
         public string Totp { get; set; }
 
         /// <summary>
         /// The user id of who you're kicking out.
         /// </summary>
-        [JsonProperty("kickId")]
+        [JsonPropertyName("kickId")]
         public string UserIdToKick { get; set; }
 
         /// <summary>
         /// If set to <c>true</c>, the kicked user won't be able to rejoin the convo permanently.
         /// </summary>
-        [JsonProperty("permaBan")]
+        [JsonPropertyName("permaBan")]
         public bool PermaBan { get; set; }
     }
 }

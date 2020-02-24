@@ -57,10 +57,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             getLastMessageIdSql = $"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1";
 
             string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
-            using (var sqlc = OpenConnection())
-            {
-                sqlc.Execute(sql);
-            }
+            using var sqlc = OpenConnection();
+            sqlc.Execute(sql);
         }
 
         /// <summary>
@@ -84,29 +82,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             get
             {
-                using (var sqlc = new SQLiteConnection(connectionString))
+                using var sqlc = new SQLiteConnection(connectionString);
+                sqlc.Open();
+
+                using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc);
+                using var reader = cmd.ExecuteReader();
+                
+                if (!reader.HasRows)
                 {
-                    sqlc.Open();
-
-                    using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc))
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (!reader.HasRows)
-                        {
-                            return null;
-                        }
-
-                        reader.Read();
-                        return new Message
-                        {
-                            Id = reader.GetInt64(0),
-                            SenderId = reader.GetString(1),
-                            SenderName = reader.GetString(2),
-                            TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
-                            Body = reader.GetString(4)
-                        };
-                    }
+                    return null;
                 }
+
+                reader.Read();
+                return new Message
+                {
+                    Id = reader.GetInt64(0),
+                    SenderId = reader.GetString(1),
+                    SenderName = reader.GetString(2),
+                    TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                    Body = reader.GetString(4)
+                };
             }
         }
 
@@ -115,11 +110,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         public async Task<long> GetLastMessageId()
         {
-            using (var sqlc = OpenConnection())
-            {
-                long id = await sqlc.QueryFirstOrDefaultAsync<long>(getLastMessageIdSql);
-                return id;
-            }
+            using var sqlc = OpenConnection();
+            long id = await sqlc.QueryFirstOrDefaultAsync<long>(getLastMessageIdSql).ConfigureAwait(false);
+            return id;
         }
 
         /// <summary>
@@ -129,29 +122,27 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>The first found <see cref="Message"/>; <c>null</c> if nothing was found.</returns>
         public async Task<Message> Get(long id)
         {
-            using (var sqlc = new SQLiteConnection(connectionString))
+            await using var sqlc = new SQLiteConnection(connectionString);
+            await sqlc.OpenAsync().ConfigureAwait(false);
+
+            await using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc);
+            await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
+            
+            if (!reader.HasRows)
             {
-                await sqlc.OpenAsync();
-
-                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc))
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    if (!reader.HasRows)
-                    {
-                        return null;
-                    }
-
-                    await reader.ReadAsync();
-                    return new Message
-                    {
-                        Id = reader.GetInt64(0),
-                        SenderId = reader.GetString(1),
-                        SenderName = reader.GetString(2),
-                        TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
-                        Body = reader.GetString(4)
-                    };
-                }
+                return null;
             }
+
+            await reader.ReadAsync().ConfigureAwait(false);
+            
+            return new Message
+            {
+                Id = reader.GetInt64(0),
+                SenderId = reader.GetString(1),
+                SenderName = reader.GetString(2),
+                TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                Body = reader.GetString(4)
+            };
         }
 
         /// <summary>
@@ -161,31 +152,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<IEnumerable<Message>> GetAll()
         {
             var messages = new List<Message>(8);
-            using (var sqlc = new SQLiteConnection(connectionString))
+            
+            await using var sqlc = new SQLiteConnection(connectionString);
+            await sqlc.OpenAsync().ConfigureAwait(false);
+
+            await using var cmd = new SQLiteCommand(getAllSql, sqlc);
+            await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
+            
+            if (!reader.HasRows)
             {
-                await sqlc.OpenAsync();
-
-                using (var cmd = new SQLiteCommand(getAllSql, sqlc))
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    if (!reader.HasRows)
-                    {
-                        return Array.Empty<Message>();
-                    }
-
-                    while (await reader.ReadAsync())
-                    {
-                        messages.Add(new Message
-                        {
-                            Id = reader.GetInt64(0),
-                            SenderId = reader.GetString(1),
-                            SenderName = reader.GetString(2),
-                            TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
-                            Body = reader.GetString(4)
-                        });
-                    }
-                }
+                return Array.Empty<Message>();
             }
+
+            while (await reader.ReadAsync().ConfigureAwait(false))
+            {
+                messages.Add(new Message
+                {
+                    Id = reader.GetInt64(0),
+                    SenderId = reader.GetString(1),
+                    SenderName = reader.GetString(2),
+                    TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                    Body = reader.GetString(4)
+                });
+            }
+            
             return messages;
         }
 
@@ -207,31 +197,29 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 sql += " OFFSET " + offset;
             }
 
-            using (var sqlc = new SQLiteConnection(connectionString))
+            await using var sqlc = new SQLiteConnection(connectionString);
+            await sqlc.OpenAsync().ConfigureAwait(false);
+
+            await using var cmd = new SQLiteCommand(sql, sqlc);
+            await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
+            
+            if (!reader.HasRows)
             {
-                await sqlc.OpenAsync();
-
-                using (var cmd = new SQLiteCommand(sql, sqlc))
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    if (!reader.HasRows)
-                    {
-                        return Array.Empty<Message>();
-                    }
-
-                    while (await reader.ReadAsync())
-                    {
-                        messages.Add(new Message
-                        {
-                            Id = reader.GetInt64(0),
-                            SenderId = reader.GetString(1),
-                            SenderName = reader.GetString(2),
-                            TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
-                            Body = reader.GetString(4)
-                        });
-                    }
-                }
+                return Array.Empty<Message>();
             }
+
+            while (await reader.ReadAsync().ConfigureAwait(false))
+            {
+                messages.Add(new Message
+                {
+                    Id = reader.GetInt64(0),
+                    SenderId = reader.GetString(1),
+                    SenderName = reader.GetString(2),
+                    TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                    Body = reader.GetString(4)
+                });
+            }
+            
             return messages.Reverse();
         }
 
@@ -245,10 +233,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             try
             {
-                Message result = (await GetAll())?.SingleOrDefault(predicate.Compile());
+                Message result = (await GetAll().ConfigureAwait(false))?.SingleOrDefault(predicate.Compile());
                 return result;
             }
-            catch (Exception)
+            catch
             {
                 return default;
             }
@@ -266,7 +254,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 IEnumerable<Message> result = (await GetAll()).Where(predicate.Compile());
                 return result;
             }
-            catch (Exception)
+            catch
             {
                 return Array.Empty<Message>();
             }
@@ -286,19 +274,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
             bool success = false;
             string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
+
+            using var dbcon = OpenConnection();
             
-            using (var dbcon = OpenConnection())
+            success = await dbcon.ExecuteAsync(sql, new
             {
-                success = await dbcon.ExecuteAsync(sql, new
-                {
-                    Id = message.Id,
-                    SenderId = message.SenderId,
-                    SenderName = message.SenderName,
-                    TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
-                    Body = message.Body,
-                }) > 0;
-            }
-            
+                Id = message.Id,
+                SenderId = message.SenderId,
+                SenderName = message.SenderName,
+                TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
+                Body = message.Body,
+            }).ConfigureAwait(false) > 0;
+
             return success;
         }
 
@@ -317,22 +304,21 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             bool success = false;
             string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
 
-            using (var dbcon = OpenConnection())
-            using (var t = dbcon.BeginTransaction())
+            using var dbcon = OpenConnection();
+            using var t = dbcon.BeginTransaction();
+            
+            success = await dbcon.ExecuteAsync(sql, messages.Select(m => new
             {
-                success = await dbcon.ExecuteAsync(sql, messages.Select(m => new
-                {
-                    Id = m.Id,
-                    SenderId = m.SenderId,
-                    SenderName = m.SenderName,
-                    TimestampUTC = m.TimestampUTC.ToUnixTimeMilliseconds(),
-                    Body = m.Body,
-                }), t) > 0;
+                Id = m.Id,
+                SenderId = m.SenderId,
+                SenderName = m.SenderName,
+                TimestampUTC = m.TimestampUTC.ToUnixTimeMilliseconds(),
+                Body = m.Body,
+            }), t).ConfigureAwait(false) > 0;
 
-                if (success)
-                {
-                    t.Commit();
-                }
+            if (success)
+            {
+                t.Commit();
             }
 
             return success;
@@ -353,19 +339,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 .Append("\"Body\" = @Body ")
                 .Append("WHERE \"Id\" = @Id");
 
-            using (var dbcon = OpenConnection())
+            using var dbcon = OpenConnection();
+            
+            int result = await dbcon.ExecuteAsync(sql.ToString(), new
             {
-                int result = await dbcon.ExecuteAsync(sql.ToString(), new
-                {
-                    Id = message.Id,
-                    SenderId = message.SenderId,
-                    SenderName = message.SenderName,
-                    TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
-                    Body = message.Body
-                });
+                Id = message.Id,
+                SenderId = message.SenderId,
+                SenderName = message.SenderName,
+                TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
+                Body = message.Body
+            }).ConfigureAwait(false);
 
-                return result > 0;
-            }
+            return result > 0;
         }
 
         /// <summary>
@@ -390,9 +375,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             try
             {
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\" WHERE \"Id\" = @Id", new { Id = id }) > 0;
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\" WHERE \"Id\" = @Id", new { Id = id }).ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -414,9 +399,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             try
             {
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\"") > 0;
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\"").ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -473,9 +458,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 string sqlString = sql.ToString().TrimEnd(',', ' ') + ");";
 
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync(sqlString) > 0;
+                result = await sqlc.ExecuteAsync(sqlString).ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }

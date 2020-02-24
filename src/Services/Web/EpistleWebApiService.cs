@@ -17,12 +17,14 @@
 */
 
 using System;
+using System.Text.Json;
+
 using RestSharp;
-using Newtonsoft.Json;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web
 {
+    
     /// <summary>
     /// Base class for all service classes that communicate
     /// with the Epistle backend Web API over HTTP requests with a request body.
@@ -50,7 +52,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web
                 resource: new Uri(endpoint, UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonConvert.SerializeObject(requestBody), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonSerializer.Serialize(requestBody), ParameterType.RequestBody);
 
             return request;
         }

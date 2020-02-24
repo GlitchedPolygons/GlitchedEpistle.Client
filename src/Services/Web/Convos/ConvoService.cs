@@ -17,14 +17,13 @@
 */
 
 using System;
+using System.Text.Json;
 using System.Globalization;
 using System.Threading.Tasks;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-
-using Newtonsoft.Json;
 
 using RestSharp;
 
@@ -117,7 +116,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
             IRestResponse response = await restClient.ExecuteAsync(request);
-            return response.IsSuccessful ? JsonConvert.DeserializeObject<ConvoMetadataDto>(response.Content) : null;
+            return response.IsSuccessful ? JsonSerializer.Deserialize<ConvoMetadataDto>(response.Content) : null;
         }
 
         /// <summary>
@@ -156,7 +155,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(tailId), tailId.ToString(CultureInfo.InvariantCulture));
 
             IRestResponse response = await restClient.ExecuteAsync(request);
-            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
+            return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
         /// <summary>
@@ -180,7 +179,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
             IRestResponse response = await restClient.ExecuteAsync(request);
-            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
+            return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
         /// <summary>
@@ -207,7 +206,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
             IRestResponse response = await restClient.ExecuteAsync(request);
-            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
+            return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
         /// <summary>
@@ -235,7 +234,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(auth), auth);
 
             IRestResponse response = await restClient.ExecuteAsync(request);
-            return response.IsSuccessful ? JsonConvert.DeserializeObject<Message[]>(response.Content) : null;
+            return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
         /// <summary>

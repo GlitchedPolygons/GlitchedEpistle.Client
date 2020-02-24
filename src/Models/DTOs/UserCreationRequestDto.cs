@@ -16,11 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
-
-using Newtonsoft.Json;
-#endregion
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -32,27 +28,27 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The user's desired password SHA512.
         /// </summary>
-        [JsonProperty(PropertyName = "pw")]
+        [JsonPropertyName("pw")]
         public string PasswordSHA512 { get; set; }
 
         /// <summary>
         /// The user's public RSA key.<para> </para>
         /// PEM-formatted, and then compressed via <c>Encoding.UTF8.GetBytes(string)</c> using <c>CompressionLevel.Fastest</c> and ultimately base-64 encoded.
         /// </summary>
-        [JsonProperty(PropertyName = "key")]
+        [JsonPropertyName("key")]
         public string PublicKey { get; set; }
 
         /// <summary>
         /// The user's private message decryption RSA key.<para> </para>
         /// PEM-formatted and encrypted into <c>byte[]</c> and then compressed and base-64 encoded.
         /// </summary>
-        [JsonProperty("pkey")]
+        [JsonPropertyName("pkey")]
         public string PrivateKey { get; set; }
 
         /// <summary>
         /// The server creation secret <c>string</c>.
         /// </summary>
-        [JsonProperty(PropertyName = "secret")]
+        [JsonPropertyName("secret")]
         public string CreationSecret { get; set; }
 
         #region Equality

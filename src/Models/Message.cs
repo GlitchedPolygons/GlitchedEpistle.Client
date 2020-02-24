@@ -17,10 +17,9 @@
 */
 
 using System;
+using System.Text.Json.Serialization;
 
 using GlitchedPolygons.RepositoryPattern;
-
-using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -32,31 +31,31 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// Gets the message's unique identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public long Id { get; set; }
 
         /// <summary>
         /// The sender's ID.
         /// </summary>
-        [JsonProperty(PropertyName = "senderId")]
+        [JsonPropertyName("senderId")]
         public string SenderId { get; set; }
 
         /// <summary>
         /// The sender's display username.
         /// </summary>
-        [JsonProperty(PropertyName = "senderName")]
+        [JsonPropertyName("senderName")]
         public string SenderName { get; set; }
 
         /// <summary>
         /// The message's timestamp in UTC.
         /// </summary>
-        [JsonProperty(PropertyName = "utc")]
+        [JsonPropertyName("utc")]
         public DateTime TimestampUTC { get; set; }
 
         /// <summary>
         /// This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
         /// </summary>
-        [JsonProperty(PropertyName = "body")]
+        [JsonPropertyName("body")]
         public string Body { get; set; }
 
         /// <summary>

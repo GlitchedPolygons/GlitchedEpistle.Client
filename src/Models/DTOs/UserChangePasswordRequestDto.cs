@@ -18,8 +18,6 @@
 
 using System;
 
-using Newtonsoft.Json;
-
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
     /// <summary>
@@ -30,26 +28,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// 2FA token.
         /// </summary>
-        [JsonProperty("totp")]
+        [JsonPropertyName("totp")]
         public string Totp { get; set; }
 
         /// <summary>
         /// Old password SHA512.
         /// </summary>
-        [JsonProperty("oldPwSHA512")]
+        [JsonPropertyName("oldPwSHA512")]
         public string OldPwSHA512 { get; set; }
 
         /// <summary>
         /// New password's SHA512.
         /// </summary>
-        [JsonProperty("newPwSHA512")]
+        [JsonPropertyName("newPwSHA512")]
         public string NewPwSHA512 { get; set; }
 
         /// <summary>
         /// New (encrypted) private key.<para> </para>
         /// Needs to be PEM-formatted and encrypted into <c>byte[]</c> and then compressed and base-64 encoded.
         /// </summary>
-        [JsonProperty("npkey")]
+        [JsonPropertyName("npkey")]
         public string NewPrivateKey { get; set; }
     }
 }

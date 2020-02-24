@@ -18,14 +18,13 @@
 
 using System;
 using System.Net;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
-
-using Newtonsoft.Json;
 
 using RestSharp;
 
@@ -38,7 +37,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
     /// <seealso cref="IUserService" />
     public class UserService : EpistleWebApiService, IUserService, IDisposable
     {
-        private static readonly JsonSerializerSettings JSON_SERIALIZER_SETTINGS = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
         private RestClient restClient = new RestClient(UrlUtility.EpistleAPI_v1);
         
 #pragma warning disable 1591
@@ -78,13 +76,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 resource: new Uri("users/login", UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonConvert.SerializeObject(paramsDto), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonSerializer.Serialize(paramsDto), ParameterType.RequestBody);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
 
             try
             {
-                var r = JsonConvert.DeserializeObject<UserLoginSuccessResponseDto>(response.Content);
+                var r = JsonSerializer.Deserialize<UserLoginSuccessResponseDto>(response.Content);
                 return response.StatusCode == HttpStatusCode.OK ? r : null;
             }
             catch (Exception)
@@ -109,7 +107,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
@@ -129,7 +127,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(totp), totp);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.StatusCode == HttpStatusCode.OK;
         }
 
@@ -148,7 +146,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
 
             if (response.StatusCode != HttpStatusCode.OK)
             {
@@ -157,10 +155,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
             try
             {
-                var convos = JsonConvert.DeserializeObject<ConvoMetadataDto[]>(response.Content);
+                var convos = JsonSerializer.Deserialize<ConvoMetadataDto[]>(response.Content);
                 return convos;
             }
-            catch (Exception)
+            catch
             {
                 return Array.Empty<ConvoMetadataDto>();
             }
@@ -183,13 +181,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 return null;
             }
 
-            List<Tuple<string, string>> keys = JsonConvert.DeserializeObject<List<Tuple<string, string>>>(response.Content, JSON_SERIALIZER_SETTINGS);
+            List<Tuple<string, string>> keys = JsonSerializer.Deserialize<List<Tuple<string, string>>>(response.Content);
             return keys;
         }
 
@@ -211,7 +209,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(passwordSHA512), passwordSHA512);
             request.AddQueryParameter(nameof(totp), totp);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
@@ -226,7 +224,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<bool> ChangeUserPassword(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "users/change-pw", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.StatusCode == HttpStatusCode.OK;
         }
 
@@ -242,15 +240,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonConvert.SerializeObject(userCreationRequestDto), ParameterType.RequestBody);
+            request.AddParameter("application/json", JsonSerializer.Serialize(userCreationRequestDto), ParameterType.RequestBody);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 return null;
             }
 
-            return JsonConvert.DeserializeObject<UserCreationResponseDto>(response.Content, JSON_SERIALIZER_SETTINGS);
+            return JsonSerializer.Deserialize<UserCreationResponseDto>(response.Content);
         }
 
         /// <summary>
@@ -262,7 +260,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<bool> DeleteUser(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "users/delete");
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.StatusCode == HttpStatusCode.NoContent;
         }
     }

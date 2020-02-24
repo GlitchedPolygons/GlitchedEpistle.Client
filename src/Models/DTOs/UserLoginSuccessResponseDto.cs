@@ -18,8 +18,6 @@
 
 using System;
 
-using Newtonsoft.Json;
-
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
     /// <summary>
@@ -30,20 +28,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// Valid request authentication token.
         /// </summary>
-        [JsonProperty("auth")]
+        [JsonPropertyName("auth")]
         public string Auth { get; set; }
 
         /// <summary>
         /// The user's public key.
         /// Others need this in order to send the <see cref="User"/> messages.
         /// </summary>
-        [JsonProperty("key")]
+        [JsonPropertyName("key")]
         public string PublicKey { get; set; }
 
         /// <summary>
         /// The user's private key; PEM-formatted and encrypted into <c>byte[]</c> and then compressed and base-64 encoded.
         /// </summary>
-        [JsonProperty("pkey")]
+        [JsonPropertyName("pkey")]
         public string PrivateKey { get; set; }
 
         #region Equality

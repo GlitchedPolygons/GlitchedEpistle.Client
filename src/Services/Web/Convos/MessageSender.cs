@@ -30,9 +30,6 @@ using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 {
     /// <summary>
@@ -132,14 +129,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 SenderName = userSettings.Username,
                 ConvoId = convo.Id,
                 ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
-                MessageBodiesJson = JsonConvert.SerializeObject(encryptedMessages)
+                MessageBodiesJson = JsonSerializer.Serialize(encryptedMessages)
             };
 
             var body = new EpistleRequestBody
             {
                 UserId = user.Id,
                 Auth = user.Token.Item2,
-                Body = JsonConvert.SerializeObject(postParamsDto)
+                Body = JsonSerializer.Serialize(postParamsDto)
             };
 
             bool success = await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem));

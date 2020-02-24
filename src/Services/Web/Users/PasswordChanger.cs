@@ -17,16 +17,16 @@
 */
 
 using System;
+using System.Text.Json;
 using System.Threading.Tasks;
+
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
-using GlitchedPolygons.Services.Cryptography.Asymmetric;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.Services.CompressionUtility;
-
-using Newtonsoft.Json;
+using GlitchedPolygons.Services.Cryptography.Asymmetric;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 {
@@ -81,17 +81,17 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 Totp = totp,
                 OldPwSHA512 = oldPw.SHA512(),
                 NewPwSHA512 = newPw.SHA512(),
-                NewPrivateKey = await keyExchange.EncryptAndCompressPrivateKeyAsync(user.PrivateKeyPem, newPw)
+                NewPrivateKey = await keyExchange.EncryptAndCompressPrivateKeyAsync(user.PrivateKeyPem, newPw).ConfigureAwait(false)
             };
 
             var requestBody = new EpistleRequestBody
             {
                 UserId = user.Id,
                 Auth = user.Token.Item2,
-                Body = await compressionUtility.Compress(JsonConvert.SerializeObject(dto))
+                Body = await compressionUtility.Compress(JsonSerializer.Serialize(dto)).ConfigureAwait(false)
             };
 
-            bool success = await userService.ChangeUserPassword(requestBody.Sign(crypto, user.PrivateKeyPem));
+            bool success = await userService.ChangeUserPassword(requestBody.Sign(crypto, user.PrivateKeyPem)).ConfigureAwait(false);
             
             return success;
         }
