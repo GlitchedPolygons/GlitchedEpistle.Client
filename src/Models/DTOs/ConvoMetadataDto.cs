@@ -18,7 +18,7 @@
 
 using System;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -31,51 +31,51 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// Unique <see cref="Convo"/> identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// The creator user identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "creatorId")]
+        [JsonPropertyName("creatorId")]
         public string CreatorId { get; set; }
 
         /// <summary>
         /// <see cref="Convo"/> name/title.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// The <see cref="Convo"/>'s description text.
         /// </summary>
-        [JsonProperty(PropertyName = "desc")]
+        [JsonPropertyName("desc")]
         public string Description { get; set; }
 
         /// <summary>
         /// The <see cref="Convo"/>'s creation timestamp (UTC).
         /// </summary>
-        [JsonProperty(PropertyName = "iat")]
+        [JsonPropertyName("iat")]
         public DateTime CreationUTC { get; set; }
 
         /// <summary>
         /// Convo expiration <see cref="DateTime"/> (UTC).
         /// </summary>
-        [JsonProperty(PropertyName = "exp")]
+        [JsonPropertyName("exp")]
         public DateTime ExpirationUTC { get; set; }
 
         /// <summary>
         /// The convo's participants (user ids separated by a comma: ',').
         /// </summary>
         /// <value>The participants.</value>
-        [JsonProperty(PropertyName = "ppl")]
+        [JsonPropertyName("ppl")]
         public string Participants { get; set; }
 
         /// <summary>
         /// The convo's banned users (their user id), separated by a comma: ','.
         /// </summary>
         /// <value>The banned users.</value>
-        [JsonProperty(PropertyName = "ban")]
+        [JsonPropertyName("ban")]
         public string BannedUsers { get; set; }
 
         /// <summary>

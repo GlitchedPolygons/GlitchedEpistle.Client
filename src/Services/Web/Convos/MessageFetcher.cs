@@ -71,7 +71,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                         userId: user.Id,
                         auth: user.Token.Item2,
                         tailId: currentTailId
-                    );
+                    ).ConfigureAwait(false);
 
                     if (retrievedMessages.NotNullNotEmpty())
                     {
@@ -114,7 +114,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 cancellationTokenSource.Cancel();
                 return true;
             }
-            catch (Exception)
+            catch
             {
                 return false;
             }

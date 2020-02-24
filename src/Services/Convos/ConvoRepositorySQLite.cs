@@ -53,6 +53,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             this.tableName = nameof(Convo);
             this.connectionString = connectionString;
+            
             string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" TEXT NOT NULL, \"CreatorId\" TEXT NOT NULL, \"Name\" TEXT, \"Description\" TEXT, \"CreationTimestampUTC\" INTEGER, \"ExpirationUTC\" INTEGER, \"Participants\" TEXT, \"BannedUsers\" TEXT, PRIMARY KEY(\"Id\"))";
             using (var sqlc = OpenConnection())
             {
@@ -81,32 +82,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             get
             {
-                using (var sqlc = new SQLiteConnection(connectionString))
-                {
-                    sqlc.Open();
-                
-                    using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc))
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (!reader.HasRows)
-                        {
-                            return null;
-                        }
+                using var sqlc = new SQLiteConnection(connectionString);
+                sqlc.Open();
 
-                        reader.Read();
-                        return new Convo
-                        {
-                            Id = reader.GetString(0),
-                            CreatorId = reader.GetString(1),
-                            Name = reader.GetString(2),
-                            Description = reader.GetString(3),
-                            CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
-                            ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
-                            Participants = reader.GetString(6).Split(',').ToList(),
-                            BannedUsers = reader.GetString(7).Split(',').ToList(),
-                        };
-                    }
+                using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc);
+                using var reader = cmd.ExecuteReader();
+                
+                if (!reader.HasRows)
+                {
+                    return null;
                 }
+
+                reader.Read();
+                
+                return new Convo
+                {
+                    Id = reader.GetString(0),
+                    CreatorId = reader.GetString(1),
+                    Name = reader.GetString(2),
+                    Description = reader.GetString(3),
+                    CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
+                    ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
+                    Participants = reader.GetString(6).Split(',').ToList(),
+                    BannedUsers = reader.GetString(7).Split(',').ToList(),
+                };
             }
         }
 
@@ -117,32 +116,30 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>The first found <see cref="Convo"/>; <c>null</c> if nothing was found.</returns>
         public async Task<Convo> Get(string id)
         {
-            using (var sqlc = new SQLiteConnection(connectionString))
+            await using var sqlc = new SQLiteConnection(connectionString);
+            await sqlc.OpenAsync().ConfigureAwait(false);
+
+            await using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc);
+            await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
+                
+            if (!reader.HasRows)
             {
-                await sqlc.OpenAsync();
-
-                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc))
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    if (!reader.HasRows)
-                    {
-                        return null;
-                    }
-
-                    await reader.ReadAsync();
-                    return new Convo
-                    {
-                        Id = reader.GetString(0),
-                        CreatorId = reader.GetString(1),
-                        Name = reader.GetString(2),
-                        Description = reader.GetString(3),
-                        CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
-                        ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
-                        Participants = reader.GetString(6).Split(',').ToList(),
-                        BannedUsers = reader.GetString(7).Split(',').ToList(),
-                    };
-                }
+                return null;
             }
+
+            await reader.ReadAsync().ConfigureAwait(false);
+            
+            return new Convo
+            {
+                Id = reader.GetString(0),
+                CreatorId = reader.GetString(1),
+                Name = reader.GetString(2),
+                Description = reader.GetString(3),
+                CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
+                ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
+                Participants = reader.GetString(6).Split(',').ToList(),
+                BannedUsers = reader.GetString(7).Split(',').ToList(),
+            };
         }
 
         /// <summary>
@@ -152,34 +149,33 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<IEnumerable<Convo>> GetAll()
         {
             var convos = new List<Convo>(8);
-            using (var sqlc = new SQLiteConnection(connectionString))
+            
+            await using var sqlc = new SQLiteConnection(connectionString);
+            await sqlc.OpenAsync().ConfigureAwait(false);
+
+            await using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" ORDER BY \"Name\"", sqlc);
+            await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
+            
+            if (!reader.HasRows)
             {
-                await sqlc.OpenAsync();
-
-                using (var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" ORDER BY \"Name\"", sqlc))
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    if (!reader.HasRows)
-                    {
-                        return Array.Empty<Convo>();
-                    }
-
-                    while (await reader.ReadAsync())
-                    {
-                        convos.Add(new Convo
-                        {
-                            Id = reader.GetString(0),
-                            CreatorId = reader.GetString(1),
-                            Name = reader.GetString(2),
-                            Description = reader.GetString(3),
-                            CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
-                            ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
-                            Participants = reader.GetString(6).Split(',').ToList(),
-                            BannedUsers = reader.GetString(7).Split(',').ToList(),
-                        });
-                    }
-                }
+                return Array.Empty<Convo>();
             }
+
+            while (await reader.ReadAsync().ConfigureAwait(false))
+            {
+                convos.Add(new Convo
+                {
+                    Id = reader.GetString(0),
+                    CreatorId = reader.GetString(1),
+                    Name = reader.GetString(2),
+                    Description = reader.GetString(3),
+                    CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
+                    ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
+                    Participants = reader.GetString(6).Split(',').ToList(),
+                    BannedUsers = reader.GetString(7).Split(',').ToList(),
+                });
+            }
+            
             return convos;
         }
         
@@ -193,10 +189,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             try
             {
-                Convo result = (await GetAll())?.SingleOrDefault(predicate.Compile());
+                Convo result = (await GetAll().ConfigureAwait(false))?.SingleOrDefault(predicate.Compile());
                 return result;
             }
-            catch (Exception)
+            catch
             {
                 return default;
             }
@@ -211,10 +207,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             try
             {
-                IEnumerable<Convo> result = (await this.GetAll()).Where(predicate.Compile());
+                IEnumerable<Convo> result = (await GetAll().ConfigureAwait(false))?.Where(predicate.Compile());
                 return result;
             }
-            catch (Exception)
+            catch
             {
                 return Array.Empty<Convo>();
             }
@@ -252,7 +248,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     ExpirationUTC = convo.ExpirationUTC.ToUnixTimeMilliseconds(),
                     Participants = convo.GetParticipantIdsCommaSeparated(),
                     BannedUsers = convo.GetBannedUsersCommaSeparated()
-                }) > 0;
+                }).ConfigureAwait(false) > 0;
             }
             
             return success;
@@ -273,25 +269,24 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             bool success = false;
             string sql = $"INSERT INTO \"{tableName}\" VALUES (@Id, @CreatorId, @Name, @Description, @CreationTimestampUTC, @ExpirationUTC, @Participants, @BannedUsers)";
 
-            using (var dbcon = OpenConnection())
-            using (var t = dbcon.BeginTransaction())
+            using var dbcon = OpenConnection();
+            using var t = dbcon.BeginTransaction();
+            
+            success = await dbcon.ExecuteAsync(sql, convos.Where(c => c.Id.NotNullNotEmpty()).Select(c => new
             {
-                success = await dbcon.ExecuteAsync(sql, convos.Where(c => c.Id.NotNullNotEmpty()).Select(c => new
-                {
-                    Id = c.Id,
-                    CreatorId = c.CreatorId,
-                    Name = c.Name,
-                    Description = c.Description,
-                    CreationTimestampUTC = c.CreationUTC.ToUnixTimeMilliseconds(),
-                    ExpirationUTC = c.ExpirationUTC.ToUnixTimeMilliseconds(),
-                    Participants = c.GetParticipantIdsCommaSeparated(),
-                    BannedUsers = c.GetBannedUsersCommaSeparated()
-                }), t) > 0;
+                Id = c.Id,
+                CreatorId = c.CreatorId,
+                Name = c.Name,
+                Description = c.Description,
+                CreationTimestampUTC = c.CreationUTC.ToUnixTimeMilliseconds(),
+                ExpirationUTC = c.ExpirationUTC.ToUnixTimeMilliseconds(),
+                Participants = c.GetParticipantIdsCommaSeparated(),
+                BannedUsers = c.GetBannedUsersCommaSeparated()
+            }), t).ConfigureAwait(false) > 0;
 
-                if (success)
-                {
-                    t.Commit();
-                }
+            if (success)
+            {
+                t.Commit();
             }
 
             return success;
@@ -315,20 +310,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 .Append("\"BannedUsers\" = @BannedUsers ")
                 .Append("WHERE \"Id\" = @Id");
 
-            using (var dbcon = OpenConnection())
+            using var dbcon = OpenConnection();
+            
+            return await dbcon.ExecuteAsync(sql.ToString(), new
             {
-                return await dbcon.ExecuteAsync(sql.ToString(), new
-                {
-                    updatedConvo.Id,
-                    updatedConvo.CreatorId,
-                    updatedConvo.Name,
-                    updatedConvo.Description,
-                    CreationTimestampUTC = updatedConvo.CreationUTC.ToUnixTimeMilliseconds(),
-                    ExpirationUTC = updatedConvo.ExpirationUTC.ToUnixTimeMilliseconds(),
-                    Participants = updatedConvo.GetParticipantIdsCommaSeparated(),
-                    BannedUsers = updatedConvo.GetBannedUsersCommaSeparated()
-                }) > 0;
-            }
+                updatedConvo.Id,
+                updatedConvo.CreatorId,
+                updatedConvo.Name,
+                updatedConvo.Description,
+                CreationTimestampUTC = updatedConvo.CreationUTC.ToUnixTimeMilliseconds(),
+                ExpirationUTC = updatedConvo.ExpirationUTC.ToUnixTimeMilliseconds(),
+                Participants = updatedConvo.GetParticipantIdsCommaSeparated(),
+                BannedUsers = updatedConvo.GetBannedUsersCommaSeparated()
+            }).ConfigureAwait(false) > 0;
         }
 
         /// <summary>
@@ -353,9 +347,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             try
             {
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\" WHERE \"Id\" = @Id", new {Id = id}) > 0;
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\" WHERE \"Id\" = @Id", new {Id = id}).ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -377,9 +371,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             try
             {
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\"") > 0;
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\"").ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -397,7 +391,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the entities were removed successfully or not.</returns>
         public async Task<bool> RemoveRange(Expression<Func<Convo, bool>> predicate)
         {
-            return await RemoveRange(await Find(predicate));
+            return await RemoveRange(await Find(predicate).ConfigureAwait(false)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -436,9 +430,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 string sqlString = sql.ToString().TrimEnd(',', ' ') + ");";
                 
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync(sqlString) > 0;
+                result = await sqlc.ExecuteAsync(sqlString).ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }

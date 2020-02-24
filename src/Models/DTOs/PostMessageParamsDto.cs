@@ -17,7 +17,7 @@
 */
 
 using System;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -29,25 +29,25 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The convo's unique ID.
         /// </summary>
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string ConvoId { get; set; }
 
         /// <summary>
         /// The conversation's access pw.
         /// </summary>
-        [JsonProperty(PropertyName = "pw")]
+        [JsonPropertyName("pw")]
         public string ConvoPasswordSHA512 { get; set; }
 
         /// <summary>
         /// The message author's username (to display).
         /// </summary>
-        [JsonProperty(PropertyName = "sndr")]
+        [JsonPropertyName("sndr")]
         public string SenderName { get; set; }
 
         /// <summary>
         /// The message's encrypted bodies (packed into json key-value pairs).
         /// </summary>
-        [JsonProperty(PropertyName = "bodies")]
+        [JsonPropertyName("bodies")]
         public string MessageBodiesJson { get; set; }
 
         #region Equality

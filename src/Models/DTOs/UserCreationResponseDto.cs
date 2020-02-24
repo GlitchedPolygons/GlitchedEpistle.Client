@@ -18,7 +18,7 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -30,27 +30,27 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The user's unique identifier (the primary key for the epistle db).
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
-        [JsonProperty(PropertyName = "iat")]
+        [JsonPropertyName("iat")]
         public DateTime CreationUTC { get; set; }
 
         /// <summary>
         /// The user's 2FA TOTP secret.
         /// </summary>
         /// <value>The totp secret.</value>
-        [JsonProperty(PropertyName = "totps")]
+        [JsonPropertyName("totps")]
         public string TotpSecret { get; set; }
 
         /// <summary>
         /// The user's 2FA TOTP emergency backup codes (can only be used once).
         /// </summary>
         /// <value>The 2FA TOTP emergency backup codes.</value>
-        [JsonProperty(PropertyName = "sos")]
+        [JsonPropertyName("sos")]
         public List<string> TotpEmergencyBackupCodes { get; set; }
 
         #region Equality

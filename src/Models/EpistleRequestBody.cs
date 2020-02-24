@@ -17,8 +17,8 @@
 */
 
 using System.Text;
+using System.Text.Json.Serialization;
 
-using Newtonsoft.Json;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 
@@ -32,13 +32,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The requesting user's ID.
         /// </summary>
-        [JsonProperty("userId")]
+        [JsonPropertyName("userId")]
         public string UserId { get; set; }
 
         /// <summary>
         /// The requesting user's authentication token.
         /// </summary>
-        [JsonProperty("auth")]
+        [JsonPropertyName("auth")]
         public string Auth { get; set; }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// that was serialized into JSON and compressed.<para> </para>
         /// If the body is really short and/or represents only a single value, you can also assign the value directly instead of serializing + compressing it.
         /// </summary>
-        [JsonProperty("body")]
+        [JsonPropertyName("body")]
         public string Body { get; set; }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <see cref="User.PrivateKeyPem"/>.
         /// <seealso cref="User"/>
         /// </summary>
-        [JsonProperty("sig")]
+        [JsonPropertyName("sig")]
         public string Signature { get; set; }
 
         /// <summary>

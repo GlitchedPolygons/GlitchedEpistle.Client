@@ -16,11 +16,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
-
-using Newtonsoft.Json;
-#endregion
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -32,31 +29,31 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// Two-Factor Authentication token.
         /// </summary>
-        [JsonProperty(PropertyName = "totp")]
+        [JsonPropertyName("totp")]
         public string Totp { get; set; }
 
         /// <summary>
         /// <see cref="Convo"/> name (title).
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// <see cref="Convo"/> description (e.g. what is the convo about?).
         /// </summary>
-        [JsonProperty(PropertyName = "desc")]
+        [JsonPropertyName("desc")]
         public string Description { get; set; }
 
         /// <summary>
         /// The convo's access password SHA512.
         /// </summary>
-        [JsonProperty(PropertyName = "pw")]
+        [JsonPropertyName("pw")]
         public string PasswordSHA512 { get; set; }
 
         /// <summary>
         /// The conversation's expiration date (in UTC).
         /// </summary>
-        [JsonProperty(PropertyName = "exp")]
+        [JsonPropertyName("exp")]
         public DateTime ExpirationUTC { get; set; } = DateTime.MaxValue;
 
         #region Equality

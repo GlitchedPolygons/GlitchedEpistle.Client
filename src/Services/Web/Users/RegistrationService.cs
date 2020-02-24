@@ -18,13 +18,14 @@
 
 using System;
 using System.Threading.Tasks;
+
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Logging;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Settings;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth;
+using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange;
 using GlitchedPolygons.Services.Cryptography.Asymmetric;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
@@ -40,10 +41,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         private readonly IKeyExchange keyExchange;
         private readonly IAsymmetricKeygenRSA keygen;
         private readonly IServerConnectionTest connectionTest;
-        
-        private static readonly RSAKeySize RSA_KEY_SIZE = new RSA4096();
 
-        private Task<Tuple<string, string>> keyGenerationTask;
+        private static readonly RSAKeySize RSA_KEY_SIZE = RSAKeySize.RSA4096;
+
+        private Task<ValueTuple<string, string>> keyGenerationTask;
         
 #pragma warning disable 1591
         public RegistrationService(IAsymmetricKeygenRSA keygen, IServerConnectionTest connectionTest, ILogger logger, IUserService userService, IAppSettings appSettings, IKeyExchange keyExchange)
@@ -72,39 +73,39 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <param name="password">The user's password (NOT the SHA512!)</param>
         /// <param name="userCreationSecret">The backend's user creation secret.</param>
         /// <returns>A tuple containing the resulting status code and (eventually) the <see cref="UserCreationResponseDto"/></returns>
-        public async Task<Tuple<int, UserCreationResponseDto>> CreateUser(string password, string userCreationSecret)
+        public async Task<ValueTuple<int, UserCreationResponseDto>> CreateUser(string password, string userCreationSecret)
         {
-            if (!await connectionTest.TestConnection())
+            if (!await connectionTest.TestConnection().ConfigureAwait(false))
             {
-                return new Tuple<int, UserCreationResponseDto>(1, null);
+                return (1, null);
             }
 
-            Tuple<string, string> keyPair = await keyGenerationTask;
+            (string, string) keyPair = await keyGenerationTask.ConfigureAwait(false);
             
             keyGenerationTask = Task.Run(() => keygen.GenerateKeyPair(RSA_KEY_SIZE));
 
-            if (keyPair is null || keyPair.Item1.NullOrEmpty() || keyPair.Item2.NullOrEmpty())
+            if (keyPair.Item1.NullOrEmpty() || keyPair.Item2.NullOrEmpty())
             {
-                return new Tuple<int, UserCreationResponseDto>(2, null);
+                return (2, null);
             }
 
+            string publicKeyPem = keyPair.Item1;
+            string privateKeyPem = keyPair.Item2;
+            
             try
             {
-                string publicKeyPem = keyPair.Item1;
-                string privateKeyPem = keyPair.Item2;
-
                 var userCreationResponse = await userService.CreateUser(new UserCreationRequestDto
                 {
                     PasswordSHA512 = password.SHA512(),
                     CreationSecret = userCreationSecret,
-                    PublicKey = await keyExchange.CompressPublicKeyAsync(publicKeyPem),
-                    PrivateKey = await keyExchange.EncryptAndCompressPrivateKeyAsync(privateKeyPem, password),
-                });
+                    PublicKey = await keyExchange.CompressPublicKeyAsync(publicKeyPem).ConfigureAwait(false),
+                    PrivateKey = await keyExchange.EncryptAndCompressPrivateKeyAsync(privateKeyPem, password).ConfigureAwait(false),
+                }).ConfigureAwait(false);
 
                 if (userCreationResponse is null)
                 {
                     logger?.LogError("The user creation process failed server-side. Reason unknown; please make an admin check out the server's log files!");
-                    return new Tuple<int, UserCreationResponseDto>(3, null);
+                    return (3, null);
                 }
 
                 appSettings.LastUserId = userCreationResponse.Id;
@@ -112,12 +113,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 // Handle this event back in the client UI,
                 // since it's there where the backup codes + 2FA secret (QR) will be displayed.
                 logger?.LogMessage($"Created user {userCreationResponse.Id}.");
-                return new Tuple<int, UserCreationResponseDto>(0, userCreationResponse);
+                return (0, userCreationResponse);
             }
             catch (Exception e)
             {
                 logger?.LogError($"The user creation process failed. Thrown exception: {e}");
-                return new Tuple<int, UserCreationResponseDto>(4, null);
+                return (4, null);
             }
         }
     }

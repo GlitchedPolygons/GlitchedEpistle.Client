@@ -16,11 +16,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#region
 using System;
-
-using Newtonsoft.Json;
-#endregion
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -33,49 +30,49 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The unique id of the <see cref="Convo"/> whose metadata should be changed.
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string ConvoId { get; set; }
 
         /// <summary>
         /// The <see cref="Convo"/>'s access password (hashed using SHA512).
         /// </summary>
-        [JsonProperty(PropertyName = "pw")]
+        [JsonPropertyName("pw")]
         public string ConvoPasswordSHA512 { get; set; }
 
         /// <summary>
         /// 2FA token.
         /// </summary>
-        [JsonProperty("totp")]
+        [JsonPropertyName("totp")]
         public string Totp { get; set; }
 
         /// <summary>
         /// The new convo admin.
         /// </summary>
-        [JsonProperty(PropertyName = "creatorId")]
+        [JsonPropertyName("creatorId")]
         public string CreatorId { get; set; }
 
         /// <summary>
         /// <see cref="Convo"/> name/title.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// The <see cref="Convo"/>'s new description text.
         /// </summary>
-        [JsonProperty(PropertyName = "desc")]
+        [JsonPropertyName("desc")]
         public string Description { get; set; }
 
         /// <summary>
         /// The changed access password hash for this <see cref="Convo"/>.
         /// </summary>
-        [JsonProperty(PropertyName = "newPw")]
+        [JsonPropertyName("newPw")]
         public string NewConvoPasswordSHA512 { get; set; }
 
         /// <summary>
         /// The new convo expiration <see cref="DateTime"/> (UTC).
         /// </summary>
-        [JsonProperty(PropertyName = "exp")]
+        [JsonPropertyName("exp")]
         public DateTime? ExpirationUTC { get; set; }
     }
 }

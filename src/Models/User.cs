@@ -17,7 +17,7 @@
 */
 
 using System;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -29,13 +29,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The user's unique identifier (the primary key for the epistle db).
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// The user's role. 
         /// </summary>
-        [JsonProperty(PropertyName = "role")]
+        [JsonPropertyName("role")]
         public string Role { get; set; } = "User";
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
-        [JsonProperty(PropertyName = "iat")]
+        [JsonPropertyName("iat")]
         public DateTime CreationTimestampUTC { get; set; }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// How many failed login attempts this <see cref="User"/> has on his record.
         /// After too many, he is locked out for a while.
         /// </summary>
-        [JsonProperty(PropertyName = "fail")]
+        [JsonPropertyName("fail")]
         public int LoginFailures { get; set; }
 
         #region Equality

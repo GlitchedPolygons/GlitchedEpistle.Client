@@ -42,6 +42,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <param name="password">The user's password (NOT the SHA512!)</param>
         /// <param name="userCreationSecret">The backend's user creation secret.</param>
         /// <returns>A tuple containing the resulting status code and (eventually) the <see cref="UserCreationResponseDto"/></returns>
-        Task<Tuple<int, UserCreationResponseDto>> CreateUser(string password, string userCreationSecret);
+        Task<ValueTuple<int, UserCreationResponseDto>> CreateUser(string password, string userCreationSecret);
     }
 }

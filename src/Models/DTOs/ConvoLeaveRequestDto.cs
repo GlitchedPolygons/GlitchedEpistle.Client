@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -28,13 +28,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The id of the <see cref="Convo"/> to leave.
         /// </summary>
-        [JsonProperty("convoId")]
+        [JsonPropertyName("convoId")]
         public string ConvoId { get; set; }
 
         /// <summary>
         /// 2FA token.
         /// </summary>
-        [JsonProperty("totp")]
+        [JsonPropertyName("totp")]
         public string Totp { get; set; }
     }
 }

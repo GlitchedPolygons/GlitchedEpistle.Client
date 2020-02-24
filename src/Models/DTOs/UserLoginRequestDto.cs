@@ -17,8 +17,7 @@
 */
 
 using System;
-
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -30,19 +29,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// <summary>
         /// The id of the <see cref="User"/> who wants to log in.
         /// </summary>
-        [JsonProperty("userId")]
+        [JsonPropertyName("userId")]
         public string UserId { get; set; }
 
         /// <summary>
         /// The user's password SHA512.
         /// </summary>
-        [JsonProperty("pw")]
+        [JsonPropertyName("pw")]
         public string PasswordSHA512 { get; set; }
 
         /// <summary>
         /// 2FA token.
         /// </summary>
-        [JsonProperty("totp")]
+        [JsonPropertyName("totp")]
         public string Totp { get; set; }
 
         #region Equality

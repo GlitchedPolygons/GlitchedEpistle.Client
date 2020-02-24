@@ -19,13 +19,12 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.RepositoryPattern;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
-
-using Newtonsoft.Json;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 {
@@ -37,31 +36,31 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// Unique identifier for the convo.
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// User ID of the conversation's creator.
         /// </summary>
-        [JsonProperty(PropertyName = "creatorId")]
+        [JsonPropertyName("creatorId")]
         public string CreatorId { get; set; }
 
         /// <summary>
         /// The conversation's name.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// A short description of what the convo is about.
         /// </summary>
-        [JsonProperty(PropertyName = "desc")]
+        [JsonPropertyName("desc")]
         public string Description { get; set; }
 
         /// <summary>
         /// The <see cref="DateTime"/> (UTC) this conversation was created.
         /// </summary>
-        [JsonProperty(PropertyName = "iat")]
+        [JsonPropertyName("iat")]
         public DateTime CreationUTC { get; set; }
 
         /// <summary>
@@ -69,19 +68,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// After this moment in time, no further messages can be posted to the convo
         /// and the conversation itself will be deleted 48h afterwards.
         /// </summary>
-        [JsonProperty(PropertyName = "exp")]
+        [JsonPropertyName("exp")]
         public DateTime ExpirationUTC { get; set; } = DateTime.MaxValue;
 
         /// <summary>
         /// The people who joined the convo (their user ids).
         /// </summary>
-        [JsonProperty(PropertyName = "ppl")]
+        [JsonPropertyName("ppl")]
         public List<string> Participants { get; set; } = new List<string>(2);
 
         /// <summary>
         /// A list of all the perma-banned users.
         /// </summary>
-        [JsonProperty(PropertyName = "ban")]
+        [JsonPropertyName("ban")]
         public List<string> BannedUsers { get; set; } = new List<string>(2);
 
         /// <summary>
@@ -95,7 +94,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
 
         /// <summary>
         /// Gets all of the <see cref="Convo"/>'s participants (their ids) comma-separated;
-        /// ready for submitting them with <see cref="IUserService.GetUserPublicKey"/>.
+        /// ready for submitting them with <see cref="IUserService.GetUserPublicKeys"/>.
         /// </summary>
         /// <returns>The participant user ids separated by commas.</returns>
         public string GetParticipantIdsCommaSeparated()
