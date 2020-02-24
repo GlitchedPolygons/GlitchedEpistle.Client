@@ -188,7 +188,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
 
             try
             {
-                return JsonSerializer.Deserialize<Dictionary<string, string>>(response.Content);
+                var json = JsonDocument.Parse(response.Content);
+                var @out = new Dictionary<string, string>(8);
+                foreach (var key in json.RootElement.EnumerateObject())
+                {
+                    @out.Add(key.Name, key.Value.GetString());
+                }
+                return @out;
             }
             catch
             {
