@@ -10,9 +10,8 @@
 ## Shared codebase for implementing clients
 
 Technology used:
-* C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md))
+* C# 8.0 ([netstandard2.1](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md))
 * [RestSharp](https://github.com/restsharp/RestSharp)
-* [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
 * [GlitchedPolygons.RepositoryPattern.SQLite](https://github.com/GlitchedPolygons/RepositoryPattern.SQLite)
 * [GlitchedPolygons.Services.CompressionUtility](https://github.com/GlitchedPolygons/CompressionUtility)
 * [GlitchedPolygons.Services.Cryptography.Symmetric](https://github.com/GlitchedPolygons/Cryptography.Symmetric)
