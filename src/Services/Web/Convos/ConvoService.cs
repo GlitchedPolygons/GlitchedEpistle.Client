@@ -233,7 +233,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
@@ -245,7 +245,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<bool> JoinConvo(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "convos/join", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.IsSuccessful;
         }
 

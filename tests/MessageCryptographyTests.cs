@@ -29,7 +29,7 @@ namespace GlitchedEpistle.Client.Tests
 {
     public class MessageCryptographyTests
     {
-        private readonly IMessageCryptography crypto = new MessageCryptography(new SymmetricCryptography(), new AsymmetricCryptographyRSA(), new LzmaUtility(), new InMemoryLogger());
+        private readonly IMessageCryptography crypto = new MessageCryptography(new SymmetricCryptography(), new AsymmetricCryptographyRSA(), new LzmaUtility(), new LzmaUtilityAsync(), new InMemoryLogger());
         
         private readonly string text = File.ReadAllText("TestData/LoremIpsum.txt");
         private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");

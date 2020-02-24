@@ -199,7 +199,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Encrypt-and-write task..</returns>
         private async Task EncryptMessageForUser(Utf8JsonWriter jsonWriter, string messageBodyJson, string userId, string publicKey)
         {
-            string encryptedMessage = await crypto.EncryptMessageAsync(messageBodyJson, publicKey).ConfigureAwait(false);
+            string encryptedMessage = await crypto.EncryptMessageAsync(messageBodyJson, keyExchange.DecompressPublicKey(publicKey)).ConfigureAwait(false);
             jsonWriter.WriteString(userId, encryptedMessage);
         }
     }
