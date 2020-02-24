@@ -22,8 +22,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
-using System.Linq;
 
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
@@ -149,17 +147,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
 
             writer.WriteStartObject();
-
+            
+            var tasks = new List<Task>(publicKeys.Count);
+            
             foreach (KeyValuePair<string, string> kvp in publicKeys)
             {
                 if (kvp.Key.NullOrEmpty() || kvp.Value.NullOrEmpty())
                 {
                     continue;
                 }
-                
-                string encryptMessage = await crypto.EncryptMessageAsync(messageBodyJson, keyExchange.DecompressPublicKey(kvp.Value)).ConfigureAwait(false);
-                writer.WriteString(kvp.Key, encryptMessage);
+                tasks.Add(EncryptMessageForUser(writer, messageBodyJson, kvp.Key, kvp.Value));
             }
+
+            await Task.WhenAll(tasks).ConfigureAwait(false);
 
             writer.WriteEndObject();
             await writer.FlushAsync().ConfigureAwait(false);
@@ -189,21 +189,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
         }
 
-        private async IAsyncEnumerable<string> EncryptMessageForUsers(string messageBodyJson, IDictionary<string, string> publicKeys)
+        /// <summary>
+        /// Takes a message body JSON and encrypts it for the given user (using his individual public key) and immediately writes it out into the passed <see cref="Utf8JsonWriter"/>.
+        /// </summary>
+        /// <param name="jsonWriter">The <see cref="Utf8JsonWriter"/> instance into which to write the encrypted message result.</param>
+        /// <param name="messageBodyJson">The message to encrypt.</param>
+        /// <param name="userId">The message recipient's <see cref="User.Id"/>.</param>
+        /// <param name="publicKey">The recipient's public key to use for encryption.</param>
+        /// <returns>Encrypt-and-write task..</returns>
+        private async Task EncryptMessageForUser(Utf8JsonWriter jsonWriter, string messageBodyJson, string userId, string publicKey)
         {
-            if (messageBodyJson.NullOrEmpty())
-            {
-                yield break;
-            }
-            
-            foreach (KeyValuePair<string, string> kvp in publicKeys)
-            {
-                if (kvp.Key.NullOrEmpty() || kvp.Value.NullOrEmpty())
-                {
-                    continue;
-                }
-                yield return await crypto.EncryptMessageAsync(messageBodyJson, keyExchange.DecompressPublicKey(kvp.Value)).ConfigureAwait(false);
-            }
+            string encryptedMessage = await crypto.EncryptMessageAsync(messageBodyJson, publicKey).ConfigureAwait(false);
+            jsonWriter.WriteString(userId, encryptedMessage);
         }
     }
 }
