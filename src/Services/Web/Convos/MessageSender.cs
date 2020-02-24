@@ -129,7 +129,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private async Task<bool> PostMessageToConvo(Convo convo, string messageBodyJson)
         {
             // Get the keys of all convo participants here.
-            Task<List<Tuple<string, string>>> publicKeys = userService.GetUserPublicKey(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
+            Task<IDictionary<string,string>> publicKeys = userService.GetUserPublicKeys(user.Id, convo.GetParticipantIdsCommaSeparated(), user.Token.Item2);
 
             // Encrypt the message for every convo participant individually
             // and put the results into a temporary "ConcurrentDictionary".
@@ -158,7 +158,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 Body = JsonSerializer.Serialize(postParamsDto)
             };
 
-            bool success = await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem));
+            bool success = await convoService.PostMessage(body.Sign(rsa, user.PrivateKeyPem)).ConfigureAwait(false);
             return success;
         }
     }

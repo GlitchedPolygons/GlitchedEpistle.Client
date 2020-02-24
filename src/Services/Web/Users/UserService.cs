@@ -171,7 +171,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
         /// <param name="auth">The request authentication token.</param>
         /// <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
-        public async Task<List<Tuple<string, string>>> GetUserPublicKey(string userId, string userIds, string auth)
+        public async Task<IDictionary<string, string>> GetUserPublicKeys(string userId, string userIds, string auth)
         {
             var request = new RestRequest(
                 method: Method.GET,
@@ -187,8 +187,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 return null;
             }
 
-            List<Tuple<string, string>> keys = JsonSerializer.Deserialize<List<Tuple<string, string>>>(response.Content);
-            return keys;
+            return JsonSerializer.Deserialize<Dictionary<string, string>>(response.Content);
         }
 
         /// <summary>

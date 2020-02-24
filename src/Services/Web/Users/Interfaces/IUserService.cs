@@ -71,7 +71,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <param name="userIds">The user ids whose public key you want to retrieve (comma-separated).</param>
         /// <param name="auth">The request authentication token.</param>
         /// <returns><c>List&lt;Tuple&lt;string, string&gt;&gt;</c> containing all of the user ids and their public key; <c>null</c> if the request failed in some way.</returns>
-        Task<List<Tuple<string, string>>> GetUserPublicKey(string userId, string userIds, string auth);
+        Task<IDictionary<string, string>> GetUserPublicKeys(string userId, string userIds, string auth);
 
         /// <summary>
         /// Gets a user's (encrypted, compressed and base-64 encoded) private key from the server.
