@@ -88,7 +88,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                         }
                     }
 
-                    Thread.Sleep(fetchTimeoutMilliseconds);
+                    await Task.Delay(fetchTimeoutMilliseconds).ConfigureAwait(false);
                 } while (!ct.IsCancellationRequested);
 
                 cancellationCallback?.Invoke();
