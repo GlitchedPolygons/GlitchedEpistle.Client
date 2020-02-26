@@ -196,10 +196,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <param name="messageBodyJson">The message to encrypt.</param>
         /// <param name="userId">The message recipient's <see cref="User.Id"/>.</param>
         /// <param name="publicKey">The recipient's public key to use for encryption.</param>
-        /// <returns>Encrypt-and-write task..</returns>
+        /// <returns>Encrypt-and-write task.</returns>
         private async Task EncryptMessageForUser(Utf8JsonWriter jsonWriter, string messageBodyJson, string userId, string publicKey)
         {
-            string encryptedMessage = await crypto.EncryptMessageAsync(messageBodyJson, keyExchange.DecompressPublicKey(publicKey)).ConfigureAwait(false);
+            string decompressedKey = await keyExchange.DecompressPublicKeyAsync(publicKey).ConfigureAwait(false);
+            string encryptedMessage = await crypto.EncryptMessageAsync(messageBodyJson, decompressedKey).ConfigureAwait(false);
             jsonWriter.WriteString(userId, encryptedMessage);
         }
     }

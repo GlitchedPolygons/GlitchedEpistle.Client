@@ -29,7 +29,7 @@ namespace GlitchedEpistle.Client.Tests
 {
     public class KeyExchangeUtilityTests
     {
-        private readonly IKeyExchange keyExchange = new KeyExchange(new SymmetricCryptography(), new LzmaUtility(), new LzmaUtilityAsync());
+        private readonly IKeyExchange keyExchange = new KeyExchange(new SymmetricCryptography(), new BrotliUtility(), new BrotliUtilityAsync());
         private readonly string privateKeyPem = File.ReadAllText("TestData/KeyPair1/Private");
         private readonly string publicTestKeyPem = File.ReadAllText("TestData/KeyPair1/Public");
 
