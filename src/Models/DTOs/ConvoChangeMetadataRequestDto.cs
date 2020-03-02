@@ -73,6 +73,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The new convo expiration <see cref="DateTime"/> (UTC).
         /// </summary>
         [JsonPropertyName("exp")]
-        public DateTime? ExpirationUTC { get; set; }
+        public long? ExpirationUTC { get; set; }
     }
 }

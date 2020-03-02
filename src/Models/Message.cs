@@ -50,7 +50,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// The message's timestamp in UTC.
         /// </summary>
         [JsonPropertyName("utc")]
-        public DateTime TimestampUTC { get; set; }
+        public long TimestampUTC { get; set; }
 
         /// <summary>
         /// This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
@@ -59,11 +59,19 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// Checks whether the <see cref="Message"/> comes from a <see cref="User"/> or from the Epistle server.
+        /// Checks whether the <see cref="Message"/> comes from a <see cref="User"/> or from the Epistle server directly.<para> </para>
+        /// Server messages come in the following format: <para> </para>
+        /// <c>server:0:f12218f6b9e3481d964a109333f70ae7</c><para> </para>
+        /// Message type IDs: <para> </para>
+        /// 0 = User joined a convo.
+        /// 1 = User left a convo.
+        /// 2 = User was kicked out from a convo.
+        /// 3 = The convo is about to expire (less than 24h left).
+        /// 4 = The convo's metadata was changed.
         /// </summary>
         public bool IsFromServer()
         {
-            return SenderId == "SERVER" && SenderName == "SERVER";
+            return SenderId == "0" && SenderName.Equals("Server", StringComparison.InvariantCultureIgnoreCase) && Body.StartsWith("server:", StringComparison.InvariantCultureIgnoreCase);
         }
 
         #region Equality

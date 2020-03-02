@@ -34,10 +34,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string Id { get; set; }
 
         /// <summary>
-        /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
+        /// The timestamp when this <see cref="User"/> was first created.
         /// </summary>
         [JsonPropertyName("iat")]
-        public DateTime CreationUTC { get; set; }
+        public long CreationUTC { get; set; }
 
         /// <summary>
         /// The user's 2FA TOTP secret.

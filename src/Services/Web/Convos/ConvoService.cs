@@ -61,6 +61,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         }
 
         /// <summary>
+        /// Gets the server's maximum convo duration setting value (in days).
+        /// </summary>
+        /// <returns>The server's preferred maximum convo lifetime. A value below 0 means that there is no maximum convo duration limit on the specified server.</returns>
+        public async Task<int> GetMaximumConvoDurationDays()
+        {
+            var request = new RestRequest(
+                method: Method.GET,
+                resource: new Uri("convos/max-days", UriKind.Relative)
+            );
+
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            if (response.IsSuccessful && int.TryParse(response.Content, out int maxDays))
+            {
+                return maxDays;
+            }
+            
+            return -1;
+        }
+
+        /// <summary>
         /// Creates a new convo on the server.<para> </para>
         /// "<paramref name="requestBody.Body"/>" should be the <see cref="ConvoCreationRequestDto"/> serialized into JSON and compressed.
         /// </summary>
@@ -69,7 +89,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<string> CreateConvo(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "convos/create");
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.IsSuccessful ? response.Content : null;
         }
 

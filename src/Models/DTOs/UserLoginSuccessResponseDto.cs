@@ -31,6 +31,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// </summary>
         [JsonPropertyName("auth")]
         public string Auth { get; set; }
+        
+        /// <summary>
+        /// Optional server broadcast message to display on user login.
+        /// </summary>
+        [JsonPropertyName("msg")]
+        public string Message { get; set; }
 
         /// <summary>
         /// The user's public key.

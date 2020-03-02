@@ -58,18 +58,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The <see cref="DateTime"/> (UTC) this conversation was created.
+        /// The UTC timestamp when this conversation was created.
         /// </summary>
         [JsonPropertyName("iat")]
-        public DateTime CreationUTC { get; set; }
+        public long CreationUTC { get; set; }
 
         /// <summary>
-        /// The exact UTC <see cref="DateTime"/> when the convo will expire.<para> </para>
+        /// The exact UTC timestamp when the convo will expire.<para> </para>
         /// After this moment in time, no further messages can be posted to the convo
         /// and the conversation itself will be deleted 48h afterwards.
         /// </summary>
         [JsonPropertyName("exp")]
-        public DateTime ExpirationUTC { get; set; } = DateTime.MaxValue;
+        public long ExpirationUTC { get; set; } = DateTime.UtcNow.AddDays(14).ToUnixTimeSeconds();
 
         /// <summary>
         /// The people who joined the convo (their user ids).
@@ -89,7 +89,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns><c>true</c> if the <see cref="Convo"/> is expired; otherwise, <c>false</c>.</returns>
         public bool IsExpired()
         {
-            return DateTime.UtcNow > ExpirationUTC;
+            return DateTime.UtcNow.ToUnixTimeSeconds() > ExpirationUTC;
         }
 
         /// <summary>
@@ -165,8 +165,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && Name == other.Name
                    && CreatorId == other.CreatorId
                    && Description == other.Description
-                   && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
-                   && CreationUTC.AlmostEquals(other.CreationUTC)
+                   && CreationUTC == other.CreationUTC
+                   && ExpirationUTC == other.ExpirationUTC
                    && BannedUsers.UnorderedEqual(other.BannedUsers.Split(','))
                    && Participants.UnorderedEqual(other.Participants.Split(','));
         }
@@ -183,8 +183,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && Name == other.Name
                    && CreatorId == other.CreatorId
                    && Description == other.Description
-                   && ExpirationUTC.AlmostEquals(other.ExpirationUTC)
-                   && CreationUTC.AlmostEquals(other.CreationUTC)
+                   && CreationUTC == other.CreationUTC
+                   && ExpirationUTC == other.ExpirationUTC
                    && BannedUsers.UnorderedEqual(other.BannedUsers)
                    && Participants.UnorderedEqual(other.Participants);
         }

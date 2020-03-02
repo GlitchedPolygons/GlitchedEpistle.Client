@@ -27,7 +27,6 @@ using System.Linq.Expressions;
 
 using Dapper;
 
-using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
@@ -99,7 +98,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     Id = reader.GetInt64(0),
                     SenderId = reader.GetString(1),
                     SenderName = reader.GetString(2),
-                    TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                    TimestampUTC = reader.GetInt64(3),
                     Body = reader.GetString(4)
                 };
             }
@@ -140,7 +139,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 Id = reader.GetInt64(0),
                 SenderId = reader.GetString(1),
                 SenderName = reader.GetString(2),
-                TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                TimestampUTC = reader.GetInt64(3),
                 Body = reader.GetString(4)
             };
         }
@@ -171,7 +170,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     Id = reader.GetInt64(0),
                     SenderId = reader.GetString(1),
                     SenderName = reader.GetString(2),
-                    TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                    TimestampUTC = reader.GetInt64(3),
                     Body = reader.GetString(4)
                 });
             }
@@ -215,7 +214,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     Id = reader.GetInt64(0),
                     SenderId = reader.GetString(1),
                     SenderName = reader.GetString(2),
-                    TimestampUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(3)),
+                    TimestampUTC = reader.GetInt64(3),
                     Body = reader.GetString(4)
                 });
             }
@@ -282,7 +281,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 Id = message.Id,
                 SenderId = message.SenderId,
                 SenderName = message.SenderName,
-                TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
+                TimestampUTC = message.TimestampUTC,
                 Body = message.Body,
             }).ConfigureAwait(false) > 0;
 
@@ -312,7 +311,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 Id = m.Id,
                 SenderId = m.SenderId,
                 SenderName = m.SenderName,
-                TimestampUTC = m.TimestampUTC.ToUnixTimeMilliseconds(),
+                TimestampUTC = m.TimestampUTC,
                 Body = m.Body,
             }), t).ConfigureAwait(false) > 0;
 
@@ -346,7 +345,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 Id = message.Id,
                 SenderId = message.SenderId,
                 SenderName = message.SenderName,
-                TimestampUTC = message.TimestampUTC.ToUnixTimeMilliseconds(),
+                TimestampUTC = message.TimestampUTC,
                 Body = message.Body
             }).ConfigureAwait(false);
 

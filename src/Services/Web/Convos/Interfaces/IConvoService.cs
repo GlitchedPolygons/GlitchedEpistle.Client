@@ -29,6 +29,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
     public interface IConvoService : IDisposable
     {
         /// <summary>
+        /// Gets the server's maximum convo duration setting value (in days).
+        /// </summary>
+        /// <returns>The server's preferred maximum convo lifetime. A value below 0 means that there is no maximum convo duration limit on the specified server.</returns>
+        Task<int> GetMaximumConvoDurationDays();
+        
+        /// <summary>
         /// Creates a new convo on the server.<para> </para>
         /// "<paramref name="requestBody.Body"/>" should be the <see cref="ConvoCreationRequestDto"/> serialized into JSON and compressed.
         /// </summary>

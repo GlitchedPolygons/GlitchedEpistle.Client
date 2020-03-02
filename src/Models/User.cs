@@ -56,7 +56,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// The <see cref="DateTime"/> when this <see cref="User"/> was first created.
         /// </summary>
         [JsonPropertyName("iat")]
-        public DateTime CreationTimestampUTC { get; set; }
+        public long CreationTimestampUTC { get; set; }
 
         /// <summary>
         /// The user's private message decryption RSA key (PEM-formatted).

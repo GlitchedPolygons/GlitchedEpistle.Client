@@ -117,7 +117,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             }
             catch (Exception e)
             {
-                logger?.LogError($"The user creation process failed. Thrown exception: {e}");
+                logger?.LogError($"The user creation process failed. Thrown exception: {e.Message}");
                 return (4, null);
             }
         }

@@ -22,9 +22,11 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
+using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs;
 using GlitchedPolygons.GlitchedEpistle.Client.Utilities;
+using GlitchedPolygons.Services.Cryptography.Asymmetric;
 
 using RestSharp;
 

@@ -18,6 +18,7 @@
 
 using System;
 using System.Text.Json.Serialization;
+using GlitchedPolygons.ExtensionMethods;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
 {
@@ -54,7 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The conversation's expiration date (in UTC).
         /// </summary>
         [JsonPropertyName("exp")]
-        public DateTime ExpirationUTC { get; set; } = DateTime.MaxValue;
+        public long ExpirationUTC { get; set; } = DateTime.UtcNow.AddDays(14).ToUnixTimeSeconds();
 
         #region Equality
         /// <summary>Indicates whether the current object is equal to another object of the same type.</summary>

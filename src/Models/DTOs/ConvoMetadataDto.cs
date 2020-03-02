@@ -56,13 +56,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The <see cref="Convo"/>'s creation timestamp (UTC).
         /// </summary>
         [JsonPropertyName("iat")]
-        public DateTime CreationUTC { get; set; }
+        public long CreationUTC { get; set; }
 
         /// <summary>
-        /// Convo expiration <see cref="DateTime"/> (UTC).
+        /// When this convo will expire (UTC).
         /// </summary>
         [JsonPropertyName("exp")]
-        public DateTime ExpirationUTC { get; set; }
+        public long ExpirationUTC { get; set; }
 
         /// <summary>
         /// The convo's participants (user ids separated by a comma: ',').

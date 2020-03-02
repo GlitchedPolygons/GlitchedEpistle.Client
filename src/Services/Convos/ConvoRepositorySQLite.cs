@@ -101,8 +101,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     CreatorId = reader.GetString(1),
                     Name = reader.GetString(2),
                     Description = reader.GetString(3),
-                    CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
-                    ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
+                    CreationUTC = reader.GetInt64(4),
+                    ExpirationUTC = reader.GetInt64(5),
                     Participants = reader.GetString(6).Split(',').ToList(),
                     BannedUsers = reader.GetString(7).Split(',').ToList(),
                 };
@@ -135,8 +135,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 CreatorId = reader.GetString(1),
                 Name = reader.GetString(2),
                 Description = reader.GetString(3),
-                CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
-                ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
+                CreationUTC = reader.GetInt64(4),
+                ExpirationUTC = reader.GetInt64(5),
                 Participants = reader.GetString(6).Split(',').ToList(),
                 BannedUsers = reader.GetString(7).Split(',').ToList(),
             };
@@ -169,8 +169,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     CreatorId = reader.GetString(1),
                     Name = reader.GetString(2),
                     Description = reader.GetString(3),
-                    CreationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(4)),
-                    ExpirationUTC = DateTimeExtensions.FromUnixTimeMilliseconds(reader.GetInt64(5)),
+                    CreationUTC = reader.GetInt64(4),
+                    ExpirationUTC = reader.GetInt64(5),
                     Participants = reader.GetString(6).Split(',').ToList(),
                     BannedUsers = reader.GetString(7).Split(',').ToList(),
                 });
@@ -244,8 +244,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     convo.CreatorId,
                     convo.Name,
                     convo.Description,
-                    CreationTimestampUTC = convo.CreationUTC.ToUnixTimeMilliseconds(),
-                    ExpirationUTC = convo.ExpirationUTC.ToUnixTimeMilliseconds(),
+                    ExpirationUTC = convo.ExpirationUTC,
+                    CreationTimestampUTC = convo.CreationUTC,
                     Participants = convo.GetParticipantIdsCommaSeparated(),
                     BannedUsers = convo.GetBannedUsersCommaSeparated()
                 }).ConfigureAwait(false) > 0;
@@ -278,8 +278,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 CreatorId = c.CreatorId,
                 Name = c.Name,
                 Description = c.Description,
-                CreationTimestampUTC = c.CreationUTC.ToUnixTimeMilliseconds(),
-                ExpirationUTC = c.ExpirationUTC.ToUnixTimeMilliseconds(),
+                ExpirationUTC = c.ExpirationUTC,
+                CreationTimestampUTC = c.CreationUTC,
                 Participants = c.GetParticipantIdsCommaSeparated(),
                 BannedUsers = c.GetBannedUsersCommaSeparated()
             }), t).ConfigureAwait(false) > 0;
@@ -314,12 +314,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             
             return await dbcon.ExecuteAsync(sql.ToString(), new
             {
-                updatedConvo.Id,
-                updatedConvo.CreatorId,
-                updatedConvo.Name,
-                updatedConvo.Description,
-                CreationTimestampUTC = updatedConvo.CreationUTC.ToUnixTimeMilliseconds(),
-                ExpirationUTC = updatedConvo.ExpirationUTC.ToUnixTimeMilliseconds(),
+                Id = updatedConvo.Id,
+                Name = updatedConvo.Name,
+                CreatorId = updatedConvo.CreatorId,
+                Description = updatedConvo.Description,
+                ExpirationUTC = updatedConvo.ExpirationUTC,
+                CreationTimestampUTC = updatedConvo.CreationUTC,
                 Participants = updatedConvo.GetParticipantIdsCommaSeparated(),
                 BannedUsers = updatedConvo.GetBannedUsersCommaSeparated()
             }).ConfigureAwait(false) > 0;
