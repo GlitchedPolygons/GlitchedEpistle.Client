@@ -74,7 +74,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// Sends a text message to a <see cref="Convo"/>.
         /// </summary>
         /// <param name="convo">The <see cref="Convo"/> to post the message into (will use the <see cref="Convo.Id"/> and other credentials for establishing a connection to the Epistle server).</param>
-        /// <param name="message"></param>
+        /// <param name="message">The text message to post.</param>
         /// <returns>Whether the message submission was successful or failed.</returns>
         public async Task<bool> PostText(Convo convo, string message)
         {

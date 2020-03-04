@@ -56,8 +56,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             getLastMessageIdSql = $"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1";
 
             string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
-            using var sqlc = OpenConnection();
-            sqlc.Execute(sql);
+            using var dbcon = OpenConnection();
+            dbcon.Execute(sql);
         }
 
         /// <summary>
@@ -81,10 +81,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             get
             {
-                using var sqlc = new SQLiteConnection(connectionString);
-                sqlc.Open();
+                using var dbcon = new SQLiteConnection(connectionString);
+                dbcon.Open();
 
-                using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc);
+                using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", dbcon);
                 using var reader = cmd.ExecuteReader();
                 
                 if (!reader.HasRows)
@@ -109,8 +109,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// </summary>
         public async Task<long> GetLastMessageId()
         {
-            using var sqlc = OpenConnection();
-            long id = await sqlc.QueryFirstOrDefaultAsync<long>(getLastMessageIdSql).ConfigureAwait(false);
+            using var dbcon = OpenConnection();
+            long id = await dbcon.QueryFirstOrDefaultAsync<long>(getLastMessageIdSql).ConfigureAwait(false);
             return id;
         }
 
@@ -121,10 +121,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>The first found <see cref="Message"/>; <c>null</c> if nothing was found.</returns>
         public async Task<Message> Get(long id)
         {
-            await using var sqlc = new SQLiteConnection(connectionString);
-            await sqlc.OpenAsync().ConfigureAwait(false);
+            await using var dbcon = new SQLiteConnection(connectionString);
+            await dbcon.OpenAsync().ConfigureAwait(false);
 
-            await using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", sqlc);
+            await using var cmd = new SQLiteCommand($"SELECT * FROM \"{tableName}\" WHERE \"Id\" = '{id}'", dbcon);
             await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
             
             if (!reader.HasRows)
@@ -152,10 +152,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         {
             var messages = new List<Message>(8);
             
-            await using var sqlc = new SQLiteConnection(connectionString);
-            await sqlc.OpenAsync().ConfigureAwait(false);
+            await using var dbcon = new SQLiteConnection(connectionString);
+            await dbcon.OpenAsync().ConfigureAwait(false);
 
-            await using var cmd = new SQLiteCommand(getAllSql, sqlc);
+            await using var cmd = new SQLiteCommand(getAllSql, dbcon);
             await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
             
             if (!reader.HasRows)
@@ -196,10 +196,10 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 sql += " OFFSET " + offset;
             }
 
-            await using var sqlc = new SQLiteConnection(connectionString);
-            await sqlc.OpenAsync().ConfigureAwait(false);
+            await using var dbcon = new SQLiteConnection(connectionString);
+            await dbcon.OpenAsync().ConfigureAwait(false);
 
-            await using var cmd = new SQLiteCommand(sql, sqlc);
+            await using var cmd = new SQLiteCommand(sql, dbcon);
             await using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
             
             if (!reader.HasRows)
@@ -370,11 +370,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<bool> Remove(long id)
         {
             bool result = false;
-            IDbConnection sqlc = null;
+            IDbConnection dbcon = null;
             try
             {
-                sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\" WHERE \"Id\" = @Id", new { Id = id }).ConfigureAwait(false) > 0;
+                dbcon = OpenConnection();
+                result = await dbcon.ExecuteAsync($"DELETE FROM \"{tableName}\" WHERE \"Id\" = @Id", new { Id = id }).ConfigureAwait(false) > 0;
             }
             catch
             {
@@ -382,7 +382,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
             finally
             {
-                sqlc?.Dispose();
+                dbcon?.Dispose();
             }
             return result;
         }
@@ -394,11 +394,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<bool> RemoveAll()
         {
             bool result = false;
-            IDbConnection sqlc = null;
+            IDbConnection dbcon = null;
             try
             {
-                sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{tableName}\"").ConfigureAwait(false) > 0;
+                dbcon = OpenConnection();
+                result = await dbcon.ExecuteAsync($"DELETE FROM \"{tableName}\"").ConfigureAwait(false) > 0;
             }
             catch
             {
@@ -406,7 +406,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
             finally
             {
-                sqlc?.Dispose();
+                dbcon?.Dispose();
             }
             return result;
         }
@@ -439,7 +439,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<bool> RemoveRange(IEnumerable<long> ids)
         {
             bool result = false;
-            IDbConnection sqlc = null;
+            IDbConnection dbcon = null;
             try
             {
                 var sql = new StringBuilder(256)
@@ -456,8 +456,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
                 string sqlString = sql.ToString().TrimEnd(',', ' ') + ");";
 
-                sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync(sqlString).ConfigureAwait(false) > 0;
+                dbcon = OpenConnection();
+                result = await dbcon.ExecuteAsync(sqlString).ConfigureAwait(false) > 0;
             }
             catch
             {
@@ -465,7 +465,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
             finally
             {
-                sqlc?.Dispose();
+                dbcon?.Dispose();
             }
             return result;
         }
