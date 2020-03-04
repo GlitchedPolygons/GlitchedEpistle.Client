@@ -86,35 +86,11 @@ Excellent for unit testing and debugging purposes.</p>
     <h5>Implements</h5>
     <div><a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger.html">ILogger</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.html">GlitchedPolygons.GlitchedEpistle.Client.Services.Logging</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_InMemoryLogger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InMemoryLogger : ILogger</code></pre>
+    <pre><code class="lang-csharp hljs">public class InMemoryLogger : object, ILogger</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -144,8 +120,8 @@ Excellent for unit testing and debugging purposes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A new <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> that is a copy of the currently logged errors.</p>
+        <td><span class="xref">ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A new <see cref="!:ICollection&lt;T>"></see> that is a copy of the currently logged errors.</p>
 </td>
       </tr>
     </tbody>
@@ -176,8 +152,8 @@ Excellent for unit testing and debugging purposes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A new <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> that is a copy of the currently logged messages.</p>
+        <td><span class="xref">ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A new <see cref="!:ICollection&lt;T>"></see> that is a copy of the currently logged messages.</p>
 </td>
       </tr>
     </tbody>
@@ -208,8 +184,8 @@ Excellent for unit testing and debugging purposes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A new <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> that is a copy of the currently logged warnings.</p>
+        <td><span class="xref">ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A new <see cref="!:ICollection&lt;T>"></see> that is a copy of the currently logged warnings.</p>
 </td>
       </tr>
     </tbody>

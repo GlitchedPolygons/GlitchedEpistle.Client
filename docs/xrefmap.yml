@@ -966,6 +966,51 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangePasswordRequestDto.Totp
   nameWithType: UserChangePasswordRequestDto.Totp
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto
+  name: UserChangeProfilePictureRequestDto
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto
+  nameWithType: UserChangeProfilePictureRequestDto
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.PasswordSHA512
+  name: PasswordSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangeProfilePictureRequestDto_PasswordSHA512
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.PasswordSHA512
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.PasswordSHA512
+  nameWithType: UserChangeProfilePictureRequestDto.PasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.PasswordSHA512*
+  name: PasswordSHA512
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangeProfilePictureRequestDto_PasswordSHA512_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.PasswordSHA512
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.PasswordSHA512
+  nameWithType: UserChangeProfilePictureRequestDto.PasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.ProfilePicture
+  name: ProfilePicture
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangeProfilePictureRequestDto_ProfilePicture
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.ProfilePicture
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.ProfilePicture
+  nameWithType: UserChangeProfilePictureRequestDto.ProfilePicture
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.ProfilePicture*
+  name: ProfilePicture
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangeProfilePictureRequestDto_ProfilePicture_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.ProfilePicture
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.ProfilePicture
+  nameWithType: UserChangeProfilePictureRequestDto.ProfilePicture
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.Totp
+  name: Totp
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangeProfilePictureRequestDto_Totp
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.Totp
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.Totp
+  nameWithType: UserChangeProfilePictureRequestDto.Totp
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.Totp*
+  name: Totp
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserChangeProfilePictureRequestDto_Totp_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.Totp
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserChangeProfilePictureRequestDto.Totp
+  nameWithType: UserChangeProfilePictureRequestDto.Totp
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto
   name: UserCreationRequestDto
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationRequestDto.html
@@ -1274,6 +1319,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.GetHashCode
   nameWithType: UserLoginSuccessResponseDto.GetHashCode
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Message
+  name: Message
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_Message
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Message
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Message
+  nameWithType: UserLoginSuccessResponseDto.Message
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Message*
+  name: Message
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_Message_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Message
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.Message
+  nameWithType: UserLoginSuccessResponseDto.Message
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.PrivateKey
   name: PrivateKey
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginSuccessResponseDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginSuccessResponseDto_PrivateKey
@@ -1925,6 +1983,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessage
   nameWithType: IMessageCryptography.DecryptMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessageAsync(System.String,System.String)
+  name: DecryptMessageAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessageAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessageAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessageAsync(System.String, System.String)
+  nameWithType: IMessageCryptography.DecryptMessageAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessageAsync*
+  name: DecryptMessageAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_DecryptMessageAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessageAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.DecryptMessageAsync
+  nameWithType: IMessageCryptography.DecryptMessageAsync
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage(System.String,System.String)
   name: EncryptMessage(String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessage_System_String_System_String_
@@ -1938,18 +2009,31 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessage
   nameWithType: IMessageCryptography.EncryptMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessageAsync(System.String,System.String)
+  name: EncryptMessageAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessageAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessageAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessageAsync(System.String, System.String)
+  nameWithType: IMessageCryptography.EncryptMessageAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessageAsync*
+  name: EncryptMessageAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_IMessageCryptography_EncryptMessageAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessageAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.IMessageCryptography.EncryptMessageAsync
+  nameWithType: IMessageCryptography.EncryptMessageAsync
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography
   name: MessageCryptography
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography
   nameWithType: MessageCryptography
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)
-  name: MessageCryptography(ISymmetricCryptography, IAsymmetricCryptographyRSA, ICompressionUtility, ILogger)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography__ctor_GlitchedPolygons_Services_Cryptography_Symmetric_ISymmetricCryptography_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_GlitchedPolygons_Services_CompressionUtility_ICompressionUtility_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.MessageCryptography(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA, GlitchedPolygons.Services.CompressionUtility.ICompressionUtility, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)
-  nameWithType: MessageCryptography.MessageCryptography(ISymmetricCryptography, IAsymmetricCryptographyRSA, ICompressionUtility, ILogger)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)
+  name: MessageCryptography(ISymmetricCryptography, IAsymmetricCryptographyRSA, ICompressionUtility, ICompressionUtilityAsync, ILogger)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography__ctor_GlitchedPolygons_Services_Cryptography_Symmetric_ISymmetricCryptography_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_GlitchedPolygons_Services_CompressionUtility_ICompressionUtility_GlitchedPolygons_Services_CompressionUtility_ICompressionUtilityAsync_GlitchedPolygons_GlitchedEpistle_Client_Services_Logging_ILogger_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA,GlitchedPolygons.Services.CompressionUtility.ICompressionUtility,GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync,GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.MessageCryptography(GlitchedPolygons.Services.Cryptography.Symmetric.ISymmetricCryptography, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA, GlitchedPolygons.Services.CompressionUtility.ICompressionUtility, GlitchedPolygons.Services.CompressionUtility.ICompressionUtilityAsync, GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.ILogger)
+  nameWithType: MessageCryptography.MessageCryptography(ISymmetricCryptography, IAsymmetricCryptographyRSA, ICompressionUtility, ICompressionUtilityAsync, ILogger)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.#ctor*
   name: MessageCryptography
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography__ctor_
@@ -1970,6 +2054,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessage
   nameWithType: MessageCryptography.DecryptMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessageAsync(System.String,System.String)
+  name: DecryptMessageAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_DecryptMessageAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessageAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessageAsync(System.String, System.String)
+  nameWithType: MessageCryptography.DecryptMessageAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessageAsync*
+  name: DecryptMessageAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_DecryptMessageAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessageAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.DecryptMessageAsync
+  nameWithType: MessageCryptography.DecryptMessageAsync
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage(System.String,System.String)
   name: EncryptMessage(String, String)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_EncryptMessage_System_String_System_String_
@@ -1983,6 +2080,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessage
   nameWithType: MessageCryptography.EncryptMessage
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessageAsync(System.String,System.String)
+  name: EncryptMessageAsync(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_EncryptMessageAsync_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessageAsync(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessageAsync(System.String, System.String)
+  nameWithType: MessageCryptography.EncryptMessageAsync(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessageAsync*
+  name: EncryptMessageAsync
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_Messages_MessageCryptography_EncryptMessageAsync_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessageAsync
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages.MessageCryptography.EncryptMessageAsync
+  nameWithType: MessageCryptography.EncryptMessageAsync
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging
   name: GlitchedPolygons.GlitchedEpistle.Client.Services.Logging
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Logging.html
@@ -2357,13 +2467,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Add
   nameWithType: ConvoRepositorySQLite.Add
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
   name: AddRange(IEnumerable<Convo>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_AddRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_AddRange_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
   name.vb: AddRange(IEnumerable(Of Convo))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange(IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo))
   nameWithType: ConvoRepositorySQLite.AddRange(IEnumerable<Convo>)
   nameWithType.vb: ConvoRepositorySQLite.AddRange(IEnumerable(Of Convo))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange*
@@ -2373,13 +2483,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.AddRange
   nameWithType: ConvoRepositorySQLite.AddRange
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
   name: Find(Expression<Func<Convo, Boolean>>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_Find_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_Find_Expression_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
   name.vb: Find(Expression(Of Func(Of Convo, Boolean)))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(Expression<Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find(Expression(Of Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
   nameWithType: ConvoRepositorySQLite.Find(Expression<Func<Convo, Boolean>>)
   nameWithType.vb: ConvoRepositorySQLite.Find(Expression(Of Func(Of Convo, Boolean)))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.Find*
@@ -2463,33 +2573,33 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveAll
   nameWithType: ConvoRepositorySQLite.RemoveAll
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
-  name: RemoveRange(IEnumerable<Convo>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
-  name.vb: RemoveRange(IEnumerable(Of Convo))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo))
-  nameWithType: ConvoRepositorySQLite.RemoveRange(IEnumerable<Convo>)
-  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(IEnumerable(Of Convo))
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
-  name: RemoveRange(IEnumerable<String>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.String})
-  name.vb: RemoveRange(IEnumerable(Of String))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of System.String))
-  nameWithType: ConvoRepositorySQLite.RemoveRange(IEnumerable<String>)
-  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(IEnumerable(Of String))
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
   name: RemoveRange(Expression<Func<Convo, Boolean>>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_Expression_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
   name.vb: RemoveRange(Expression(Of Func(Of Convo, Boolean)))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(Expression<Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(Expression(Of Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
   nameWithType: ConvoRepositorySQLite.RemoveRange(Expression<Func<Convo, Boolean>>)
   nameWithType.vb: ConvoRepositorySQLite.RemoveRange(Expression(Of Func(Of Convo, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  name: RemoveRange(IEnumerable<Convo>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo})
+  name.vb: RemoveRange(IEnumerable(Of Convo))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo))
+  nameWithType: ConvoRepositorySQLite.RemoveRange(IEnumerable<Convo>)
+  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(IEnumerable(Of Convo))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable{System.String})
+  name: RemoveRange(IEnumerable<String>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_IEnumerable_System_String__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable{System.String})
+  name.vb: RemoveRange(IEnumerable(Of String))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable<System.String>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange(IEnumerable(Of System.String))
+  nameWithType: ConvoRepositorySQLite.RemoveRange(IEnumerable<String>)
+  nameWithType.vb: ConvoRepositorySQLite.RemoveRange(IEnumerable(Of String))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange*
   name: RemoveRange
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_RemoveRange_
@@ -2497,13 +2607,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.RemoveRange
   nameWithType: ConvoRepositorySQLite.RemoveRange
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
   name: SingleOrDefault(Expression<Func<Convo, Boolean>>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_SingleOrDefault_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoRepositorySQLite_SingleOrDefault_Expression_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Convo_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Convo,System.Boolean}})
   name.vb: SingleOrDefault(Expression(Of Func(Of Convo, Boolean)))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(Expression<Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault(Expression(Of Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Convo, System.Boolean)))
   nameWithType: ConvoRepositorySQLite.SingleOrDefault(Expression<Func<Convo, Boolean>>)
   nameWithType.vb: ConvoRepositorySQLite.SingleOrDefault(Expression(Of Func(Of Convo, Boolean)))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoRepositorySQLite.SingleOrDefault*
@@ -2662,6 +2772,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetLastConvoMessages
   nameWithType: ConvoService.GetLastConvoMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetMaximumConvoDurationDays
+  name: GetMaximumConvoDurationDays()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetMaximumConvoDurationDays
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetMaximumConvoDurationDays
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetMaximumConvoDurationDays()
+  nameWithType: ConvoService.GetMaximumConvoDurationDays()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetMaximumConvoDurationDays*
+  name: GetMaximumConvoDurationDays
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetMaximumConvoDurationDays_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetMaximumConvoDurationDays
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetMaximumConvoDurationDays
+  nameWithType: ConvoService.GetMaximumConvoDurationDays
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.GetPreviousMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
   name: GetPreviousMessages(String, String, String, String, Int64, Int64)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.ConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_ConvoService_GetPreviousMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
@@ -2882,6 +3005,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetLastConvoMessages
   nameWithType: IConvoService.GetLastConvoMessages
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetMaximumConvoDurationDays
+  name: GetMaximumConvoDurationDays()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetMaximumConvoDurationDays
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetMaximumConvoDurationDays
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetMaximumConvoDurationDays()
+  nameWithType: IConvoService.GetMaximumConvoDurationDays()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetMaximumConvoDurationDays*
+  name: GetMaximumConvoDurationDays
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetMaximumConvoDurationDays_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetMaximumConvoDurationDays
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetMaximumConvoDurationDays
+  nameWithType: IConvoService.GetMaximumConvoDurationDays
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.GetPreviousMessages(System.String,System.String,System.String,System.String,System.Int64,System.Int64)
   name: GetPreviousMessages(String, String, String, String, Int64, Int64)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IConvoService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IConvoService_GetPreviousMessages_System_String_System_String_System_String_System_String_System_Int64_System_Int64_
@@ -2953,13 +3089,13 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher
   nameWithType: IMessageFetcher
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,Action{IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},Action,System.Int32)
   name: StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StartAutoFetchingMessages_System_String_System_String_System_Int64_System_Action_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message___System_Action_System_Int32_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StartAutoFetchingMessages_System_String_System_String_System_Int64_Action_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message___Action_System_Int32_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,Action{IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},Action,System.Int32)
   name.vb: StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action<System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>>, System.Action, System.Int32)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action(Of System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message)), System.Action, System.Int32)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, Action<IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>>, Action, System.Int32)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, Action(Of IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message)), Action, System.Int32)
   nameWithType: IMessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
   nameWithType.vb: IMessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages*
@@ -2969,11 +3105,11 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StartAutoFetchingMessages
   nameWithType: IMessageFetcher.StartAutoFetchingMessages
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
   name: StopAutoFetchingMessages(CancellationTokenSource)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StopAutoFetchingMessages_System_Threading_CancellationTokenSource_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_IMessageFetcher_StopAutoFetchingMessages_CancellationTokenSource_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
   nameWithType: IMessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.IMessageFetcher.StopAutoFetchingMessages*
   name: StopAutoFetchingMessages
@@ -3068,13 +3204,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.MessageFetcher
   nameWithType: MessageFetcher.MessageFetcher
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,Action{IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},Action,System.Int32)
   name: StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StartAutoFetchingMessages_System_String_System_String_System_Int64_System_Action_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message___System_Action_System_Int32_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,System.Action{System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},System.Action,System.Int32)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StartAutoFetchingMessages_System_String_System_String_System_Int64_Action_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message___Action_System_Int32_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String,System.String,System.Int64,Action{IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message}},Action,System.Int32)
   name.vb: StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action<System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>>, System.Action, System.Int32)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, System.Action(Of System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message)), System.Action, System.Int32)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, Action<IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>>, Action, System.Int32)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages(System.String, System.String, System.Int64, Action(Of IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message)), Action, System.Int32)
   nameWithType: MessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action<IEnumerable<Message>>, Action, Int32)
   nameWithType.vb: MessageFetcher.StartAutoFetchingMessages(String, String, Int64, Action(Of IEnumerable(Of Message)), Action, Int32)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages*
@@ -3084,11 +3220,11 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StartAutoFetchingMessages
   nameWithType: MessageFetcher.StartAutoFetchingMessages
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
   name: StopAutoFetchingMessages(CancellationTokenSource)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StopAutoFetchingMessages_System_Threading_CancellationTokenSource_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(System.Threading.CancellationTokenSource)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageFetcher_StopAutoFetchingMessages_CancellationTokenSource_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
   nameWithType: MessageFetcher.StopAutoFetchingMessages(CancellationTokenSource)
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageFetcher.StopAutoFetchingMessages*
   name: StopAutoFetchingMessages
@@ -3129,13 +3265,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Add
   nameWithType: MessageRepositorySQLite.Add
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
   name: AddRange(IEnumerable<Message>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_AddRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_AddRange_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
   name.vb: AddRange(IEnumerable(Of Message))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange(IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
   nameWithType: MessageRepositorySQLite.AddRange(IEnumerable<Message>)
   nameWithType.vb: MessageRepositorySQLite.AddRange(IEnumerable(Of Message))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange*
@@ -3145,13 +3281,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.AddRange
   nameWithType: MessageRepositorySQLite.AddRange
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name: Find(Expression<Func<Message, Boolean>>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Find_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_Find_Expression_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name.vb: Find(Expression(Of Func(Of Message, Boolean)))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(Expression<Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find(Expression(Of Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
   nameWithType: MessageRepositorySQLite.Find(Expression<Func<Message, Boolean>>)
   nameWithType.vb: MessageRepositorySQLite.Find(Expression(Of Func(Of Message, Boolean)))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.Find*
@@ -3261,33 +3397,33 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveAll
   nameWithType: MessageRepositorySQLite.RemoveAll
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
-  name: RemoveRange(IEnumerable<Message>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
-  name.vb: RemoveRange(IEnumerable(Of Message))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
-  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Message>)
-  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Message))
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.Int64})
-  name: RemoveRange(IEnumerable<Int64>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_System_Collections_Generic_IEnumerable_System_Int64__
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable{System.Int64})
-  name.vb: RemoveRange(IEnumerable(Of Int64))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable<System.Int64>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Collections.Generic.IEnumerable(Of System.Int64))
-  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Int64>)
-  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Int64))
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name: RemoveRange(Expression<Func<Message, Boolean>>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_Expression_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name.vb: RemoveRange(Expression(Of Func(Of Message, Boolean)))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(Expression<Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(Expression(Of Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
   nameWithType: MessageRepositorySQLite.RemoveRange(Expression<Func<Message, Boolean>>)
   nameWithType.vb: MessageRepositorySQLite.RemoveRange(Expression(Of Func(Of Message, Boolean)))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  name: RemoveRange(IEnumerable<Message>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_IEnumerable_GlitchedPolygons_GlitchedEpistle_Client_Models_Message__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable{GlitchedPolygons.GlitchedEpistle.Client.Models.Message})
+  name.vb: RemoveRange(IEnumerable(Of Message))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable<GlitchedPolygons.GlitchedEpistle.Client.Models.Message>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message))
+  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Message>)
+  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Message))
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable{System.Int64})
+  name: RemoveRange(IEnumerable<Int64>)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_IEnumerable_System_Int64__
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable{System.Int64})
+  name.vb: RemoveRange(IEnumerable(Of Int64))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable<System.Int64>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange(IEnumerable(Of System.Int64))
+  nameWithType: MessageRepositorySQLite.RemoveRange(IEnumerable<Int64>)
+  nameWithType.vb: MessageRepositorySQLite.RemoveRange(IEnumerable(Of Int64))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange*
   name: RemoveRange
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_RemoveRange_
@@ -3295,13 +3431,13 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.RemoveRange
   nameWithType: MessageRepositorySQLite.RemoveRange
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name: SingleOrDefault(Expression<Func<Message, Boolean>>)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_SingleOrDefault_System_Linq_Expressions_Expression_System_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Convos_MessageRepositorySQLite_SingleOrDefault_Expression_Func_GlitchedPolygons_GlitchedEpistle_Client_Models_Message_System_Boolean___
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(Expression{Func{GlitchedPolygons.GlitchedEpistle.Client.Models.Message,System.Boolean}})
   name.vb: SingleOrDefault(Expression(Of Func(Of Message, Boolean)))
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression<System.Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(System.Linq.Expressions.Expression(Of System.Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(Expression<Func<GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault(Expression(Of Func(Of GlitchedPolygons.GlitchedEpistle.Client.Models.Message, System.Boolean)))
   nameWithType: MessageRepositorySQLite.SingleOrDefault(Expression<Func<Message, Boolean>>)
   nameWithType.vb: MessageRepositorySQLite.SingleOrDefault(Expression(Of Func(Of Message, Boolean)))
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos.MessageRepositorySQLite.SingleOrDefault*
@@ -3460,25 +3596,6 @@ references:
   commentId: N:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
   nameWithType: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService
-  name: ILoginService
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService
-  nameWithType: ILoginService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login(System.String,System.String,System.String)
-  name: Login(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ILoginService_Login_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login(System.String, System.String, System.String)
-  nameWithType: ILoginService.Login(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login*
-  name: Login
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ILoginService_Login_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ILoginService.Login
-  nameWithType: ILoginService.Login
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IPasswordChanger
   name: IPasswordChanger
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IPasswordChanger.html
@@ -3498,6 +3615,38 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IPasswordChanger.ChangePassword
   nameWithType: IPasswordChanger.ChangePassword
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger
+  name: IProfilePictureChanger
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger
+  nameWithType: IProfilePictureChanger
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.GetUserProfilePictures(System.String)
+  name: GetUserProfilePictures(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IProfilePictureChanger_GetUserProfilePictures_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.GetUserProfilePictures(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.GetUserProfilePictures(System.String)
+  nameWithType: IProfilePictureChanger.GetUserProfilePictures(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.GetUserProfilePictures*
+  name: GetUserProfilePictures
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IProfilePictureChanger_GetUserProfilePictures_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.GetUserProfilePictures
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.GetUserProfilePictures
+  nameWithType: IProfilePictureChanger.GetUserProfilePictures
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.UpdateUserProfilePicture(System.String,System.String)
+  name: UpdateUserProfilePicture(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IProfilePictureChanger_UpdateUserProfilePicture_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.UpdateUserProfilePicture(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.UpdateUserProfilePicture(System.String, System.String)
+  nameWithType: IProfilePictureChanger.UpdateUserProfilePicture(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.UpdateUserProfilePicture*
+  name: UpdateUserProfilePicture
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IProfilePictureChanger_UpdateUserProfilePicture_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.UpdateUserProfilePicture
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IProfilePictureChanger.UpdateUserProfilePicture
+  nameWithType: IProfilePictureChanger.UpdateUserProfilePicture
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService
   name: IRegistrationService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IRegistrationService.html
@@ -3588,19 +3737,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPrivateKey
   nameWithType: IUserService.GetUserPrivateKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKey(System.String,System.String,System.String)
-  name: GetUserPublicKey(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserPublicKey_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKey(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKey(System.String, System.String, System.String)
-  nameWithType: IUserService.GetUserPublicKey(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKey*
-  name: GetUserPublicKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserPublicKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKeys(System.String,System.String,System.String)
+  name: GetUserPublicKeys(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserPublicKeys_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKeys(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKeys(System.String, System.String, System.String)
+  nameWithType: IUserService.GetUserPublicKeys(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKeys*
+  name: GetUserPublicKeys
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GetUserPublicKeys_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKeys
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKey
-  nameWithType: IUserService.GetUserPublicKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.GetUserPublicKeys
+  nameWithType: IUserService.GetUserPublicKeys
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.Login(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
   name: Login(UserLoginRequestDto)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_Login_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_
@@ -3640,38 +3789,6 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService.Validate2FA
   nameWithType: IUserService.Validate2FA
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService
-  name: LoginService
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html
-  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService
-  nameWithType: LoginService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
-  name: LoginService(IServerConnectionTest, IUserService, IAppSettings, User, IKeyExchange)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService__ctor_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_ServerHealth_IServerConnectionTest_GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_IUserService_GlitchedPolygons_GlitchedEpistle_Client_Services_Settings_IAppSettings_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_GlitchedEpistle_Client_Services_Cryptography_KeyExchange_IKeyExchange_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest,GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService,GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings,GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.LoginService(GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth.IServerConnectionTest, GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.IUserService, GlitchedPolygons.GlitchedEpistle.Client.Services.Settings.IAppSettings, GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange.IKeyExchange)
-  nameWithType: LoginService.LoginService(IServerConnectionTest, IUserService, IAppSettings, User, IKeyExchange)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor*
-  name: LoginService
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService__ctor_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.LoginService
-  nameWithType: LoginService.LoginService
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login(System.String,System.String,System.String)
-  name: Login(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService_Login_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login(System.String, System.String, System.String)
-  nameWithType: LoginService.Login(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login*
-  name: Login
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_LoginService_Login_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.LoginService.Login
-  nameWithType: LoginService.Login
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger
   name: PasswordChanger
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.html
@@ -3704,6 +3821,77 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.PasswordChanger.ChangePassword
   nameWithType: PasswordChanger.ChangePassword
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger
+  name: ProfilePictureChanger
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html
+  commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger
+  nameWithType: ProfilePictureChanger
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA)
+  name: ProfilePictureChanger(User, IAsymmetricCryptographyRSA)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger__ctor_GlitchedPolygons_GlitchedEpistle_Client_Models_User_GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricCryptographyRSA_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.#ctor(GlitchedPolygons.GlitchedEpistle.Client.Models.User,GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.ProfilePictureChanger(GlitchedPolygons.GlitchedEpistle.Client.Models.User, GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA)
+  nameWithType: ProfilePictureChanger.ProfilePictureChanger(User, IAsymmetricCryptographyRSA)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.#ctor*
+  name: ProfilePictureChanger
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger__ctor_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.#ctor
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.ProfilePictureChanger
+  nameWithType: ProfilePictureChanger.ProfilePictureChanger
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Dispose
+  name: Dispose()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_Dispose
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Dispose
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Dispose()
+  nameWithType: ProfilePictureChanger.Dispose()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Dispose*
+  name: Dispose
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_Dispose_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Dispose
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Dispose
+  nameWithType: ProfilePictureChanger.Dispose
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Finalize
+  name: Finalize()
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_Finalize
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Finalize
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Finalize()
+  nameWithType: ProfilePictureChanger.Finalize()
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Finalize*
+  name: Finalize
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_Finalize_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Finalize
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.Finalize
+  nameWithType: ProfilePictureChanger.Finalize
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.GetUserProfilePictures(System.String)
+  name: GetUserProfilePictures(String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_GetUserProfilePictures_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.GetUserProfilePictures(System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.GetUserProfilePictures(System.String)
+  nameWithType: ProfilePictureChanger.GetUserProfilePictures(String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.GetUserProfilePictures*
+  name: GetUserProfilePictures
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_GetUserProfilePictures_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.GetUserProfilePictures
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.GetUserProfilePictures
+  nameWithType: ProfilePictureChanger.GetUserProfilePictures
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.UpdateUserProfilePicture(System.String,System.String)
+  name: UpdateUserProfilePicture(String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_UpdateUserProfilePicture_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.UpdateUserProfilePicture(System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.UpdateUserProfilePicture(System.String, System.String)
+  nameWithType: ProfilePictureChanger.UpdateUserProfilePicture(String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.UpdateUserProfilePicture*
+  name: UpdateUserProfilePicture
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_ProfilePictureChanger_UpdateUserProfilePicture_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.UpdateUserProfilePicture
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.ProfilePictureChanger.UpdateUserProfilePicture
+  nameWithType: ProfilePictureChanger.UpdateUserProfilePicture
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService
   name: RegistrationService
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.RegistrationService.html
@@ -3846,19 +4034,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPrivateKey
   nameWithType: UserService.GetUserPrivateKey
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKey(System.String,System.String,System.String)
-  name: GetUserPublicKey(String, String, String)
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserPublicKey_System_String_System_String_System_String_
-  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKey(System.String,System.String,System.String)
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKey(System.String, System.String, System.String)
-  nameWithType: UserService.GetUserPublicKey(String, String, String)
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKey*
-  name: GetUserPublicKey
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserPublicKey_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKey
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKeys(System.String,System.String,System.String)
+  name: GetUserPublicKeys(String, String, String)
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserPublicKeys_System_String_System_String_System_String_
+  commentId: M:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKeys(System.String,System.String,System.String)
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKeys(System.String, System.String, System.String)
+  nameWithType: UserService.GetUserPublicKeys(String, String, String)
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKeys*
+  name: GetUserPublicKeys
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_GetUserPublicKeys_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKeys
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKey
-  nameWithType: UserService.GetUserPublicKey
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.GetUserPublicKeys
+  nameWithType: UserService.GetUserPublicKeys
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.Login(GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserLoginRequestDto)
   name: Login(UserLoginRequestDto)
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users.UserService.html#GlitchedPolygons_GlitchedEpistle_Client_Services_Web_Users_UserService_Login_GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserLoginRequestDto_

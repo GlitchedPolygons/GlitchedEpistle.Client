@@ -81,28 +81,6 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">User</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a>&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.html">GlitchedPolygons.GlitchedEpistle.Client.Models</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Models_User_syntax">Syntax</h5>
@@ -120,13 +98,12 @@
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_User_CreationTimestampUTC_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestampUTC*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_User_CreationTimestampUTC" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.User.CreationTimestampUTC">CreationTimestampUTC</h4>
-  <div class="markdown level1 summary"><p>The <span class="xref">System.DateTime</span> when this <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a> was first created.</p>
+  <div class="markdown level1 summary"><p>The <see cref="!:DateTime"></see> when this <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a> was first created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;iat&quot;)]
-public DateTime CreationTimestampUTC { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long CreationTimestampUTC { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,7 +115,7 @@ public DateTime CreationTimestampUTC { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -157,8 +134,7 @@ public DateTime CreationTimestampUTC { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;id&quot;)]
-public string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,8 +166,7 @@ After too many, he is locked out for a while.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;fail&quot;)]
-public int LoginFailures { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int LoginFailures { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,8 +197,7 @@ public int LoginFailures { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public string PasswordSHA512 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string PasswordSHA512 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,8 +228,7 @@ public string PasswordSHA512 { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public string PrivateKeyPem { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string PrivateKeyPem { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,8 +259,7 @@ public string PrivateKeyPem { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public string PublicKeyPem { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string PublicKeyPem { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,8 +290,7 @@ public string PublicKeyPem { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;role&quot;)]
-public string Role { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Role { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -346,14 +317,13 @@ public string Role { get; set; }</code></pre>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_User_Token_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.User.Token*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_User_Token" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.User.Token">Token</h4>
   <div class="markdown level1 summary"><p>The token needed to authenticate Web API requests.<p> </p>
-<span class="xref">System.Tuple`2.Item1</span> is the token's UTC timestamp (when it was emitted).<p> </p>
-<span class="xref">System.Tuple`2.Item2</span> is the token <code>string</code>.</p>
+<see cref="!:Tuple&lt;T1,T2>.Item1"></see> is the token's UTC timestamp (when it was emitted).<p> </p>
+<see cref="!:Tuple&lt;T1,T2>.Item2"></see> is the token <code>string</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public Tuple&lt;DateTime, string&gt; Token { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Tuple&lt;DateTime, string&gt; Token { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,7 +335,7 @@ public Tuple&lt;DateTime, string&gt; Token { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Tuple</span>&lt;<span class="xref">System.DateTime</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Tuple</span>&lt;<span class="xref">DateTime</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -472,8 +442,6 @@ public Tuple&lt;DateTime, string&gt; Token { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_User_GetHashCode.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.User.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -506,12 +474,6 @@ public Tuple&lt;DateTime, string&gt; Token { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.GetHashCode()</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
-  </div>
 </article>
           </div>
           

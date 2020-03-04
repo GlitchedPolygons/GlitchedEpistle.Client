@@ -81,28 +81,6 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">UserCreationResponseDto</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.html">UserCreationResponseDto</a>&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.html">GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.GlitchedEpistle.Client.dll</h6>
   <h5 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_syntax">Syntax</h5>
@@ -120,13 +98,12 @@
   </span>
   <a id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_CreationUTC_" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC*"></a>
   <h4 id="GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_CreationUTC" data-uid="GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.CreationUTC">CreationUTC</h4>
-  <div class="markdown level1 summary"><p>The <span class="xref">System.DateTime</span> when this <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a> was first created.</p>
+  <div class="markdown level1 summary"><p>The timestamp when this <a class="xref" href="GlitchedPolygons.GlitchedEpistle.Client.Models.User.html">User</a> was first created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;iat&quot;)]
-public DateTime CreationUTC { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long CreationUTC { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,7 +115,7 @@ public DateTime CreationUTC { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -157,8 +134,7 @@ public DateTime CreationUTC { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;id&quot;)]
-public string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,8 +165,7 @@ public string Id { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;sos&quot;)]
-public List&lt;string&gt; TotpEmergencyBackupCodes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; TotpEmergencyBackupCodes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,7 +177,7 @@ public List&lt;string&gt; TotpEmergencyBackupCodes { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>The 2FA TOTP emergency backup codes.</p>
 </td>
       </tr>
@@ -222,8 +197,7 @@ public List&lt;string&gt; TotpEmergencyBackupCodes { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;totps&quot;)]
-public string TotpSecret { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string TotpSecret { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,8 +317,6 @@ public string TotpSecret { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/GlitchedPolygons/GlitchedEpistle.Client/new/master/apiSpec/new?filename=GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_UserCreationResponseDto_GetHashCode.md&amp;value=---%0Auid%3A%20GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.UserCreationResponseDto.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -377,12 +349,6 @@ public string TotpSecret { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.GetHashCode()</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
-  </div>
 </article>
           </div>
           
