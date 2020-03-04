@@ -34,13 +34,12 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// The retrieved <see cref="Message"/>s are raw, as they were returned from the backend (thus encrypted using the <see cref="MessageFetcher.user"/>'s private key).
         /// </summary>
         /// <param name="convoId">The <see cref="Convo.Id"/>.</param>
-        /// <param name="convoPasswordSHA512">The convo's password SHA512.'</param>
         /// <param name="tailId">The <see cref="Message.Id"/> from which to start fetching onwards (previous messages will be ignored).</param>
         /// <param name="callback">The message fetching success callback. This is invoked whenever &gt;=1 messages has been fetched.</param>
         /// <param name="cancellationCallback">Invoked if and when the auto-fetching routine is cancelled via <c>CancellationTokenSource.Cancel()</c>.</param>
         /// <param name="fetchTimeoutMilliseconds">The time in milliseconds between fetch executions.</param>
         /// <returns>A message fetch routine handle in the form of a <see cref="CancellationTokenSource"/>, which provides the ability to stop auto-fetching via <c>CancellationTokenSource.Cancel()</c> OR <see cref="StopAutoFetchingMessages"/>. DO NOT FORGET to dispose the <see cref="CancellationTokenSource"/> via either a <c>using</c> block or by calling <c>CancellationTokenSource.Dispose()</c> manually!</returns>
-        CancellationTokenSource StartAutoFetchingMessages(string convoId, string convoPasswordSHA512, long tailId, Action<IEnumerable<Message>> callback, Action cancellationCallback = null, int fetchTimeoutMilliseconds = 314);
+        CancellationTokenSource StartAutoFetchingMessages(string convoId, long tailId, Action<IEnumerable<Message>> callback, Action cancellationCallback = null, int fetchTimeoutMilliseconds = 314);
 
         /// <summary>
         /// Stops continuously fetching a convo's messages via the <see cref="CancellationTokenSource"/> that was returned by <see cref="StartAutoFetchingMessages"/>.<para> </para>
