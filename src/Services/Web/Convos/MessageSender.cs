@@ -18,10 +18,12 @@
 
 using System;
 using System.IO;
+using System.Web;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 using GlitchedPolygons.ExtensionMethods;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
@@ -48,15 +50,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         private readonly IAsymmetricCryptographyRSA rsa;
         private readonly IConvoPasswordProvider convoPasswordProvider;
         private static readonly char[] MSG_TRIM_CHARS = { '\n', '\r', '\t' };
-        private static readonly JsonWriterOptions JSON_WRITER_OPTIONS = new JsonWriterOptions
-        {
-            Indented = false
-        };
-
+        
         /// <summary>
         /// The maximum allowed file size for a convo's message (currently 32MB).
         /// </summary>
-        public const long MAX_FILE_SIZE_BYTES = 33554432;
+        public const long MAX_FILE_SIZE_BYTES = 33_554_432;
         
 #pragma warning disable 1591
         public MessageSender(User user, IUserService userService, IConvoPasswordProvider convoPasswordProvider, IConvoService convoService, IAsymmetricCryptographyRSA rsa, IMessageCryptography crypto, IUserSettings userSettings, IKeyExchange keyExchange)
@@ -80,17 +78,15 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the message submission was successful or failed.</returns>
         public async Task<bool> PostText(Convo convo, string message)
         {
-            await using var output = new MemoryStream();
-            await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
+            if (convo is null || message.NullOrEmpty() || message.Length > MAX_FILE_SIZE_BYTES)
+            {
+                return false;
+            }
             
-            writer.WriteStartObject();
-            writer.WriteString("text", message.TrimEnd(MSG_TRIM_CHARS).TrimStart(MSG_TRIM_CHARS));
-            writer.WriteEndObject();
+            var sb = new StringBuilder(message.Length);
+            sb.Append("TEXT=").Append(message.TrimEnd(MSG_TRIM_CHARS).TrimStart(MSG_TRIM_CHARS));
             
-            await writer.FlushAsync().ConfigureAwait(false);
-
-            string utf8 = Encoding.UTF8.GetString(output.ToArray());
-            return await PostMessageToConvo(convo, utf8).ConfigureAwait(false);
+            return await PostMessageToConvo(convo, sb.ToString()).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -102,34 +98,26 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the message could be submitted successfully to the backend or not.</returns>
         public async Task<bool> PostFile(Convo convo, string fileName, byte[] fileBytes)
         {
-            if (fileBytes.LongLength > MAX_FILE_SIZE_BYTES || fileName.NullOrEmpty() || fileBytes.NullOrEmpty())
+            if (fileBytes.LongLength > MAX_FILE_SIZE_BYTES || fileName.NullOrEmpty() || fileBytes.NullOrEmpty() || fileName.Contains("///"))
             {
                 return false;
             }
             
-            await using var output = new MemoryStream();
-            await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
+            var sb = new StringBuilder(fileBytes.Length * 3 / 2);
+            sb.Append("FILE=").Append(fileName).Append("///BASE64=").Append(Convert.ToBase64String(fileBytes));
             
-            writer.WriteStartObject();
-            writer.WriteString("fileName", fileName);
-            writer.WriteString("fileBase64", Convert.ToBase64String(fileBytes));
-            writer.WriteEndObject();
-            
-            await writer.FlushAsync().ConfigureAwait(false);
-
-            string utf8 = Encoding.UTF8.GetString(output.ToArray());
-            return await PostMessageToConvo(convo, utf8).ConfigureAwait(false);
+            return await PostMessageToConvo(convo, sb.ToString()).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// Submits a message json body to a <see cref="Convo"/>.
+        /// Submits a message to a <see cref="Convo"/>.
         /// </summary>
         /// <param name="convo">The <see cref="Convo"/> to post the message into.</param>
-        /// <param name="messageBodyJson">The message body's JSON string.</param>
+        /// <param name="message">The message body to encrypt and post.</param>
         /// <returns>Whether the message could be submitted successfully or not.</returns>
-        private async Task<bool> PostMessageToConvo(Convo convo, string messageBodyJson)
+        private async Task<bool> PostMessageToConvo(Convo convo, string message)
         {
-            if (messageBodyJson.NullOrEmpty())
+            if (message.NullOrEmpty())
             {
                 return false;
             }
@@ -143,26 +131,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
 
             // Encrypt the message for every convo participant individually.
-            await using var output = new MemoryStream();
-            await using var writer = new Utf8JsonWriter(output, JSON_WRITER_OPTIONS);
-
-            writer.WriteStartObject();
+            var concurrentDictionary = new ConcurrentDictionary<string,string>();
             
-            var tasks = new List<Task>(publicKeys.Count);
-            
-            foreach (KeyValuePair<string, string> kvp in publicKeys)
+            Parallel.ForEach(publicKeys, kvp =>
             {
-                if (kvp.Key.NullOrEmpty() || kvp.Value.NullOrEmpty())
+                (string userId, string userPublicKey) = kvp;
+                if (userId.NotNullNotEmpty() && userPublicKey.NotNullNotEmpty())
                 {
-                    continue;
+                    string decompressedKey = keyExchange.DecompressPublicKey(userPublicKey);
+                    string encryptedMessage = crypto.EncryptMessage(message, decompressedKey);
+                    concurrentDictionary.TryAdd(userId, encryptedMessage);
                 }
-                tasks.Add(EncryptMessageForUser(writer, messageBodyJson, kvp.Key, kvp.Value));
-            }
-
-            await Task.WhenAll(tasks).ConfigureAwait(false);
-
-            writer.WriteEndObject();
-            await writer.FlushAsync().ConfigureAwait(false);
+            });
 
             try
             {
@@ -171,7 +151,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     SenderName = userSettings.Username,
                     ConvoId = convo.Id,
                     ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
-                    MessageBodiesJson = Encoding.UTF8.GetString(output.ToArray())
+                    MessageBodiesJson = JsonSerializer.Serialize(concurrentDictionary),
                 };
 
                 var body = new EpistleRequestBody
@@ -187,21 +167,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             {
                 return false;
             }
-        }
-
-        /// <summary>
-        /// Takes a message body JSON and encrypts it for the given user (using his individual public key) and immediately writes it out into the passed <see cref="Utf8JsonWriter"/>.
-        /// </summary>
-        /// <param name="jsonWriter">The <see cref="Utf8JsonWriter"/> instance into which to write the encrypted message result.</param>
-        /// <param name="messageBodyJson">The message to encrypt.</param>
-        /// <param name="userId">The message recipient's <see cref="User.Id"/>.</param>
-        /// <param name="publicKey">The recipient's public key to use for encryption.</param>
-        /// <returns>Encrypt-and-write task.</returns>
-        private async Task EncryptMessageForUser(Utf8JsonWriter jsonWriter, string messageBodyJson, string userId, string publicKey)
-        {
-            string decompressedKey = await keyExchange.DecompressPublicKeyAsync(publicKey).ConfigureAwait(false);
-            string encryptedMessage = await crypto.EncryptMessageAsync(messageBodyJson, decompressedKey).ConfigureAwait(false);
-            jsonWriter.WriteString(userId, encryptedMessage);
         }
     }
 }
