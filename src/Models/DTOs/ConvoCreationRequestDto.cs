@@ -55,7 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         /// The conversation's expiration date (in UTC).
         /// </summary>
         [JsonPropertyName("exp")]
-        public long ExpirationUTC { get; set; } = DateTime.UtcNow.AddDays(14).ToUnixTimeSeconds();
+        public long ExpirationUTC { get; set; } = DateTime.UtcNow.AddDays(14).ToUnixTimeMilliseconds();
 
         #region Equality
         /// <summary>Indicates whether the current object is equal to another object of the same type.</summary>

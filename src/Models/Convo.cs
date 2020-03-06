@@ -69,7 +69,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// and the conversation itself will be deleted 48h afterwards.
         /// </summary>
         [JsonPropertyName("exp")]
-        public long ExpirationUTC { get; set; } = DateTime.UtcNow.AddDays(14).ToUnixTimeSeconds();
+        public long ExpirationUTC { get; set; } = DateTime.UtcNow.AddDays(14).ToUnixTimeMilliseconds();
 
         /// <summary>
         /// The people who joined the convo (their user ids).
@@ -89,7 +89,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <returns><c>true</c> if the <see cref="Convo"/> is expired; otherwise, <c>false</c>.</returns>
         public bool IsExpired()
         {
-            return DateTime.UtcNow.ToUnixTimeSeconds() > ExpirationUTC;
+            return DateTime.UtcNow.ToUnixTimeMilliseconds() > ExpirationUTC;
         }
 
         /// <summary>
