@@ -51,9 +51,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         [JsonPropertyName("utc")]
         public long TimestampUTC { get; set; }
+        
+        /// <summary>
+        /// The type of message (e.g. "TEXT=UTF8", "FILE=example.png", etc...).
+        /// </summary>
+        public string Type { get; set; }
+        
+        /// <summary>
+        /// The message decryption key which was asymmetrically encrypted for the recipient user using his public key.
+        /// </summary>
+        [JsonPropertyName("key")]
+        public string EncryptedKey { get; set; }
 
         /// <summary>
-        /// This is the message body - a json string that's been encrypted specifically for its recipient user (using that user's public RSA key).
+        /// This is the encrypted message body.
         /// </summary>
         [JsonPropertyName("body")]
         public string Body { get; set; }
@@ -94,6 +105,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         {
             return other != null 
                    && other.Id == Id 
+                   && other.Type == Type
                    && other.SenderId == SenderId 
                    && other.SenderName == SenderName 
                    && other.Body == Body;

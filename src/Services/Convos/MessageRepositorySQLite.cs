@@ -54,10 +54,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
 
             getAllSql = $"SELECT * FROM \"{tableName}\" ORDER BY \"TimestampUTC\" ASC";
             getLastMessageIdSql = $"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1";
-
-            string sql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Body\" TEXT, PRIMARY KEY(\"Id\"))";
+            
             using var dbcon = OpenConnection();
-            dbcon.Execute(sql);
+            dbcon.Execute($"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Type\" TEXT, \"EncryptedKey\" TEXT, \"Body\" TEXT, PRIMARY KEY(\"Id\"))");
         }
 
         /// <summary>
@@ -93,13 +92,16 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 }
 
                 reader.Read();
+                
                 return new Message
                 {
                     Id = reader.GetInt64(0),
                     SenderId = reader.GetString(1),
                     SenderName = reader.GetString(2),
                     TimestampUTC = reader.GetInt64(3),
-                    Body = reader.GetString(4)
+                    Type = reader.GetString(4),
+                    EncryptedKey = reader.GetString(5),
+                    Body = reader.GetString(6),
                 };
             }
         }
@@ -140,7 +142,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 SenderId = reader.GetString(1),
                 SenderName = reader.GetString(2),
                 TimestampUTC = reader.GetInt64(3),
-                Body = reader.GetString(4)
+                Type = reader.GetString(4),
+                EncryptedKey = reader.GetString(5),
+                Body = reader.GetString(6),
             };
         }
 
@@ -171,7 +175,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     SenderId = reader.GetString(1),
                     SenderName = reader.GetString(2),
                     TimestampUTC = reader.GetInt64(3),
-                    Body = reader.GetString(4)
+                    Type = reader.GetString(4),
+                    EncryptedKey = reader.GetString(5),
+                    Body = reader.GetString(6),
                 });
             }
             
@@ -215,7 +221,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     SenderId = reader.GetString(1),
                     SenderName = reader.GetString(2),
                     TimestampUTC = reader.GetInt64(3),
-                    Body = reader.GetString(4)
+                    Type = reader.GetString(4),
+                    EncryptedKey = reader.GetString(5),
+                    Body = reader.GetString(6),
                 });
             }
             
@@ -272,16 +280,18 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
 
             bool success = false;
-            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
+            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Type, @EncryptedKey, @Body)";
 
             using var dbcon = OpenConnection();
-            
+
             success = await dbcon.ExecuteAsync(sql, new
             {
                 Id = message.Id,
                 SenderId = message.SenderId,
                 SenderName = message.SenderName,
                 TimestampUTC = message.TimestampUTC,
+                Type = message.Type,
+                EncryptedKey = message.EncryptedKey,
                 Body = message.Body,
             }).ConfigureAwait(false) > 0;
 
@@ -301,18 +311,20 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
 
             bool success = false;
-            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Body)";
+            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Type, @EncryptedKey, @Body)";
 
             using var dbcon = OpenConnection();
             using var t = dbcon.BeginTransaction();
             
-            success = await dbcon.ExecuteAsync(sql, messages.Select(m => new
+            success = await dbcon.ExecuteAsync(sql, messages.Select(message => new
             {
-                Id = m.Id,
-                SenderId = m.SenderId,
-                SenderName = m.SenderName,
-                TimestampUTC = m.TimestampUTC,
-                Body = m.Body,
+                Id = message.Id,
+                SenderId = message.SenderId,
+                SenderName = message.SenderName,
+                TimestampUTC = message.TimestampUTC,
+                Type = message.Type,
+                EncryptedKey = message.EncryptedKey,
+                Body = message.Body,
             }), t).ConfigureAwait(false) > 0;
 
             if (success)
@@ -335,6 +347,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 .Append("\"SenderId\" = @SenderId, ")
                 .Append("\"SenderName\" = @SenderName, ")
                 .Append("\"TimestampUTC\" = @TimestampUTC, ")
+                .Append("\"Type\" = @Type, ")
+                .Append("\"EncryptedKey\" = @EncryptedKey, ")
                 .Append("\"Body\" = @Body ")
                 .Append("WHERE \"Id\" = @Id");
 
@@ -346,7 +360,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 SenderId = message.SenderId,
                 SenderName = message.SenderName,
                 TimestampUTC = message.TimestampUTC,
-                Body = message.Body
+                Type = message.Type,
+                EncryptedKey = message.EncryptedKey,
+                Body = message.Body,
             }).ConfigureAwait(false);
 
             return result > 0;

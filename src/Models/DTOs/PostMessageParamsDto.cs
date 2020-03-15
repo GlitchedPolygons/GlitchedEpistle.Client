@@ -33,7 +33,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string ConvoId { get; set; }
 
         /// <summary>
-        /// The conversation's access pw.
+        /// The conversation's access password (its SHA512 hash).
         /// </summary>
         [JsonPropertyName("pw")]
         public string ConvoPasswordSHA512 { get; set; }
@@ -45,10 +45,23 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
         public string SenderName { get; set; }
 
         /// <summary>
-        /// The message's encrypted bodies (packed into json key-value pairs).
+        /// The type of message (e.g. "TEXT=UTF8", "FILE=example.png", etc...).
         /// </summary>
-        [JsonPropertyName("bodies")]
-        public string MessageBodiesJson { get; set; }
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
+        
+        /// <summary>
+        /// The message encryption key, asymmetrically encrypted for each individual convo participant as a comma-separated list string.
+        /// E.g. "userId_01:encryptedKey_01,userId_02:encryptedKey_02,userId_03:encryptedKey_03"
+        /// </summary>
+        [JsonPropertyName("keys")]
+        public string EncryptedKeys { get; set; }
+        
+        /// <summary>
+        /// The message's encrypted body.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
 
         #region Equality
         /// <summary>Indicates whether the current object is equal to another object of the same type.</summary>
@@ -64,7 +77,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
             {
                 return true;
             }
-            return string.Equals(ConvoId, other.ConvoId) && string.Equals(ConvoPasswordSHA512, other.ConvoPasswordSHA512) && string.Equals(SenderName, other.SenderName) && string.Equals(MessageBodiesJson, other.MessageBodiesJson);
+            return string.Equals(ConvoId, other.ConvoId) && string.Equals(ConvoPasswordSHA512, other.ConvoPasswordSHA512) && string.Equals(SenderName, other.SenderName) && string.Equals(Body, other.Body);
         }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -96,7 +109,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs
                 int hashCode = ConvoId.GetHashCode();
                 hashCode = (hashCode * 397) ^ ConvoPasswordSHA512.GetHashCode();
                 hashCode = (hashCode * 397) ^ SenderName.GetHashCode();
-                hashCode = (hashCode * 397) ^ MessageBodiesJson.GetHashCode();
+                hashCode = (hashCode * 397) ^ Body.GetHashCode();
                 return hashCode;
             }
         }

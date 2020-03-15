@@ -22,7 +22,6 @@ using GlitchedPolygons.Services.Cryptography.Asymmetric;
 using GlitchedPolygons.GlitchedEpistle.Client.Models;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users;
 using GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos;
-using GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.Messages;
 
 namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExchange
 {
@@ -47,7 +46,6 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Cryptography.KeyExcha
         /// <seealso cref="User"/>
         /// <seealso cref="ISymmetricCryptography"/>
         /// <seealso cref="IAsymmetricCryptographyRSA"/>
-        /// <seealso cref="IMessageCryptography"/>
         /// <seealso cref="IUserService"/>
         /// <seealso cref="IConvoService"/>
         /// <param name="privateKeyPem">The user's private RSA key (PEM-formatted <c>string</c>).</param>
