@@ -798,19 +798,6 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto
   nameWithType: PostMessageParamsDto
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Body
-  name: Body
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_Body
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Body
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Body
-  nameWithType: PostMessageParamsDto.Body
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Body*
-  name: Body
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_Body_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Body
-  isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.Body
-  nameWithType: PostMessageParamsDto.Body
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoId
   name: ConvoId
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_ConvoId
@@ -837,6 +824,19 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.ConvoPasswordSHA512
   nameWithType: PostMessageParamsDto.ConvoPasswordSHA512
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedBody
+  name: EncryptedBody
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_EncryptedBody
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedBody
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedBody
+  nameWithType: PostMessageParamsDto.EncryptedBody
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedBody*
+  name: EncryptedBody
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_EncryptedBody_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedBody
+  isSpec: "True"
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedBody
+  nameWithType: PostMessageParamsDto.EncryptedBody
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.EncryptedKeys
   name: EncryptedKeys
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.DTOs.PostMessageParamsDto.html#GlitchedPolygons_GlitchedEpistle_Client_Models_DTOs_PostMessageParamsDto_EncryptedKeys
@@ -1493,19 +1493,19 @@ references:
   commentId: T:GlitchedPolygons.GlitchedEpistle.Client.Models.Message
   fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message
   nameWithType: Message
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body
-  name: Body
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_Body
-  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body
-  nameWithType: Message.Body
-- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body*
-  name: Body
-  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_Body_
-  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedBody
+  name: EncryptedBody
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_EncryptedBody
+  commentId: P:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedBody
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedBody
+  nameWithType: Message.EncryptedBody
+- uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedBody*
+  name: EncryptedBody
+  href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_EncryptedBody_
+  commentId: Overload:GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedBody
   isSpec: "True"
-  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.Body
-  nameWithType: Message.Body
+  fullName: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedBody
+  nameWithType: Message.EncryptedBody
 - uid: GlitchedPolygons.GlitchedEpistle.Client.Models.Message.EncryptedKey
   name: EncryptedKey
   href: api/GlitchedPolygons.GlitchedEpistle.Client.Models.Message.html#GlitchedPolygons_GlitchedEpistle_Client_Models_Message_EncryptedKey

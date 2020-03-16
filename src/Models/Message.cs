@@ -68,7 +68,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// This is the encrypted message body.
         /// </summary>
         [JsonPropertyName("body")]
-        public string Body { get; set; }
+        public string EncryptedBody { get; set; }
 
         /// <summary>
         /// Checks whether the <see cref="Message"/> comes from a <see cref="User"/> or from the Epistle server directly.<para> </para>
@@ -83,7 +83,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// </summary>
         public bool IsFromServer()
         {
-            return SenderId == "0" && SenderName.Equals("Server", StringComparison.InvariantCultureIgnoreCase) && Body.StartsWith("server:", StringComparison.InvariantCultureIgnoreCase);
+            return SenderId == "0" && SenderName.Equals("Server", StringComparison.InvariantCultureIgnoreCase) && EncryptedBody.StartsWith("server:", StringComparison.InvariantCultureIgnoreCase);
         }
 
         #region Equality
@@ -109,7 +109,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
                    && other.Type == Type
                    && other.SenderId == SenderId 
                    && other.SenderName == SenderName 
-                   && other.Body == Body;
+                   && other.EncryptedBody == EncryptedBody;
         }
 
         /// <summary>

@@ -160,7 +160,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     ConvoId = convo.Id,
                     ConvoPasswordSHA512 = convoPasswordProvider.GetPasswordSHA512(convo.Id),
                     EncryptedKeys = encryptedKeys.ToCommaSeparatedString(),
-                    Body = Convert.ToBase64String(encryptionResult.EncryptedData)
+                    EncryptedBody = Convert.ToBase64String(encryptionResult.EncryptedData)
                 };
 
                 var body = new EpistleRequestBody

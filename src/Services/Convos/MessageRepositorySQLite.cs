@@ -101,7 +101,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     TimestampUTC = reader.GetInt64(3),
                     Type = reader.GetString(4),
                     EncryptedKey = reader.GetString(5),
-                    Body = reader.GetString(6),
+                    EncryptedBody = reader.GetString(6),
                 };
             }
         }
@@ -144,7 +144,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = reader.GetInt64(3),
                 Type = reader.GetString(4),
                 EncryptedKey = reader.GetString(5),
-                Body = reader.GetString(6),
+                EncryptedBody = reader.GetString(6),
             };
         }
 
@@ -177,7 +177,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     TimestampUTC = reader.GetInt64(3),
                     Type = reader.GetString(4),
                     EncryptedKey = reader.GetString(5),
-                    Body = reader.GetString(6),
+                    EncryptedBody = reader.GetString(6),
                 });
             }
             
@@ -223,7 +223,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                     TimestampUTC = reader.GetInt64(3),
                     Type = reader.GetString(4),
                     EncryptedKey = reader.GetString(5),
-                    Body = reader.GetString(6),
+                    EncryptedBody = reader.GetString(6),
                 });
             }
             
@@ -292,7 +292,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = message.TimestampUTC,
                 Type = message.Type,
                 EncryptedKey = message.EncryptedKey,
-                Body = message.Body,
+                Body = message.EncryptedBody,
             }).ConfigureAwait(false) > 0;
 
             return success;
@@ -324,7 +324,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = message.TimestampUTC,
                 Type = message.Type,
                 EncryptedKey = message.EncryptedKey,
-                Body = message.Body,
+                Body = message.EncryptedBody,
             }), t).ConfigureAwait(false) > 0;
 
             if (success)
@@ -362,7 +362,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = message.TimestampUTC,
                 Type = message.Type,
                 EncryptedKey = message.EncryptedKey,
-                Body = message.Body,
+                Body = message.EncryptedBody,
             }).ConfigureAwait(false);
 
             return result > 0;
