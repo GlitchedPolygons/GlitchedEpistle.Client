@@ -56,7 +56,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             getLastMessageIdSql = $"SELECT \"Id\" FROM \"{tableName}\" ORDER BY \"TimestampUTC\" DESC LIMIT 1";
             
             using var dbcon = OpenConnection();
-            dbcon.Execute($"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Type\" TEXT, \"EncryptedKey\" TEXT, \"Body\" TEXT, PRIMARY KEY(\"Id\"))");
+            dbcon.Execute($"CREATE TABLE IF NOT EXISTS \"{tableName}\" (\"Id\" INTEGER NOT NULL, \"SenderId\" TEXT NOT NULL, \"SenderName\" TEXT, \"TimestampUTC\" INTEGER, \"Type\" TEXT, \"EncryptedKey\" TEXT, \"EncryptedBody\" TEXT, PRIMARY KEY(\"Id\"))");
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
 
             bool success = false;
-            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Type, @EncryptedKey, @Body)";
+            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Type, @EncryptedKey, @EncryptedBody)";
 
             using var dbcon = OpenConnection();
 
@@ -292,7 +292,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = message.TimestampUTC,
                 Type = message.Type,
                 EncryptedKey = message.EncryptedKey,
-                Body = message.EncryptedBody,
+                EncryptedBody = message.EncryptedBody,
             }).ConfigureAwait(false) > 0;
 
             return success;
@@ -311,7 +311,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             }
 
             bool success = false;
-            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Type, @EncryptedKey, @Body)";
+            string sql = $"INSERT OR IGNORE INTO \"{tableName}\" VALUES (@Id, @SenderId, @SenderName, @TimestampUTC, @Type, @EncryptedKey, @EncryptedBody)";
 
             using var dbcon = OpenConnection();
             using var t = dbcon.BeginTransaction();
@@ -324,7 +324,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = message.TimestampUTC,
                 Type = message.Type,
                 EncryptedKey = message.EncryptedKey,
-                Body = message.EncryptedBody,
+                EncryptedBody = message.EncryptedBody,
             }), t).ConfigureAwait(false) > 0;
 
             if (success)
@@ -349,7 +349,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 .Append("\"TimestampUTC\" = @TimestampUTC, ")
                 .Append("\"Type\" = @Type, ")
                 .Append("\"EncryptedKey\" = @EncryptedKey, ")
-                .Append("\"Body\" = @Body ")
+                .Append("\"EncryptedBody\" = @EncryptedBody ")
                 .Append("WHERE \"Id\" = @Id");
 
             using var dbcon = OpenConnection();
@@ -362,7 +362,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
                 TimestampUTC = message.TimestampUTC,
                 Type = message.Type,
                 EncryptedKey = message.EncryptedKey,
-                Body = message.EncryptedBody,
+                EncryptedBody = message.EncryptedBody,
             }).ConfigureAwait(false);
 
             return result > 0;
