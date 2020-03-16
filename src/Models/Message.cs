@@ -55,6 +55,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Models
         /// <summary>
         /// The type of message (e.g. "TEXT=UTF8", "FILE=example.png", etc...).
         /// </summary>
+        [JsonPropertyName("type")]
         public string Type { get; set; }
         
         /// <summary>
