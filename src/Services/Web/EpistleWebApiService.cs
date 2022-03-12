@@ -40,9 +40,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web
         /// <param name="endpoint">The API endpoint (relative path).</param>
         /// <param name="method">The HTTP method to use. Should be either POST or PUT if you use the request body.</param>
         /// <returns>The <see cref="RestRequest"/>, ready to be submitted.</returns>
-        protected RestRequest EpistleRequest(EpistleRequestBody requestBody, string endpoint, Method method = Method.POST)
+        protected RestRequest EpistleRequest(EpistleRequestBody requestBody, string endpoint, Method method = Method.Post)
         {
-            if (method != Method.POST && method != Method.PUT)
+            if (method != Method.Post && method != Method.Put)
             {
                 throw new ArgumentException($"{nameof(EpistleWebApiService)}::{nameof(EpistleRequest)}: Non-PUT or POST HTTP method passed. Please only add request bodies to POST and PUT requests!");
             }

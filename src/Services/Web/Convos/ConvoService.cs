@@ -67,11 +67,11 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<int> GetMaximumConvoDurationDays()
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri("convos/max-days", UriKind.Relative)
             );
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             if (response.IsSuccessful && int.TryParse(response.Content, out int maxDays))
             {
                 return maxDays;
@@ -89,7 +89,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<string> CreateConvo(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "convos/create");
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.IsSuccessful ? response.Content : null;
         }
 
@@ -100,7 +100,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether deletion was successful or not.</returns>
         public async Task<bool> DeleteConvo(EpistleRequestBody requestBody)
         {
-            IRestResponse response = await restClient.ExecuteAsync(EpistleRequest(requestBody, "convos/delete"));
+            RestResponse response = await restClient.ExecuteAsync(EpistleRequest(requestBody, "convos/delete"));
             return response.IsSuccessful;
         }
 
@@ -112,7 +112,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<bool> PostMessage(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "convos/post");
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful;
         }
 
@@ -127,7 +127,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<ConvoMetadataDto> GetConvoMetadata(string convoId, string convoPasswordSHA512, string userId, string auth)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"convos/meta/{convoId}", UriKind.Relative)
             );
 
@@ -135,7 +135,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(auth), auth);
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful ? JsonSerializer.Deserialize<ConvoMetadataDto>(response.Content) : null;
         }
 
@@ -148,8 +148,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the convo's metadata was changed successfully or not.</returns>
         public async Task<bool> ChangeConvoMetadata(EpistleRequestBody requestBody)
         {
-            var request = EpistleRequest(requestBody, "convos/metadata", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            var request = EpistleRequest(requestBody, "convos/metadata", Method.Put);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful;
         }
 
@@ -165,7 +165,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<Message[]> GetConvoMessagesSinceTailId(string convoId, string convoPasswordSHA512, string userId, string auth, long tailId = 0)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"convos/{convoId}", UriKind.Relative)
             );
 
@@ -174,7 +174,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
             request.AddQueryParameter(nameof(tailId), tailId.ToString(CultureInfo.InvariantCulture));
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
@@ -190,7 +190,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<Message[]> GetLastConvoMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long n)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"convos/{convoId}/{n}", UriKind.Relative)
             );
 
@@ -198,7 +198,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
@@ -216,7 +216,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<Message[]> GetPreviousMessages(string convoId, string convoPasswordSHA512, string userId, string auth, long fromId, long n)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"convos/{convoId}/prev/{n}", UriKind.Relative)
             );
 
@@ -225,7 +225,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(fromId), fromId.ToString());
             request.AddQueryParameter(nameof(convoPasswordSHA512), convoPasswordSHA512);
 
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
@@ -243,7 +243,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         public async Task<Message[]> GetConvoMessagesFromRange(string convoId, string convoPasswordSHA512, long fromId, long toId, string userId, string auth)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"convos/{convoId}/range", UriKind.Relative)
             );
 
@@ -253,7 +253,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.IsSuccessful ? JsonSerializer.Deserialize<Message[]>(response.Content) : null;
         }
 
@@ -264,8 +264,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the <see cref="Convo" /> was joined successfully or not.</returns>
         public async Task<bool> JoinConvo(EpistleRequestBody requestBody)
         {
-            var request = EpistleRequest(requestBody, "convos/join", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            var request = EpistleRequest(requestBody, "convos/join", Method.Put);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response.IsSuccessful;
         }
 
@@ -276,8 +276,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the <see cref="Convo" /> was left successfully or not.</returns>
         public async Task<bool> LeaveConvo(EpistleRequestBody requestBody)
         {
-            var request = EpistleRequest(requestBody, "convos/leave", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            var request = EpistleRequest(requestBody, "convos/leave", Method.Put);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful;
         }
 
@@ -288,8 +288,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Convos
         /// <returns>Whether the user was kicked out successfully or not.</returns>
         public async Task<bool> KickUser(EpistleRequestBody requestBody)
         {
-            var request = EpistleRequest(requestBody, "convos/kick", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request);
+            var request = EpistleRequest(requestBody, "convos/kick", Method.Put);
+            RestResponse response = await restClient.ExecuteAsync(request);
             return response.IsSuccessful;
         }
     }

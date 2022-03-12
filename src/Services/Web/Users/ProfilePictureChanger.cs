@@ -80,7 +80,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             try
             {
                 var request = new RestRequest(
-                    method: Method.GET,
+                    method: Method.Get,
                     resource: new Uri("users/pic", UriKind.Relative)
                 );
 
@@ -88,7 +88,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 request.AddQueryParameter("auth", user.Token.Item2);
                 request.AddQueryParameter("userIds", userIds);
 
-                IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+                RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
                 if (response?.StatusCode != HttpStatusCode.OK)
                 {
                     return null;
@@ -137,8 +137,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                     Body = JsonSerializer.Serialize(dto)
                 };
 
-                var request = EpistleRequest(requestBody.Sign(rsa, user.PrivateKeyPem), "users/pic", Method.PUT);
-                IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+                var request = EpistleRequest(requestBody.Sign(rsa, user.PrivateKeyPem), "users/pic", Method.Put);
+                RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
                 return response?.StatusCode == HttpStatusCode.OK;
             }
             catch

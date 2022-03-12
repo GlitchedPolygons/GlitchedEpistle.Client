@@ -74,13 +74,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<UserLoginSuccessResponseDto> Login(UserLoginRequestDto paramsDto)
         {
             var request = new RestRequest(
-                method: Method.POST,
+                method: Method.Post,
                 resource: new Uri("users/login", UriKind.Relative)
             );
 
             request.AddParameter("application/json", JsonSerializer.Serialize(paramsDto), ParameterType.RequestBody);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
 
             try
             {
@@ -102,14 +102,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<string> RefreshAuthToken(string userId, string auth)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri("users/login/refresh", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response?.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
@@ -122,14 +122,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<bool> Validate2FA(string userId, string totp)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri("users/login/2fa", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(totp), totp);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response?.StatusCode == HttpStatusCode.OK;
         }
 
@@ -142,13 +142,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<IEnumerable<ConvoMetadataDto>> GetConvos(string userId, string auth)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"users/{userId}/convos", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
 
             if (response?.StatusCode != HttpStatusCode.OK)
             {
@@ -175,14 +175,14 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<IDictionary<string, string>> GetUserPublicKeys(string userId, string userIds, string auth)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"users/get-public-key/{userIds}", UriKind.Relative)
             );
 
             request.AddQueryParameter(nameof(userId), userId);
             request.AddQueryParameter(nameof(auth), auth);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             if (response?.StatusCode != HttpStatusCode.OK)
             {
                 return null;
@@ -214,7 +214,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<string> GetUserPrivateKey(string userId, string passwordSHA512, string totp)
         {
             var request = new RestRequest(
-                method: Method.GET,
+                method: Method.Get,
                 resource: new Uri($"users/get-private-key/{userId}", UriKind.Relative)
             );
 
@@ -222,7 +222,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
             request.AddQueryParameter(nameof(passwordSHA512), passwordSHA512);
             request.AddQueryParameter(nameof(totp), totp);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response?.StatusCode == HttpStatusCode.OK ? response.Content : null;
         }
 
@@ -236,8 +236,8 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         /// <returns><c>bool</c> indicating whether the change was successful or not.</returns>
         public async Task<bool> ChangeUserPassword(EpistleRequestBody requestBody)
         {
-            var request = EpistleRequest(requestBody, "users/change-pw", Method.PUT);
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            var request = EpistleRequest(requestBody, "users/change-pw", Method.Put);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response?.StatusCode == HttpStatusCode.OK;
         }
 
@@ -249,13 +249,13 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<UserCreationResponseDto> CreateUser(UserCreationRequestDto userCreationRequestDto)
         {
             var request = new RestRequest(
-                method: Method.POST,
+                method: Method.Post,
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
             request.AddParameter("application/json", JsonSerializer.Serialize(userCreationRequestDto), ParameterType.RequestBody);
 
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             if (response?.StatusCode != HttpStatusCode.OK)
             {
                 return null;
@@ -280,7 +280,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         public async Task<bool> DeleteUser(EpistleRequestBody requestBody)
         {
             var request = EpistleRequest(requestBody, "users/delete");
-            IRestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
+            RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             return response?.StatusCode == HttpStatusCode.NoContent;
         }
     }

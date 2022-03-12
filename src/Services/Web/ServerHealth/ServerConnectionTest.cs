@@ -42,7 +42,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
                 var restClient = new RestClient(UrlUtility.FixUrl(serverUrl) ?? UrlUtility.EpistleBaseUrl);
 
                 var request = new RestRequest(
-                    method: Method.GET,
+                    method: Method.Get,
                     resource: new Uri("marco", UriKind.Relative)
                 );
 
