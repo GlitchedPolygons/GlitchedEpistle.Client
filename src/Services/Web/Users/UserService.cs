@@ -78,7 +78,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 resource: new Uri("users/login", UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonSerializer.Serialize(paramsDto), ParameterType.RequestBody);
+            request.AddStringBody(JsonSerializer.Serialize(paramsDto), "application/json");
 
             RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
 
@@ -253,7 +253,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
                 resource: new Uri("users/create", UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonSerializer.Serialize(userCreationRequestDto), ParameterType.RequestBody);
+            request.AddStringBody(JsonSerializer.Serialize(userCreationRequestDto), "application/json");
 
             RestResponse response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
             if (response?.StatusCode != HttpStatusCode.OK)

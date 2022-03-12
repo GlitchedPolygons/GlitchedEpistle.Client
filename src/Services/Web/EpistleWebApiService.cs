@@ -52,7 +52,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web
                 resource: new Uri(endpoint, UriKind.Relative)
             );
 
-            request.AddParameter("application/json", JsonSerializer.Serialize(requestBody), ParameterType.RequestBody);
+            request.AddStringBody(JsonSerializer.Serialize(requestBody),"application/json");
 
             return request;
         }
