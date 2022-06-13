@@ -39,7 +39,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
         {
             try
             {
-                var restClient = new RestClient(UrlUtility.FixUrl(serverUrl) ?? UrlUtility.EpistleBaseUrl);
+                using var restClient = new RestClient(UrlUtility.FixUrl(serverUrl) ?? UrlUtility.EpistleBaseUrl);
 
                 var request = new RestRequest(
                     method: Method.Get,
@@ -47,7 +47,7 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.ServerHealth
                 );
 
                 var response = await restClient.ExecuteAsync(request).ConfigureAwait(false);
-                return response?.Content.ToLower() == "polo";
+                return response?.Content?.ToLower().Trim() == "polo";
             }
             catch
             {

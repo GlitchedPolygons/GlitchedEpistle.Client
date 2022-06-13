@@ -62,7 +62,9 @@ namespace GlitchedPolygons.GlitchedEpistle.Client.Services.Web.Users
         
         private void UrlUtility_ChangedEpistleServerUrl()
         {
+            var previousRestClient = restClient;
             restClient = new RestClient(UrlUtility.EpistleAPI_v1);
+            previousRestClient.Dispose();
         }
         
         /// <summary>

@@ -34,9 +34,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>8</LangVersion>
     <Copyright>Raphael Beck</Copyright>
-    <PackageVersion>3.1.5</PackageVersion>
-    <AssemblyVersion>3.1.5</AssemblyVersion>
-    <FileVersion>3.1.5</FileVersion>
+    <PackageVersion>3.1.6</PackageVersion>
+    <AssemblyVersion>3.1.6</AssemblyVersion>
+    <FileVersion>3.1.6</FileVersion>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
@@ -59,13 +59,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="107.3.0" />
-    <PackageReference Include="GlitchedPolygons.ExtensionMethods" Version="1.0.8" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="GlitchedPolygons.ExtensionMethods" Version="1.1.0" />
     <PackageReference Include="GlitchedPolygons.RepositoryPattern.SQLite" Version="1.0.3" />
     <PackageReference Include="GlitchedPolygons.Services.CompressionUtility" Version="2.0.1" />
     <PackageReference Include="GlitchedPolygons.Services.Cryptography.Symmetric" Version="2.0.0" />
     <PackageReference Include="GlitchedPolygons.Services.Cryptography.Asymmetric" Version="2.0.0" />
-    <PackageReference Include="System.Text.Json" Version="6.0.2" />
+    <PackageReference Include="System.Text.Json" Version="6.0.4" />
   </ItemGroup>
 
   <ItemGroup>
