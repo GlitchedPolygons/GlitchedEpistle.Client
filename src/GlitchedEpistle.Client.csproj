@@ -65,7 +65,7 @@
     <PackageReference Include="GlitchedPolygons.Services.CompressionUtility" Version="2.0.1" />
     <PackageReference Include="GlitchedPolygons.Services.Cryptography.Symmetric" Version="2.0.0" />
     <PackageReference Include="GlitchedPolygons.Services.Cryptography.Asymmetric" Version="2.0.0" />
-    <PackageReference Include="System.Text.Json" Version="6.0.4" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>
